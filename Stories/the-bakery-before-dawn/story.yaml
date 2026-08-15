@@ -1,0 +1,89 @@
+# CANONICAL MANIFEST — edit this file and nothing else.
+# Everything in _generated/ is produced from here by: lullable.py build
+
+schemaVersion: 1
+storyID: the-bakery-before-dawn
+supersedes: null
+identityResolved: true
+identityNote: ''
+workflowStatus: draft
+accessDecision: premium
+episode:
+  id: 17
+  pillar: 6. Craft & Quiet Work
+  tags:
+  - sleep story
+  - baking
+  - craft
+  - cozy
+card:
+  title: The Bakery Before Dawn
+  subtitle: Warm flour, a slow rising, and the long quiet hours before a town wakes
+  narrator: PENDING
+  genreIDs:
+  - cozy-tales
+  bedtimeNote: Someone else is already awake, working gently in the warm, at something that cannot be hurried. There is nothing here you need to do.
+  bestFor: Feeling safe and warm
+  sleepPace: Slow and steady
+  atmosphere: Warm, floury, hushed
+  description: You cross a frozen street at two in the morning toward the one lit window on the corner, and step into a small tiled room that smells of warm flour. A baker works alone at a wooden bench, unhurried, feeding a glass jar that is older than she is. You learn what is living inside it, why the dough rests before it is touched, what the salt is quietly doing, and how a loaf lifts and sets and turns gold in the last half hour. Then the light goes off, and she walks home to sleep.
+  colorHex: 2E1F14
+  accentHex: E3B778
+  isFeatured: false
+  trialPreviewEligible: false
+  publishedAt: PENDING
+  durationSeconds: null
+script:
+  narrationFile: narration.md
+  ssmlFile: upload-to-elevenlabs.txt
+  words: 4379
+  breaks: 331
+  wordsPerBreak: 13.23
+  silenceSeconds: 632.9
+  estimatedMinutesAt118wpm: 47.7
+rights:
+  status: verified
+  evidence: Script written in-house for Lullable; narration rendered with our own licensed ElevenLabs voice; no third-party text, music or sound used. All rights owned by Lullable.
+  evidenceFiles: []
+render:
+  provider: elevenlabs
+  voiceId: PENDING
+  voiceName: PENDING
+  model: PENDING
+  settings:
+    stability: null
+    similarityBoost: null
+    style: null
+    speakerBoost: null
+  historyItemId: PENDING
+  projectId: PENDING
+  renderedAt: PENDING
+audio:
+  master:
+    filename: PENDING
+    sha256: PENDING
+    bytes: null
+    durationSeconds: null
+    codec: null
+    sampleRate: null
+    channels: null
+  delivery:
+    filename: PENDING
+    sha256: PENDING
+    bytes: null
+    durationSeconds: null
+    codec: null
+    profile: null
+    sampleRate: null
+    channels: null
+    bitRateKbps: null
+qa:
+  audioApproved: false
+  approvedBy: ''
+  approvedAt: ''
+  deviceAccepted: false
+  deviceNotes: ''
+publish:
+  audioAssetID: PENDING
+  supabaseAudioUploaded: false
+  catalogRowUpserted: false

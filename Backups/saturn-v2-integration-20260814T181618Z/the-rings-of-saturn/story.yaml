@@ -1,0 +1,89 @@
+# CANONICAL MANIFEST — edit this file and nothing else.
+# Everything in _generated/ is produced from here by: lullable.py build
+
+schemaVersion: 1
+storyID: the-rings-of-saturn
+supersedes: null
+identityResolved: false
+identityNote: 'UNRESOLVED: the app already carries a card with storyID ''edge-of-saturn''. If this narration REPLACES that card, set storyID to ''edge-of-saturn'' and supersedes to null, so existing favorites and progress survive. If this is an ADDITIONAL story, keep ''the-rings-of-saturn'' and set supersedes to null. Then set identityResolved: true. Publication is blocked until then.'
+workflowStatus: draft
+accessDecision: PENDING
+episode:
+  id: 16
+  pillar: 4. Space & Cosmic Journeys
+  tags:
+  - sleep story
+  - space
+  - astronomy
+  - saturn
+card:
+  title: The Rings of Saturn
+  subtitle: Ten metres of ice, two hundred thousand kilometres wide, turning in silence
+  narrator: PENDING
+  genreIDs:
+  - cosmic-journeys
+  bedtimeNote: A long way from anything that has ever asked something of you. Nothing out here is in a hurry, and none of it needs watching.
+  bestFor: Drifting off slowly
+  sleepPace: Slow and weightless
+  atmosphere: Cold, vast, silent
+  description: 'You rise gently from your own roof and travel outward, past the Moon and Jupiter, until a tilted gold shape appears in the dark. Up close the rings resolve into thousands of fine bright lines, and then into ice: billions of frozen pieces, some finer than dust and some the size of mountains, all drifting the same way at once. You watch small moons carve clean lanes and raise slow waves behind them, hear a gentle unfinished argument about how old it all is, and then settle into the ring plane and stay.'
+  colorHex: 1B2436
+  accentHex: E8C89A
+  isFeatured: false
+  trialPreviewEligible: false
+  publishedAt: PENDING
+  durationSeconds: null
+script:
+  narrationFile: narration.md
+  ssmlFile: upload-to-elevenlabs.txt
+  words: 4448
+  breaks: 324
+  wordsPerBreak: 13.73
+  silenceSeconds: 567.9
+  estimatedMinutesAt118wpm: 47.2
+rights:
+  status: verified
+  evidence: Script written in-house for Lullable; narration rendered with our own licensed ElevenLabs voice; no third-party text, music or sound used. All rights owned by Lullable.
+  evidenceFiles: []
+render:
+  provider: elevenlabs
+  voiceId: PENDING
+  voiceName: PENDING
+  model: PENDING
+  settings:
+    stability: null
+    similarityBoost: null
+    style: null
+    speakerBoost: null
+  historyItemId: PENDING
+  projectId: PENDING
+  renderedAt: PENDING
+audio:
+  master:
+    filename: PENDING
+    sha256: PENDING
+    bytes: null
+    durationSeconds: null
+    codec: null
+    sampleRate: null
+    channels: null
+  delivery:
+    filename: PENDING
+    sha256: PENDING
+    bytes: null
+    durationSeconds: null
+    codec: null
+    profile: null
+    sampleRate: null
+    channels: null
+    bitRateKbps: null
+qa:
+  audioApproved: false
+  approvedBy: ''
+  approvedAt: ''
+  deviceAccepted: false
+  deviceNotes: ''
+publish:
+  audioAssetID: PENDING
+  supabaseAudioUploaded: false
+  catalogRowUpserted: false

@@ -1,0 +1,89 @@
+# CANONICAL MANIFEST — edit this file and nothing else.
+# Everything in _generated/ is produced from here by: lullable.py build
+
+schemaVersion: 1
+storyID: the-great-library-of-alexandria
+supersedes: null
+identityResolved: true
+identityNote: ''
+workflowStatus: draft
+accessDecision: premium
+episode:
+  id: 15
+  pillar: 5. History & Human Ingenuity
+  tags:
+  - sleep story
+  - history
+  - ancient world
+  - alexandria
+card:
+  title: The Great Library of Alexandria
+  subtitle: Lamplight, papyrus and patient work beside a warm and quiet sea
+  narrator: PENDING
+  genreIDs:
+  - ancient-worlds
+  bedtimeNote: Nothing here is urgent and nothing needs remembering. Only scribes at their tables, copying one careful line at a time.
+  bestFor: Slowing a busy day
+  sleepPace: Slow, unhurried
+  atmosphere: Warm, dusty, lamplit
+  description: You arrive at a harbour in the evening, when the light is going gold and the sea wind is moving up through the streets. Inside the cool halls, thousands of scrolls lie in their niches, and scribes copy them by hand, one careful line at a time. You learn how papyrus was pressed from river reeds, how ink was made from soot, how the first catalogue was written, and how a man measured the whole earth from the length of a shadow. Then the lamps are lit, and the work is set down.
+  colorHex: 3A2A18
+  accentHex: D9A55C
+  isFeatured: false
+  trialPreviewEligible: false
+  publishedAt: PENDING
+  durationSeconds: null
+script:
+  narrationFile: narration.md
+  ssmlFile: upload-to-elevenlabs.txt
+  words: 4245
+  breaks: 320
+  wordsPerBreak: 13.27
+  silenceSeconds: 549.9
+  estimatedMinutesAt118wpm: 45.1
+rights:
+  status: verified
+  evidence: Script written in-house for Lullable; narration rendered with our own licensed ElevenLabs voice; no third-party text, music or sound used. All rights owned by Lullable.
+  evidenceFiles: []
+render:
+  provider: elevenlabs
+  voiceId: PENDING
+  voiceName: PENDING
+  model: PENDING
+  settings:
+    stability: null
+    similarityBoost: null
+    style: null
+    speakerBoost: null
+  historyItemId: PENDING
+  projectId: PENDING
+  renderedAt: PENDING
+audio:
+  master:
+    filename: PENDING
+    sha256: PENDING
+    bytes: null
+    durationSeconds: null
+    codec: null
+    sampleRate: null
+    channels: null
+  delivery:
+    filename: PENDING
+    sha256: PENDING
+    bytes: null
+    durationSeconds: null
+    codec: null
+    profile: null
+    sampleRate: null
+    channels: null
+    bitRateKbps: null
+qa:
+  audioApproved: false
+  approvedBy: ''
+  approvedAt: ''
+  deviceAccepted: false
+  deviceNotes: ''
+publish:
+  audioAssetID: PENDING
+  supabaseAudioUploaded: false
+  catalogRowUpserted: false

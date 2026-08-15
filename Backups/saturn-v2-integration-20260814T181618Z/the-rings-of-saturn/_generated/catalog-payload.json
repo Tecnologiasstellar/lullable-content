@@ -1,0 +1,4 @@
+{
+  "_refused": true,
+  "_reason": "not fit for catalog: G02 story identity, G08 audio + rights files, G09 audio checksums, G10 delivery encoding, G11 duration matches audio, G12 render manifest, G13 QA + device sign-off, G16 access decision final"
+}

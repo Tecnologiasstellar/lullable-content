@@ -1,0 +1,35 @@
+# Lullable Story Card v1
+# Copy this file into a new folder named with storyID, then rename it story-card.yaml.
+# Keep field names exactly as written. Text must be in quotes when it contains punctuation.
+
+storyID: "PENDING-lowercase-hyphenated-id"
+title: "PENDING"
+subtitle: "PENDING"
+narrator: "PENDING"
+genreIDs:
+  - "PENDING-one-existing-genre-id"
+access: "premium" # Choose "free" or "premium"
+trialPreviewEligible: false
+isFeatured: false
+publishedAt: "PENDING" # Example: "2026-09-15T16:00:00Z"
+
+# Visual card artwork: exactly 6 uppercase letters/numbers, with no # symbol.
+colorHex: "PENDING"
+accentHex: "PENDING"
+
+# This value is measured from the final narration file; leave as PENDING while producing.
+durationSeconds: "PENDING"
+
+# Customer-facing card copy
+bedtimeNote: "PENDING — 90 to 180 characters. Explain why this story feels right for tonight without medical or sleep promises."
+bestFor: "PENDING" # 10–24 characters
+sleepPace: "PENDING" # 8–22 characters
+atmosphere: "PENDING" # 10–28 characters
+description: "PENDING — 220 to 650 characters. Two to four calm, specific sentences about the journey."
+
+# Publishing and rights record. Do not mark verified without actual documentary proof.
+audioAssetID: "PENDING"
+audioMasterFilename: "PENDING.wav"
+commercialRightsStatus: "pending-verification" # pending-verification | verified | restricted
+rightsEvidence: "PENDING — describe the text, voice, music/sound, and output-license proof; list filenames."
+audioDelivery: "AAC-LC M4A, 44.1 kHz, mono, 96 kbps (generated after approval)"

@@ -1,0 +1,89 @@
+# CANONICAL MANIFEST — edit this file and nothing else.
+# Everything in _generated/ is produced from here by: lullable.py build
+
+schemaVersion: 1
+storyID: the-deep-ocean-trenches
+supersedes: null
+identityResolved: true
+identityNote: ''
+workflowStatus: draft
+accessDecision: premium
+episode:
+  id: 14
+  pillar: 3. Earth Science & Nature
+  tags:
+  - sleep story
+  - earth science
+  - nature
+  - ocean
+card:
+  title: The Deep Ocean Trenches
+  subtitle: A slow descent past the last of the light, into the stillest water on earth
+  narrator: PENDING
+  genreIDs:
+  - gentle-nature
+  bedtimeNote: One slow direction, downward, and nothing waiting at the end of it. An easy thing to follow, and an easier thing to let go of.
+  bestFor: Letting the day end
+  sleepPace: Slow and sinking
+  atmosphere: Dark, cool, weightless
+  description: You slip beneath a starlit sea and sink, without effort, through the sunlit water and the long blue twilight into a darkness the sun has never reached. Small living lights blink on and drift away. Marine snow falls, soft and endless, all the way down to a floor of pale sediment older than memory. Further down still lie the trenches, where the pressure feels only like stillness and there is nowhere deeper to go.
+  colorHex: 0B1F33
+  accentHex: 5FA8C4
+  isFeatured: false
+  trialPreviewEligible: false
+  publishedAt: PENDING
+  durationSeconds: null
+script:
+  narrationFile: null
+  ssmlFile: upload-to-elevenlabs.txt
+  words: 4190
+  breaks: 282
+  wordsPerBreak: 14.86
+  silenceSeconds: 460.9
+  estimatedMinutesAt118wpm: 43.2
+rights:
+  status: verified
+  evidence: Script written in-house for Lullable; narration rendered with our own licensed ElevenLabs voice; no third-party text, music or sound used. All rights owned by Lullable.
+  evidenceFiles: []
+render:
+  provider: elevenlabs
+  voiceId: PENDING
+  voiceName: PENDING
+  model: PENDING
+  settings:
+    stability: null
+    similarityBoost: null
+    style: null
+    speakerBoost: null
+  historyItemId: PENDING
+  projectId: PENDING
+  renderedAt: PENDING
+audio:
+  master:
+    filename: PENDING
+    sha256: PENDING
+    bytes: null
+    durationSeconds: null
+    codec: null
+    sampleRate: null
+    channels: null
+  delivery:
+    filename: PENDING
+    sha256: PENDING
+    bytes: null
+    durationSeconds: null
+    codec: null
+    profile: null
+    sampleRate: null
+    channels: null
+    bitRateKbps: null
+qa:
+  audioApproved: false
+  approvedBy: ''
+  approvedAt: ''
+  deviceAccepted: false
+  deviceNotes: ''
+publish:
+  audioAssetID: PENDING
+  supabaseAudioUploaded: false
+  catalogRowUpserted: false

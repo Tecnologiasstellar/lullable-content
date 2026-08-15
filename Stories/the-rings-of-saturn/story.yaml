@@ -1,0 +1,103 @@
+---
+schemaVersion: 1
+storyID: the-rings-of-saturn
+supersedes: 
+identityResolved: true
+identityNote: Published as an additional story. It is distinct from the existing edge-of-saturn
+  fixture; no prior story ID is replaced.
+workflowStatus: published
+accessDecision: free
+episode:
+  id: 16
+  pillar: 4. Space & Cosmic Journeys
+  tags:
+  - sleep story
+  - space
+  - astronomy
+  - saturn
+card:
+  title: The Rings of Saturn
+  subtitle: Ten metres of ice, two hundred thousand kilometres wide, turning in silence
+  narrator: Lullable
+  genreIDs:
+  - cosmic-journeys
+  bedtimeNote: A long way from anything that has ever asked something of you. Nothing
+    out here is in a hurry, and none of it needs watching.
+  bestFor: Drifting off slowly
+  sleepPace: Slow and weightless
+  atmosphere: Cold, vast, silent
+  description: 'You rise gently from your own roof and travel outward, past the Moon
+    and Jupiter, until a tilted gold shape appears in the dark. Up close the rings
+    resolve into thousands of fine bright lines, and then into ice: billions of frozen
+    pieces, some finer than dust and some the size of mountains, all drifting the
+    same way at once. You watch small moons carve clean lanes and raise slow waves
+    behind them, hear a gentle unfinished argument about how old it all is, and then
+    settle into the ring plane and stay.'
+  colorHex: 1B2436
+  accentHex: E8C89A
+  isFeatured: false
+  trialPreviewEligible: false
+  publishedAt: '2026-08-14T17:53:16Z'
+  durationSeconds: 2125.557
+script:
+  narrationFile: narration.md
+  ssmlFile: upload-to-elevenlabs.txt
+  words: 4448
+  breaks: 324
+  wordsPerBreak: 13.73
+  silenceSeconds: 567.9
+  estimatedMinutesAt118wpm: 47.2
+rights:
+  status: verified
+  evidence: 'Founder/operator attestation recorded in rights-evidence.md: script written
+    in-house for Lullable; narration rendered with Lullable''s licensed ElevenLabs
+    voice; no third-party text, music, or sound used.'
+  evidenceFiles:
+  - rights-evidence.md
+render:
+  provider: elevenlabs
+  voiceId: oiVoyoYP9iXTljaT7XBd
+  voiceName: Lullable_Female
+  model: eleven_turbo_v2_5
+  settings:
+    speed: 1.0
+    stability: 0.5
+    similarityBoost: 0.75
+    style: 0.0
+    speakerBoost: true
+  historyItemId: 
+  projectId: BH3jZFwYV18CNXixdWcn
+  chapterId: FL9dkPAMC9Pg5CR5nkv3
+  renderedAt: '2026-08-14T16:18:19Z'
+audio:
+  master:
+    filename: ElevenLabs_the-rings-of-saturn-v2.wav
+    sha256: 5300e449a37cf1f32fbc9f417a39c901e8c36ca6f381429925684cbb3ce9f984
+    bytes: 187474184
+    durationSeconds: 2125.557143
+    codec: pcm_s16le
+    sampleRate: 44100
+    channels: 1
+  delivery:
+    filename: story.m4a
+    sha256: 8150ee8e8589e6633ba59a14643bf4b1a35a592fed3a8284452156a87aae830f
+    bytes: 23202379
+    durationSeconds: 2125.557007
+    codec: aac
+    profile: LC
+    sampleRate: 44100
+    channels: 1
+    bitRateKbps: 86
+qa:
+  audioApproved: true
+  approvedBy: Founder/operator
+  approvedAt: '2026-08-14T16:32:33Z'
+  deviceAccepted: true
+  deviceNotes: PASS ALL on authorized physical iPhone; see canonical device-qa.md.
+publish:
+  audioAssetID: audio-the-rings-of-saturn-en-v2-aac96
+  supabaseAudioUploaded: true
+  catalogRowUpserted: true
+  storageBucket: sleep-stories-public
+  storageObjectPath: the-rings-of-saturn/audio-the-rings-of-saturn-en-v2-aac96/story.m4a
+  rollbackAssetID: audio-the-rings-of-saturn-en-v1-aac96

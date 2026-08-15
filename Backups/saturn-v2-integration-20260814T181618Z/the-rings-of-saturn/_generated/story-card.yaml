@@ -1,0 +1,25 @@
+# GENERATED FROM story.yaml — do not edit. Regenerate with: lullable.py build
+
+storyID: the-rings-of-saturn
+title: The Rings of Saturn
+subtitle: Ten metres of ice, two hundred thousand kilometres wide, turning in silence
+narrator: PENDING
+genreIDs:
+- cosmic-journeys
+access: PENDING
+trialPreviewEligible: false
+isFeatured: false
+publishedAt: PENDING
+colorHex: 1B2436
+accentHex: E8C89A
+durationSeconds: PENDING
+bedtimeNote: A long way from anything that has ever asked something of you. Nothing out here is in a hurry, and none of it needs watching.
+bestFor: Drifting off slowly
+sleepPace: Slow and weightless
+atmosphere: Cold, vast, silent
+description: 'You rise gently from your own roof and travel outward, past the Moon and Jupiter, until a tilted gold shape appears in the dark. Up close the rings resolve into thousands of fine bright lines, and then into ice: billions of frozen pieces, some finer than dust and some the size of mountains, all drifting the same way at once. You watch small moons carve clean lanes and raise slow waves behind them, hear a gentle unfinished argument about how old it all is, and then settle into the ring plane and stay.'
+audioAssetID: PENDING
+audioMasterFilename: PENDING
+commercialRightsStatus: verified
+rightsEvidence: Script written in-house for Lullable; narration rendered with our own licensed ElevenLabs voice; no third-party text, music or sound used. All rights owned by Lullable.
+audioDelivery: AAC-LC M4A, 44.1 kHz, mono, 96 kbps

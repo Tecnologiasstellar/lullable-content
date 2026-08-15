@@ -1,0 +1,90 @@
+# CANONICAL MANIFEST — edit this file and nothing else.
+# Everything in _generated/ is produced from here by: lullable.py build
+
+schemaVersion: 1
+storyID: the-observatory-on-ben-nevis
+supersedes: null
+identityResolved: true
+identityNote: ''
+workflowStatus: draft
+accessDecision: premium
+episode:
+  id: 18
+  pillar: 6. Craft & Quiet Work
+  tags:
+  - sleep story
+  - weather
+  - mountains
+  - Victorian science
+  - quiet work
+card:
+  title: The Observatory on Ben Nevis
+  subtitle: Twenty-one years of hourly weather readings, taken by lamplight inside a cloud
+  narrator: PENDING
+  genreIDs:
+  - cozy-tales
+  bedtimeNote: Somebody is awake on a mountain, taking a reading on the hour, whether or not you are. The next one is not yours, and it will be taken anyway.
+  bestFor: Letting go of the day
+  sleepPace: Hourly and unhurried
+  atmosphere: Cold, lamplit, patient
+  description: You climb into the cloud that sits on the highest ground in Britain, and step through a low stone door into lamplight, a warm stove, and a kettle that is always on. For twenty-one years, somebody here walked out into the weather every hour of every night and wrote down what it was doing. You learn how a wet sleeve of muslin measures the dryness of the air, why the thermometer boxes had to be lifted as the snow came up to meet them, and how ice grows sideways into the wind. Then the lamp is turned low, a wet coat goes on the hook, and the mountain carries on without you.
+  colorHex: 1F2A2E
+  accentHex: B9C9CE
+  isFeatured: false
+  trialPreviewEligible: false
+  publishedAt: PENDING
+  durationSeconds: null
+script:
+  narrationFile: narration.md
+  ssmlFile: upload-to-elevenlabs.txt
+  words: 4159
+  breaks: 324
+  wordsPerBreak: 12.84
+  silenceSeconds: 620.0
+  estimatedMinutesAt118wpm: 45.6
+rights:
+  status: verified
+  evidence: Script written in-house for Lullable; narration rendered with our own licensed ElevenLabs voice; no third-party text, music or sound used. All rights owned by Lullable.
+  evidenceFiles: []
+render:
+  provider: elevenlabs
+  voiceId: PENDING
+  voiceName: PENDING
+  model: PENDING
+  settings:
+    stability: null
+    similarityBoost: null
+    style: null
+    speakerBoost: null
+  historyItemId: PENDING
+  projectId: PENDING
+  renderedAt: PENDING
+audio:
+  master:
+    filename: PENDING
+    sha256: PENDING
+    bytes: null
+    durationSeconds: null
+    codec: null
+    sampleRate: null
+    channels: null
+  delivery:
+    filename: PENDING
+    sha256: PENDING
+    bytes: null
+    durationSeconds: null
+    codec: null
+    profile: null
+    sampleRate: null
+    channels: null
+    bitRateKbps: null
+qa:
+  audioApproved: false
+  approvedBy: ''
+  approvedAt: ''
+  deviceAccepted: false
+  deviceNotes: ''
+publish:
+  audioAssetID: PENDING
+  supabaseAudioUploaded: false
+  catalogRowUpserted: false
