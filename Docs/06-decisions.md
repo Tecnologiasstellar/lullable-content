@@ -344,3 +344,94 @@ it mutates the Homebrew interpreter that other projects on this machine use.
 
 `.venv/` is local state, not source. It should not be committed if this folder
 is ever put under version control.
+
+---
+
+## D23 — One system, one spreadsheet, one queue  *(settled 2026-08-15)*
+
+A second workbook, `Lullable_audio_pipeline.xlsx`, appeared carrying a 20-episode
+plan. It was deleted, and its topics moved into `Backlog/episode-backlog.md`.
+
+Two spreadsheets means two answers to "what is the state of this story," and the
+second one is always the stale one. The roles are now fixed:
+
+| Role | The one thing |
+|---|---|
+| Truth | `Stories/<storyID>/story.yaml` |
+| Report | `Lullable_Story_Card_Tracker.xlsx` — one sheet, generated |
+| Control | `Tools/lullable.py` |
+| Queue | `Backlog/episode-backlog.md` |
+
+The truth is not, and cannot be, a spreadsheet: G09 hashes real bytes, G10 runs
+`ffprobe`, G11 compares the card against measured audio. A workbook cannot check
+reality, so it can only ever report it.
+
+A topic lives in the backlog **or** the tracker, never both. Scaffolding moves it
+across. That is what keeps them from disagreeing.
+
+The tracker's "Read Me" sheet was dropped in the same pass. It duplicated
+`START_HERE.md`, and its one load-bearing sentence — *this is a report, not a
+form* — is already row 1 of the data sheet.
+
+---
+
+## D24 — Episodes run 45 to 65 minutes. No ambient beds.  *(settled 2026-08-15)*
+
+The pipeline workbook proposed a `10-30m Story + 3hr Ambient` format. Both halves
+were rejected.
+
+**Runtime is 45–65 minutes**, enforced by `compile`, which now refuses to write
+outside that band alongside its existing checks on words/break and exclamation
+marks. At this cadence minutes ≈ words × 0.0109, so the band is roughly
+4,150–6,000 words. Write to 4,600–5,200.
+
+Enforcing it in `compile` rather than adding an eighteenth gate was deliberate.
+`compile` is where the number is computed and where the writer is standing; a
+gate would report the problem hours later, in a spreadsheet.
+
+**There are no ambient beds.** Not 3-hour, not any length. A Lullable episode is
+a narrated story and nothing else. Ambient audio is a second production pipeline,
+a second asset type, a second set of rights questions and a second thing to keep
+in one head — bought against a catalogue that has published exactly one episode.
+
+This is recorded here so it does not return as a good idea in six weeks.
+
+---
+
+## D25 — Runtime exceptions live in the manifest, not in memory  *(settled 2026-08-15)*
+
+`the-deep-ocean-trenches` runs 43.2 minutes, below the 45-minute floor set in D24.
+AV accepted it as final rather than padding it.
+
+A settled exception needs somewhere to live, or the next person to run `compile`
+re-opens a closed question. `--force` was rejected for this: it is a flag someone
+has to remember, it leaves no record of who decided or why, and it also silences
+the words/break and exclamation-mark checks, which should stay live.
+
+So the exception is data:
+
+```yaml
+episode:
+  runtimeExempt: true
+  runtimeExemptNote: 43.2 min accepted as final by AV, 2026-08-15. Do not pad.
+```
+
+`compile` reads it, skips only the runtime band, prints the note so the exception
+is visible on every run, and leaves every other check enforced. The flag lives
+under `episode:`, which `compile` preserves — `script:` is overwritten on every
+compile and would have lost it.
+
+**Use this sparingly.** One story carries it today. If a third or fourth appears,
+the band is wrong and D24 should be revisited instead.
+
+---
+
+## D26 — Pillar strings on pre-rename stories are left alone  *(settled 2026-08-15)*
+
+The five stories written before the pillar rename still carry the old strings:
+`3. Earth Science & Nature`, `4. Space & Cosmic Journeys`, `5. History & Human
+Ingenuity`, `6. Craft & Quiet Work`.
+
+They stay. `pillar` is free text, no gate reads it, and `the-rings-of-saturn` is
+published — rewriting a published manifest for an editorial label would mean
+re-publishing for no user-visible gain. New episodes use the current four pillars.

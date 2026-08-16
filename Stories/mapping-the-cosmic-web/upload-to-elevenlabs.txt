@@ -1,0 +1,371 @@
+Good evening. <break time="2.6s"/>
+
+However the day has gone, it is finished now. <break time="1.0s"/> It has nothing more to ask of you. <break time="1.2s"/> Let your shoulders come down away from your ears. <break time="1.5s"/> Let the bed take your whole weight. Nothing tonight needs carrying any further. <break time="2.4s"/>
+
+Let your hands fall open. <break time="1.0s"/> Let your jaw soften. Let your breathing settle into whatever pace it wants. <break time="1.8s"/> Nothing here needs watching. Nothing needs deciding. <break time="1.5s"/> Nothing is waiting on you. <break time="2.0s"/>
+
+Tonight we are going to follow a piece of patient work. <break time="1.5s"/> It took several decades, and a great many cold nights on mountains. <break time="1.8s"/> Numbers were written down one at a time, by a lot of people. <break time="2.0s"/>
+
+What they were doing was measuring how far away things are. <break time="1.5s"/> And when they had measured enough of them, a shape appeared that nobody had expected. <break time="2.4s"/>
+
+We will start in a small room on a mountain in Arizona. <break time="1.8s"/> Then we will go outward, slowly, until we can see the shape they found. <break time="2.2s"/>
+
+If your attention drifts as we go, let it drift. <break time="1.2s"/> If you lose the thread of the words, let it go. <break time="1.2s"/> The thread is only here to give you something gentle to let go of. <break time="1.8s"/> So breathe in, slowly, through your nose. <break time="1.0s"/> And let it go. And let us begin. <break time="3.0s"/>
+
+It is the early nineteen eighties, and it is night. <break time="2.4s"/>
+
+Picture a dome on a ridge, above the desert, with the lights of nothing much in the distance. <break time="1.0s"/> The air is thin and very dry and very cold. <break time="2.4s"/>
+
+Inside, the dome is open to the sky, so it is the same temperature as the night outside. <break time="1.2s"/> There is a smell of cold metal and machine oil. <break time="3.0s"/>
+
+Someone is sitting at a desk beside the telescope, in a coat, with a mug going cold beside them. <break time="2.0s"/>
+
+There is a low hum from the drive motors. <break time="2.0s"/> Every so often the whole dome rotates a few degrees, with a sound like a distant train, and then stops. <break time="2.2s"/>
+
+They are working through a list. <break time="1.5s"/> On the list are galaxies — hundreds of them, faint smudges catalogued from photographs. <break time="2.0s"/>
+
+The job is to point at one, collect its light for half an hour, write down what came back, and move to the next. <break time="2.2s"/>
+
+That is the entire job. Some nights they manage twenty. <break time="1.0s"/> Some nights the clouds come in and they manage none. <break time="3.0s"/>
+
+What they are collecting is a spectrum, and it is worth knowing what a spectrum gives you. <break time="2.0s"/>
+
+When you spread a galaxy's light out by wavelength, it is not smooth. <break time="1.0s"/> There are dark gaps in it, at very specific places, where particular elements have absorbed particular colours. <break time="2.2s"/>
+
+Those gaps are a fingerprint. Hydrogen makes its marks in one pattern. <break time="1.0s"/> Calcium makes another. In a laboratory on Earth, those patterns sit at exactly known wavelengths. <break time="2.2s"/>
+
+But in the light of a distant galaxy, the whole pattern is shifted. <break time="1.8s"/> Every gap has moved towards the red end, all by the same proportion. <break time="3.0s"/>
+
+The shape is intact. It has just been slid along. <break time="3.0s"/>
+
+That happens because space itself has been expanding while the light was travelling. <break time="1.2s"/> The light gets stretched along with it. <break time="2.6s"/>
+
+So the amount of the shift tells you how long the light has been in flight. <break time="2.0s"/> Which tells you how far away the galaxy is. <break time="3.0s"/>
+
+That method was worked out long before anyone knew what these smudges even were. <break time="2.0s"/>
+
+In nineteen twelve, at a small observatory in Arizona, a man called Vesto Slipher pointed a telescope at the faint oval in Andromeda. <break time="1.0s"/> He collected its light, patiently, for a very long time. <break time="1.0s"/> The exposures took whole nights. Sometimes several nights, stacked together, for one object. <break time="2.4s"/>
+
+Nobody at the time was certain whether these things were clouds inside our own galaxy or something else entirely. <break time="2.4s"/>
+
+By nineteen fourteen he had fifteen of them, and he read the results to a meeting in Illinois. <break time="2.0s"/> Almost all of them were shifted to the red, and by large amounts. <break time="1.2s"/> The room stood up and applauded, which is not a common thing at an astronomy meeting. <break time="2.4s"/>
+
+By nineteen seventeen he had twenty-five. <break time="2.0s"/>
+
+He was not trying to discover that the universe expands. <break time="1.0s"/> He was measuring how fast some faint ovals were moving. <break time="1.0s"/> The meaning arrived years afterwards, once other people worked out how far away they were. <break time="3.0s"/>
+
+The person who did most of the follow-up work had an unusual route into it. <break time="2.4s"/>
+
+His name was Milton Humason. He left school early, and he first came to Mount Wilson as a mule driver, hauling equipment up the mountain during construction. <break time="2.4s"/>
+
+When the observatory was built, he took a job there as a janitor. <break time="1.0s"/> Then he worked in the darkroom. <break time="2.0s"/> Then he was made a night assistant, because it turned out he was extremely good at the actual work of observing. <break time="2.0s"/>
+
+It is a delicate job. You are guiding a telescope by hand for hours, in the cold. <break time="1.8s"/> A faint smudge has to stay exactly on a slit, so that its light goes where it needs to go. <break time="2.4s"/>
+
+He became one of the best observers of his generation. <break time="1.8s"/> He spent years collecting the spectra of very faint, very distant galaxies, and those measurements are what turned Slipher's curiosity into a law. <break time="3.0s"/>
+
+And that is the trick the whole thing rests on, so let us be clear about why it matters. <break time="2.0s"/>
+
+A photograph of the sky is flat. It gives you two directions and no depth at all. <break time="2.4s"/>
+
+Two galaxies can appear side by side in an image and be a billion light years apart, one far behind the other. <break time="1.5s"/> The picture cannot tell you. It never could. <break time="2.0s"/>
+
+Every catalogue of galaxies before this was, in effect, a very detailed picture of a wall. <break time="2.0s"/>
+
+The redshift is what turns it into a room. <break time="1.2s"/> Measure the shift for each smudge, and each smudge acquires a distance, and the flat picture opens up into three dimensions. <break time="2.4s"/>
+
+But it has to be done one galaxy at a time. <break time="1.0s"/> There is no shortcut. Every single point in the map costs somebody half an hour on a mountain. <break time="3.0s"/>
+
+So they did that, for years. <break time="3.0s"/>
+
+Drive up the mountain in the afternoon. Open the dome at dusk. <break time="1.5s"/> Work through the list. Close up at dawn. Sleep. <break time="1.8s"/> Drive down. Come back. <break time="2.2s"/>
+
+Weather takes about a third of the nights. <break time="1.0s"/> Equipment takes some more. Nothing about it is fast, and nothing about it is glamorous, and the individual measurements are not interesting on their own. <break time="2.4s"/>
+
+One number per galaxy. Then the next galaxy. <break time="2.4s"/>
+
+Over several years a group working out of Harvard built up eleven hundred of them, in a particular wedge of sky. <break time="3.0s"/>
+
+Eleven hundred is not many. <break time="1.5s"/> It is a very small sample of the universe. <break time="1.8s"/> But it was enough, because of how they chose to plot it. <break time="3.0s"/>
+
+They took a thin slice. <break time="2.4s"/>
+
+Rather than scattering the galaxies through a three-dimensional volume, they picked a narrow strip of sky. <break time="1.5s"/> A band a few degrees tall. Then they plotted only what was in it. <break time="2.6s"/>
+
+Direction across the page. Distance outward from the centre. <break time="2.6s"/>
+
+A wedge, like a slice of pie, with us at the point of it. <break time="2.4s"/>
+
+The expectation was straightforward. Galaxies were assumed to be scattered fairly evenly, with some clumping here and there. <break time="1.0s"/> Plotted this way, the slice ought to look like a slightly lumpy spray of dots. <break time="2.0s"/>
+
+In nineteen eighty-six, three of them — Valérie de Lapparent, Margaret Geller and John Huchra — published the plot. <break time="3.0s"/>
+
+It did not look like a spray of dots at all. <break time="3.0s"/>
+
+It looked like bubbles. <break time="3.0s"/>
+
+The galaxies sat in thin curved chains, and the chains joined up, and between them were large round regions with nothing in them. <break time="2.2s"/>
+
+Not fewer galaxies. Effectively none. <break time="2.0s"/>
+
+The dots were arranged as though they were sitting on the surfaces of soap bubbles, packed together. <break time="1.5s"/> Clustered along the films. Gathered where several films met. <break time="1.2s"/> And absent from the insides. <break time="2.0s"/>
+
+Nobody had drawn the universe this way before because nobody had had the depth to draw. <break time="1.5s"/> And the moment the depth existed, the structure was simply there in the data, unmistakable, from eleven hundred points. <break time="2.2s"/>
+
+There is a nice detail in that plot. <break time="1.5s"/> Right in the middle of it there is a shape that looks like a little person, with arms and legs. <break time="1.0s"/> People started calling it the stick man. <break time="2.0s"/>
+
+That is not a structure. It is one dense cluster of galaxies, smeared out along the line of sight. <break time="1.8s"/> Their own motion within the cluster does that, and it makes any cluster look stretched in this kind of map. <break time="2.2s"/>
+
+It is an artefact. It is also, for a whole generation of astronomers, the most familiar shape in cosmology. <break time="3.0s"/>
+
+That smearing is worth a moment, because it stopped being a nuisance and became a tool. <break time="2.6s"/>
+
+A redshift is not purely a distance. It also picks up whatever motion the galaxy has of its own, on top of the general expansion. <break time="2.4s"/>
+
+Inside a dense cluster the galaxies swing about at considerable speeds. <break time="1.2s"/> Some are coming towards us a little, some going away a little. <break time="1.8s"/> The map reads that as distance, and stretches the cluster out into a spike pointing straight at us. <break time="2.6s"/>
+
+For years that was simply an error to be tolerated. <break time="2.6s"/>
+
+Then people realised the size of the smear tells you something. <break time="1.0s"/> How fast galaxies fall towards dense regions depends on how strong gravity is on those scales, and on how much unseen mass is there. <break time="2.0s"/>
+
+So the distortion became a measurement of how quickly the structure is growing. <break time="2.4s"/>
+
+It is a nice pattern in this kind of work. <break time="1.2s"/> The thing that spoils your map turns out to be carrying information, once you look at it directly. <break time="3.0s"/>
+
+Since then the language has settled down, and the pieces have names. <break time="2.0s"/>
+
+The dense knots where several strands meet are clusters. <break time="1.2s"/> Thousands of galaxies, held together, in a region a few tens of millions of light years across. <break time="2.2s"/>
+
+The strands running between the knots are filaments. Long, thin, threaded with galaxies. <break time="2.4s"/>
+
+The broad flat regions are walls, or sheets. <break time="1.0s"/> Wide and comparatively thin. <break time="2.4s"/>
+
+And the great rounded spaces enclosed by all of it are voids. <break time="2.4s"/>
+
+Put together, that is the cosmic web. <break time="1.0s"/> Knots joined by threads, threads bounding sheets, sheets wrapped around enormous quiet interiors. <break time="3.0s"/>
+
+It is worth saying what a filament would actually be like to be inside, because the word suggests something denser than it is. <break time="3.0s"/>
+
+You would not notice one. That is the first thing. <break time="2.6s"/>
+
+Standing anywhere along a filament, the sky would look ordinary. <break time="1.5s"/> Dark, with the stars of your own galaxy across it, and a scattering of faint smudges beyond. <break time="2.4s"/>
+
+A filament is a strand only in the sense that a very sparse mist is a shape. <break time="1.5s"/> The galaxies within it might be a few million light years apart. <break time="1.2s"/> You could travel through it your whole life and never sense the strand. <break time="3.0s"/>
+
+The structure exists at a scale where individual galaxies are dust. <break time="1.2s"/> It is a shape made of dots that are themselves enormous, spread so far apart that the shape is invisible from inside it. <break time="2.4s"/>
+
+Which is why nobody suspected it was there. <break time="1.0s"/> You cannot see it by looking up. <break time="1.2s"/> You can only see it by measuring several thousand distances and then drawing them all on one page. <break time="3.0s"/>
+
+One of the walls they found in that early data is worth a moment. <break time="2.4s"/>
+
+It is a sheet of galaxies about six hundred million light years long. <break time="1.5s"/> It is two hundred and fifty million across. <break time="1.0s"/> And it is only about thirty million thick. <break time="2.4s"/>
+
+So it is genuinely a wall. <break time="1.8s"/> A vast flat quilt of galaxies, comparatively thin, hanging in the map. <break time="3.0s"/>
+
+They called it the Great Wall, and for some years it was the largest single thing anyone had found. <break time="3.0s"/>
+
+Nothing dramatic is happening in it. It is not moving anywhere in particular. <break time="1.2s"/> It is simply an enormous number of galaxies arranged in a sheet, sitting there, minding themselves. <break time="3.0s"/>
+
+And now the other half of the picture, which is the part I find most restful. <break time="2.2s"/>
+
+The voids are large. Much larger than people expected. <break time="2.4s"/>
+
+There is one in the direction of the constellation Boötes that is around three hundred and thirty million light years across. <break time="1.8s"/> In a region that size you might reasonably expect a couple of thousand galaxies. <break time="2.0s"/>
+
+It has a few dozen. <break time="2.4s"/>
+
+It was found by accident, in nineteen eighty-one, by another team doing exactly the same patient business of measuring redshifts. <break time="2.0s"/> They kept expecting the galaxies to start again, and for a very long stretch of the survey, they did not. <break time="2.6s"/>
+
+Here is a thought that goes with it, and I like this one very much. <break time="1.2s"/> Suppose our own galaxy sat near the middle of a void like that. <break time="1.2s"/> The sky would look almost the same to the naked eye. <break time="1.8s"/> But the nearest other galaxies would be terribly distant and faint. <break time="1.2s"/> We might not have worked out that other galaxies existed at all, until well into the twentieth century. <break time="2.0s"/>
+
+A quiet neighbourhood. That is all it would be. <break time="3.0s"/>
+
+Voids are not actually empty, and what is in them is rather lovely. <break time="2.4s"/>
+
+They contain a scattering of galaxies — small ones, mostly, faint and blue, with plenty of gas still in them and no large neighbours anywhere. <break time="2.2s"/>
+
+Galaxies in crowded regions get stirred up. <break time="1.0s"/> They pass close to each other, they pull gas out of each other, they end up older and redder and more settled. <break time="2.2s"/>
+
+A void galaxy has had none of that. <break time="1.0s"/> It has simply sat in its own enormous room, making stars slowly out of the gas it started with. <break time="1.2s"/> Undisturbed, for the entire history of the universe. <break time="2.4s"/>
+
+They are the least eventful objects there are, and there are a surprising number of them. <break time="2.6s"/>
+
+And the voids themselves are still gently emptying. The little material left inside them continues to drift outward towards the walls, because that is where the pull is. <break time="2.0s"/>
+
+So they grow. Very slowly, over billions of years, the quiet rooms get larger. <break time="3.0s"/>
+
+So where does a pattern like this come from? <break time="1.2s"/> The answer is slow and it is very gentle. <break time="3.0s"/>
+
+Go back to when the universe was young and hot and almost completely smooth. <break time="1.0s"/> Almost. Not quite. <break time="2.2s"/>
+
+There were tiny variations in density from place to place — differences of about one part in a hundred thousand. <break time="1.8s"/> Faint ripples in an otherwise even sea. <break time="3.0s"/>
+
+Gravity does one thing with a difference like that. <break time="1.2s"/> It makes it bigger. <break time="2.0s"/>
+
+A region that is very slightly denser pulls very slightly harder. <break time="1.5s"/> So it gathers a little more. <break time="2.0s"/> Which makes it denser still. Which makes it pull harder still. <break time="2.0s"/>
+
+And the regions that were very slightly thinner give their material up to their neighbours, and become thinner, and give up more. <break time="2.0s"/>
+
+Run that for thirteen billion years and the ripples become this. <break time="1.5s"/> The dense parts become filaments and knots. <break time="1.0s"/> The thin parts drain, and keep draining, and become voids. <break time="2.4s"/>
+
+Nothing pushed anything. The material simply moved slowly downhill, for a very long time. <break time="3.0s"/>
+
+There is one more ingredient, and most of the web is made of it. <break time="2.4s"/>
+
+The galaxies you can see are not doing the structural work. <break time="1.2s"/> They are sitting on top of something far more massive that gives off no light at all. <break time="2.2s"/>
+
+That material is detected by what it pulls on. <break time="1.8s"/> Galaxies rotate too quickly for the stars they contain. <break time="1.2s"/> Clusters hold together more firmly than their visible mass allows. <break time="1.0s"/> Light passing near them bends more than it should. <break time="2.0s"/>
+
+All of those point the same way, and they point at a great deal of unseen mass, arranged in the same web. <break time="2.4s"/>
+
+So the honest picture is this. <break time="1.2s"/> There is an enormous invisible scaffold, shaped like a web. <break time="1.2s"/> And the visible galaxies are lights strung along it, marking out the shape of something you cannot see directly. <break time="3.0s"/>
+
+Rather like frost picking out a spider's web on a cold morning. <break time="1.8s"/> The frost is not the web. <break time="1.0s"/> It is what lets you see it. <break time="3.0s"/>
+
+And even the ordinary matter is mostly not in the galaxies, which took a long time to establish. <break time="2.2s"/>
+
+For years there was a straightforward accounting problem. <break time="1.0s"/> Theory said how much ordinary matter the universe should contain — the kind that atoms are made of. <break time="1.5s"/> Add up everything visible, in all the stars and all the gas in all the galaxies, and you get about half of that. <break time="2.4s"/>
+
+The other half was missing. <break time="1.5s"/> Not mysterious in nature, just unlocated. <break time="2.6s"/>
+
+The suspicion was that it was strung along the filaments as extremely thin gas. <break time="1.5s"/> Hot enough to be hard to see, and spread so wide that it barely registers. <break time="2.2s"/>
+
+Confirming that has taken twenty years of careful, indirect work. <break time="1.0s"/> Several different methods were used, with nothing much in common between them. <break time="1.0s"/> The answer has come out consistent. <break time="2.4s"/>
+
+The gas is there. The filaments are mostly gas, with galaxies as the occasional bright knot in it. <break time="2.2s"/>
+
+So the threads are real threads. <break time="1.0s"/> They are simply made of something too faint and too spread out to photograph. <break time="3.0s"/>
+
+And there is a scale built into the web that comes from sound, which is the loveliest fact in this whole subject. <break time="3.0s"/>
+
+In the very early universe, everything was a hot dense plasma. <break time="1.0s"/> Hot dense material carries pressure waves. Which is to say, it carries sound. <break time="2.4s"/>
+
+Those slightly denser ripples we mentioned each sent out a spherical sound wave, moving outward, very fast. <break time="2.2s"/>
+
+Then, about three hundred and eighty thousand years in, the universe cooled enough to become transparent. <break time="1.2s"/> The pressure that had been carrying the waves vanished. <break time="2.0s"/>
+
+And the waves stopped, exactly where they were. <break time="2.4s"/>
+
+Each one left a faint spherical shell of slightly denser material, at a fixed radius, around every original ripple. <break time="2.0s"/>
+
+That radius is still there in the arrangement of galaxies today. <break time="1.2s"/> Galaxies are very slightly more likely to be found about five hundred million light years apart than at any other separation. <break time="2.0s"/>
+
+A preferred distance, frozen into the sky, left over from a sound that stopped playing thirteen billion years ago. <break time="3.0s"/>
+
+That frozen distance turns out to be extremely useful, and it changed what the surveys were for. <break time="2.2s"/>
+
+Suppose you know how long a thing actually is. <break time="1.0s"/> Then you measure how long it looks. From those two numbers you can work out how far away it is. <break time="1.5s"/> That is how a ruler held at arm's length works. <break time="2.2s"/>
+
+The sound scale is a ruler of known length, and copies of it are scattered through the entire universe at every distance. <break time="2.6s"/>
+
+So a large enough map lets you measure the ruler nearby, and then further out, and then further still. <break time="1.8s"/> And that tells you how the expansion of space has behaved over time. <break time="2.6s"/>
+
+Which is why these surveys stopped being about drawing a picture and started being about measuring something. <break time="2.4s"/>
+
+The picture was the beginning. The ruler is the reason it kept going. <break time="3.0s"/>
+
+The equipment changed as the ambitions grew, and the way it worked is a lovely piece of craft. <break time="2.4s"/>
+
+For one of the big surveys they used aluminium plates. <break time="1.0s"/> Round, about eighty centimetres across, and three millimetres thick. <break time="2.2s"/>
+
+For each patch of sky, a plate was drilled with six hundred and forty holes. <break time="1.0s"/> The pattern of holes matched the exact positions of the galaxies in that patch. <break time="3.0s"/>
+
+Then, every afternoon, people would sit with the plate and plug an optical fibre into every one of those holes. <break time="1.5s"/> By hand. Six hundred and forty of them, one at a time. <break time="2.4s"/>
+
+That night the plate went into the telescope, and each fibre carried the light of one object down to a spectrograph. <break time="2.2s"/>
+
+The next afternoon, a different plate, a different patch of sky, and the whole thing plugged again. <break time="2.4s"/>
+
+Thousands of plates. Millions of holes. All of them plugged by somebody's hands. <break time="3.0s"/>
+
+The current instrument does the same job differently, and it is a rather beautiful machine. <break time="2.4s"/>
+
+It sits on a four-metre telescope in Arizona. <break time="1.2s"/> In its focal plane there are five thousand small robots. <break time="2.0s"/>
+
+Each robot is a little arm holding the end of one optical fibre. <break time="1.0s"/> On command, all five thousand of them move at once, and each one places its fibre precisely on top of one galaxy. <break time="2.0s"/>
+
+The whole field rearranges itself in a couple of minutes. <break time="1.2s"/> Then the telescope collects light. Then they all move again, into a completely different pattern, for the next patch of sky. <break time="3.0s"/>
+
+No plates. No plugging. Five thousand spectra at a time, all night, every clear night. <break time="2.4s"/>
+
+Earlier this year it finished the five-year map it was built to make. <break time="1.5s"/> Forty-seven million galaxies and quasars, each one with its own measured distance. <break time="3.0s"/>
+
+And because it is working well, it is carrying on. <break time="1.2s"/> There is more sky. <break time="3.0s"/>
+
+There is also an argument going on about what the map is showing, and it is unresolved. <break time="2.4s"/>
+
+The expansion of space is not slowing down. It has been speeding up for the last several billion years, and the thing responsible is called dark energy, which is mostly a name for not knowing. <break time="2.2s"/>
+
+The simplest assumption is that it is constant. <break time="1.2s"/> A fixed property of empty space, the same everywhere, the same at every moment. <break time="1.2s"/> That assumption has held up well for twenty-five years. <break time="2.4s"/>
+
+The new maps hint that it might not be constant. <break time="1.8s"/> When the ruler is measured at many different distances, and therefore at many different times, the numbers seem to prefer a version that changes slightly. <break time="2.4s"/>
+
+It is a hint. It is not a result. <break time="1.5s"/> The effect is small, it depends on how several independent measurements are combined, and careful people are careful about it. <break time="2.4s"/>
+
+If it holds up, a fairly settled piece of physics becomes unsettled again. <break time="1.0s"/> If it fades with more data, the simple version stands. <break time="2.2s"/>
+
+Either way the answer comes from the same place. <break time="2.0s"/> More galaxies, more distances, one at a time, on more clear nights. <break time="3.0s"/>
+
+There is a way to check all of this, and the check is done in a computer. <break time="2.4s"/>
+
+You take the early universe as it is actually observed — smooth, hot, with those one-part-in-a-hundred-thousand ripples. <break time="1.0s"/> You put in gravity, and the ordinary matter, and the unseen mass. <break time="2.4s"/>
+
+Then you let it run forward. <break time="1.0s"/> Billions of simulated years, in a box. <break time="2.6s"/>
+
+And what comes out is a web. Filaments. <break time="1.5s"/> Knots where filaments cross. Sheets between them. <break time="1.0s"/> Great rounded voids. <break time="2.4s"/>
+
+Nobody puts the web in. Nobody tells it to make filaments. <break time="1.8s"/> It falls out of the arithmetic, from a nearly smooth start, every time. <break time="2.2s"/>
+
+You can put a picture of the simulation next to a picture of the survey and struggle to say which is which. <break time="2.2s"/>
+
+That agreement is the quiet payoff of the whole enterprise. <break time="1.5s"/> Decades of people writing down one number per galaxy, and a physics that starts from almost nothing, arriving at the same shape. <break time="3.0s"/>
+
+It is worth knowing where we are in it, so let us place ourselves. <break time="2.2s"/>
+
+Our galaxy sits with a couple of dozen others in a small local gathering. <break time="1.5s"/> That gathering sits towards the edge of a much larger flow of galaxies, all drifting gently in a common direction. <break time="2.0s"/>
+
+In two thousand and fourteen a group mapped those motions and drew a boundary around everything moving together with us. <break time="1.5s"/> It came out at something like five hundred and twenty million light years across, containing perhaps a hundred thousand galaxies. <break time="2.4s"/>
+
+They gave it a Hawaiian name that means immeasurable heaven. <break time="2.0s"/>
+
+We are not at the middle of it. We are out on one of the strands, well off to one side, drifting slowly along with everything else nearby. <break time="3.0s"/>
+
+Now let us pull back and simply look at the whole thing for a while. <break time="2.4s"/>
+
+From far enough out it does look like a web, or like the inside of a sponge, or like foam. <break time="2.2s"/>
+
+Bright knots. Fine threads between them. <break time="1.0s"/> Broad pale sheets. And the great dark rounded rooms in between, taking up most of the volume. <break time="2.0s"/>
+
+It is entirely still. Not truly, but as good as. <break time="1.0s"/> The galaxies are moving, and the whole thing is very slowly stretching. <break time="1.0s"/> But the changes take hundreds of millions of years to amount to anything. <break time="2.4s"/>
+
+Nothing in that picture will look different tomorrow. <break time="1.5s"/> Nothing in it will look different in ten thousand years. <break time="2.2s"/>
+
+It is the largest arrangement there is, and it is doing nothing at all in any hurry. <break time="3.0s"/>
+
+And the thing that stays with me is not the web. <break time="1.2s"/> It is the way it was found. <break time="2.0s"/>
+
+Not by a single instrument, or a single night, or a single person. <break time="1.8s"/> By a very long series of ordinary evenings. <break time="2.4s"/>
+
+A cold dome. A list. One galaxy, half an hour, one number written down. <break time="1.2s"/> Then the next galaxy. <break time="2.0s"/>
+
+Nobody who plugged a fibre into a hole on a Tuesday afternoon was looking at the shape of the universe. <break time="1.5s"/> They were looking at a hole, and a fibre. <break time="3.0s"/>
+
+The shape only exists when enough of those afternoons are added together. <break time="1.5s"/> It could not have been guessed at, and it could not have been rushed. <break time="2.6s"/>
+
+There is something restful in that. <break time="1.5s"/> Very large things are found by very small, repeated, unremarkable acts. <break time="3.0s"/>
+
+You do not need to hold on to any of it. <break time="2.0s"/>
+
+Not the filaments, or the voids, or the frozen sound. <break time="1.2s"/> Not the five thousand small arms moving at once, in the dark, on a mountain in Arizona. <break time="2.6s"/>
+
+It is all there anyway, arranged exactly as it is, whether or not anyone is thinking about it tonight. <break time="1.0s"/> It was there long before this evening, and it will be there afterwards, changing at a rate too slow to matter. <break time="2.0s"/>
+
+Let the words go. Let the picture soften and drift apart. <break time="2.4s"/>
+
+There is nothing out there that needs you tonight. <break time="1.8s"/> There is nothing here that does either. <break time="2.0s"/>
+
+Only a very old, very large, very quiet arrangement of light, holding still. <break time="2.6s"/>
+
+Sleep now. Easy, and unhurried, and deep. <break time="2.4s"/>
+
+Goodnight. <break time="3.0s"/>

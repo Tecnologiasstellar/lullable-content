@@ -2,47 +2,45 @@
 # Everything in _generated/ is produced from here by: lullable.py build
 
 schemaVersion: 1
-storyID: the-deep-ocean-trenches
+storyID: the-midnight-sleeper-train-across-the-alps
 supersedes: null
 identityResolved: true
 identityNote: ''
 workflowStatus: draft
 accessDecision: premium
 episode:
-  id: 14
-  pillar: 3. Earth Science & Nature
+  id: 8
+  pillar: 4. Immersive Journeys & Slow Fiction
   tags:
   - sleep story
-  - earth science
-  - nature
-  - ocean
-  runtimeExempt: true
-  runtimeExemptNote: 43.2 min accepted as final by AV, 2026-08-15. Do not pad to reach the 45-min floor.
+  - journey
+  - train
+  - mountains
 card:
-  title: The Deep Ocean Trenches
-  subtitle: A slow descent past the last of the light, into the stillest water on earth
-  narrator: PENDING
+  title: The Midnight Sleeper Train Across the Alps
+  subtitle: A warm berth, a folder of sleeping passports, and mountains passing in the dark
+  narrator: Lullable
   genreIDs:
-  - gentle-nature
-  bedtimeNote: One slow direction, downward, and nothing waiting at the end of it. An easy thing to follow, and an easier thing to let go of.
-  bestFor: Letting the day end
-  sleepPace: Slow and sinking
-  atmosphere: Dark, cool, weightless
-  description: You slip beneath a starlit sea and sink, without effort, through the sunlit water and the long blue twilight into a darkness the sun has never reached. Small living lights blink on and drift away. Marine snow falls, soft and endless, all the way down to a floor of pale sediment older than memory. Further down still lie the trenches, where the pressure feels only like stillness and there is nowhere deeper to go.
-  colorHex: 0B1F33
-  accentHex: 5FA8C4
+  - cozy-tales
+  bedtimeNote: The signals are turning green all the way to the lake, and the attendant is awake so you need not be. The train knows the rest, and none of it is your business tonight.
+  bestFor: Being gently carried
+  sleepPace: Rocking and westward
+  atmosphere: Warm, amber, moonlit, moving
+  description: Board the midnight-blue sleeper in Vienna, hand your passport to the attendant, and let the train do the rest. Cross the Alps in a rocking berth while borders pass over you like weather, carriages are quietly sorted toward separate mornings, and a freight train washes past in the dark. Along the way, why the clickety-clack disappeared when the rails were welded into seamless miles, the 1884 tunnel bored from both ends to meet like a handshake, and the whole quiet profession of people who stay awake so that everyone else can sleep at seventy miles an hour.
+  colorHex: 151A2E
+  accentHex: D9B36C
   isFeatured: false
   trialPreviewEligible: false
   publishedAt: PENDING
   durationSeconds: null
 script:
-  narrationFile: null
+  narrationFile: narration.md
   ssmlFile: upload-to-elevenlabs.txt
-  words: 4190
-  breaks: 282
-  wordsPerBreak: 14.86
-  silenceSeconds: 460.9
-  estimatedMinutesAt118wpm: 43.2
+  words: 4369
+  breaks: 335
+  wordsPerBreak: 13.04
+  silenceSeconds: 608.5
+  estimatedMinutesAt118wpm: 47.2
 rights:
   status: verified
   evidence: Script written in-house for Lullable; narration rendered with our own licensed ElevenLabs voice; no third-party text, music or sound used. All rights owned by Lullable.

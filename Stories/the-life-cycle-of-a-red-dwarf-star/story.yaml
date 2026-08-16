@@ -2,47 +2,46 @@
 # Everything in _generated/ is produced from here by: lullable.py build
 
 schemaVersion: 1
-storyID: the-deep-ocean-trenches
+storyID: the-life-cycle-of-a-red-dwarf-star
 supersedes: null
 identityResolved: true
 identityNote: ''
 workflowStatus: draft
 accessDecision: premium
 episode:
-  id: 14
-  pillar: 3. Earth Science & Nature
+  id: 4
+  pillar: 1. Cosmology for Sleep
   tags:
   - sleep story
-  - earth science
-  - nature
-  - ocean
-  runtimeExempt: true
-  runtimeExemptNote: 43.2 min accepted as final by AV, 2026-08-15. Do not pad to reach the 45-min floor.
+  - space
+  - astronomy
+  - stars
+  - deep time
 card:
-  title: The Deep Ocean Trenches
-  subtitle: A slow descent past the last of the light, into the stillest water on earth
-  narrator: PENDING
+  title: The Life Cycle of a Red Dwarf Star
+  subtitle: The commonest star in the galaxy, burning so slowly that none has ever finished
+  narrator: Lullable
   genreIDs:
-  - gentle-nature
-  bedtimeNote: One slow direction, downward, and nothing waiting at the end of it. An easy thing to follow, and an easier thing to let go of.
-  bestFor: Letting the day end
-  sleepPace: Slow and sinking
-  atmosphere: Dark, cool, weightless
-  description: You slip beneath a starlit sea and sink, without effort, through the sunlit water and the long blue twilight into a darkness the sun has never reached. Small living lights blink on and drift away. Marine snow falls, soft and endless, all the way down to a floor of pale sediment older than memory. Further down still lie the trenches, where the pressure feels only like stillness and there is nowhere deeper to go.
-  colorHex: 0B1F33
-  accentHex: 5FA8C4
+  - cosmic-journeys
+  bedtimeNote: Not one red dwarf has ever run down. The universe is far too young. Every single one ever made is still quietly burning, and none of it needs watching tonight.
+  bestFor: Unwinding without hurry
+  sleepPace: Low, warm, unchanging
+  atmosphere: Dim, orange, warm, endless
+  description: Travel four light years to Proxima Centauri, a small orange star so dim you could look straight at it, and so ordinary that three quarters of the galaxy is made of stars like it. Inside, the whole body slowly turns itself over, which is why it will still be burning in ten trillion years. Along the way, why nature makes far more small stars than large ones, the women at Harvard who sorted the spectra by hand, the titanium chemistry that survives in a star's atmosphere, and the quiet fact that not one red dwarf anywhere has ever finished.
+  colorHex: 1C1013
+  accentHex: D97A55
   isFeatured: false
   trialPreviewEligible: false
   publishedAt: PENDING
   durationSeconds: null
 script:
-  narrationFile: null
+  narrationFile: narration.md
   ssmlFile: upload-to-elevenlabs.txt
-  words: 4190
-  breaks: 282
-  wordsPerBreak: 14.86
-  silenceSeconds: 460.9
-  estimatedMinutesAt118wpm: 43.2
+  words: 4281
+  breaks: 329
+  wordsPerBreak: 13.01
+  silenceSeconds: 648.5
+  estimatedMinutesAt118wpm: 47.1
 rights:
   status: verified
   evidence: Script written in-house for Lullable; narration rendered with our own licensed ElevenLabs voice; no third-party text, music or sound used. All rights owned by Lullable.

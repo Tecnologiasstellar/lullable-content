@@ -2,47 +2,45 @@
 # Everything in _generated/ is produced from here by: lullable.py build
 
 schemaVersion: 1
-storyID: the-deep-ocean-trenches
+storyID: the-building-of-a-cathedral
 supersedes: null
 identityResolved: true
 identityNote: ''
 workflowStatus: draft
 accessDecision: premium
 episode:
-  id: 14
-  pillar: 3. Earth Science & Nature
+  id: 11
+  pillar: 2. Ancient History & Gentle Lore
   tags:
   - sleep story
-  - earth science
-  - nature
-  - ocean
-  runtimeExempt: true
-  runtimeExemptNote: 43.2 min accepted as final by AV, 2026-08-15. Do not pad to reach the 45-min floor.
+  - history
+  - craft
+  - stone
 card:
-  title: The Deep Ocean Trenches
-  subtitle: A slow descent past the last of the light, into the stillest water on earth
-  narrator: PENDING
+  title: The Building of a Cathedral
+  subtitle: An evening among people entirely at peace with never finishing
+  narrator: Lullable
   genreIDs:
-  - gentle-nature
-  bedtimeNote: One slow direction, downward, and nothing waiting at the end of it. An easy thing to follow, and an easier thing to let go of.
-  bestFor: Letting the day end
-  sleepPace: Slow and sinking
-  atmosphere: Dark, cool, weightless
-  description: You slip beneath a starlit sea and sink, without effort, through the sunlit water and the long blue twilight into a darkness the sun has never reached. Small living lights blink on and drift away. Marine snow falls, soft and endless, all the way down to a floor of pale sediment older than memory. Further down still lie the trenches, where the pressure feels only like stillness and there is nowhere deeper to go.
-  colorHex: 0B1F33
-  accentHex: 5FA8C4
+  - ancient-worlds
+  bedtimeNote: Sixty years done, eighty to go, and every person on the site content with that arithmetic. Nothing in your life needs finishing by morning either.
+  bestFor: Setting worries down
+  sleepPace: Generational and calm
+  atmosphere: Stone, dusk, gold, chant
+  description: Walk into a thirteenth-century city at dusk, where the largest unfinished thing in the world has been rising for sixty years and will not be done for eighty more. Visit the lodge where stone dust turns gold in the doorway light, and the plaster tracing floor where three generations of masters have scratched their thinking at full size. Learn why the pointed arch lets stone float, how a timber centering is struck and a vault suddenly holds itself, and why lime mortar sets the pace of the whole century. Then watch the site put itself to bed, wrapped in straw against the frost, still quietly turning back into stone in the dark.
+  colorHex: 26222B
+  accentHex: C9A2C8
   isFeatured: false
   trialPreviewEligible: false
   publishedAt: PENDING
   durationSeconds: null
 script:
-  narrationFile: null
+  narrationFile: narration.md
   ssmlFile: upload-to-elevenlabs.txt
-  words: 4190
-  breaks: 282
-  wordsPerBreak: 14.86
-  silenceSeconds: 460.9
-  estimatedMinutesAt118wpm: 43.2
+  words: 4478
+  breaks: 333
+  wordsPerBreak: 13.45
+  silenceSeconds: 587.1
+  estimatedMinutesAt118wpm: 47.7
 rights:
   status: verified
   evidence: Script written in-house for Lullable; narration rendered with our own licensed ElevenLabs voice; no third-party text, music or sound used. All rights owned by Lullable.

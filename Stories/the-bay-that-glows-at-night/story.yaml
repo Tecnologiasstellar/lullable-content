@@ -2,47 +2,42 @@
 # Everything in _generated/ is produced from here by: lullable.py build
 
 schemaVersion: 1
-storyID: the-deep-ocean-trenches
+storyID: the-bay-that-glows-at-night
 supersedes: null
 identityResolved: true
 identityNote: ''
 workflowStatus: draft
-accessDecision: premium
+accessDecision: PENDING
 episode:
-  id: 14
+  id: 12
   pillar: 3. Earth Science & Nature
   tags:
   - sleep story
-  - earth science
-  - nature
-  - ocean
-  runtimeExempt: true
-  runtimeExemptNote: 43.2 min accepted as final by AV, 2026-08-15. Do not pad to reach the 45-min floor.
 card:
-  title: The Deep Ocean Trenches
-  subtitle: A slow descent past the last of the light, into the stillest water on earth
-  narrator: PENDING
+  title: The Bay That Glows at Night
+  subtitle: Adrift on a moonless Caribbean bay where every touch of the water answers in blue
+  narrator: Lullable
   genreIDs:
   - gentle-nature
-  bedtimeNote: One slow direction, downward, and nothing waiting at the end of it. An easy thing to follow, and an easier thing to let go of.
-  bestFor: Letting the day end
-  sleepPace: Slow and sinking
-  atmosphere: Dark, cool, weightless
-  description: You slip beneath a starlit sea and sink, without effort, through the sunlit water and the long blue twilight into a darkness the sun has never reached. Small living lights blink on and drift away. Marine snow falls, soft and endless, all the way down to a floor of pale sediment older than memory. Further down still lie the trenches, where the pressure feels only like stillness and there is nowhere deeper to go.
-  colorHex: 0B1F33
-  accentHex: 5FA8C4
+  bedtimeNote: No moon tonight, and that is the point. The paddle rests, the water glows wherever the fish go, and a whole island keeps its darkness like a garden.
+  bestFor: Dimming a busy mind
+  sleepPace: Adrift and moonless
+  atmosphere: Warm dark, blue sparks
+  description: Glide out through a tunnel of mangroves onto the brightest glowing bay in the world, on a night with no moon. Learn how a single living cell, one of seven hundred thousand in every gallon, keeps a tiny pantry of light and opens it at a touch. Watch fish write comet trails, hold a handful of blue stars, and float between two skies while warm rain sets the whole surface flickering. With Darwin at the ship's rail, the rare milky seas that glow from horizon to horizon, and an island community that tends its darkness the way other towns tend their gardens.
+  colorHex: 0A1622
+  accentHex: 63D9F2
   isFeatured: false
   trialPreviewEligible: false
   publishedAt: PENDING
   durationSeconds: null
 script:
-  narrationFile: null
+  narrationFile: narration.md
   ssmlFile: upload-to-elevenlabs.txt
-  words: 4190
-  breaks: 282
-  wordsPerBreak: 14.86
-  silenceSeconds: 460.9
-  estimatedMinutesAt118wpm: 43.2
+  words: 4262
+  breaks: 346
+  wordsPerBreak: 12.32
+  silenceSeconds: 597.9
+  estimatedMinutesAt118wpm: 46.1
 rights:
   status: verified
   evidence: Script written in-house for Lullable; narration rendered with our own licensed ElevenLabs voice; no third-party text, music or sound used. All rights owned by Lullable.

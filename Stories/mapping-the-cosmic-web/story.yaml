@@ -2,47 +2,46 @@
 # Everything in _generated/ is produced from here by: lullable.py build
 
 schemaVersion: 1
-storyID: the-deep-ocean-trenches
+storyID: mapping-the-cosmic-web
 supersedes: null
 identityResolved: true
 identityNote: ''
 workflowStatus: draft
 accessDecision: premium
 episode:
-  id: 14
-  pillar: 3. Earth Science & Nature
+  id: 5
+  pillar: 1. Cosmology for Sleep
   tags:
   - sleep story
-  - earth science
-  - nature
-  - ocean
-  runtimeExempt: true
-  runtimeExemptNote: 43.2 min accepted as final by AV, 2026-08-15. Do not pad to reach the 45-min floor.
+  - space
+  - astronomy
+  - cosmology
+  - surveys
 card:
-  title: The Deep Ocean Trenches
-  subtitle: A slow descent past the last of the light, into the stillest water on earth
-  narrator: PENDING
+  title: Mapping the Cosmic Web
+  subtitle: Decades of cold nights on mountains, one galaxy at a time, until a shape appeared
+  narrator: Lullable
   genreIDs:
-  - gentle-nature
-  bedtimeNote: One slow direction, downward, and nothing waiting at the end of it. An easy thing to follow, and an easier thing to let go of.
-  bestFor: Letting the day end
-  sleepPace: Slow and sinking
-  atmosphere: Dark, cool, weightless
-  description: You slip beneath a starlit sea and sink, without effort, through the sunlit water and the long blue twilight into a darkness the sun has never reached. Small living lights blink on and drift away. Marine snow falls, soft and endless, all the way down to a floor of pale sediment older than memory. Further down still lie the trenches, where the pressure feels only like stillness and there is nowhere deeper to go.
-  colorHex: 0B1F33
-  accentHex: 5FA8C4
+  - cosmic-journeys
+  bedtimeNote: The largest arrangement there is, and it does nothing in any hurry. It was found by people writing down one number a night, and none of it needs your attention tonight.
+  bestFor: Ending a long day
+  sleepPace: Slow, wide, still
+  atmosphere: Vast, dark, quiet, patient
+  description: Sit in a cold dome in Arizona in the 1980s, while somebody points a telescope at one faint smudge after another and writes down a number. Do that for years, plot the results, and a shape appears that nobody expected — galaxies strung along threads, gathered at knots, wrapped around enormous quiet rooms with almost nothing inside. Along the way, the mule driver who became one of the great observers, a sound from the early universe frozen into the sky as a ruler, and five thousand small robots that rearrange themselves in the dark.
+  colorHex: 10131F
+  accentHex: 8E9FD0
   isFeatured: false
   trialPreviewEligible: false
   publishedAt: PENDING
   durationSeconds: null
 script:
-  narrationFile: null
+  narrationFile: narration.md
   ssmlFile: upload-to-elevenlabs.txt
-  words: 4190
-  breaks: 282
-  wordsPerBreak: 14.86
-  silenceSeconds: 460.9
-  estimatedMinutesAt118wpm: 43.2
+  words: 4294
+  breaks: 326
+  wordsPerBreak: 13.17
+  silenceSeconds: 644.8
+  estimatedMinutesAt118wpm: 47.1
 rights:
   status: verified
   evidence: Script written in-house for Lullable; narration rendered with our own licensed ElevenLabs voice; no third-party text, music or sound used. All rights owned by Lullable.

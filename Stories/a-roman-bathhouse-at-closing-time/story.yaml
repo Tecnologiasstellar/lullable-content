@@ -2,47 +2,45 @@
 # Everything in _generated/ is produced from here by: lullable.py build
 
 schemaVersion: 1
-storyID: the-deep-ocean-trenches
+storyID: a-roman-bathhouse-at-closing-time
 supersedes: null
 identityResolved: true
 identityNote: ''
 workflowStatus: draft
 accessDecision: premium
 episode:
-  id: 14
-  pillar: 3. Earth Science & Nature
+  id: 9
+  pillar: 2. Ancient History & Gentle Lore
   tags:
   - sleep story
-  - earth science
-  - nature
-  - ocean
-  runtimeExempt: true
-  runtimeExemptNote: 43.2 min accepted as final by AV, 2026-08-15. Do not pad to reach the 45-min floor.
+  - history
+  - ancient world
+  - warmth
 card:
-  title: The Deep Ocean Trenches
-  subtitle: A slow descent past the last of the light, into the stillest water on earth
-  narrator: PENDING
+  title: A Roman Bathhouse at Closing Time
+  subtitle: Warm floors, running water, and the last lamps of an ordinary Roman evening
+  narrator: Lullable
   genreIDs:
-  - gentle-nature
-  bedtimeNote: One slow direction, downward, and nothing waiting at the end of it. An easy thing to follow, and an easier thing to let go of.
-  bestFor: Letting the day end
-  sleepPace: Slow and sinking
-  atmosphere: Dark, cool, weightless
-  description: You slip beneath a starlit sea and sink, without effort, through the sunlit water and the long blue twilight into a darkness the sun has never reached. Small living lights blink on and drift away. Marine snow falls, soft and endless, all the way down to a floor of pale sediment older than memory. Further down still lie the trenches, where the pressure feels only like stillness and there is nowhere deeper to go.
-  colorHex: 0B1F33
-  accentHex: 5FA8C4
+  - ancient-worlds
+  bedtimeNote: The fire is banked, the water runs on its own, and the night man is dozing at his post. The building keeps itself warm until morning, and none of it needs you.
+  bestFor: Warming down to sleep
+  sleepPace: Lamplit and settling
+  atmosphere: Steam, stone, amber light
+  description: Slip into a provincial Roman bathhouse at the gentlest hour of its day, just as the crowds drift home and the attendants light the evening lamps. Walk the warm rooms in their proper order, stand on a floor heated by a fire nobody sees, and listen to water that has been arriving from the hills without pause for a hundred years. Along the way, the bronze strigil and the oil, Seneca's famous list of bathhouse noises, the spring in Britain where the earth itself stokes the furnace, and the banked fire that will breathe warmth under the mosaics all night long.
+  colorHex: 2B1B12
+  accentHex: E0A96D
   isFeatured: false
   trialPreviewEligible: false
   publishedAt: PENDING
   durationSeconds: null
 script:
-  narrationFile: null
+  narrationFile: narration.md
   ssmlFile: upload-to-elevenlabs.txt
-  words: 4190
-  breaks: 282
-  wordsPerBreak: 14.86
-  silenceSeconds: 460.9
-  estimatedMinutesAt118wpm: 43.2
+  words: 4358
+  breaks: 345
+  wordsPerBreak: 12.63
+  silenceSeconds: 616.2
+  estimatedMinutesAt118wpm: 47.2
 rights:
   status: verified
   evidence: Script written in-house for Lullable; narration rendered with our own licensed ElevenLabs voice; no third-party text, music or sound used. All rights owned by Lullable.

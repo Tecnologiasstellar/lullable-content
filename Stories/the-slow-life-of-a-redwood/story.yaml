@@ -2,47 +2,45 @@
 # Everything in _generated/ is produced from here by: lullable.py build
 
 schemaVersion: 1
-storyID: the-deep-ocean-trenches
+storyID: the-slow-life-of-a-redwood
 supersedes: null
 identityResolved: true
 identityNote: ''
 workflowStatus: draft
 accessDecision: premium
 episode:
-  id: 14
+  id: 7
   pillar: 3. Earth Science & Nature
   tags:
   - sleep story
-  - earth science
   - nature
-  - ocean
-  runtimeExempt: true
-  runtimeExemptNote: 43.2 min accepted as final by AV, 2026-08-15. Do not pad to reach the 45-min floor.
+  - forest
+  - trees
 card:
-  title: The Deep Ocean Trenches
-  subtitle: A slow descent past the last of the light, into the stillest water on earth
-  narrator: PENDING
+  title: The Slow Life of a Redwood
+  subtitle: A night in the fog with the tallest living things there have ever been
+  narrator: Lullable
   genreIDs:
   - gentle-nature
-  bedtimeNote: One slow direction, downward, and nothing waiting at the end of it. An easy thing to follow, and an easier thing to let go of.
-  bestFor: Letting the day end
-  sleepPace: Slow and sinking
-  atmosphere: Dark, cool, weightless
-  description: You slip beneath a starlit sea and sink, without effort, through the sunlit water and the long blue twilight into a darkness the sun has never reached. Small living lights blink on and drift away. Marine snow falls, soft and endless, all the way down to a floor of pale sediment older than memory. Further down still lie the trenches, where the pressure feels only like stillness and there is nowhere deeper to go.
-  colorHex: 0B1F33
-  accentHex: 5FA8C4
+  bedtimeNote: The grove waters itself with fog while everyone sleeps, and has done for two thousand summers. Nothing in it moves faster than a slug, and nothing needs watching tonight.
+  bestFor: Quieting a full mind
+  sleepPace: Soft, green, ancient
+  atmosphere: Foggy, hushed, deep green
+  description: Walk into a coastal grove at dusk and stand at the foot of a tree over three hundred feet tall, wrapped in a foot of soft bark, older than the cathedrals. Follow one unbroken thread of water from the roots to the highest needle, and wait for the summer fog to roll in off the cold Pacific so the forest can water itself in the dark. Along the way, roots that graft into their neighbours and hold each other up, rings of trees standing where their elders stood, a ghost-white redwood fed by its family, and a garden of ferns and huckleberries growing a metre deep in the crown.
+  colorHex: 14201A
+  accentHex: A8C3A0
   isFeatured: false
   trialPreviewEligible: false
   publishedAt: PENDING
   durationSeconds: null
 script:
-  narrationFile: null
+  narrationFile: narration.md
   ssmlFile: upload-to-elevenlabs.txt
-  words: 4190
-  breaks: 282
-  wordsPerBreak: 14.86
-  silenceSeconds: 460.9
-  estimatedMinutesAt118wpm: 43.2
+  words: 4197
+  breaks: 335
+  wordsPerBreak: 12.53
+  silenceSeconds: 616.1
+  estimatedMinutesAt118wpm: 45.8
 rights:
   status: verified
   evidence: Script written in-house for Lullable; narration rendered with our own licensed ElevenLabs voice; no third-party text, music or sound used. All rights owned by Lullable.

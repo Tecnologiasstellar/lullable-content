@@ -2,47 +2,42 @@
 # Everything in _generated/ is produced from here by: lullable.py build
 
 schemaVersion: 1
-storyID: the-deep-ocean-trenches
+storyID: the-clockmaker-s-workshop
 supersedes: null
 identityResolved: true
 identityNote: ''
 workflowStatus: draft
-accessDecision: premium
+accessDecision: PENDING
 episode:
-  id: 14
-  pillar: 3. Earth Science & Nature
+  id: 13
+  pillar: 4. Immersive Journeys & Slow Fiction
   tags:
   - sleep story
-  - earth science
-  - nature
-  - ocean
-  runtimeExempt: true
-  runtimeExemptNote: 43.2 min accepted as final by AV, 2026-08-15. Do not pad to reach the 45-min floor.
 card:
-  title: The Deep Ocean Trenches
-  subtitle: A slow descent past the last of the light, into the stillest water on earth
-  narrator: PENDING
+  title: The Clockmaker's Workshop
+  subtitle: An evening among a hundred gentle clocks, none of them quite in agreement
+  narrator: Lullable
   genreIDs:
-  - gentle-nature
-  bedtimeNote: One slow direction, downward, and nothing waiting at the end of it. An easy thing to follow, and an easier thing to let go of.
-  bestFor: Letting the day end
-  sleepPace: Slow and sinking
-  atmosphere: Dark, cool, weightless
-  description: You slip beneath a starlit sea and sink, without effort, through the sunlit water and the long blue twilight into a darkness the sun has never reached. Small living lights blink on and drift away. Marine snow falls, soft and endless, all the way down to a floor of pale sediment older than memory. Further down still lie the trenches, where the pressure feels only like stillness and there is nowhere deeper to go.
-  colorHex: 0B1F33
-  accentHex: 5FA8C4
+  - cozy-tales
+  bedtimeNote: The shop is locked, the lamp is out, and every pendulum keeps its small agreement in the dark. Nobody has to keep time while they sleep. It is being handled.
+  bestFor: Ticking down to rest
+  sleepPace: Once a second, forever
+  atmosphere: Brass, oil, a hundred ticks
+  description: Step through a door with a brass bell into a small-town shop where a hundred clocks tick softly out of step, like rain on a roof. At the bench, an unhurried craftsman tends a movement of polished wheels with tools that have not changed in two centuries. Learn what a clock really is, a falling weight let down slowly over a week, and why two clocks on the same wall drift into perfect step with each other, a mystery first noticed from a sickbed in 1665. With painted moon dials, a drawer of orphaned keys that all fit something somewhere, winding day, house calls taken over tea, and the repairers' names penciled inside case doors, a century apart.
+  colorHex: 1C140E
+  accentHex: C98F3D
   isFeatured: false
   trialPreviewEligible: false
   publishedAt: PENDING
   durationSeconds: null
 script:
-  narrationFile: null
+  narrationFile: narration.md
   ssmlFile: upload-to-elevenlabs.txt
-  words: 4190
-  breaks: 282
-  wordsPerBreak: 14.86
-  silenceSeconds: 460.9
-  estimatedMinutesAt118wpm: 43.2
+  words: 4406
+  breaks: 342
+  wordsPerBreak: 12.88
+  silenceSeconds: 586.8
+  estimatedMinutesAt118wpm: 47.1
 rights:
   status: verified
   evidence: Script written in-house for Lullable; narration rendered with our own licensed ElevenLabs voice; no third-party text, music or sound used. All rights owned by Lullable.

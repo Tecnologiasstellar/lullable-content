@@ -2,47 +2,45 @@
 # Everything in _generated/ is produced from here by: lullable.py build
 
 schemaVersion: 1
-storyID: the-deep-ocean-trenches
+storyID: voyager-1-a-journey-to-interstellar-space
 supersedes: null
 identityResolved: true
 identityNote: ''
 workflowStatus: draft
 accessDecision: premium
 episode:
-  id: 14
-  pillar: 3. Earth Science & Nature
+  id: 3
+  pillar: 1. Cosmology for Sleep
   tags:
   - sleep story
-  - earth science
-  - nature
-  - ocean
-  runtimeExempt: true
-  runtimeExemptNote: 43.2 min accepted as final by AV, 2026-08-15. Do not pad to reach the 45-min floor.
+  - space
+  - spacecraft
+  - distance
 card:
-  title: The Deep Ocean Trenches
-  subtitle: A slow descent past the last of the light, into the stillest water on earth
-  narrator: PENDING
+  title: 'Voyager 1: A Journey to Interstellar Space'
+  subtitle: A small gold machine, forty-nine years out, still quietly drifting away from us
+  narrator: Lullable
   genreIDs:
-  - gentle-nature
-  bedtimeNote: One slow direction, downward, and nothing waiting at the end of it. An easy thing to follow, and an easier thing to let go of.
-  bestFor: Letting the day end
-  sleepPace: Slow and sinking
-  atmosphere: Dark, cool, weightless
-  description: You slip beneath a starlit sea and sink, without effort, through the sunlit water and the long blue twilight into a darkness the sun has never reached. Small living lights blink on and drift away. Marine snow falls, soft and endless, all the way down to a floor of pale sediment older than memory. Further down still lie the trenches, where the pressure feels only like stillness and there is nowhere deeper to go.
-  colorHex: 0B1F33
-  accentHex: 5FA8C4
+  - cosmic-journeys
+  bedtimeNote: It left in 1977 and it is not going anywhere in particular. It is simply still going, steadily, and none of it needs watching tonight.
+  bestFor: Settling into the quiet
+  sleepPace: Steady and outward
+  atmosphere: Dark, distant, gold, calm
+  description: Follow the most distant object people have ever made, out past Jupiter and Saturn and into the space between the stars. A gold record bolted to its side, a transmitter no brighter than a refrigerator bulb, and a whisper of radio that takes almost a full day to reach a dish in the Australian grass. Along the way, the gentle theft of a gravity assist, the choice to look at Titan, and the faint steady hum the gas out there turns out to make. Nothing about it is urgent. Nothing about it ever was.
+  colorHex: 0A0F1C
+  accentHex: C7B27A
   isFeatured: false
   trialPreviewEligible: false
   publishedAt: PENDING
   durationSeconds: null
 script:
-  narrationFile: null
+  narrationFile: narration.md
   ssmlFile: upload-to-elevenlabs.txt
-  words: 4190
-  breaks: 282
-  wordsPerBreak: 14.86
-  silenceSeconds: 460.9
-  estimatedMinutesAt118wpm: 43.2
+  words: 4301
+  breaks: 323
+  wordsPerBreak: 13.32
+  silenceSeconds: 613.1
+  estimatedMinutesAt118wpm: 46.7
 rights:
   status: verified
   evidence: Script written in-house for Lullable; narration rendered with our own licensed ElevenLabs voice; no third-party text, music or sound used. All rights owned by Lullable.

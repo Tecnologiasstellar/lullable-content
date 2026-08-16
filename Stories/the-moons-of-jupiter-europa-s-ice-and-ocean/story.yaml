@@ -2,47 +2,46 @@
 # Everything in _generated/ is produced from here by: lullable.py build
 
 schemaVersion: 1
-storyID: the-deep-ocean-trenches
+storyID: the-moons-of-jupiter-europa-s-ice-and-ocean
 supersedes: null
 identityResolved: true
 identityNote: ''
 workflowStatus: draft
 accessDecision: premium
 episode:
-  id: 14
-  pillar: 3. Earth Science & Nature
+  id: 2
+  pillar: 1. Cosmology for Sleep
   tags:
   - sleep story
-  - earth science
-  - nature
-  - ocean
-  runtimeExempt: true
-  runtimeExemptNote: 43.2 min accepted as final by AV, 2026-08-15. Do not pad to reach the 45-min floor.
+  - space
+  - astronomy
+  - moons
+  - ice
 card:
-  title: The Deep Ocean Trenches
-  subtitle: A slow descent past the last of the light, into the stillest water on earth
-  narrator: PENDING
+  title: 'The Moons of Jupiter: Europa''s Ice and Ocean'
+  subtitle: A small cracked moon of ice, and the dark ocean turning over beneath it
+  narrator: Lullable
   genreIDs:
-  - gentle-nature
-  bedtimeNote: One slow direction, downward, and nothing waiting at the end of it. An easy thing to follow, and an easier thing to let go of.
-  bestFor: Letting the day end
-  sleepPace: Slow and sinking
-  atmosphere: Dark, cool, weightless
-  description: You slip beneath a starlit sea and sink, without effort, through the sunlit water and the long blue twilight into a darkness the sun has never reached. Small living lights blink on and drift away. Marine snow falls, soft and endless, all the way down to a floor of pale sediment older than memory. Further down still lie the trenches, where the pressure feels only like stillness and there is nowhere deeper to go.
-  colorHex: 0B1F33
-  accentHex: 5FA8C4
+  - cosmic-journeys
+  bedtimeNote: There is no light down there and there never has been. The water simply turns over in the dark, as it has for a very long time, and none of it needs watching tonight.
+  bestFor: Sinking into sleep
+  sleepPace: Quiet and downward
+  atmosphere: Cold, white, deep, quiet
+  description: You travel out past Mars to a banded planet eleven times the width of the Earth, and find four small worlds standing beside it in a line. The second one is white, smooth as a billiard ball, and cracked all over like a glazed bowl. You learn why it has almost no craters, how a tiny wobble in its orbit keeps an ocean liquid where nothing should be, and how that ocean was found from the outside without anyone touching it. Then you sink through the ice into water that has never once seen light.
+  colorHex: 0E1A2B
+  accentHex: 9FC8DA
   isFeatured: false
   trialPreviewEligible: false
   publishedAt: PENDING
   durationSeconds: null
 script:
-  narrationFile: null
+  narrationFile: narration.md
   ssmlFile: upload-to-elevenlabs.txt
-  words: 4190
-  breaks: 282
-  wordsPerBreak: 14.86
-  silenceSeconds: 460.9
-  estimatedMinutesAt118wpm: 43.2
+  words: 4264
+  breaks: 347
+  wordsPerBreak: 12.29
+  silenceSeconds: 640.8
+  estimatedMinutesAt118wpm: 46.8
 rights:
   status: verified
   evidence: Script written in-house for Lullable; narration rendered with our own licensed ElevenLabs voice; no third-party text, music or sound used. All rights owned by Lullable.

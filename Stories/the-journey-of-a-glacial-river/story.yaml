@@ -2,47 +2,45 @@
 # Everything in _generated/ is produced from here by: lullable.py build
 
 schemaVersion: 1
-storyID: the-deep-ocean-trenches
+storyID: the-journey-of-a-glacial-river
 supersedes: null
 identityResolved: true
 identityNote: ''
 workflowStatus: draft
 accessDecision: premium
 episode:
-  id: 14
+  id: 10
   pillar: 3. Earth Science & Nature
   tags:
   - sleep story
-  - earth science
   - nature
-  - ocean
-  runtimeExempt: true
-  runtimeExemptNote: 43.2 min accepted as final by AV, 2026-08-15. Do not pad to reach the 45-min floor.
+  - water
+  - mountains
 card:
-  title: The Deep Ocean Trenches
-  subtitle: A slow descent past the last of the light, into the stillest water on earth
-  narrator: PENDING
+  title: The Journey of a Glacial River
+  subtitle: One snowflake's two-hundred-year trip from a silent snowfield to the sea
+  narrator: Lullable
   genreIDs:
   - gentle-nature
-  bedtimeNote: One slow direction, downward, and nothing waiting at the end of it. An easy thing to follow, and an easier thing to let go of.
-  bestFor: Letting the day end
-  sleepPace: Slow and sinking
-  atmosphere: Dark, cool, weightless
-  description: You slip beneath a starlit sea and sink, without effort, through the sunlit water and the long blue twilight into a darkness the sun has never reached. Small living lights blink on and drift away. Marine snow falls, soft and endless, all the way down to a floor of pale sediment older than memory. Further down still lie the trenches, where the pressure feels only like stillness and there is nowhere deeper to go.
-  colorHex: 0B1F33
-  accentHex: 5FA8C4
+  bedtimeNote: Water never has to choose. It goes the one way it can go, at whatever pace it is given, and tonight you can go with it, downhill the whole way.
+  bestFor: Drifting downstream
+  sleepPace: Downhill, all the way
+  atmosphere: Blue ice, cold water, calm
+  description: Follow a single snowflake from a windless high snowfield down to the salt water, a journey of two centuries in one direction only. Be buried into blue glacier ice with a breath of old sky sealed inside, ride the slowest river there is, and emerge at the ice cave where the young river is born, milky with the flour of ground mountains. Then down through the braided gravel plains, into a turquoise lake that sorts the sunlight, through pine forests where a small brown bird walks underwater, and out at last across the mudflats to the sea, where the sun is already lifting the water to begin again.
+  colorHex: 0F2230
+  accentHex: 7FD0C9
   isFeatured: false
   trialPreviewEligible: false
   publishedAt: PENDING
   durationSeconds: null
 script:
-  narrationFile: null
+  narrationFile: narration.md
   ssmlFile: upload-to-elevenlabs.txt
-  words: 4190
-  breaks: 282
-  wordsPerBreak: 14.86
-  silenceSeconds: 460.9
-  estimatedMinutesAt118wpm: 43.2
+  words: 4167
+  breaks: 332
+  wordsPerBreak: 12.55
+  silenceSeconds: 611.6
+  estimatedMinutesAt118wpm: 45.5
 rights:
   status: verified
   evidence: Script written in-house for Lullable; narration rendered with our own licensed ElevenLabs voice; no third-party text, music or sound used. All rights owned by Lullable.

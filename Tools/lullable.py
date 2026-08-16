@@ -27,6 +27,8 @@ PARA  = [(2.0,.30),(2.2,.22),(2.4,.28),(2.6,.12),(3.0,.08)]
 SEAM  = 3.0
 BREATH_MIN, BREATH_MAX = 5, 9
 MAX_WORDS_PER_BREAK = 15.0
+MIN_RUNTIME_MIN     = 45.0
+MAX_RUNTIME_MIN     = 65.0
 LONG_SENTENCE = 22
 
 # ------------------------------------------------------------- vocabularies --
@@ -587,10 +589,20 @@ def cmd_compile(a):
     est = words*(1.0/118.0) + silence/60.0
     _p("[compile] words=%d breaks=%d words/break=%.1f silence=%.1fmin est=~%.0fmin@118wpm"
        % (words, len(brk), wpb, silence/60, est))
-    if (wpb > MAX_WORDS_PER_BREAK or "!" in body) and not a.force:
+    p = os.path.join(d,"story.yaml")
+    m = load_manifest(d) if os.path.exists(p) else blank_manifest()
+    # A settled, deliberate exception to the 45-65 band, recorded in the manifest
+    # rather than in someone's memory — so a rebuild cannot silently undo it.
+    exempt = bool(_get(m, "episode.runtimeExempt"))
+    off_runtime = not (MIN_RUNTIME_MIN <= est <= MAX_RUNTIME_MIN) and not exempt
+    if exempt: _p("  note: runtime exempt — %s" % (_get(m,"episode.runtimeExemptNote") or "settled exception"))
+    if (wpb > MAX_WORDS_PER_BREAK or "!" in body or off_runtime) and not a.force:
         _p("\n  QUALITY GATE FAILED — nothing written.")
         if wpb > MAX_WORDS_PER_BREAK: _p("    * words/break %.1f above %.1f" % (wpb, MAX_WORDS_PER_BREAK))
         if "!" in body: _p("    * exclamation marks present")
+        if off_runtime:
+            _p("    * runtime ~%.1f min outside %.0f-%.0f min (add or cut whole sections, not sentence length)"
+               % (est, MIN_RUNTIME_MIN, MAX_RUNTIME_MIN))
         for n,s in long_sentences(text)[:12]:
             _p("    [%2d] %s" % (n, s[:96] + ("..." if len(s)>96 else "")))
         _p("  Split these sentences and run again. (--force overrides.)\n")
@@ -598,8 +610,6 @@ def cmd_compile(a):
     open(os.path.join(d,"upload-to-elevenlabs.txt"),"w",encoding="utf-8").write(body+"\n")
     readable = re.sub(r'\n{3,}','\n\n', re.sub(r'\n\s*§[^\n]*\n','\n\n',text)).strip()
     open(os.path.join(d,"script.md"),"w",encoding="utf-8").write(readable+"\n")
-    p = os.path.join(d,"story.yaml")
-    m = load_manifest(d) if os.path.exists(p) else blank_manifest()
     m["script"] = {"narrationFile": a.narration, "ssmlFile":"upload-to-elevenlabs.txt",
                    "words": words, "breaks": len(brk), "wordsPerBreak": round(wpb,2),
                    "silenceSeconds": round(silence,1), "estimatedMinutesAt118wpm": round(est,1)}
@@ -782,40 +792,6 @@ def build_tracker(root):
 
     ws.freeze_panes = "B5"; ws.auto_filter.ref = "A3:%s%d" % (LAST,last_row)
 
-    # ---- Read Me -------------------------------------------------------------
-    rm = wb.create_sheet("Read Me", 0); rm.sheet_view.showGridLines = False
-    for col,w in zip("ABCD",[30,34,52,4]): rm.column_dimensions[col].width = w
-    rr = [1]
-    def put(t, size=10, bold=False, italic=False, fill=None, h=None, color=INK):
-        rm.merge_cells(start_row=rr[0],start_column=1,end_row=rr[0],end_column=3)
-        c = rm.cell(row=rr[0],column=1,value=t)
-        c.font = Font(name=F,size=size,bold=bold,italic=italic,color=color)
-        c.alignment = Alignment("left","top",wrap_text=True)
-        if fill: c.fill = PatternFill("solid",fgColor=fill)
-        if h: rm.row_dimensions[rr[0]].height = h
-        rr[0]+=1
-    put("LULLABLE STORY TRACKER", 15, bold=True, fill=BAND, h=30, color="FFFFFF")
-    put("This workbook is a REPORT, not a form.", 11, bold=True, h=20)
-    put("Every cell is generated from Stories/<storyID>/story.yaml. If you type here, your edit is "
-        "erased the next time the tracker is rebuilt. To change a story, edit its story.yaml and run "
-        "lullable.py tracker.", 9, h=42)
-    rr[0]+=1
-    put("Workflow status vs access", 10, bold=True, h=18)
-    put("workflowStatus is where the story is in production: draft, rendered, qa-approved, staging, "
-        "published. accessDecision is the separate commercial question: PENDING, free or premium. "
-        "The access value the app sees stays PENDING until the story reaches staging with a decision "
-        "made, so nothing can be published under an accidental tier.", 9, h=54)
-    rr[0]+=1
-    put("The gates", 10, bold=True, h=18)
-    for gid,title,_fn in GATES:
-        rm.cell(row=rr[0],column=1,value=gid+"  "+title).font = Font(name=F,size=9,bold=True)
-        rm.cell(row=rr[0],column=1).alignment = Alignment("left","top")
-        rr[0]+=1
-    rr[0]+=1
-    put("Each stage requires a subset of gates. PUBLISH READY means all seventeen pass. Gates check "
-        "real things: files on disk, sha256 checksums, ffprobe encoding, that the card duration matches "
-        "the measured audio, that QA and a physical device signed off, and that Supabase actually has "
-        "the row.", 9, h=54)
     return wb, rows, len(dirs)
 
 # ============================================================ NEW COMMANDS ===
