@@ -35,7 +35,7 @@ card:
     settle into the ring plane and stay.'
   colorHex: 1B2436
   accentHex: E8C89A
-  isFeatured: false
+  isFeatured: true
   trialPreviewEligible: false
   publishedAt: '2026-08-14T17:53:16Z'
   durationSeconds: 2125.557
