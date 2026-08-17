@@ -19,7 +19,7 @@ episode:
 card:
   title: The Bakery Before Dawn
   subtitle: Warm flour, a slow rising, and the long quiet hours before a town wakes
-  narrator: PENDING
+  narrator: Lullable
   genreIDs:
   - cozy-tales
   bedtimeNote: Someone else is already awake, working gently in the warm, at something that cannot be hurried. There is nothing here you need to do.
@@ -48,7 +48,7 @@ rights:
 render:
   provider: elevenlabs
   voiceId: PENDING
-  voiceName: PENDING
+  voiceName: Lullable_Femal
   model: PENDING
   settings:
     stability: null
