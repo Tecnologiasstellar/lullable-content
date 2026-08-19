@@ -1,0 +1,90 @@
+# CANONICAL MANIFEST — edit this file and nothing else.
+# Everything in _generated/ is produced from here by: lullable.py build
+
+schemaVersion: 1
+storyID: aristotle-the-greatest-philosopher
+supersedes: null
+identityResolved: true
+identityNote: ''
+workflowStatus: staging
+accessDecision: free
+episode:
+  id: 19
+  pillar: 5. History & Human Ingenuity
+  tags:
+  - sleep story
+  - philosophy
+  - ancient greece
+card:
+  title: Aristotle, the Greatest Philosopher
+  subtitle: A quiet journey through reason, virtue, and the good life
+  narrator: Andrew
+  genreIDs:
+  - ancient-worlds
+  bedtimeNote: One calm mind, examined slowly — reason, virtue, and the good life, laid out like a quiet evening walk. Nothing here needs to be solved tonight.
+  bestFor: Curious, wandering minds
+  sleepPace: Slow and steady
+  atmosphere: Marble, lamplight, reason
+  description: You settle in beside one of history’s calmest minds. This is a slow exploration of Aristotle’s life and ideas — how he watched the natural world, what he taught about knowledge, character, and friendship, and why his patient way of thinking still shapes how we understand ourselves. The questions are old, the pace is gentle, and nothing needs deciding tonight.
+  colorHex: 26384A
+  accentHex: B89A6A
+  isFeatured: false
+  trialPreviewEligible: false
+  publishedAt: '2026-08-09T00:00:00Z'
+  durationSeconds: 2640
+script:
+  narrationFile: narration.md
+  ssmlFile: upload-to-elevenlabs.txt
+  words: 0
+  breaks: 0
+  wordsPerBreak: 0.0
+  silenceSeconds: 0.0
+  estimatedMinutesAt118wpm: 0.0
+rights:
+  status: verified
+  evidence: Adopted legacy episode (pre-pipeline, imported 2026-08-09). In-house script narrated with a licensed ElevenLabs voice; commercial rights verified at import per PRODUCTION_AUDIO_CANDIDATE_EVIDENCE.md in the app repo archive. No third-party text, music or sound.
+  evidenceFiles: []
+render:
+  provider: elevenlabs
+  voiceId: PENDING
+  voiceName: PENDING
+  model: PENDING
+  settings:
+    stability: null
+    similarityBoost: null
+    style: null
+    speakerBoost: false
+  historyItemId: PENDING
+  projectId: PENDING
+  renderedAt: '2026-08-10T03:26:00Z'
+audio:
+  master:
+    filename: master.wav
+    sha256: 0cdd5b93c0c66b72529b0f208dc1d1bd38d88bd3fc5056632c8a4afdd4eb906e
+    bytes: 232814972
+    durationSeconds: 2639.625
+    codec: pcm_s16le
+    sampleRate: 44100
+    channels: 1
+  delivery:
+    filename: delivery.m4a
+    sha256: c57bee527752767e2ae1dfc5d49121dc0c064faae6691d93eebb764c16db29b3
+    bytes: 31120093
+    durationSeconds: 2639.625
+    codec: aac
+    profile: LC
+    sampleRate: 44100
+    channels: 1
+    bitRateKbps: 93
+qa:
+  audioApproved: false
+  approvedBy: ''
+  approvedAt: ''
+  deviceAccepted: false
+  deviceNotes: ''
+publish:
+  audioAssetID: audio-aristotle-en-v1-aac96
+  supabaseAudioUploaded: true
+  catalogRowUpserted: true
+  storageBucket: sleep-stories-public
+  storageObjectPath: aristotle-the-greatest-philosopher/audio-aristotle-en-v1-aac96/story.m4a

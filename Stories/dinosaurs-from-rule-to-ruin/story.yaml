@@ -1,0 +1,90 @@
+# CANONICAL MANIFEST — edit this file and nothing else.
+# Everything in _generated/ is produced from here by: lullable.py build
+
+schemaVersion: 1
+storyID: dinosaurs-from-rule-to-ruin
+supersedes: null
+identityResolved: true
+identityNote: ''
+workflowStatus: staging
+accessDecision: premium
+episode:
+  id: 20
+  pillar: 5. History & Human Ingenuity
+  tags:
+  - sleep story
+  - dinosaurs
+  - deep time
+card:
+  title: 'The Dinosaurs: From Rule to Ruin'
+  subtitle: A 44-minute journey through deep time
+  narrator: Sleep Stories by AVP
+  genreIDs:
+  - ancient-worlds
+  bedtimeNote: Deep time moves slowly here. Every age in this story settled into stillness long ago, and nothing in it asks anything of you tonight.
+  bestFor: Drifting through time
+  sleepPace: Slow and steady
+  atmosphere: Ancient, vast, hushed
+  description: Drift through the rise, reign, and quiet fading of the dinosaurs in a calm story of deep time. You move slowly across changing continents and warm shallow seas, through long ages when giants grazed in the light of an older sun, and follow the traces they left behind in stone — a world that never fully ended, still with us in every morning’s birdsong.
+  colorHex: 26384A
+  accentHex: B89A6A
+  isFeatured: false
+  trialPreviewEligible: false
+  publishedAt: '2026-08-11T02:11:43Z'
+  durationSeconds: 2690
+script:
+  narrationFile: narration.md
+  ssmlFile: upload-to-elevenlabs.txt
+  words: 0
+  breaks: 0
+  wordsPerBreak: 0.0
+  silenceSeconds: 0.0
+  estimatedMinutesAt118wpm: 0.0
+rights:
+  status: verified
+  evidence: Adopted legacy episode (pre-pipeline, imported 2026-08-10). Founder confirmation on 2026-08-10 that AVP owns the commercial streaming rights for this audio (recorded in AudioImport/dinosaurs-premium-draft.json in the app repo). No third-party text, music or sound.
+  evidenceFiles: []
+render:
+  provider: elevenlabs
+  voiceId: PENDING
+  voiceName: PENDING
+  model: PENDING
+  settings:
+    stability: null
+    similarityBoost: null
+    style: null
+    speakerBoost: false
+  historyItemId: PENDING
+  projectId: PENDING
+  renderedAt: '2026-08-10T19:46:00Z'
+audio:
+  master:
+    filename: master.wav
+    sha256: 30edfe827cdaf5c8d0261af696b52269f61cd87e83552368ff303f2699eb5fb3
+    bytes: 237281374
+    durationSeconds: 2690.265
+    codec: pcm_s16le
+    sampleRate: 44100
+    channels: 1
+  delivery:
+    filename: delivery.m4a
+    sha256: c8ee4c8ec05a98e24fae440349aa45a82370bad89966194231f9210ebf41ed5e
+    bytes: 31653612
+    durationSeconds: 2690.264
+    codec: aac
+    profile: LC
+    sampleRate: 44100
+    channels: 1
+    bitRateKbps: 93
+qa:
+  audioApproved: false
+  approvedBy: ''
+  approvedAt: ''
+  deviceAccepted: false
+  deviceNotes: ''
+publish:
+  audioAssetID: audio-dinosaurs-en-v1-aac96
+  supabaseAudioUploaded: true
+  catalogRowUpserted: true
+  storageBucket: sleep-stories-premium
+  storageObjectPath: dinosaurs-from-rule-to-ruin/audio-dinosaurs-en-v1-aac96/story.m4a

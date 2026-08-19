@@ -6,7 +6,7 @@ storyID: the-bakery-before-dawn
 supersedes: null
 identityResolved: true
 identityNote: ''
-workflowStatus: draft
+workflowStatus: staging
 accessDecision: free
 episode:
   id: 17
@@ -31,8 +31,8 @@ card:
   accentHex: E3B778
   isFeatured: false
   trialPreviewEligible: false
-  publishedAt: PENDING
-  durationSeconds: null
+  publishedAt: '2026-08-16T15:26:08Z'
+  durationSeconds: 2174
 script:
   narrationFile: narration.md
   ssmlFile: upload-to-elevenlabs.txt
@@ -47,36 +47,36 @@ rights:
   evidenceFiles: []
 render:
   provider: elevenlabs
-  voiceId: PENDING
+  voiceId: oiVoyoYP9iXTljaT7XBd
   voiceName: Lullable_Femal
   model: PENDING
   settings:
     stability: null
     similarityBoost: null
     style: null
-    speakerBoost: null
+    speakerBoost: false
   historyItemId: PENDING
   projectId: PENDING
-  renderedAt: PENDING
+  renderedAt: '2026-08-16T14:53:00Z'
 audio:
   master:
-    filename: PENDING
-    sha256: PENDING
-    bytes: null
-    durationSeconds: null
-    codec: null
-    sampleRate: null
-    channels: null
+    filename: ElevenLabs_the-bakery-before-dawn.wav
+    sha256: 669b7a6524c72bc01860a4e8bcc77db014e5934925b3564d9610e5c4e68814e6
+    bytes: 191715586
+    durationSeconds: 2173.646
+    codec: pcm_s16le
+    sampleRate: 44100
+    channels: 1
   delivery:
-    filename: PENDING
-    sha256: PENDING
-    bytes: null
-    durationSeconds: null
-    codec: null
-    profile: null
-    sampleRate: null
-    channels: null
-    bitRateKbps: null
+    filename: delivery.m4a
+    sha256: 13ae9d81663c2948018b10bd19dee4f5139cffb5c9b859e5a2f7b84e03be1559
+    bytes: 22371192
+    durationSeconds: 2173.645
+    codec: aac
+    profile: LC
+    sampleRate: 44100
+    channels: 1
+    bitRateKbps: 81
 qa:
   audioApproved: false
   approvedBy: ''
@@ -84,6 +84,8 @@ qa:
   deviceAccepted: false
   deviceNotes: ''
 publish:
-  audioAssetID: PENDING
-  supabaseAudioUploaded: false
-  catalogRowUpserted: false
+  audioAssetID: audio-the-bakery-before-dawn-en-v1-aac96
+  supabaseAudioUploaded: true
+  catalogRowUpserted: true
+  storageBucket: sleep-stories-public
+  storageObjectPath: the-bakery-before-dawn/audio-the-bakery-before-dawn-en-v1-aac96/story.m4a

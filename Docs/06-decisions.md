@@ -435,3 +435,35 @@ Ingenuity`, `6. Craft & Quiet Work`.
 They stay. `pillar` is free text, no gate reads it, and `the-rings-of-saturn` is
 published — rewriting a published manifest for an editorial label would mean
 re-publishing for no user-visible gain. New episodes use the current four pillars.
+
+---
+
+## D27 — Legacy staging rows adopted into the manifest pipeline  *(settled 2026-08-19)*
+
+Staging Supabase carried three published rows that predated this pipeline:
+`aristotle-the-greatest-philosopher` (free), `dinosaurs-from-rule-to-ruin`
+(premium) and `the-bakery-before-dawn` (published free 2026-08-16 while its
+manifest still said draft). App-repo DECISIONS.md §19 (founder, 2026-08-16)
+decided adoption over archival. This pass executed it: all three now have
+manifests whose audio blocks were computed by `closeout` from the actual bytes.
+
+The adopted delivery files are **byte-identical to the uploaded assets** — the
+masters still existed, and re-encoding with the recovered importer recipe
+(ffmpeg native AAC, `aac_low`, 44.1 kHz mono 96k, `+faststart`) reproduced the
+recorded sha256s exactly (`c57bee52…` aristotle, `c8ee4c8e…` dinosaurs; bakery's
+prepared delivery matched `13ae9d81…` without re-encoding).
+
+All three sit at `workflowStatus: staging` — true: the rows are live on staging —
+with their real gaps visible instead of hidden: G12/G07 (render provenance was
+never recorded; voice/model/history unknown for the two legacy renders, model +
+history-id missing for bakery), G13 (no QA device sign-off has ever happened),
+and for the two legacy episodes G17 (no narration text exists in the pipeline;
+the scripts were never in this system). These stories reach `published` the
+normal way or not at all.
+
+Adoption rule this establishes: a legacy episode is adopted by scaffolding with
+`new --story-id <existing-id>` (identity is the published ID, never a new one),
+placing the recovered master + delivery in `audio/`, and running `closeout` —
+never by typing audio figures into YAML. Card copy may be brought up to
+editorial targets in the manifest; the staging row catches up at the next
+publish sync.
