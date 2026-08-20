@@ -6,7 +6,7 @@ storyID: the-lighthouse-on-the-windswept-island
 supersedes: null
 identityResolved: true
 identityNote: ''
-workflowStatus: rendered
+workflowStatus: published
 accessDecision: premium
 episode:
   id: 22
@@ -32,7 +32,7 @@ card:
   accentHex: E8B84B
   isFeatured: false
   trialPreviewEligible: false
-  publishedAt: PENDING
+  publishedAt: '2026-08-20T19:30:00Z'
   durationSeconds: 1468
 script:
   narrationFile: narration.md
@@ -79,12 +79,12 @@ audio:
     channels: 1
     bitRateKbps: 65
 qa:
-  audioApproved: false
-  approvedBy: ''
-  approvedAt: ''
-  deviceAccepted: false
-  deviceNotes: ''
+  audioApproved: true
+  approvedBy: AV
+  approvedAt: '2026-08-20T21:03:42Z'
+  deviceAccepted: true
+  deviceNotes: QA waived by AV without a device listen, 2026-08-20 — approved on his explicit instruction, not an actual audio review.
 publish:
-  audioAssetID: PENDING
-  supabaseAudioUploaded: false
-  catalogRowUpserted: false
+  audioAssetID: audio-the-lighthouse-on-the-windswept-island-en-v1-aac96
+  supabaseAudioUploaded: true
+  catalogRowUpserted: true

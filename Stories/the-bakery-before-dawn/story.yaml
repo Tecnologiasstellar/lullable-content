@@ -6,7 +6,7 @@ storyID: the-bakery-before-dawn
 supersedes: null
 identityResolved: true
 identityNote: ''
-workflowStatus: staging
+workflowStatus: published
 accessDecision: free
 episode:
   id: 17
@@ -78,13 +78,13 @@ audio:
     channels: 1
     bitRateKbps: 61
 qa:
-  audioApproved: false
-  approvedBy: ''
-  approvedAt: ''
-  deviceAccepted: false
-  deviceNotes: ''
+  audioApproved: true
+  approvedBy: AV
+  approvedAt: '2026-08-20T21:03:34Z'
+  deviceAccepted: true
+  deviceNotes: QA waived by AV without a device listen, 2026-08-20 — approved on his explicit instruction, not an actual audio review.
 publish:
-  audioAssetID: audio-the-bakery-before-dawn-en-v1-aac96
+  audioAssetID: audio-the-bakery-before-dawn-en-v2-aac96
   supabaseAudioUploaded: true
   catalogRowUpserted: true
   storageBucket: sleep-stories-public
