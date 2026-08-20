@@ -7,7 +7,7 @@ supersedes: null
 identityResolved: true
 identityNote: ''
 workflowStatus: rendered
-accessDecision: PENDING
+accessDecision: premium
 episode:
   id: 26
   pillar: 1. Cosmology for Sleep
@@ -62,22 +62,22 @@ render:
 audio:
   master:
     filename: master.wav
-    sha256: 2ee83b6ce28f2ddbaeefbfb2d81a83f982c23908f82e6a41529e3dfe4b16d0e4
-    bytes: 186501198
-    durationSeconds: 2114.525
+    sha256: 88284228d32e673a3ef239a8387d994a7b77343143077b10243551d221d7874e
+    bytes: 186503118
+    durationSeconds: 2114.547
     codec: pcm_s16le
     sampleRate: 44100
     channels: 1
   delivery:
     filename: delivery.m4a
-    sha256: b60a75d92508b1c955b5c867c58b37560a15431bd5b9b0f44ce76e135b4b3ff3
-    bytes: 15550190
-    durationSeconds: 2114.6
+    sha256: 1cd5334890fc3aca8df518eaed9dc1ab10a2eba373d0ebfcff3c787252b25d2a
+    bytes: 25740433
+    durationSeconds: 2114.62
     codec: aac
     profile: LC
     sampleRate: 44100
     channels: 1
-    bitRateKbps: 57
+    bitRateKbps: 96
 qa:
   audioApproved: false
   approvedBy: ''

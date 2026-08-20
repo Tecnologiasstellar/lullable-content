@@ -7,7 +7,7 @@ supersedes: null
 identityResolved: true
 identityNote: ''
 workflowStatus: rendered
-accessDecision: PENDING
+accessDecision: premium
 episode:
   id: 24
   pillar: 2. Ancient History & Gentle Lore
@@ -62,22 +62,22 @@ render:
 audio:
   master:
     filename: master.wav
-    sha256: 82998dca2efb57a513ae4f42c450139648e0d3f4b778dd155ed26c7f8d49d577
-    bytes: 53231616
-    durationSeconds: 603.532
+    sha256: 92053cb50ab5e66d7efc4f65a1e375fadf54b6a9095ec74275f09c1f744cb733
+    bytes: 141623246
+    durationSeconds: 1605.705
     codec: pcm_s16le
     sampleRate: 44100
     channels: 1
   delivery:
     filename: delivery.m4a
-    sha256: 3855e16dec8d5ea127e55dd6118fe8b913f2a1bd9841ec4948e60f7edeed1291
-    bytes: 11813563
-    durationSeconds: 1605.7
+    sha256: 894baca642c3502e3edab700664ba975ecc8c8318e9e6273d35fee377adcece0
+    bytes: 19546648
+    durationSeconds: 1605.704
     codec: aac
     profile: LC
     sampleRate: 44100
     channels: 1
-    bitRateKbps: 57
+    bitRateKbps: 96
 qa:
   audioApproved: false
   approvedBy: ''

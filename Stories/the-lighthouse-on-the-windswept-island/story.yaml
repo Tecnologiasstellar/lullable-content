@@ -7,7 +7,7 @@ supersedes: null
 identityResolved: true
 identityNote: ''
 workflowStatus: rendered
-accessDecision: PENDING
+accessDecision: premium
 episode:
   id: 22
   pillar: 6. Craft & Quiet Work
@@ -20,7 +20,7 @@ episode:
 card:
   title: The Lighthouse on the Windswept Island
   subtitle: A keeper winds the weight, lights the lens, and keeps the coast safe till dawn
-  narrator: Read by Patrick from Block Island, Rhode Island
+  narrator: Read by Patrick, Block Island
   genreIDs:
   - cozy-tales
   bedtimeNote: Somewhere on a cold coast tonight, a lighthouse keeper is turning a great patient light so that strangers can pass safely by. You are as watched-over as any ship out there.

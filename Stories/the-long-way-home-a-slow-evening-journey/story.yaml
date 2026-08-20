@@ -7,7 +7,7 @@ supersedes: null
 identityResolved: true
 identityNote: ''
 workflowStatus: rendered
-accessDecision: PENDING
+accessDecision: premium
 episode:
   id: 23
   pillar: 4. Immersive Journeys & Slow Fiction
@@ -62,22 +62,22 @@ render:
 audio:
   master:
     filename: master.wav
-    sha256: 288146b1a24aeb80763bddf73745b9288ab01308077bf41b9f7efdb73f16abeb
-    bytes: 179253326
-    durationSeconds: 2032.35
+    sha256: 85753245c085d96ffecd4b2a6ee95b3b63a33e7f78ae10d531619192ee60ab1d
+    bytes: 179255246
+    durationSeconds: 2032.372
     codec: pcm_s16le
     sampleRate: 44100
     channels: 1
   delivery:
     filename: delivery.m4a
-    sha256: 65c09caf4a29b7ce5064d4f738cf749fc36d92b88fbd14b124e2ff663d07f9b0
-    bytes: 14488935
-    durationSeconds: 2032.4
+    sha256: 730f90fdcd7824e475db3469012c10447f386d0e19a859a47c94c2e06b6706b1
+    bytes: 24740192
+    durationSeconds: 2032.403
     codec: aac
     profile: LC
     sampleRate: 44100
     channels: 1
-    bitRateKbps: 56
+    bitRateKbps: 96
 qa:
   audioApproved: false
   approvedBy: ''
