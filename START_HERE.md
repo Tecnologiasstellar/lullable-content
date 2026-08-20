@@ -46,9 +46,11 @@ lullable_audio/
 │       └── _generated/               never edit anything in here
 │           ├── story-card.yaml
 │           ├── tracker-row.tsv
-│           ├── catalog-payload.json
-│           ├── neon-metadata.json
-│           └── publish-commands.sh
+│           ├── catalog-staging.sql
+│           ├── catalog-production.sql
+│           ├── publish-staging.sh
+│           ├── publish-production.sh
+│           └── neon-metadata.json
 │
 └── Templates/                        the original standard, for reference
 ```
@@ -63,7 +65,9 @@ Ask Claude to run these; you never need to type them yourself.
 |---|---|
 | `new "<Title>" --genre <g>` | Scaffolds a new episode folder with a manifest and a narration skeleton. |
 | `compile Stories/<id>` | Turns the narration into the paused upload file. Refuses if the cadence is off. |
-| `validate --all` | Checks every story against 17 gates and says exactly what is blocking each one. |
+| `validate --all` | Checks every story against 18 gates and says exactly what is blocking each one. |
+| `publish <id> --env staging` | Ships one story to one Supabase project. Production is refused until staging is verified. |
+| `verify <id> --env staging` | Compares the live row and audio object against the manifest. |
 | `status` | One screen: every story, its stage, and what is blocking it. |
 | `build --all` | Regenerates everything in `_generated/` from the manifests. |
 | `tracker` | Rebuilds the spreadsheet from all manifests. |
@@ -92,9 +96,9 @@ nobody chose.
 
 ---
 
-## The 17 gates
+## The 18 gates
 
-Each stage requires a subset. `PUBLISH READY` means all seventeen pass.
+Each stage requires a subset. `PUBLISH READY` means all eighteen pass or are n/a.
 
 | | Gate | Checks |
 |---|---|---|
@@ -190,5 +194,7 @@ the workflow and calls this file, rather than carrying a duplicate of it.
 
 ## Is this folder forever?
 
-No. It is the working home while the catalogue is small. The plan is Supabase, and
-`_generated/catalog-payload.json` is already shaped for that move.
+No. It is the working home while the catalogue is small. The move to Supabase has
+happened: `publish --env staging|production` uploads the audio and upserts the
+catalog row, and all 26 stories are live. This folder stays the authoring side —
+manifests, narration, SSML — and Supabase is the serving side.

@@ -114,7 +114,7 @@ The old "publish ready" formula checked that cells were non-empty and
 well-spelled. It could not tell whether the audio existed, whether it was the
 right encoding, or whether the duration on the card matched the file.
 
-The seventeen gates hash the bytes, run `ffprobe`, and compare the card against
+The gates hash the bytes, run `ffprobe`, and compare the card against
 the measurement. Verified with ten deliberate mutations, each caught by exactly
 the gate that should catch it.
 
@@ -467,3 +467,119 @@ placing the recovered master + delivery in `audio/`, and running `closeout` —
 never by typing audio figures into YAML. Card copy may be brought up to
 editorial targets in the manifest; the staging row catches up at the next
 publish sync.
+
+---
+
+## D28 — Two Supabase environments, and a promote step that is actually enforced  *(settled 2026-08-20)*
+
+Until today `workflowStatus: staging` was a label on a manifest, not a place.
+D27 used the word "staging" loosely for exactly this reason: there was one
+database, and everything published went straight into it. All 26 stories reached
+production by hand-written SQL, unreviewed anywhere first.
+
+There are now two projects, and the pipeline knows the difference:
+
+| env | ref | name |
+|---|---|---|
+| staging | `lpzejlunebjogkfvzzdk` | lullable-staging |
+| production | `wamsqjzstezqfpemhucm` | lullable-production |
+
+Refs live in `Tools/environments.json`, so no ref is ever typed into a command.
+
+**Staging was eight migrations behind.** It had 4 of 12 — no `bedtime_note`,
+`best_for`, `sleep_pace`, `atmosphere`, no `sigil`/`glow_hex`/`base_hex`, and no
+`database_environment` table. Publishing to it would have failed on the first
+insert. The remaining eight were pushed from the app repo, and staging's
+one-row `database_environment` was set to `sandbox` per app-repo DECISIONS §26.
+Staging is now schema-identical to production: same 12 migrations, same 23
+`stories` columns, same two buckets.
+
+**The publish block is now two-environment.** The old shape recorded two
+booleans and no timestamps:
+
+    publish: {audioAssetID, supabaseAudioUploaded, catalogRowUpserted}
+
+The new one records where the object is and when each environment took it:
+
+    publish:
+      audioAssetID / bucketID / objectPath    # identical in both environments
+      staging:    {uploadedAt, rowUpsertedAt, verifiedAt}
+      production: {uploadedAt, rowUpsertedAt, verifiedAt}
+
+`bucketID` and `objectPath` for the 26 were read out of the live production
+catalog, not derived, so the manifests record what is actually there.
+
+**The backfill does not pretend.** The old schema never recorded upload times,
+so they are not recoverable. `production.uploadedAt`/`rowUpsertedAt` were
+backfilled from `card.publishedAt` — an editorial date standing in for an
+unrecorded event, not a measurement — and `staging.*` was left empty for all 26,
+because it is simply true that none of them ever passed through staging. Every
+backfilled manifest carries `legacyDirectToProduction: true`, which is the
+honest record of that bypass rather than a hole papered over with invented
+timestamps. The flag is dropped the first time a story really goes through
+staging, and G14 starts applying to it from then on.
+
+**G14 was split and G18 added.** G14 is now "staging landed" (n/a for legacy
+stories); G18 is "production landed", and it additionally requires
+`staging.verifiedAt`. That single condition is the enforcement: production can
+only be reached by promoting something already proven in staging. `publish --env
+production` refuses before it touches the network so the error is readable.
+G03 now validates the publish timestamps instead of the two removed booleans.
+
+**Generated SQL replaced a payload that never matched the schema.**
+`catalog_payload()` built a flat JSON body against columns that do not exist.
+`catalog_sql(m, env)` emits the real thing, modelled on the hand-written publish
+SQL that is known to work: a storage-object precheck, a genre upsert, the story
+upsert, the audio-asset upsert, the genre links, the activation update, and a
+post-publication assertion — all in one transaction. Every statement is
+`ON CONFLICT DO UPDATE` (or `DO NOTHING`), because promoting to production means
+running it against a row that already exists.
+
+Three things it deliberately does not touch: `sigil`, `glow_hex` and `base_hex`
+are owned by the app's design layer, appear in no manifest, and would be nulled
+on every republish if this wrote them. `publication_status` is left out of the
+story upsert's `DO UPDATE` so a live row is never momentarily demoted to draft.
+Genre rows are `ON CONFLICT DO NOTHING` so publishing a story can never rewrite
+the presentation of a genre that is already live.
+
+**Storage objects are immutable.** `supabase storage cp` has no overwrite and
+returns 409 when the key exists — which is the normal promote case, since the
+bytes are already there. `publish` now checks the object first: absent, it
+uploads; present with matching bytes, it skips; present with *different* bytes,
+it refuses and says so. A re-render needs a new asset id, never a swap of bytes
+underneath an id the catalog already points at.
+
+**`--linked` is not optional** on every storage and db command. Without it the
+CLI quietly addresses a local Docker shadow database instead of the project.
+`supabase db query`, `storage cp` and `storage ls` have no `--project-ref` flag
+in CLI 2.113.0, so `link` stays a separate step; storage commands additionally
+require `--experimental`, and `db query` does not.
+
+Both projects were renamed on 2026-08-20 (the old names were `lullable-production`
+for what is now staging, and `sleep-stories-avp` for what is now production). A
+rename changes only the dashboard label — ref, host and keys are untouched.
+
+**Proven end to end** on `the-hidden-clocks-of-the-night-sky`: published to a
+staging project that had never seen it (fresh insert), verified 11/11 against
+the manifest, then promoted to production against the row that was already there
+(`ON CONFLICT DO UPDATE`). Production's only actual change was gaining the
+`story_genres` link it had been missing. The audit trigger fired in staging
+(`story-created` + `publication-state-changed`) and correctly did not fire in
+production, because `audit_story_publication_change()` guards on
+`is distinct from` and none of the three audited columns changed.
+
+**A gap this surfaced, since closed:** only 4 of 26 production stories had a
+`story_genres` row — the hand-written publishes skipped the table entirely — and
+the `gentle-nature` genre row had never been created anywhere. The 21 remaining
+links were backfilled by `Tools/backfill_story_genres.py`, generated from
+`card.genreIDs` rather than typed, every statement `ON CONFLICT DO NOTHING` so
+the three genre rows that already existed kept their live presentation. All 26
+stories are now linked, and each link was cross-checked against its manifest:
+ancient-worlds 7, cosmic-journeys 8, cozy-tales 6, gentle-nature 5. Stories
+published through `publish` fix their own link, so this script is a one-off for
+the backlog, not part of the flow.
+
+**The process from here.** `closeout` → `approve` (real device listen) →
+`publish --env staging` → `verify --env staging` → look at staging →
+`publish --env production` → `verify --env production`. Anything skipping
+staging is refused by the tool, not by convention.

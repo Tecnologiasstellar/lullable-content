@@ -139,8 +139,9 @@ Not files — **story IDs and schema.**
 
 - A published `storyID` becomes the key favorites and progress hang off. It can
   never change afterwards.
-- `_generated/catalog-payload.json` is shaped for the Supabase `stories` table.
-- Four card fields — `bedtimeNote`, `bestFor`, `sleepPace`, `atmosphere` — exist
-  on the phone but not yet in the hosted catalog. App-side work.
+- `_generated/catalog-<env>.sql` is the actual upsert against the deployed
+  `stories`, `audio_assets`, `genres` and `story_genres` tables.
+- `sigil`, `glow_hex` and `base_hex` are app-side design columns. This pipeline
+  reads and writes neither — they would be nulled on every republish if it did.
 
 Keep that interface explicit and the halves can move independently.
