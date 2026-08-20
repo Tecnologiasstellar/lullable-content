@@ -31,3 +31,16 @@ __pycache__/
 
 # local interpreter for Tools/lullable.py — see Docs/06-decisions.md D22
 .venv/
+
+# Supabase CLI local link state — supabase/.temp/pooler-url holds a live DB
+# connection string with credentials. Never commit this.
+supabase/.temp/
+
+# AWS credentials for the Polly renderer. These are real keys — the tools
+# beside them are worth versioning, the keys never are.
+AWS_Polly/*.csv
+AWS_Polly/*.rtf
+
+# Superseded ElevenLabs-era masters (~1.1 GB) staged for deletion. The audio
+# rules above miss the split .chunk_* files, so name the folder explicitly.
+Stories/_to_delete/
