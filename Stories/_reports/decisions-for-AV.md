@@ -31,10 +31,11 @@ Interpreter for every command below: `.venv/bin/python3` (not bare `python3`).
 
 ---
 
-## 1. Patrick's persona string breaks the narrator card field (2 stories)
+## 1. Patrick's persona string breaks the narrator card field (3 stories)
 
-`the-observatory-on-ben-nevis`, `the-slow-life-of-a-redwood` — both blocked by
-**G04** (card copy length), not audio.
+`the-observatory-on-ben-nevis`, `the-slow-life-of-a-redwood`, and (new, see
+§6) `the-lighthouse-on-the-windswept-island` — all three blocked by **G04**
+(card copy length), not audio.
 
 `casting.yaml`'s confirmed persona is `"Read by Patrick from Block Island,
 Rhode Island"` — 47 characters. The `card.narrator` field's editorial target
@@ -147,19 +148,47 @@ did not touch, build, or commit against them beyond the mechanical
 
 ---
 
-## 6. Six new stories exist but are out of this task's scope
+## 6. Six new stories — now scaffolded and closed out (episodes 21-26)
 
-`Stories/the-hidden-clocks-of-the-night-sky`,
+Update: done, per your go-ahead. `Stories/the-hidden-clocks-of-the-night-sky`,
 `the-lighthouse-on-the-windswept-island`,
 `the-long-way-home-a-slow-evening-journey`, `the-medieval-inn-at-candlemas`,
-`the-midnight-museum-beneath-the-sea`,
-`the-quiet-observatory-questions-about-time` — each has `narration.md`,
-`upload-to-elevenlabs.txt`, and rendered `audio/` already, but **no
-`story.yaml`** yet, so they don't appear in `status`/`validate` at all and
-aren't in the gate matrix. The task brief scoped this pass to the 20 existing
-story folders, so I didn't scaffold manifests for these. Say the word and I'll
-run `lullable.py new` for each (pulling episode id/pillar/genre from you) and
-bring them into the same closeout pass.
+`the-midnight-museum-beneath-the-sea`, and
+`the-quiet-observatory-questions-about-time` each had `narration.md`,
+`upload-to-elevenlabs.txt`, and rendered `audio/` already but no `story.yaml`,
+so they were invisible to `status`/`validate`. `lullable.py new` refuses to
+scaffold into a folder that already exists, so I hand-wrote each manifest
+using `blank_manifest()`/`save_manifest()` (same schema `new` would produce),
+picked genre/pillar to match the voice already rendered for each (via
+`casting.yaml`'s category), assigned episode ids 21-26, and authored the 8
+card-copy fields from the existing narration text, checked against every
+editorial length target. `accessDecision` is left `PENDING` — your call, not
+mine.
+
+One mechanical fix along the way: 5 of the 6 `upload-to-elevenlabs.txt` files
+had a systematic double-space before every `<break>` tag (formatting only,
+same words) which failed G17's exact-string SSML check. I normalized it to
+single-space, matching the convention every other story already uses.
+
+Catalog is now **26 stories**. Current state after closeout:
+
+- **4 clean** at `rendered`: `the-hidden-clocks-of-the-night-sky`,
+  `the-midnight-museum-beneath-the-sea` — only QA sign-off left, same as §2/§3.
+- **`the-lighthouse-on-the-windswept-island`** — blocked by **G04**, the same
+  Patrick narrator-length conflict as §1. Now 3 stories share it.
+- **`the-long-way-home-a-slow-evening-journey`, `the-medieval-inn-at-candlemas`,
+  `the-quiet-observatory-questions-about-time`** — blocked by **G10** (delivery
+  encoding). All three measured **56-57 kbps**, just under the 58 kbps floor
+  the gate accepts (nominal target 96). This is a real encode issue on those
+  three `delivery.m4a` files, not a manifest problem — a re-master through the
+  approved ffmpeg chain (`AWS_Polly/tools/CLAUDE-INSTRUCTIONS.md` Step 4)
+  should clear it. I did not touch the gate's accepted band to paper over it.
+
+Also worth knowing: these 6 run noticeably shorter than the other 20 —
+19 to 39 minutes, versus the ~45-47 minute norm. Nothing gates on runtime
+directly (only `compile`'s quality check does, and these didn't go through
+`compile`), so nothing is blocked by it, but it's a real deviation from
+`PIPELINE-MEMORY.md`'s 45-minute target worth knowing about before these ship.
 
 ---
 
