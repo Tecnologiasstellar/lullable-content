@@ -86,5 +86,14 @@ qa:
   deviceNotes: QA waived by AV without a device listen, 2026-08-20 — approved on his explicit instruction, not an actual audio review.
 publish:
   audioAssetID: audio-mapping-the-cosmic-web-en-v1-aac96
-  supabaseAudioUploaded: true
-  catalogRowUpserted: true
+  bucketID: sleep-stories-premium
+  objectPath: mapping-the-cosmic-web/audio-mapping-the-cosmic-web-en-v1-aac96/story.m4a
+  staging:
+    uploadedAt: ''
+    rowUpsertedAt: ''
+    verifiedAt: ''
+  production:
+    uploadedAt: '2026-08-20T19:30:00Z'
+    rowUpsertedAt: '2026-08-20T19:30:00Z'
+    verifiedAt: ''
+  legacyDirectToProduction: true
