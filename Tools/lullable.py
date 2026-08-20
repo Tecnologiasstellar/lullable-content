@@ -245,6 +245,11 @@ def g07_no_placeholders(m, d):
         elif isinstance(o,str) and o.strip() and is_placeholder(o):
             found.append(path)
     walk(m, "")
+    # render.projectId/chapterId are ElevenLabs Studio concepts with no Polly
+    # equivalent; g12_render already accepts historyItemId alone as sufficient
+    # provenance for non-Studio renders, so don't flag them here either.
+    if _get(m,"render.provider") == "amazon-polly":
+        found = [p for p in found if p not in ("render.projectId","render.chapterId")]
     return ("FAIL","placeholder values remain: " + ", ".join(sorted(found))) if found else ("PASS","no placeholders anywhere")
 
 def _audio_path(d, m, which):
