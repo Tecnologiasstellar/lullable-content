@@ -917,10 +917,17 @@ def cmd_closeout(a):
     mpr, dpr = ffprobe(mp), ffprobe(dp)
     if not dpr:
         _p("cannot close out: ffprobe could not read the delivery file"); sys.exit(1)
+    old_delivery_sha = _get(m, "audio.delivery.sha256")
+    new_delivery_sha = sha256_of(dp)
+    audio_changed = (not is_placeholder(old_delivery_sha)) and old_delivery_sha != new_delivery_sha
+    if audio_changed and m.get("qa", {}).get("audioApproved"):
+        m["qa"] = {"audioApproved": False, "approvedBy": "", "approvedAt": "",
+                   "deviceAccepted": False, "deviceNotes": ""}
+        _p("  !! delivery audio changed since the last approval — QA sign-off reset, re-listen required")
     m["audio"]["master"] = {"filename": master, "sha256": sha256_of(mp), "bytes": (mpr or {}).get("bytes"),
         "durationSeconds": (mpr or {}).get("durationSeconds"), "codec": (mpr or {}).get("codec"),
         "sampleRate": (mpr or {}).get("sampleRate"), "channels": (mpr or {}).get("channels")}
-    m["audio"]["delivery"] = {"filename": delivery, "sha256": sha256_of(dp), "bytes": dpr["bytes"],
+    m["audio"]["delivery"] = {"filename": delivery, "sha256": new_delivery_sha, "bytes": dpr["bytes"],
         "durationSeconds": dpr["durationSeconds"], "codec": dpr["codec"], "profile": dpr["profile"],
         "sampleRate": dpr["sampleRate"], "channels": dpr["channels"], "bitRateKbps": dpr["bitRateKbps"]}
     m["card"]["durationSeconds"] = int(round(dpr["durationSeconds"]))

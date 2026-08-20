@@ -81,11 +81,11 @@ audio:
     channels: 1
     bitRateKbps: 69
 qa:
-  audioApproved: true
-  approvedBy: Founder/operator
-  approvedAt: '2026-08-14T16:32:33Z'
-  deviceAccepted: true
-  deviceNotes: PASS ALL on authorized physical iPhone; see canonical device-qa.md.
+  audioApproved: false
+  approvedBy: ''
+  approvedAt: ''
+  deviceAccepted: false
+  deviceNotes: ''
 publish:
   audioAssetID: audio-the-rings-of-saturn-en-v2-aac96
   supabaseAudioUploaded: true
