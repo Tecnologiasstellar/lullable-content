@@ -6,7 +6,8 @@ CANONICAL SOURCE OF TRUTH: Stories/<storyID>/story.yaml
 Everything else is generated FROM it and must never be hand-edited:
     _generated/tracker-row.tsv     one line for the Excel tracker
     _generated/story-card.yaml     the app-facing card
-    _generated/catalog-payload.json  the Supabase upsert body
+    _generated/catalog-<env>.sql     the Supabase upsert, per environment
+    _generated/publish-<env>.sh      the shipping commands, per environment
     _generated/neon-metadata.json    the Neon record
     Lullable_Story_Card_Tracker.xlsx rebuilt from all manifests
 
@@ -15,8 +16,13 @@ Subcommands
     validate  run the staged gate model over one story or all
     build     regenerate every derived artifact from story.yaml
     tracker   rebuild the Excel workbook from all manifests
+    publish   ship one story to one Supabase environment
+    verify    confirm what actually landed there matches the manifest
+
+Content reaches production one way: publish --env staging, verify --env staging,
+then publish --env production. Docs/06-decisions.md D28.
 """
-import argparse, hashlib, json, os, random, re, subprocess, sys, datetime
+import argparse, hashlib, io, json, os, random, re, subprocess, sys, datetime
 import yaml
 
 SCHEMA_VERSION = 1
@@ -45,6 +51,31 @@ BITRATE_MIN_KBPS, BITRATE_MAX_KBPS = 58, 140   # 96 nominal; VBR on speech drift
                                                # band catches real mistakes (32k, 320k stereo)
                                                # without failing normal encoder variation
 DURATION_TOLERANCE_S   = 1.0
+
+# ------------------------------------------------------------ environments --
+# Two Supabase projects, one catalogue. Refs are not secret — `supabase projects
+# list` prints them — the file exists so a ref is never typed into a command by
+# hand, which is how content ends up in the wrong database.
+ENVIRONMENTS = json.load(io.open(os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                                              "environments.json"), encoding="utf-8"))
+ENV_NAMES = ("staging", "production")
+
+# Which storage bucket the audio lands in, decided by the access decision and
+# nowhere else. The premium bucket is private; the app is never shown an object
+# path for it, so this mapping is the whole of the free/premium storage split.
+BUCKETS = {"free": "sleep-stories-public", "premium": "sleep-stories-premium"}
+
+# story_genres has an FK to genres, so a genre row must exist before a story can
+# be linked to it. Inserted ON CONFLICT DO NOTHING: publishing a story must never
+# rewrite the presentation of a genre that is already live. Values come from the
+# app's bundled SleepStories/Resources/catalog.json; sort_order follows the live
+# table's 10/20/30 spacing, with gentle-nature at 15 to preserve the app's order.
+GENRE_ROWS = {
+ "ancient-worlds": ("Ancient Worlds","Myths, ruins, and distant civilizations","building.columns.fill","455071",10),
+ "gentle-nature":  ("Gentle Nature","Rain, forests, oceans, and quiet trails","leaf.fill","46665B",15),
+ "cosmic-journeys":("Cosmic Journeys","Drift through stars and deep time","sparkles","514B76",20),
+ "cozy-tales":     ("Cozy Tales","Warm rooms, soft weather, familiar places","house.fill","765746",30),
+}
 
 CARD_TARGETS = {   # field: (editorial min, editorial max, hard cap)
     "title":(18,48,200), "subtitle":(35,90,300), "narrator":(2,32,160),
@@ -153,8 +184,9 @@ def blank_manifest():
                             "sampleRate":None,"channels":None,"bitRateKbps":None}},
       "qa": {"audioApproved": False,"approvedBy":"","approvedAt":"",
              "deviceAccepted": False,"deviceNotes":""},
-      "publish": {"audioAssetID":"PENDING","supabaseAudioUploaded": False,
-                  "catalogRowUpserted": False},
+      "publish": {"audioAssetID":"PENDING", "bucketID":"PENDING", "objectPath":"PENDING",
+                  "staging":    {"uploadedAt":"","rowUpsertedAt":"","verifiedAt":""},
+                  "production": {"uploadedAt":"","rowUpsertedAt":"","verifiedAt":""}},
     }
 
 # ================================================================== GATES ====
@@ -205,9 +237,18 @@ def g03_enums(m, d):
         for g in gids:
             if g not in GENRES: bad.append("genreID=%r" % g)
     for b in ("card.isFeatured","card.trialPreviewEligible","qa.audioApproved",
-              "qa.deviceAccepted","publish.supabaseAudioUploaded","publish.catalogRowUpserted"):
+              "qa.deviceAccepted"):
         if not isinstance(_get(m,b), bool): bad.append("%s must be a real boolean" % b)
-    return ("FAIL", "; ".join(bad)) if bad else ("PASS","all enums and booleans valid")
+    for env in ENV_NAMES:
+        block = _get(m,"publish."+env)
+        if not isinstance(block, dict):
+            bad.append("publish.%s must be a block of timestamps" % env); continue
+        for f in ("uploadedAt","rowUpsertedAt","verifiedAt"):
+            v = block.get(f)
+            if not isinstance(v, str): bad.append("publish.%s.%s must be a string" % (env,f))
+            elif v and parse_iso_utc(v) is None:
+                bad.append("publish.%s.%s is not ISO-8601 UTC" % (env,f))
+    return ("FAIL", "; ".join(bad)) if bad else ("PASS","all enums, booleans and publish stamps valid")
 
 def g04_copy(m, d):
     """Authored copy only. `narrator` is set by voice assignment at render time,
@@ -350,12 +391,34 @@ def g13_qa(m, d):
     if not _get(m,"qa.deviceAccepted"): bad.append("not accepted on a physical device")
     return ("FAIL","; ".join(bad)) if bad else ("PASS","approved by %s; device accepted" % _get(m,"qa.approvedBy"))
 
-def g14_publish(m, d):
+def _identity_missing(m):
+    """The three publish facts that are the same in every environment."""
+    return [f for f in ("audioAssetID","bucketID","objectPath")
+            if is_placeholder(_get(m,"publish."+f))]
+
+def _env_missing(m, env):
     bad = []
-    if is_placeholder(_get(m,"publish.audioAssetID")): bad.append("audioAssetID not minted")
-    if not _get(m,"publish.supabaseAudioUploaded"): bad.append("audio not uploaded to Supabase")
-    if not _get(m,"publish.catalogRowUpserted"): bad.append("catalog row not upserted")
-    return ("FAIL","; ".join(bad)) if bad else ("PASS","asset %s live in catalog" % _get(m,"publish.audioAssetID"))
+    for f in ("uploadedAt","rowUpsertedAt"):
+        v = _get(m,"publish.%s.%s" % (env,f)) or ""
+        if not v: bad.append("%s.%s not recorded" % (env,f))
+        elif parse_iso_utc(v) is None: bad.append("%s.%s is not ISO-8601 UTC" % (env,f))
+    return bad
+
+def g14_staging(m, d):
+    """Landed in staging. NA for the stories that predate the staging project —
+    see Docs/06-decisions.md D28. That flag is deliberately visible in the
+    manifest rather than backfilled with invented timestamps."""
+    if _get(m,"publish.legacyDirectToProduction"):
+        return "NA","predates the staging environment — went straight to production"
+    bad = ["%s not minted" % f for f in _identity_missing(m)] + _env_missing(m,"staging")
+    return ("FAIL","; ".join(bad)) if bad else ("PASS","asset %s live in staging" % _get(m,"publish.audioAssetID"))
+
+def g18_production(m, d):
+    """Landed in production — and got there by promotion, not by a direct write."""
+    bad = ["%s not minted" % f for f in _identity_missing(m)] + _env_missing(m,"production")
+    if not _get(m,"publish.legacyDirectToProduction") and not (_get(m,"publish.staging.verifiedAt") or ""):
+        bad.append("staging.verifiedAt not recorded — production must be a promote, never a direct write")
+    return ("FAIL","; ".join(bad)) if bad else ("PASS","asset %s live in production" % _get(m,"publish.audioAssetID"))
 
 def g15_rights(m, d):
     st = _get(m,"rights.status")
@@ -398,17 +461,23 @@ GATES = [
  ("G11","duration matches audio", g11_duration),
  ("G12","render manifest",        g12_render),
  ("G13","QA + device sign-off",   g13_qa),
- ("G14","Supabase + catalog",     g14_publish),
+ ("G14","staging landed",        g14_staging),
  ("G15","commercial rights",      g15_rights),
  ("G16","access decision final",  g16_access),
  ("G17","SSML integrity",         g17_ssml),
+ ("G18","production landed",     g18_production),
 ]
+
+# Fit to be pushed to ANY environment. Excludes G14/G18 on purpose: those record
+# that a push already happened, so requiring them here would be circular.
+PUBLISHABLE_GATES = ["G01","G02","G03","G04","G05","G15","G17",
+                     "G08","G09","G10","G11","G12","G13","G16"]
 
 STAGE_GATES = {
  "draft":       ["G01","G02","G03","G04","G05","G15","G17"],
  "rendered":    ["G01","G02","G03","G04","G05","G15","G17","G08","G09","G10","G11","G12"],
  "qa-approved": ["G01","G02","G03","G04","G05","G15","G17","G08","G09","G10","G11","G12","G13"],
- "staging":     ["G01","G02","G03","G04","G05","G15","G17","G08","G09","G10","G11","G12","G13","G16"],
+ "staging":     PUBLISHABLE_GATES + ["G14"],
  "published":   [g[0] for g in GATES],
 }
 
@@ -423,11 +492,11 @@ def run_gates(m, d):
 def stage_verdict(m, results, stage=None):
     stage = stage or m.get("workflowStatus","draft")
     required = STAGE_GATES.get(stage, STAGE_GATES["draft"])
-    failed = [g for g in required if results[g][1] != "PASS"]
+    failed = [g for g in required if results[g][1] not in ("PASS","NA")]
     return stage, required, failed
 
 def publish_ready(results):
-    return all(results[g][1] == "PASS" for g in STAGE_GATES["published"])
+    return all(results[g][1] in ("PASS","NA") for g in STAGE_GATES["published"])
 
 # ============================================================== GENERATORS ===
 # Every function below derives from the manifest. Nothing here is authored.
@@ -489,22 +558,156 @@ def story_card(m):
       "audioDelivery": "AAC-LC M4A, 44.1 kHz, mono, 96 kbps",
     }
 
-def catalog_payload(m, results):
-    """Supabase upsert body. Refuses to build unless the story is fit to publish."""
-    stage, required, failed = stage_verdict(m, results, "staging")
+def _sql(v):
+    """A Postgres literal. None -> null; strings quoted and escaped."""
+    if v is None: return "null"
+    if isinstance(v, bool): return "true" if v else "false"
+    if isinstance(v, (int, float)): return repr(v)
+    return "'" + str(v).replace("'", "''") + "'"
+
+def publish_targets(m):
+    """Where the audio object lives. Derived from the access decision and the
+    asset id — the same in every environment, which is why promoting a story is
+    a copy of identical bytes to an identical path in the other project."""
+    aid = _get(m, "publish.audioAssetID")
+    return BUCKETS.get(m.get("accessDecision")), "%s/%s/story.m4a" % (m.get("storyID"), aid)
+
+def asset_version(aid):
+    mt = re.search(r"-v(\d+)-", aid or "")
+    return int(mt.group(1)) if mt else 1
+
+# The story columns this pipeline owns. sigil / glow_hex / base_hex are owned by
+# the app's design layer, are nullable, and appear in no manifest — writing them
+# from here would null out design work on every republish.
+def _story_columns(m):
+    return [
+      ("id",                       m.get("storyID")),
+      ("title",                    _get(m,"card.title")),
+      ("subtitle",                 _get(m,"card.subtitle")),
+      ("description",              _get(m,"card.description")),
+      ("narrator",                 _get(m,"card.narrator")),
+      ("access",                   m.get("accessDecision")),
+      ("trial_preview_eligible",   bool(_get(m,"card.trialPreviewEligible"))),
+      ("color_hex",                _get(m,"card.colorHex")),
+      ("accent_hex",               _get(m,"card.accentHex")),
+      ("is_featured",              bool(_get(m,"card.isFeatured"))),
+      ("publication_status",       "draft"),
+      ("commercial_rights_status", _get(m,"rights.status")),
+      ("bedtime_note",             _get(m,"card.bedtimeNote")),
+      ("best_for",                 _get(m,"card.bestFor")),
+      ("sleep_pace",               _get(m,"card.sleepPace")),
+      ("atmosphere",               _get(m,"card.atmosphere")),
+    ]
+
+def catalog_sql(m, results, env):
+    """The catalog upsert, in the shape the deployed schema actually has.
+
+    Idempotent by construction: promoting a story to production means running
+    this against a row that already exists, so every statement is an upsert and
+    the transaction refuses to commit if the result is not what was intended."""
+    sid = m.get("storyID")
+    failed = [g for g in PUBLISHABLE_GATES if results[g][1] not in ("PASS","NA")]
     if failed:
-        return {"_refused": True,
-                "_reason": "not fit for catalog: " + ", ".join("%s %s" % (f, results[f][0]) for f in failed)}
-    c = story_card(m)
-    return {"story_id": c["storyID"], "supersedes": m.get("supersedes"),
-            "title": c["title"], "subtitle": c["subtitle"], "narrator": c["narrator"],
-            "genre_ids": c["genreIDs"], "access": c["access"],
-            "trial_preview_eligible": c["trialPreviewEligible"], "is_featured": c["isFeatured"],
-            "published_at": c["publishedAt"], "color_hex": c["colorHex"], "accent_hex": c["accentHex"],
-            "duration_seconds": c["durationSeconds"], "bedtime_note": c["bedtimeNote"],
-            "best_for": c["bestFor"], "sleep_pace": c["sleepPace"], "atmosphere": c["atmosphere"],
-            "description": c["description"], "audio_asset_id": c["audioAssetID"],
-            "audio_sha256": _get(m,"audio.delivery.sha256")}
+        return ("-- BLOCKED — %d gate(s) failing for %s. Nothing here is safe to run.\n" % (len(failed), sid)
+                + "".join("--   %s %s — %s\n" % (f, results[f][0], results[f][2]) for f in failed))
+
+    aid = _get(m,"publish.audioAssetID")
+    bucket, path = publish_targets(m)
+    dl = _get(m,"audio.delivery") or {}
+    genres = [g for g in (_get(m,"card.genreIDs") or [])]
+    cols = _story_columns(m)
+    ref = ENVIRONMENTS[env]["projectRef"]
+
+    out = []
+    out.append("-- GENERATED FROM story.yaml — do not edit. Regenerate with: lullable.py build %s" % sid)
+    out.append("-- target: %s (%s / %s)" % (env, ENVIRONMENTS[env]["displayName"], ref))
+    out.append("-- object: %s/%s" % (bucket, path))
+    out.append("")
+    out.append("begin;")
+    out.append("")
+    out.append("-- The audio must already be in Storage. A catalog row pointing at a missing")
+    out.append("-- object is worse than no row at all: the story appears and then fails to play.")
+    out.append("do $$")
+    out.append("declare object_size bigint; object_mime text;")
+    out.append("begin")
+    out.append("  select (metadata ->> 'size')::bigint, metadata ->> 'mimetype'")
+    out.append("    into object_size, object_mime")
+    out.append("  from storage.objects")
+    out.append("  where bucket_id = %s and name = %s;" % (_sql(bucket), _sql(path)))
+    out.append("  if not found then")
+    out.append("    raise exception 'audio object %% is missing from bucket %%; refusing to publish', %s, %s;"
+               % (_sql(path), _sql(bucket)))
+    out.append("  end if;")
+    out.append("  if object_size <> %s or object_mime <> 'audio/mp4' then" % _sql(dl.get("bytes")))
+    out.append("    raise exception 'audio object metadata mismatch: size %, mime %', object_size, object_mime;")
+    out.append("  end if;")
+    out.append("end $$;")
+    out.append("")
+    out.append("-- story_genres has an FK to genres. Never rewrites a genre that already exists.")
+    for g in genres:
+        if g not in GENRE_ROWS: continue
+        n, sub, sym, hexv, order = GENRE_ROWS[g]
+        out.append("insert into public.genres (id, name, subtitle, symbol_name, color_hex, sort_order, is_active)")
+        out.append("values (%s, %s, %s, %s, %s, %d, true) on conflict (id) do nothing;"
+                   % (_sql(g), _sql(n), _sql(sub), _sql(sym), _sql(hexv), order))
+    out.append("")
+    out.append("insert into public.stories (")
+    out.append("  " + ", ".join(c for c, _ in cols))
+    out.append(") values (")
+    out.append("  " + ",\n  ".join(_sql(v) for _, v in cols))
+    out.append(")")
+    out.append("on conflict (id) do update set")
+    # publication_status is left out on purpose: the final update owns it, so a
+    # live row is never momentarily demoted to draft by a republish.
+    out.append(",\n".join("  %s = excluded.%s" % (c, c) for c, _ in cols
+                          if c not in ("id", "publication_status")) + ";")
+    out.append("")
+    out.append("insert into public.audio_assets (")
+    out.append("  id, story_id, version, bucket_id, object_path, duration_seconds, size_bytes,")
+    out.append("  mime_type, sha256, status, resume_compatible")
+    out.append(") values (")
+    out.append("  %s, %s, %d, %s, %s, %s, %s, 'audio/mp4', %s, 'ready', true"
+               % (_sql(aid), _sql(sid), asset_version(aid), _sql(bucket), _sql(path),
+                  _sql(dl.get("durationSeconds")), _sql(dl.get("bytes")), _sql(dl.get("sha256"))))
+    out.append(")")
+    out.append("on conflict (id) do update set")
+    out.append("  bucket_id = excluded.bucket_id,")
+    out.append("  object_path = excluded.object_path,")
+    out.append("  duration_seconds = excluded.duration_seconds,")
+    out.append("  size_bytes = excluded.size_bytes,")
+    out.append("  sha256 = excluded.sha256,")
+    out.append("  status = excluded.status,")
+    out.append("  resume_compatible = excluded.resume_compatible;")
+    out.append("")
+    for g in genres:
+        out.append("insert into public.story_genres (story_id, genre_id) values (%s, %s)"
+                   % (_sql(sid), _sql(g)))
+        out.append("on conflict do nothing;")
+    out.append("")
+    out.append("-- Point the story at the asset and make it live, in that order.")
+    out.append("update public.stories set")
+    out.append("  active_audio_asset_id = %s," % _sql(aid))
+    out.append("  publication_status = 'published',")
+    out.append("  published_at = %s" % _sql(_get(m,"card.publishedAt")))
+    out.append("where id = %s;" % _sql(sid))
+    out.append("")
+    out.append("do $$")
+    out.append("begin")
+    out.append("  if not exists (select 1 from public.stories")
+    out.append("     where id = %s and publication_status = 'published'" % _sql(sid))
+    out.append("       and access = %s and commercial_rights_status = 'verified'" % _sql(m.get("accessDecision")))
+    out.append("       and active_audio_asset_id = %s) then" % _sql(aid))
+    out.append("    raise exception 'post-publication assertion failed for %s';" % sid)
+    out.append("  end if;")
+    out.append("end $$;")
+    out.append("")
+    out.append("commit;")
+    out.append("")
+    out.append("select s.id, s.publication_status, s.access, s.trial_preview_eligible, s.is_featured,")
+    out.append("       s.active_audio_asset_id, a.object_path, a.duration_seconds, a.size_bytes, a.sha256")
+    out.append("from public.stories s join public.audio_assets a on a.id = s.active_audio_asset_id")
+    out.append("where s.id = %s;" % _sql(sid))
+    return "\n".join(out) + "\n"
 
 def neon_metadata(m, story_dir):
     ssml = ""
@@ -520,20 +723,26 @@ def neon_metadata(m, story_dir):
             "render": m.get("render"), "audio": m.get("audio"),
             "tts_model_note": "Upload via ElevenLabs Studio; use a v2-family model that honors SSML break tags (NOT Eleven v3)."}
 
-def publish_commands(m, results):
-    """The commands to actually ship. Generated from the manifest, never typed."""
-    stage, req, failed = stage_verdict(m, results, "staging")
-    sid = m.get("storyID"); dv = _get(m,"audio.delivery.filename")
+def publish_commands(m, results, env):
+    """The commands to actually ship, generated from the manifest, never typed.
+
+    --linked is not decoration. Without it the storage and db commands quietly
+    address a local Docker shadow database instead of the real project."""
+    ref = ENVIRONMENTS[env]["projectRef"]
+    sid = m.get("storyID"); dv = _get(m, "audio.delivery.filename")
+    failed = [g for g in PUBLISHABLE_GATES if results[g][1] not in ("PASS", "NA")]
     if failed:
-        return ["# BLOCKED — %d gate(s) failing for staging:" % len(failed)] + \
+        return ["# BLOCKED — %d gate(s) failing:" % len(failed)] + \
                ["#   %s %s — %s" % (f, results[f][0], results[f][2]) for f in failed]
+    bucket, path = publish_targets(m)
     return [
-      "# 1. upload the delivery file",
-      "supabase storage cp audio/%s ss:///story-audio/%s/%s" % (dv, sid, dv),
-      "# 2. upsert the catalog row",
-      "psql \"$SUPABASE_DB_URL\" -c \"\\copy stories from program 'cat _generated/catalog-payload.json'\"",
-      "# 3. mark it published in the manifest, then rebuild",
-      "lullable.py build %s" % sid,
+      "# %s  ->  %s (%s / %s)" % (sid, env, ENVIRONMENTS[env]["displayName"], ref),
+      "# Run from the lullable_audio folder. Or just: lullable.py publish %s --env %s" % (sid, env),
+      "",
+      "supabase link --project-ref %s" % ref,
+      "supabase storage cp Stories/%s/audio/%s 'ss:///%s/%s' \\" % (sid, dv, bucket, path),
+      "  --content-type audio/mp4 --linked --experimental",
+      "supabase db query --linked --file Stories/%s/_generated/catalog-%s.sql" % (sid, env),
     ]
 
 def build_story(story_dir, quiet=False):
@@ -546,14 +755,19 @@ def build_story(story_dir, quiet=False):
     row = tracker_row(m)
     with open(os.path.join(out,"tracker-row.tsv"),"w",encoding="utf-8") as f:
         f.write("\t".join(str(row[c]).replace("\t"," ").replace("\n"," ") for c in TRACKER_COLUMNS) + "\n")
-    with open(os.path.join(out,"catalog-payload.json"),"w",encoding="utf-8") as f:
-        json.dump(catalog_payload(m, results), f, ensure_ascii=False, indent=2)
+    for env in ENV_NAMES:
+        with open(os.path.join(out,"catalog-%s.sql" % env),"w",encoding="utf-8") as f:
+            f.write(catalog_sql(m, results, env))
     with open(os.path.join(out,"neon-metadata.json"),"w",encoding="utf-8") as f:
         json.dump(neon_metadata(m, story_dir), f, ensure_ascii=False, indent=2)
-    with open(os.path.join(out,"publish-commands.sh"),"w",encoding="utf-8") as f:
-        f.write("#!/usr/bin/env bash\n# GENERATED FROM story.yaml — do not edit.\nset -euo pipefail\n\n")
-        f.write("\n".join(publish_commands(m, results)) + "\n")
-    if not quiet: _p("  built _generated/ for %s (5 artifacts)" % m.get("storyID"))
+    for env in ENV_NAMES:
+        with open(os.path.join(out,"publish-%s.sh" % env),"w",encoding="utf-8") as f:
+            f.write("#!/usr/bin/env bash\n# GENERATED FROM story.yaml — do not edit.\nset -euo pipefail\n\n")
+            f.write("\n".join(publish_commands(m, results, env)) + "\n")
+    for stale in ("catalog-payload.json","publish-commands.sh"):   # pre-D28 names
+        sp = os.path.join(out, stale)
+        if os.path.exists(sp): os.remove(sp)
+    if not quiet: _p("  built _generated/ for %s (%d artifacts)" % (m.get("storyID"), 4 + 2*len(ENV_NAMES)))
     return m, results
 
 # ================================================================ COMPILER ===
@@ -984,6 +1198,196 @@ def cmd_approve(a):
     _p("  status: %s%s" % (m["workflowStatus"],
         "" if not failed else "  (still blocked by " + ", ".join(failed) + ")"))
 
+# ================================================================= PUBLISH ===
+# Two Supabase projects, one catalogue. Content lands in staging, is verified
+# there, and only then gets promoted to production. Docs/06-decisions.md D28.
+
+def now_iso():
+    return datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+def sb(root, args, dry=False, quiet=False):
+    """Run the supabase CLI from the folder that holds supabase/, where the
+    link state lives. Every call is --linked; see publish_commands for why."""
+    if not quiet: _p("  $ supabase " + " ".join(args))
+    if dry: return 0, ""
+    r = subprocess.run(["supabase"] + args, cwd=os.path.abspath(root),
+                       capture_output=True, text=True)
+    if r.returncode != 0:
+        _p("  ! " + (((r.stderr or "") + (r.stdout or "")).strip()[:1500] or "command failed"))
+    return r.returncode, (r.stdout or "")
+
+def sb_rows(root, sql):
+    """A --linked query as row dicts. The CLI prints a banner before the JSON."""
+    code, out = sb(root, ["db", "query", "--linked", sql], quiet=True)
+    if code != 0 or "{" not in out: return None
+    try: return json.loads(out[out.index("{"):]).get("rows")
+    except ValueError: return None
+
+def storage_size(root, bucket, path):
+    """Bytes of the object already at that path, or None if there is none.
+
+    Published audio is immutable: `supabase storage cp` has no overwrite, and it
+    should not. Re-rendering a story means minting a new asset id, never
+    swapping bytes underneath one the catalog already points at."""
+    rows = sb_rows(root, "select (metadata ->> 'size')::bigint as size from storage.objects "
+                         "where bucket_id = %s and name = %s;" % (_sql(bucket), _sql(path)))
+    return rows[0].get("size") if rows else None
+
+def link_to(root, env, dry=False):
+    ref = ENVIRONMENTS[env]["projectRef"]
+    code, _out = sb(root, ["link", "--project-ref", ref], dry=dry)
+    if code != 0:
+        _p("could not link to %s (%s) — stopping before anything is written." % (env, ref))
+        sys.exit(1)
+
+def cmd_publish(a):
+    env, root = a.env, a.root
+    d = os.path.join(root, "Stories", a.story)
+    m = load_manifest(d); results = run_gates(m, d)
+
+    failed = [g for g in PUBLISHABLE_GATES if results[g][1] not in ("PASS", "NA")]
+    if failed:
+        _p("refusing to publish %s — %d gate(s) failing:" % (a.story, len(failed)))
+        for f in failed: _p("  %s %-24s %s" % (f, results[f][0], results[f][2]))
+        sys.exit(1)
+
+    # The CLI half of G18. The database would reject nothing here, which is
+    # exactly why the refusal has to live in the tool.
+    if env == "production" and not (_get(m, "publish.staging.verifiedAt") or ""):
+        _p("refusing to promote %s to production — it has not been verified in staging." % a.story)
+        _p("    lullable.py publish %s --env staging" % a.story)
+        _p("    lullable.py verify  %s --env staging" % a.story)
+        sys.exit(1)
+
+    # Minted once and then never again: the same asset id and the same object
+    # path in both projects is what makes promoting a promote and not a rewrite.
+    if is_placeholder(_get(m, "publish.audioAssetID")):
+        m["publish"]["audioAssetID"] = "audio-%s-en-v1-aac96" % m.get("storyID")
+    bucket, path = publish_targets(m)
+    if not bucket:
+        _p("no bucket for accessDecision %r" % m.get("accessDecision")); sys.exit(1)
+    m["publish"]["bucketID"], m["publish"]["objectPath"] = bucket, path
+    dv = _get(m, "audio.delivery.filename")
+
+    if a.dry_run:
+        _p("dry run — nothing is uploaded and nothing is written.")
+        _p("  %s -> %s (%s)" % (a.story, env, ENVIRONMENTS[env]["displayName"]))
+        _p("  object   %s/%s" % (bucket, path))
+        _p("")
+        for line in publish_commands(m, results, env): _p("  " + line)
+        _p("")
+        _p(catalog_sql(m, results, env))
+        return
+
+    save_manifest(d, m); build_story(d, quiet=True)
+    _p("publishing %s to %s (%s)" % (a.story, env, ENVIRONMENTS[env]["displayName"]))
+    _p("  object   %s/%s" % (bucket, path))
+    link_to(root, env)
+
+    want = _get(m, "audio.delivery.bytes")
+    already = storage_size(root, bucket, path)
+    uploaded = now_iso()
+    if already is None:
+        code, _o = sb(root, ["storage", "cp", "Stories/%s/audio/%s" % (a.story, dv),
+                             "ss:///%s/%s" % (bucket, path),
+                             "--content-type", "audio/mp4", "--linked", "--experimental"])
+        if code != 0:
+            _p("upload failed — nothing was written to the catalog."); sys.exit(1)
+    elif int(already) == int(want or -1):
+        # The normal promote case: identical bytes are already sitting there.
+        _p("  object already in %s with matching bytes (%s) — upload skipped" % (env, already))
+        uploaded = _get(m, "publish.%s.uploadedAt" % env) or uploaded
+    else:
+        _p("  refusing: %s already holds a DIFFERENT object at this path." % env)
+        _p("    there: %s bytes    manifest: %s bytes" % (already, want))
+        _p("  published audio is immutable. A re-render needs a new asset id")
+        _p("  (audio-<story>-en-v2-aac96), not a rewrite under the live one.")
+        sys.exit(1)
+
+    sqlf = "Stories/%s/_generated/catalog-%s.sql" % (a.story, env)
+    code, out = sb(root, ["db", "query", "--linked", "--file", sqlf])
+    if code != 0:
+        _p("catalog upsert failed — the audio is in Storage but no row points at it.")
+        _p("the manifest was NOT stamped, so this is safe to re-run once the cause is fixed.")
+        sys.exit(1)
+
+    m["publish"][env]["uploadedAt"] = uploaded
+    m["publish"][env]["rowUpsertedAt"] = now_iso()
+    if env == "staging":
+        # It has now genuinely been through staging, so it no longer predates it.
+        m["publish"].pop("legacyDirectToProduction", None)
+        if m.get("workflowStatus") in ("draft", "rendered", "qa-approved"):
+            m["workflowStatus"] = "staging"
+    if env == "production":
+        m["workflowStatus"] = "published"
+    save_manifest(d, m); build_story(d, quiet=True)
+    _p("  landed in %s. next:  lullable.py verify %s --env %s" % (env, a.story, env))
+
+VERIFY_SQL = """select s.title, s.access, s.publication_status, s.active_audio_asset_id,
+       a.bucket_id, a.object_path, a.duration_seconds, a.size_bytes, a.sha256,
+       a.status as asset_status
+from public.stories s
+left join public.audio_assets a on a.id = %s
+where s.id = %s;"""
+
+def cmd_verify(a):
+    env, root = a.env, a.root
+    d = os.path.join(root, "Stories", a.story)
+    m = load_manifest(d)
+    sid, aid = m.get("storyID"), _get(m, "publish.audioAssetID")
+    if is_placeholder(aid):
+        _p("nothing to verify — %s has no audioAssetID yet." % a.story); sys.exit(1)
+    bucket, path = publish_targets(m)
+    dl = _get(m, "audio.delivery") or {}
+
+    _p("verifying %s in %s (%s)" % (a.story, env, ENVIRONMENTS[env]["displayName"]))
+    link_to(root, env)
+    rows = sb_rows(root, VERIFY_SQL % (_sql(aid), _sql(sid)))
+    if not rows:
+        _p("  FAIL  no stories row for %s in %s" % (sid, env)); sys.exit(1)
+    r = rows[0]
+
+    dur_db = r.get("duration_seconds")
+    dur_ok = (dur_db is not None
+              and abs(float(dur_db) - float(dl.get("durationSeconds") or 0)) <= DURATION_TOLERANCE_S)
+    checks = [
+      ("title",            _get(m, "card.title"),        r.get("title")),
+      ("access",           m.get("accessDecision"),      r.get("access")),
+      ("publication",      "published",                  r.get("publication_status")),
+      ("active asset",     aid,                          r.get("active_audio_asset_id")),
+      ("bucket",           bucket,                       r.get("bucket_id")),
+      ("object path",      path,                         r.get("object_path")),
+      ("size bytes",       dl.get("bytes"),              r.get("size_bytes")),
+      ("sha256",           dl.get("sha256"),             r.get("sha256")),
+      ("asset status",     "ready",                      r.get("asset_status")),
+    ]
+    code, out = sb(root, ["storage", "ls", "--linked", "--experimental",
+                          "ss:///%s/%s/%s/" % (bucket, sid, aid)], quiet=True)
+    obj_ok = (code == 0 and "story.m4a" in out)
+
+    _p("-" * 78)
+    ok = True
+    for label, want, got in checks:
+        good = (str(want) == str(got))
+        ok = ok and good
+        _p("  %-4s %-14s %s" % ("PASS" if good else "FAIL", label,
+                                str(got)[:52] if good else "%r != manifest %r" % (got, want)))
+    _p("  %-4s %-14s %s within %.1fs" % ("PASS" if dur_ok else "FAIL", "duration",
+                                         dur_db, DURATION_TOLERANCE_S))
+    _p("  %-4s %-14s %s" % ("PASS" if obj_ok else "FAIL", "storage object",
+                            "%s/%s" % (bucket, path)))
+    ok = ok and dur_ok and obj_ok
+    _p("-" * 78)
+
+    if not ok:
+        _p(">> %s does NOT match the manifest in %s. Nothing stamped." % (sid, env))
+        sys.exit(1)
+    m["publish"][env]["verifiedAt"] = now_iso()
+    save_manifest(d, m); build_story(d, quiet=True)
+    _p(">> %s matches the manifest in %s." % (sid, env))
+    if env == "staging":
+        _p("   cleared to promote:  lullable.py publish %s --env production" % a.story)
+
 # ========================================================== WEBSITE EXPORT ===
 # Generates llulable_website/catalog/<storyID>.md from the manifest.
 # The app's four spatial genres are canonical (see Docs/06-decisions.md D19);
@@ -1163,6 +1567,15 @@ def main():
     we.add_argument("--dry-run", action="store_true"); we.add_argument("--show", action="store_true")
     we.add_argument("--force", action="store_true", help="export even without measured audio (not advised)")
     we.set_defaults(fn=cmd_website_export)
+
+    pb = sub.add_parser("publish", help="upload audio + upsert the catalog row in one environment")
+    pb.add_argument("story"); pb.add_argument("--env", required=True, choices=ENV_NAMES)
+    pb.add_argument("--dry-run", action="store_true", help="print the commands and SQL, write nothing")
+    pb.set_defaults(fn=cmd_publish)
+
+    vf = sub.add_parser("verify", help="confirm the row and object landed correctly in one environment")
+    vf.add_argument("story"); vf.add_argument("--env", required=True, choices=ENV_NAMES)
+    vf.set_defaults(fn=cmd_verify)
 
     ap2 = sub.add_parser("approve", help="record QA and device sign-off")
     ap2.add_argument("story"); ap2.add_argument("--by", required=True)
