@@ -6,7 +6,7 @@ storyID: voyager-1-a-journey-to-interstellar-space
 supersedes: null
 identityResolved: true
 identityNote: ''
-workflowStatus: draft
+workflowStatus: rendered
 accessDecision: premium
 episode:
   id: 3
@@ -19,7 +19,7 @@ episode:
 card:
   title: 'Voyager 1: A Journey to Interstellar Space'
   subtitle: A small gold machine, forty-nine years out, still quietly drifting away from us
-  narrator: Lullable
+  narrator: Read by Amy from Greenwich
   genreIDs:
   - cosmic-journeys
   bedtimeNote: It left in 1977 and it is not going anywhere in particular. It is simply still going, steadily, and none of it needs watching tonight.
@@ -32,7 +32,7 @@ card:
   isFeatured: false
   trialPreviewEligible: false
   publishedAt: PENDING
-  durationSeconds: null
+  durationSeconds: 2290
 script:
   narrationFile: narration.md
   ssmlFile: upload-to-elevenlabs.txt
@@ -46,37 +46,37 @@ rights:
   evidence: Script written in-house for Lullable; narration rendered with our own licensed ElevenLabs voice; no third-party text, music or sound used. All rights owned by Lullable.
   evidenceFiles: []
 render:
-  provider: elevenlabs
-  voiceId: PENDING
-  voiceName: PENDING
-  model: PENDING
+  provider: amazon-polly
+  voiceId: Amy
+  voiceName: Amy
+  model: generative
   settings:
     stability: null
     similarityBoost: null
     style: null
-    speakerBoost: null
-  historyItemId: PENDING
+    speakerBoost: false
+  historyItemId: polly-task-id-not-logged;raw=polly-Amy-raw.mp3
   projectId: PENDING
-  renderedAt: PENDING
+  renderedAt: '2026-08-20T17:22:38Z'
 audio:
   master:
-    filename: PENDING
-    sha256: PENDING
-    bytes: null
-    durationSeconds: null
-    codec: null
-    sampleRate: null
-    channels: null
+    filename: master.wav
+    sha256: 68738dd951f1758e2b0e0f1e677b6fb0707a711910380ef0182e3c57a627a06b
+    bytes: 201977934
+    durationSeconds: 2289.998
+    codec: pcm_s16le
+    sampleRate: 44100
+    channels: 1
   delivery:
-    filename: PENDING
-    sha256: PENDING
-    bytes: null
-    durationSeconds: null
-    codec: null
-    profile: null
-    sampleRate: null
-    channels: null
-    bitRateKbps: null
+    filename: delivery.m4a
+    sha256: d95269a5cb20cb0d505f58b06413982c82bcf7feb59d3a032ff113c4fd4fd4d4
+    bytes: 19191361
+    durationSeconds: 2290.0
+    codec: aac
+    profile: LC
+    sampleRate: 44100
+    channels: 1
+    bitRateKbps: 66
 qa:
   audioApproved: false
   approvedBy: ''

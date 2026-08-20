@@ -6,7 +6,7 @@ storyID: the-building-of-a-cathedral
 supersedes: null
 identityResolved: true
 identityNote: ''
-workflowStatus: draft
+workflowStatus: rendered
 accessDecision: premium
 episode:
   id: 11
@@ -19,7 +19,7 @@ episode:
 card:
   title: The Building of a Cathedral
   subtitle: An evening among people entirely at peace with never finishing
-  narrator: Lullable
+  narrator: Read by Arthur from Ludlow
   genreIDs:
   - ancient-worlds
   bedtimeNote: Sixty years done, eighty to go, and every person on the site content with that arithmetic. Nothing in your life needs finishing by morning either.
@@ -32,7 +32,7 @@ card:
   isFeatured: false
   trialPreviewEligible: false
   publishedAt: PENDING
-  durationSeconds: null
+  durationSeconds: 2308
 script:
   narrationFile: narration.md
   ssmlFile: upload-to-elevenlabs.txt
@@ -46,37 +46,37 @@ rights:
   evidence: Script written in-house for Lullable; narration rendered with our own licensed ElevenLabs voice; no third-party text, music or sound used. All rights owned by Lullable.
   evidenceFiles: []
 render:
-  provider: elevenlabs
-  voiceId: PENDING
-  voiceName: PENDING
-  model: PENDING
+  provider: amazon-polly
+  voiceId: Arthur
+  voiceName: Arthur
+  model: neural
   settings:
     stability: null
     similarityBoost: null
     style: null
-    speakerBoost: null
-  historyItemId: PENDING
+    speakerBoost: false
+  historyItemId: polly-task-id-not-logged;raw=polly-Arthur-raw.mp3
   projectId: PENDING
-  renderedAt: PENDING
+  renderedAt: '2026-08-20T17:15:33Z'
 audio:
   master:
-    filename: PENDING
-    sha256: PENDING
-    bytes: null
-    durationSeconds: null
-    codec: null
-    sampleRate: null
-    channels: null
+    filename: master.wav
+    sha256: 5fffa01b8166d1971fca0c9422d3d94b9b65b78b1846a4887dca7bdb7253d4cf
+    bytes: 203530318
+    durationSeconds: 2307.599
+    codec: pcm_s16le
+    sampleRate: 44100
+    channels: 1
   delivery:
-    filename: PENDING
-    sha256: PENDING
-    bytes: null
-    durationSeconds: null
-    codec: null
-    profile: null
-    sampleRate: null
-    channels: null
-    bitRateKbps: null
+    filename: delivery.m4a
+    sha256: f7d012b7b8b8802c5dfe8863c1071dceea34f9f9193009576327650e0694eb67
+    bytes: 17937156
+    durationSeconds: 2307.6
+    codec: aac
+    profile: LC
+    sampleRate: 44100
+    channels: 1
+    bitRateKbps: 61
 qa:
   audioApproved: false
   approvedBy: ''

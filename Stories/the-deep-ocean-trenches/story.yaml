@@ -6,7 +6,7 @@ storyID: the-deep-ocean-trenches
 supersedes: null
 identityResolved: true
 identityNote: ''
-workflowStatus: draft
+workflowStatus: rendered
 accessDecision: premium
 episode:
   id: 14
@@ -21,7 +21,7 @@ episode:
 card:
   title: The Deep Ocean Trenches
   subtitle: A slow descent past the last of the light, into the stillest water on earth
-  narrator: PENDING
+  narrator: Read by Brian from St Ives
   genreIDs:
   - gentle-nature
   bedtimeNote: One slow direction, downward, and nothing waiting at the end of it. An easy thing to follow, and an easier thing to let go of.
@@ -34,7 +34,7 @@ card:
   isFeatured: false
   trialPreviewEligible: false
   publishedAt: PENDING
-  durationSeconds: null
+  durationSeconds: 2409
 script:
   narrationFile: null
   ssmlFile: upload-to-elevenlabs.txt
@@ -48,37 +48,37 @@ rights:
   evidence: Script written in-house for Lullable; narration rendered with our own licensed ElevenLabs voice; no third-party text, music or sound used. All rights owned by Lullable.
   evidenceFiles: []
 render:
-  provider: elevenlabs
-  voiceId: PENDING
-  voiceName: PENDING
-  model: PENDING
+  provider: amazon-polly
+  voiceId: Brian
+  voiceName: Brian
+  model: generative
   settings:
     stability: null
     similarityBoost: null
     style: null
-    speakerBoost: null
-  historyItemId: PENDING
+    speakerBoost: false
+  historyItemId: polly-task-id-not-logged;raw=polly-brian-raw.mp3
   projectId: PENDING
-  renderedAt: PENDING
+  renderedAt: '2026-08-20T00:54:11Z'
 audio:
   master:
-    filename: PENDING
-    sha256: PENDING
-    bytes: null
-    durationSeconds: null
-    codec: null
-    sampleRate: null
-    channels: null
+    filename: master.wav
+    sha256: 1b974e1de0ba4039122fbee82dc61014d7ef7fb728e36d546471ea0d1ff7f6ab
+    bytes: 212506702
+    durationSeconds: 2409.372
+    codec: pcm_s16le
+    sampleRate: 44100
+    channels: 1
   delivery:
-    filename: PENDING
-    sha256: PENDING
-    bytes: null
-    durationSeconds: null
-    codec: null
-    profile: null
-    sampleRate: null
-    channels: null
-    bitRateKbps: null
+    filename: delivery.m4a
+    sha256: 9188bd1c26996d608f44b01809ef17e0da9b4f4d26338f19893e7a246dc975c3
+    bytes: 22353369
+    durationSeconds: 2409.4
+    codec: aac
+    profile: LC
+    sampleRate: 44100
+    channels: 1
+    bitRateKbps: 73
 qa:
   audioApproved: false
   approvedBy: ''

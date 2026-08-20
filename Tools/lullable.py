@@ -37,6 +37,7 @@ WORKFLOW_STATUSES = ("draft","rendered","qa-approved","staging","published")
 ACCESS_DECISIONS  = ("PENDING","free","premium")
 RIGHTS_STATUSES   = ("pending-verification","verified","restricted")
 V2_MODELS         = ("eleven_multilingual_v2","eleven_english_v2","eleven_turbo_v2","eleven_turbo_v2_5")
+POLLY_ENGINES     = ("neural","generative","long-form")  # AWS_Polly/tools/PIPELINE-MEMORY.md D-2026-08-20
 PLACEHOLDERS      = ("PENDING","VOICE_ID","TODO","XXX","CHANGEME","")
 
 DELIVERY_SPEC = {"codec":"aac","profile":"LC","sampleRate":44100,"channels":1,"bitRateKbps":96}
@@ -321,12 +322,15 @@ def g12_render(m, d):
     has_studio_evidence = present(project_id) and present(chapter_id)
     if not (has_history_evidence or has_studio_evidence):
         bad.append("render provenance requires historyItemId or both projectId and chapterId")
+    provider = _get(m,"render.provider")
     model = _get(m,"render.model")
-    if not is_placeholder(model) and model not in V2_MODELS:
-        bad.append("model %r is not a v2-family model that honours SSML breaks" % model)
-    st = _get(m,"render.settings") or {}
-    if any(st.get(k) is None for k in ("stability","similarityBoost")):
-        bad.append("render.settings stability/similarityBoost not recorded")
+    valid_models = POLLY_ENGINES if provider == "amazon-polly" else V2_MODELS
+    if not is_placeholder(model) and model not in valid_models:
+        bad.append("model %r is not valid for provider %r (want one of %s)" % (model, provider, ", ".join(valid_models)))
+    if provider != "amazon-polly":
+        st = _get(m,"render.settings") or {}
+        if any(st.get(k) is None for k in ("stability","similarityBoost")):
+            bad.append("render.settings stability/similarityBoost not recorded")
     ra = _get(m,"render.renderedAt")
     if not is_placeholder(ra) and parse_iso_utc(ra) is None:
         bad.append("render.renderedAt is not ISO-8601 UTC")
@@ -921,6 +925,7 @@ def cmd_closeout(a):
         "sampleRate": dpr["sampleRate"], "channels": dpr["channels"], "bitRateKbps": dpr["bitRateKbps"]}
     m["card"]["durationSeconds"] = int(round(dpr["durationSeconds"]))
     r = m["render"]
+    if a.provider:    r["provider"] = a.provider
     if a.voice_id:    r["voiceId"] = a.voice_id
     if a.voice_name:  r["voiceName"] = a.voice_name
     if a.model:       r["model"] = a.model
@@ -1129,7 +1134,8 @@ def main():
     co.add_argument("--master", default=""); co.add_argument("--delivery", default="")
     co.add_argument("--voice-id", default=""); co.add_argument("--voice-name", default="")
     co.add_argument("--narrator", default="")
-    co.add_argument("--model", default="", choices=("",)+V2_MODELS)
+    co.add_argument("--provider", default="", choices=("","elevenlabs","amazon-polly"))
+    co.add_argument("--model", default="", choices=("",)+V2_MODELS+POLLY_ENGINES)
     co.add_argument("--history-id", default=""); co.add_argument("--project-id", default="")
     co.add_argument("--rendered-at", default="")
     co.add_argument("--stability", type=float, default=None)

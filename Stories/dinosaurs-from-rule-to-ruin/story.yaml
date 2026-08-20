@@ -18,7 +18,7 @@ episode:
 card:
   title: 'The Dinosaurs: From Rule to Ruin'
   subtitle: A 44-minute journey through deep time
-  narrator: Sleep Stories by AVP
+  narrator: Read by Arthur from Ludlow
   genreIDs:
   - ancient-worlds
   bedtimeNote: Deep time moves slowly here. Every age in this story settled into stillness long ago, and nothing in it asks anything of you tonight.
@@ -31,7 +31,7 @@ card:
   isFeatured: false
   trialPreviewEligible: false
   publishedAt: '2026-08-11T02:11:43Z'
-  durationSeconds: 2690
+  durationSeconds: 2588
 script:
   narrationFile: narration.md
   ssmlFile: upload-to-elevenlabs.txt
@@ -45,37 +45,37 @@ rights:
   evidence: Adopted legacy episode (pre-pipeline, imported 2026-08-10). Founder confirmation on 2026-08-10 that AVP owns the commercial streaming rights for this audio (recorded in AudioImport/dinosaurs-premium-draft.json in the app repo). No third-party text, music or sound.
   evidenceFiles: []
 render:
-  provider: elevenlabs
-  voiceId: PENDING
-  voiceName: PENDING
-  model: PENDING
+  provider: amazon-polly
+  voiceId: Arthur
+  voiceName: Arthur
+  model: neural
   settings:
     stability: null
     similarityBoost: null
     style: null
     speakerBoost: false
-  historyItemId: PENDING
+  historyItemId: polly-task-id-not-logged;raw=polly-Arthur-raw.mp3
   projectId: PENDING
-  renderedAt: '2026-08-10T19:46:00Z'
+  renderedAt: '2026-08-20T18:05:48Z'
 audio:
   master:
     filename: master.wav
-    sha256: 30edfe827cdaf5c8d0261af696b52269f61cd87e83552368ff303f2699eb5fb3
-    bytes: 237281374
-    durationSeconds: 2690.265
+    sha256: 6ef313d61964436947d696ead1c18bf8a078a853a8fcc2a4bd78d144b728cc9f
+    bytes: 228280398
+    durationSeconds: 2588.212
     codec: pcm_s16le
     sampleRate: 44100
     channels: 1
   delivery:
     filename: delivery.m4a
-    sha256: c8ee4c8ec05a98e24fae440349aa45a82370bad89966194231f9210ebf41ed5e
-    bytes: 31653612
-    durationSeconds: 2690.264
+    sha256: 83461ccd26cbd5401e0e0caa95bc5d7599735b1ac09ad322be0cadd1eee31e12
+    bytes: 20337904
+    durationSeconds: 2588.3
     codec: aac
     profile: LC
     sampleRate: 44100
     channels: 1
-    bitRateKbps: 93
+    bitRateKbps: 61
 qa:
   audioApproved: false
   approvedBy: ''

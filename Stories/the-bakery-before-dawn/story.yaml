@@ -19,7 +19,7 @@ episode:
 card:
   title: The Bakery Before Dawn
   subtitle: Warm flour, a slow rising, and the long quiet hours before a town wakes
-  narrator: Lullable
+  narrator: Read by Niamh from Kinsale
   genreIDs:
   - cozy-tales
   bedtimeNote: Someone else is already awake, working gently in the warm, at something that cannot be hurried. There is nothing here you need to do.
@@ -32,7 +32,7 @@ card:
   isFeatured: false
   trialPreviewEligible: false
   publishedAt: '2026-08-16T15:26:08Z'
-  durationSeconds: 2174
+  durationSeconds: 2394
 script:
   narrationFile: narration.md
   ssmlFile: upload-to-elevenlabs.txt
@@ -46,37 +46,37 @@ rights:
   evidence: Script written in-house for Lullable; narration rendered with our own licensed ElevenLabs voice; no third-party text, music or sound used. All rights owned by Lullable.
   evidenceFiles: []
 render:
-  provider: elevenlabs
-  voiceId: oiVoyoYP9iXTljaT7XBd
-  voiceName: Lullable_Femal
-  model: PENDING
+  provider: amazon-polly
+  voiceId: Niamh
+  voiceName: Niamh
+  model: generative
   settings:
     stability: null
     similarityBoost: null
     style: null
     speakerBoost: false
-  historyItemId: PENDING
+  historyItemId: polly-task-id-not-logged;raw=polly-Niamh-raw.mp3
   projectId: PENDING
-  renderedAt: '2026-08-16T14:53:00Z'
+  renderedAt: '2026-08-20T17:24:18Z'
 audio:
   master:
-    filename: ElevenLabs_the-bakery-before-dawn.wav
-    sha256: 669b7a6524c72bc01860a4e8bcc77db014e5934925b3564d9610e5c4e68814e6
-    bytes: 191715586
-    durationSeconds: 2173.646
+    filename: master.wav
+    sha256: da5488fa634ef94610e29080ffaeabbc70542bd83093dbe94ba262945ccf4197
+    bytes: 211114062
+    durationSeconds: 2393.583
     codec: pcm_s16le
     sampleRate: 44100
     channels: 1
   delivery:
     filename: delivery.m4a
-    sha256: 13ae9d81663c2948018b10bd19dee4f5139cffb5c9b859e5a2f7b84e03be1559
-    bytes: 22371192
-    durationSeconds: 2173.645
+    sha256: 4e262f91bf9c79f89e1d2c333886f6599fb98000c86f1217071e68c98084e71e
+    bytes: 18766359
+    durationSeconds: 2393.6
     codec: aac
     profile: LC
     sampleRate: 44100
     channels: 1
-    bitRateKbps: 81
+    bitRateKbps: 61
 qa:
   audioApproved: false
   approvedBy: ''

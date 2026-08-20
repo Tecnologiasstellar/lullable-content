@@ -6,7 +6,7 @@ storyID: the-life-cycle-of-a-red-dwarf-star
 supersedes: null
 identityResolved: true
 identityNote: ''
-workflowStatus: draft
+workflowStatus: rendered
 accessDecision: premium
 episode:
   id: 4
@@ -20,7 +20,7 @@ episode:
 card:
   title: The Life Cycle of a Red Dwarf Star
   subtitle: The commonest star in the galaxy, burning so slowly that none has ever finished
-  narrator: Lullable
+  narrator: Read by Amy from Greenwich
   genreIDs:
   - cosmic-journeys
   bedtimeNote: Not one red dwarf has ever run down. The universe is far too young. Every single one ever made is still quietly burning, and none of it needs watching tonight.
@@ -33,7 +33,7 @@ card:
   isFeatured: false
   trialPreviewEligible: false
   publishedAt: PENDING
-  durationSeconds: null
+  durationSeconds: 2341
 script:
   narrationFile: narration.md
   ssmlFile: upload-to-elevenlabs.txt
@@ -47,37 +47,37 @@ rights:
   evidence: Script written in-house for Lullable; narration rendered with our own licensed ElevenLabs voice; no third-party text, music or sound used. All rights owned by Lullable.
   evidenceFiles: []
 render:
-  provider: elevenlabs
-  voiceId: PENDING
-  voiceName: PENDING
-  model: PENDING
+  provider: amazon-polly
+  voiceId: Amy
+  voiceName: Amy
+  model: generative
   settings:
     stability: null
     similarityBoost: null
     style: null
-    speakerBoost: null
-  historyItemId: PENDING
+    speakerBoost: false
+  historyItemId: polly-task-id-not-logged;raw=polly-Amy-raw.mp3
   projectId: PENDING
-  renderedAt: PENDING
+  renderedAt: '2026-08-20T17:21:26Z'
 audio:
   master:
-    filename: PENDING
-    sha256: PENDING
-    bytes: null
-    durationSeconds: null
-    codec: null
-    sampleRate: null
-    channels: null
+    filename: master.wav
+    sha256: 8dc4d654e0c94c655d95c04d79a34d5e82cd1b111d8426c0dafaa628f993276f
+    bytes: 206504014
+    durationSeconds: 2341.314
+    codec: pcm_s16le
+    sampleRate: 44100
+    channels: 1
   delivery:
-    filename: PENDING
-    sha256: PENDING
-    bytes: null
-    durationSeconds: null
-    codec: null
-    profile: null
-    sampleRate: null
-    channels: null
-    bitRateKbps: null
+    filename: delivery.m4a
+    sha256: a8c648aee95002a58d140edf9ce29faffe36cc9828c3d25eeb4eaf6a0b25debc
+    bytes: 19250331
+    durationSeconds: 2341.3
+    codec: aac
+    profile: LC
+    sampleRate: 44100
+    channels: 1
+    bitRateKbps: 64
 qa:
   audioApproved: false
   approvedBy: ''

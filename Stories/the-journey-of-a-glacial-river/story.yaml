@@ -6,7 +6,7 @@ storyID: the-journey-of-a-glacial-river
 supersedes: null
 identityResolved: true
 identityNote: ''
-workflowStatus: draft
+workflowStatus: rendered
 accessDecision: premium
 episode:
   id: 10
@@ -19,7 +19,7 @@ episode:
 card:
   title: The Journey of a Glacial River
   subtitle: One snowflake's two-hundred-year trip from a silent snowfield to the sea
-  narrator: Lullable
+  narrator: Read by Niamh from Kinsale
   genreIDs:
   - gentle-nature
   bedtimeNote: Water never has to choose. It goes the one way it can go, at whatever pace it is given, and tonight you can go with it, downhill the whole way.
@@ -32,7 +32,7 @@ card:
   isFeatured: false
   trialPreviewEligible: false
   publishedAt: PENDING
-  durationSeconds: null
+  durationSeconds: 2360
 script:
   narrationFile: narration.md
   ssmlFile: upload-to-elevenlabs.txt
@@ -46,37 +46,37 @@ rights:
   evidence: Script written in-house for Lullable; narration rendered with our own licensed ElevenLabs voice; no third-party text, music or sound used. All rights owned by Lullable.
   evidenceFiles: []
 render:
-  provider: elevenlabs
-  voiceId: PENDING
-  voiceName: PENDING
-  model: PENDING
+  provider: amazon-polly
+  voiceId: Niamh
+  voiceName: Niamh
+  model: generative
   settings:
     stability: null
     similarityBoost: null
     style: null
-    speakerBoost: null
-  historyItemId: PENDING
+    speakerBoost: false
+  historyItemId: polly-task-id-not-logged;raw=polly-Niamh-raw.mp3
   projectId: PENDING
-  renderedAt: PENDING
+  renderedAt: '2026-08-20T17:25:24Z'
 audio:
   master:
-    filename: PENDING
-    sha256: PENDING
-    bytes: null
-    durationSeconds: null
-    codec: null
-    sampleRate: null
-    channels: null
+    filename: master.wav
+    sha256: b917fd0e246fb3d9403107750391d02ed922217ed6d87fdbf57766e16e10a66a
+    bytes: 208144462
+    durationSeconds: 2359.914
+    codec: pcm_s16le
+    sampleRate: 44100
+    channels: 1
   delivery:
-    filename: PENDING
-    sha256: PENDING
-    bytes: null
-    durationSeconds: null
-    codec: null
-    profile: null
-    sampleRate: null
-    channels: null
-    bitRateKbps: null
+    filename: delivery.m4a
+    sha256: d8367b43584f3470c1db2c6b057e35f4b6a151e5c1e76be26d74e4a7b5a1b760
+    bytes: 18781970
+    durationSeconds: 2360.0
+    codec: aac
+    profile: LC
+    sampleRate: 44100
+    channels: 1
+    bitRateKbps: 62
 qa:
   audioApproved: false
   approvedBy: ''

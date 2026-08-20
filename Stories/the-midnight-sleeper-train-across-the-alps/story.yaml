@@ -6,7 +6,7 @@ storyID: the-midnight-sleeper-train-across-the-alps
 supersedes: null
 identityResolved: true
 identityNote: ''
-workflowStatus: draft
+workflowStatus: rendered
 accessDecision: premium
 episode:
   id: 8
@@ -19,7 +19,7 @@ episode:
 card:
   title: The Midnight Sleeper Train Across the Alps
   subtitle: A warm berth, a folder of sleeping passports, and mountains passing in the dark
-  narrator: Lullable
+  narrator: Read by Niamh from Kinsale
   genreIDs:
   - cozy-tales
   bedtimeNote: The signals are turning green all the way to the lake, and the attendant is awake so you need not be. The train knows the rest, and none of it is your business tonight.
@@ -32,7 +32,7 @@ card:
   isFeatured: false
   trialPreviewEligible: false
   publishedAt: PENDING
-  durationSeconds: null
+  durationSeconds: 2404
 script:
   narrationFile: narration.md
   ssmlFile: upload-to-elevenlabs.txt
@@ -46,37 +46,37 @@ rights:
   evidence: Script written in-house for Lullable; narration rendered with our own licensed ElevenLabs voice; no third-party text, music or sound used. All rights owned by Lullable.
   evidenceFiles: []
 render:
-  provider: elevenlabs
-  voiceId: PENDING
-  voiceName: PENDING
-  model: PENDING
+  provider: amazon-polly
+  voiceId: Niamh
+  voiceName: Niamh
+  model: generative
   settings:
     stability: null
     similarityBoost: null
     style: null
-    speakerBoost: null
-  historyItemId: PENDING
+    speakerBoost: false
+  historyItemId: polly-task-id-not-logged;raw=polly-Niamh-raw.mp3
   projectId: PENDING
-  renderedAt: PENDING
+  renderedAt: '2026-08-20T17:26:29Z'
 audio:
   master:
-    filename: PENDING
-    sha256: PENDING
-    bytes: null
-    durationSeconds: null
-    codec: null
-    sampleRate: null
-    channels: null
+    filename: master.wav
+    sha256: f8fc2e3b66ae4ed1f3a82ccfe658c0a1b1409235151cdb82c8e58e63728e54b7
+    bytes: 212064334
+    durationSeconds: 2404.357
+    codec: pcm_s16le
+    sampleRate: 44100
+    channels: 1
   delivery:
-    filename: PENDING
-    sha256: PENDING
-    bytes: null
-    durationSeconds: null
-    codec: null
-    profile: null
-    sampleRate: null
-    channels: null
-    bitRateKbps: null
+    filename: delivery.m4a
+    sha256: d2b26413417ec64f58b1e9c21de33f0217fe2936f94be8e5255095290876f308
+    bytes: 19368177
+    durationSeconds: 2404.4
+    codec: aac
+    profile: LC
+    sampleRate: 44100
+    channels: 1
+    bitRateKbps: 63
 qa:
   audioApproved: false
   approvedBy: ''

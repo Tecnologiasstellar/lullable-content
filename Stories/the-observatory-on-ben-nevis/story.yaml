@@ -6,7 +6,7 @@ storyID: the-observatory-on-ben-nevis
 supersedes: null
 identityResolved: true
 identityNote: ''
-workflowStatus: draft
+workflowStatus: rendered
 accessDecision: premium
 episode:
   id: 18
@@ -20,7 +20,7 @@ episode:
 card:
   title: The Observatory on Ben Nevis
   subtitle: Twenty-one years of hourly weather readings, taken by lamplight inside a cloud
-  narrator: PENDING
+  narrator: Read by Patrick from Block Island, Rhode Island
   genreIDs:
   - cozy-tales
   bedtimeNote: Somebody is awake on a mountain, taking a reading on the hour, whether or not you are. The next one is not yours, and it will be taken anyway.
@@ -33,7 +33,7 @@ card:
   isFeatured: false
   trialPreviewEligible: false
   publishedAt: PENDING
-  durationSeconds: null
+  durationSeconds: 2418
 script:
   narrationFile: narration.md
   ssmlFile: upload-to-elevenlabs.txt
@@ -47,37 +47,37 @@ rights:
   evidence: Script written in-house for Lullable; narration rendered with our own licensed ElevenLabs voice; no third-party text, music or sound used. All rights owned by Lullable.
   evidenceFiles: []
 render:
-  provider: elevenlabs
-  voiceId: PENDING
-  voiceName: PENDING
-  model: PENDING
+  provider: amazon-polly
+  voiceId: Patrick
+  voiceName: Patrick
+  model: long-form
   settings:
     stability: null
     similarityBoost: null
     style: null
-    speakerBoost: null
-  historyItemId: PENDING
+    speakerBoost: false
+  historyItemId: polly-task-id-not-logged;raw=polly-Patrick-raw.mp3
   projectId: PENDING
-  renderedAt: PENDING
+  renderedAt: '2026-08-20T17:24:13Z'
 audio:
   master:
-    filename: PENDING
-    sha256: PENDING
-    bytes: null
-    durationSeconds: null
-    codec: null
-    sampleRate: null
-    channels: null
+    filename: master.wav
+    sha256: 0c8c890b9441ae689e315aac570a97f0e9085696a78645dd4017dfe6404b83bd
+    bytes: 213256270
+    durationSeconds: 2417.871
+    codec: pcm_s16le
+    sampleRate: 44100
+    channels: 1
   delivery:
-    filename: PENDING
-    sha256: PENDING
-    bytes: null
-    durationSeconds: null
-    codec: null
-    profile: null
-    sampleRate: null
-    channels: null
-    bitRateKbps: null
+    filename: delivery.m4a
+    sha256: fe58033f4c8344c526db080a23507331c50fdae7545869c814bd9b107be83c10
+    bytes: 20753057
+    durationSeconds: 2417.9
+    codec: aac
+    profile: LC
+    sampleRate: 44100
+    channels: 1
+    bitRateKbps: 67
 qa:
   audioApproved: false
   approvedBy: ''

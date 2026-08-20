@@ -6,7 +6,7 @@ storyID: the-clockmaker-s-workshop
 supersedes: null
 identityResolved: true
 identityNote: ''
-workflowStatus: draft
+workflowStatus: rendered
 accessDecision: premium
 episode:
   id: 13
@@ -16,7 +16,7 @@ episode:
 card:
   title: The Clockmaker's Workshop
   subtitle: An evening among a hundred gentle clocks, none of them quite in agreement
-  narrator: Lullable
+  narrator: Read by Niamh from Kinsale
   genreIDs:
   - cozy-tales
   bedtimeNote: The shop is locked, the lamp is out, and every pendulum keeps its small agreement in the dark. Nobody has to keep time while they sleep. It is being handled.
@@ -29,7 +29,7 @@ card:
   isFeatured: false
   trialPreviewEligible: false
   publishedAt: PENDING
-  durationSeconds: null
+  durationSeconds: 2376
 script:
   narrationFile: narration.md
   ssmlFile: upload-to-elevenlabs.txt
@@ -43,37 +43,37 @@ rights:
   evidence: Script written in-house for Lullable; narration rendered with our own licensed ElevenLabs voice; no third-party text, music or sound used. All rights owned by Lullable.
   evidenceFiles: []
 render:
-  provider: elevenlabs
-  voiceId: PENDING
-  voiceName: PENDING
-  model: PENDING
+  provider: amazon-polly
+  voiceId: Niamh
+  voiceName: Niamh
+  model: generative
   settings:
     stability: null
     similarityBoost: null
     style: null
-    speakerBoost: null
-  historyItemId: PENDING
+    speakerBoost: false
+  historyItemId: polly-task-id-not-logged;raw=polly-Niamh-raw.mp3
   projectId: PENDING
-  renderedAt: PENDING
+  renderedAt: '2026-08-20T17:25:20Z'
 audio:
   master:
-    filename: PENDING
-    sha256: PENDING
-    bytes: null
-    durationSeconds: null
-    codec: null
-    sampleRate: null
-    channels: null
+    filename: master.wav
+    sha256: 862848ed37e8903be31835cba9c14cddb482e7d0dc839d5a4b821d9e801e0821
+    bytes: 209541198
+    durationSeconds: 2375.75
+    codec: pcm_s16le
+    sampleRate: 44100
+    channels: 1
   delivery:
-    filename: PENDING
-    sha256: PENDING
-    bytes: null
-    durationSeconds: null
-    codec: null
-    profile: null
-    sampleRate: null
-    channels: null
-    bitRateKbps: null
+    filename: delivery.m4a
+    sha256: 0a465278f51417ba7116afcc3809f39aa21ef82de7176c4cec6a7bf9515b617c
+    bytes: 19488246
+    durationSeconds: 2375.8
+    codec: aac
+    profile: LC
+    sampleRate: 44100
+    channels: 1
+    bitRateKbps: 64
 qa:
   audioApproved: false
   approvedBy: ''

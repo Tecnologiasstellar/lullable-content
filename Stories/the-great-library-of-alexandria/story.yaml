@@ -6,7 +6,7 @@ storyID: the-great-library-of-alexandria
 supersedes: null
 identityResolved: true
 identityNote: ''
-workflowStatus: draft
+workflowStatus: rendered
 accessDecision: premium
 episode:
   id: 15
@@ -19,7 +19,7 @@ episode:
 card:
   title: The Great Library of Alexandria
   subtitle: Lamplight, papyrus and patient work beside a warm and quiet sea
-  narrator: PENDING
+  narrator: Read by Arthur from Ludlow
   genreIDs:
   - ancient-worlds
   bedtimeNote: Nothing here is urgent and nothing needs remembering. Only scribes at their tables, copying one careful line at a time.
@@ -32,7 +32,7 @@ card:
   isFeatured: false
   trialPreviewEligible: false
   publishedAt: PENDING
-  durationSeconds: null
+  durationSeconds: 2159
 script:
   narrationFile: narration.md
   ssmlFile: upload-to-elevenlabs.txt
@@ -46,37 +46,37 @@ rights:
   evidence: Script written in-house for Lullable; narration rendered with our own licensed ElevenLabs voice; no third-party text, music or sound used. All rights owned by Lullable.
   evidenceFiles: []
 render:
-  provider: elevenlabs
-  voiceId: PENDING
-  voiceName: PENDING
-  model: PENDING
+  provider: amazon-polly
+  voiceId: Arthur
+  voiceName: Arthur
+  model: neural
   settings:
     stability: null
     similarityBoost: null
     style: null
-    speakerBoost: null
-  historyItemId: PENDING
+    speakerBoost: false
+  historyItemId: polly-task-id-not-logged;raw=polly-Arthur-raw.mp3
   projectId: PENDING
-  renderedAt: PENDING
+  renderedAt: '2026-08-20T17:17:14Z'
 audio:
   master:
-    filename: PENDING
-    sha256: PENDING
-    bytes: null
-    durationSeconds: null
-    codec: null
-    sampleRate: null
-    channels: null
+    filename: master.wav
+    sha256: d8fd7cb68bb53051fc8a785642b1f2bf563fcbac5c30ffa7892314b031d83182
+    bytes: 190437454
+    durationSeconds: 2159.154
+    codec: pcm_s16le
+    sampleRate: 44100
+    channels: 1
   delivery:
-    filename: PENDING
-    sha256: PENDING
-    bytes: null
-    durationSeconds: null
-    codec: null
-    profile: null
-    sampleRate: null
-    channels: null
-    bitRateKbps: null
+    filename: delivery.m4a
+    sha256: 03907df09ef312c8b819376bde1074cc1a975811994d36aa4afdbe3384aa2d4a
+    bytes: 16821936
+    durationSeconds: 2159.2
+    codec: aac
+    profile: LC
+    sampleRate: 44100
+    channels: 1
+    bitRateKbps: 61
 qa:
   audioApproved: false
   approvedBy: ''

@@ -6,7 +6,7 @@ storyID: the-bay-that-glows-at-night
 supersedes: null
 identityResolved: true
 identityNote: ''
-workflowStatus: draft
+workflowStatus: rendered
 accessDecision: premium
 episode:
   id: 12
@@ -16,7 +16,7 @@ episode:
 card:
   title: The Bay That Glows at Night
   subtitle: Adrift on a moonless Caribbean bay where every touch of the water answers in blue
-  narrator: Lullable
+  narrator: Read by Brian from St Ives
   genreIDs:
   - gentle-nature
   bedtimeNote: No moon tonight, and that is the point. The paddle rests, the water glows wherever the fish go, and a whole island keeps its darkness like a garden.
@@ -29,7 +29,7 @@ card:
   isFeatured: false
   trialPreviewEligible: false
   publishedAt: PENDING
-  durationSeconds: null
+  durationSeconds: 2637
 script:
   narrationFile: narration.md
   ssmlFile: upload-to-elevenlabs.txt
@@ -43,37 +43,37 @@ rights:
   evidence: Script written in-house for Lullable; narration rendered with our own licensed ElevenLabs voice; no third-party text, music or sound used. All rights owned by Lullable.
   evidenceFiles: []
 render:
-  provider: elevenlabs
-  voiceId: PENDING
-  voiceName: PENDING
-  model: PENDING
+  provider: amazon-polly
+  voiceId: Brian
+  voiceName: Brian
+  model: generative
   settings:
     stability: null
     similarityBoost: null
     style: null
-    speakerBoost: null
-  historyItemId: PENDING
+    speakerBoost: false
+  historyItemId: polly-task-id-not-logged;raw=polly-Brian-raw.mp3
   projectId: PENDING
-  renderedAt: PENDING
+  renderedAt: '2026-08-20T17:27:35Z'
 audio:
   master:
-    filename: PENDING
-    sha256: PENDING
-    bytes: null
-    durationSeconds: null
-    codec: null
-    sampleRate: null
-    channels: null
+    filename: master.wav
+    sha256: d1d8b7ef6fcf79cae8a6c99c18b16447796356bddbb20d5c92f9cae552089cf2
+    bytes: 232566862
+    durationSeconds: 2636.812
+    codec: pcm_s16le
+    sampleRate: 44100
+    channels: 1
   delivery:
-    filename: PENDING
-    sha256: PENDING
-    bytes: null
-    durationSeconds: null
-    codec: null
-    profile: null
-    sampleRate: null
-    channels: null
-    bitRateKbps: null
+    filename: delivery.m4a
+    sha256: 697a1a35ba0f29d3cb8cc9d5799b8dcccbe181c6d220e12169ffaaaa13deb6e9
+    bytes: 22744879
+    durationSeconds: 2636.9
+    codec: aac
+    profile: LC
+    sampleRate: 44100
+    channels: 1
+    bitRateKbps: 68
 qa:
   audioApproved: false
   approvedBy: ''

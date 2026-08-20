@@ -1,10 +1,11 @@
----
+# CANONICAL MANIFEST — edit this file and nothing else.
+# Everything in _generated/ is produced from here by: lullable.py build
+
 schemaVersion: 1
 storyID: the-rings-of-saturn
-supersedes: 
+supersedes: null
 identityResolved: true
-identityNote: Published as an additional story. It is distinct from the existing edge-of-saturn
-  fixture; no prior story ID is replaced.
+identityNote: Published as an additional story. It is distinct from the existing edge-of-saturn fixture; no prior story ID is replaced.
 workflowStatus: published
 accessDecision: free
 episode:
@@ -18,27 +19,20 @@ episode:
 card:
   title: The Rings of Saturn
   subtitle: Ten metres of ice, two hundred thousand kilometres wide, turning in silence
-  narrator: Lullable
+  narrator: Read by Amy from Greenwich
   genreIDs:
   - cosmic-journeys
-  bedtimeNote: A long way from anything that has ever asked something of you. Nothing
-    out here is in a hurry, and none of it needs watching.
+  bedtimeNote: A long way from anything that has ever asked something of you. Nothing out here is in a hurry, and none of it needs watching.
   bestFor: Drifting off slowly
   sleepPace: Slow and weightless
   atmosphere: Cold, vast, silent
-  description: 'You rise gently from your own roof and travel outward, past the Moon
-    and Jupiter, until a tilted gold shape appears in the dark. Up close the rings
-    resolve into thousands of fine bright lines, and then into ice: billions of frozen
-    pieces, some finer than dust and some the size of mountains, all drifting the
-    same way at once. You watch small moons carve clean lanes and raise slow waves
-    behind them, hear a gentle unfinished argument about how old it all is, and then
-    settle into the ring plane and stay.'
+  description: 'You rise gently from your own roof and travel outward, past the Moon and Jupiter, until a tilted gold shape appears in the dark. Up close the rings resolve into thousands of fine bright lines, and then into ice: billions of frozen pieces, some finer than dust and some the size of mountains, all drifting the same way at once. You watch small moons carve clean lanes and raise slow waves behind them, hear a gentle unfinished argument about how old it all is, and then settle into the ring plane and stay.'
   colorHex: 1B2436
   accentHex: E8C89A
   isFeatured: true
   trialPreviewEligible: false
   publishedAt: '2026-08-14T17:53:16Z'
-  durationSeconds: 2125.557
+  durationSeconds: 2298
 script:
   narrationFile: narration.md
   ssmlFile: upload-to-elevenlabs.txt
@@ -49,45 +43,43 @@ script:
   estimatedMinutesAt118wpm: 47.2
 rights:
   status: verified
-  evidence: 'Founder/operator attestation recorded in rights-evidence.md: script written
-    in-house for Lullable; narration rendered with Lullable''s licensed ElevenLabs
-    voice; no third-party text, music, or sound used.'
+  evidence: 'Founder/operator attestation recorded in rights-evidence.md: script written in-house for Lullable; narration rendered with Lullable''s licensed ElevenLabs voice; no third-party text, music, or sound used.'
   evidenceFiles:
   - rights-evidence.md
 render:
-  provider: elevenlabs
-  voiceId: oiVoyoYP9iXTljaT7XBd
-  voiceName: Lullable_Female
-  model: eleven_turbo_v2_5
+  provider: amazon-polly
+  voiceId: Amy
+  voiceName: Amy
+  model: generative
   settings:
     speed: 1.0
     stability: 0.5
     similarityBoost: 0.75
     style: 0.0
-    speakerBoost: true
-  historyItemId: 
+    speakerBoost: false
+  historyItemId: polly-task-id-not-logged;raw=polly-Amy-raw.mp3
   projectId: BH3jZFwYV18CNXixdWcn
   chapterId: FL9dkPAMC9Pg5CR5nkv3
-  renderedAt: '2026-08-14T16:18:19Z'
+  renderedAt: '2026-08-20T17:22:33Z'
 audio:
   master:
-    filename: ElevenLabs_the-rings-of-saturn-v2.wav
-    sha256: 5300e449a37cf1f32fbc9f417a39c901e8c36ca6f381429925684cbb3ce9f984
-    bytes: 187474184
-    durationSeconds: 2125.557143
+    filename: master.wav
+    sha256: 0779c2320fa0c6cadd103a8c1dc406f69543b4212ad4bf857946af4d676c5bc0
+    bytes: 202651726
+    durationSeconds: 2297.638
     codec: pcm_s16le
     sampleRate: 44100
     channels: 1
   delivery:
-    filename: story.m4a
-    sha256: 8150ee8e8589e6633ba59a14643bf4b1a35a592fed3a8284452156a87aae830f
-    bytes: 23202379
-    durationSeconds: 2125.557007
+    filename: delivery.m4a
+    sha256: e9f05b74fe511c9d1481f3ce501f50f2852a250fdc4422b253b4bcc2883be900
+    bytes: 20096769
+    durationSeconds: 2297.7
     codec: aac
     profile: LC
     sampleRate: 44100
     channels: 1
-    bitRateKbps: 86
+    bitRateKbps: 69
 qa:
   audioApproved: true
   approvedBy: Founder/operator

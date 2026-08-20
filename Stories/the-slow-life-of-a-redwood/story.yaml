@@ -6,7 +6,7 @@ storyID: the-slow-life-of-a-redwood
 supersedes: null
 identityResolved: true
 identityNote: ''
-workflowStatus: draft
+workflowStatus: rendered
 accessDecision: premium
 episode:
   id: 7
@@ -19,7 +19,7 @@ episode:
 card:
   title: The Slow Life of a Redwood
   subtitle: A night in the fog with the tallest living things there have ever been
-  narrator: Lullable
+  narrator: Read by Patrick from Block Island, Rhode Island
   genreIDs:
   - gentle-nature
   bedtimeNote: The grove waters itself with fog while everyone sleeps, and has done for two thousand summers. Nothing in it moves faster than a slug, and nothing needs watching tonight.
@@ -32,7 +32,7 @@ card:
   isFeatured: false
   trialPreviewEligible: false
   publishedAt: PENDING
-  durationSeconds: null
+  durationSeconds: 2431
 script:
   narrationFile: narration.md
   ssmlFile: upload-to-elevenlabs.txt
@@ -46,37 +46,37 @@ rights:
   evidence: Script written in-house for Lullable; narration rendered with our own licensed ElevenLabs voice; no third-party text, music or sound used. All rights owned by Lullable.
   evidenceFiles: []
 render:
-  provider: elevenlabs
-  voiceId: PENDING
-  voiceName: PENDING
-  model: PENDING
+  provider: amazon-polly
+  voiceId: Patrick
+  voiceName: Patrick
+  model: long-form
   settings:
     stability: null
     similarityBoost: null
     style: null
-    speakerBoost: null
-  historyItemId: PENDING
+    speakerBoost: false
+  historyItemId: polly-task-id-not-logged;raw=polly-Patrick-raw.mp3
   projectId: PENDING
-  renderedAt: PENDING
+  renderedAt: '2026-08-20T17:26:34Z'
 audio:
   master:
-    filename: PENDING
-    sha256: PENDING
-    bytes: null
-    durationSeconds: null
-    codec: null
-    sampleRate: null
-    channels: null
+    filename: master.wav
+    sha256: 4ccef873cc886e8ccea911464bcefa6e1580ffdcb5e89e6935dba66ec5758349
+    bytes: 214382670
+    durationSeconds: 2430.642
+    codec: pcm_s16le
+    sampleRate: 44100
+    channels: 1
   delivery:
-    filename: PENDING
-    sha256: PENDING
-    bytes: null
-    durationSeconds: null
-    codec: null
-    profile: null
-    sampleRate: null
-    channels: null
-    bitRateKbps: null
+    filename: delivery.m4a
+    sha256: d5c36f5ed8e12a46fd5c9a611954f65239dacb20db9d956b2f58f0a8df536d78
+    bytes: 21063952
+    durationSeconds: 2430.7
+    codec: aac
+    profile: LC
+    sampleRate: 44100
+    channels: 1
+    bitRateKbps: 68
 qa:
   audioApproved: false
   approvedBy: ''

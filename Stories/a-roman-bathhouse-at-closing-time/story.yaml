@@ -6,7 +6,7 @@ storyID: a-roman-bathhouse-at-closing-time
 supersedes: null
 identityResolved: true
 identityNote: ''
-workflowStatus: draft
+workflowStatus: rendered
 accessDecision: premium
 episode:
   id: 9
@@ -19,7 +19,7 @@ episode:
 card:
   title: A Roman Bathhouse at Closing Time
   subtitle: Warm floors, running water, and the last lamps of an ordinary Roman evening
-  narrator: Lullable
+  narrator: Read by Arthur from Ludlow
   genreIDs:
   - ancient-worlds
   bedtimeNote: The fire is banked, the water runs on its own, and the night man is dozing at his post. The building keeps itself warm until morning, and none of it needs you.
@@ -32,7 +32,7 @@ card:
   isFeatured: false
   trialPreviewEligible: false
   publishedAt: PENDING
-  durationSeconds: null
+  durationSeconds: 2330
 script:
   narrationFile: narration.md
   ssmlFile: upload-to-elevenlabs.txt
@@ -46,37 +46,37 @@ rights:
   evidence: Script written in-house for Lullable; narration rendered with our own licensed ElevenLabs voice; no third-party text, music or sound used. All rights owned by Lullable.
   evidenceFiles: []
 render:
-  provider: elevenlabs
-  voiceId: PENDING
-  voiceName: PENDING
-  model: PENDING
+  provider: amazon-polly
+  voiceId: Arthur
+  voiceName: Arthur
+  model: neural
   settings:
     stability: null
     similarityBoost: null
     style: null
-    speakerBoost: null
-  historyItemId: PENDING
+    speakerBoost: false
+  historyItemId: polly-task-id-not-logged;raw=polly-Arthur-raw.mp3
   projectId: PENDING
-  renderedAt: PENDING
+  renderedAt: '2026-08-20T17:13:36Z'
 audio:
   master:
-    filename: PENDING
-    sha256: PENDING
-    bytes: null
-    durationSeconds: null
-    codec: null
-    sampleRate: null
-    channels: null
+    filename: master.wav
+    sha256: 7dff17b3ad76f5fd6c6ff71e415da74e97b0e14e008225441f6457a25704a65f
+    bytes: 205514830
+    durationSeconds: 2330.099
+    codec: pcm_s16le
+    sampleRate: 44100
+    channels: 1
   delivery:
-    filename: PENDING
-    sha256: PENDING
-    bytes: null
-    durationSeconds: null
-    codec: null
-    profile: null
-    sampleRate: null
-    channels: null
-    bitRateKbps: null
+    filename: delivery.m4a
+    sha256: ea4d943f5343f1f9d1660e4d27172983d602682f1f999b796639139705ebb4c5
+    bytes: 17678536
+    durationSeconds: 2330.1
+    codec: aac
+    profile: LC
+    sampleRate: 44100
+    channels: 1
+    bitRateKbps: 59
 qa:
   audioApproved: false
   approvedBy: ''

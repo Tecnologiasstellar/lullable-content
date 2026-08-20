@@ -6,7 +6,7 @@ storyID: floating-through-the-pillars-of-creation
 supersedes: null
 identityResolved: true
 identityNote: ''
-workflowStatus: draft
+workflowStatus: rendered
 accessDecision: premium
 episode:
   id: 1
@@ -20,7 +20,7 @@ episode:
 card:
   title: Floating Through the Pillars of Creation
   subtitle: Cold columns of dust and gas, six thousand light years out, quietly making stars
-  narrator: Lullable
+  narrator: Read by Amy from Greenwich
   genreIDs:
   - cosmic-journeys
   bedtimeNote: Nothing out there is waiting for anything. The columns simply stand in the light, giving themselves up to it slowly, and they will go on standing long after tonight.
@@ -33,7 +33,7 @@ card:
   isFeatured: false
   trialPreviewEligible: false
   publishedAt: PENDING
-  durationSeconds: null
+  durationSeconds: 2435
 script:
   narrationFile: narration.md
   ssmlFile: upload-to-elevenlabs.txt
@@ -47,37 +47,37 @@ rights:
   evidence: Script written in-house for Lullable; narration rendered with our own licensed ElevenLabs voice; no third-party text, music or sound used. All rights owned by Lullable.
   evidenceFiles: []
 render:
-  provider: elevenlabs
-  voiceId: PENDING
-  voiceName: PENDING
-  model: PENDING
+  provider: amazon-polly
+  voiceId: Amy
+  voiceName: Amy
+  model: generative
   settings:
     stability: null
     similarityBoost: null
     style: null
-    speakerBoost: null
-  historyItemId: PENDING
+    speakerBoost: false
+  historyItemId: polly-task-id-not-logged;raw=polly-Amy-raw.mp3
   projectId: PENDING
-  renderedAt: PENDING
+  renderedAt: '2026-08-20T17:13:40Z'
 audio:
   master:
-    filename: PENDING
-    sha256: PENDING
-    bytes: null
-    durationSeconds: null
-    codec: null
-    sampleRate: null
-    channels: null
+    filename: master.wav
+    sha256: 1abe66e07198e0cf18c74514841595332d5751798c5d6c781830ba7ef7585d72
+    bytes: 214771790
+    durationSeconds: 2435.053
+    codec: pcm_s16le
+    sampleRate: 44100
+    channels: 1
   delivery:
-    filename: PENDING
-    sha256: PENDING
-    bytes: null
-    durationSeconds: null
-    codec: null
-    profile: null
-    sampleRate: null
-    channels: null
-    bitRateKbps: null
+    filename: delivery.m4a
+    sha256: c8ce92527c3f4f65109317117f3f7ef3ae5ff6610106e57e6419aa397d120499
+    bytes: 20519845
+    durationSeconds: 2435.1
+    codec: aac
+    profile: LC
+    sampleRate: 44100
+    channels: 1
+    bitRateKbps: 66
 qa:
   audioApproved: false
   approvedBy: ''
