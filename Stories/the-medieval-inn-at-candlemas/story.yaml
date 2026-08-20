@@ -1,0 +1,90 @@
+# CANONICAL MANIFEST — edit this file and nothing else.
+# Everything in _generated/ is produced from here by: lullable.py build
+
+schemaVersion: 1
+storyID: the-medieval-inn-at-candlemas
+supersedes: null
+identityResolved: true
+identityNote: ''
+workflowStatus: rendered
+accessDecision: PENDING
+episode:
+  id: 24
+  pillar: 2. Ancient History & Gentle Lore
+  tags:
+  - sleep story
+  - medieval
+  - inn
+  - history
+  - winter
+card:
+  title: The Medieval Inn at Candlemas
+  subtitle: A traveler arrives at a fourteenth-century wayside inn on the feast of the returning light
+  narrator: Read by Arthur from Ludlow
+  genreIDs:
+  - ancient-worlds
+  bedtimeNote: Six centuries ago, a bell rang a whole valley to bed, fires were banked under clay covers, and travelers slept easy, all facing one fire. Borrow that old, whole kind of night.
+  bestFor: Settling in after travel
+  sleepPace: Slow and fireside
+  atmosphere: Candlelit, timbered, snowy
+  description: You ride into a fourteenth-century wayside inn on Candlemas, the old feast of blessed candles marking winter's turn. A green bush over the door promises ale, beds, and fire, and inside, strangers share one hearth, a thick pottage, and low unimportant talk. At curfew the innkeeper covers the fire under a clay dome, candles are pinched out one by one, and the village church bell rings the valley to rest. Upstairs under a thick thatch roof, travelers share a chamber the old way, speaking of first sleep and second sleep as easily as dinner and supper, while outside, in perfect silence, it begins to snow.
+  colorHex: 241A12
+  accentHex: E0A855
+  isFeatured: false
+  trialPreviewEligible: false
+  publishedAt: PENDING
+  durationSeconds: 1606
+script:
+  narrationFile: narration.md
+  ssmlFile: upload-to-elevenlabs.txt
+  words: 2592
+  breaks: 236
+  wordsPerBreak: 10.98
+  silenceSeconds: 480.8
+  estimatedMinutesAt118wpm: 30.0
+rights:
+  status: verified
+  evidence: Script written in-house for Lullable; narration rendered with our own licensed ElevenLabs voice; no third-party text, music or sound used. All rights owned by Lullable.
+  evidenceFiles: []
+render:
+  provider: amazon-polly
+  voiceId: Arthur
+  voiceName: Arthur
+  model: neural
+  settings:
+    stability: null
+    similarityBoost: null
+    style: null
+    speakerBoost: false
+  historyItemId: polly-task-id-not-logged;raw=polly-Arthur-raw.mp3
+  projectId: PENDING
+  renderedAt: '2026-08-20T18:55:16Z'
+audio:
+  master:
+    filename: master.wav
+    sha256: 82998dca2efb57a513ae4f42c450139648e0d3f4b778dd155ed26c7f8d49d577
+    bytes: 53231616
+    durationSeconds: 603.532
+    codec: pcm_s16le
+    sampleRate: 44100
+    channels: 1
+  delivery:
+    filename: delivery.m4a
+    sha256: 3855e16dec8d5ea127e55dd6118fe8b913f2a1bd9841ec4948e60f7edeed1291
+    bytes: 11813563
+    durationSeconds: 1605.7
+    codec: aac
+    profile: LC
+    sampleRate: 44100
+    channels: 1
+    bitRateKbps: 57
+qa:
+  audioApproved: false
+  approvedBy: ''
+  approvedAt: ''
+  deviceAccepted: false
+  deviceNotes: ''
+publish:
+  audioAssetID: PENDING
+  supabaseAudioUploaded: false
+  catalogRowUpserted: false

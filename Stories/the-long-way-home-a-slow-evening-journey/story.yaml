@@ -1,0 +1,90 @@
+# CANONICAL MANIFEST — edit this file and nothing else.
+# Everything in _generated/ is produced from here by: lullable.py build
+
+schemaVersion: 1
+storyID: the-long-way-home-a-slow-evening-journey
+supersedes: null
+identityResolved: true
+identityNote: ''
+workflowStatus: rendered
+accessDecision: PENDING
+episode:
+  id: 23
+  pillar: 4. Immersive Journeys & Slow Fiction
+  tags:
+  - sleep story
+  - walking
+  - ireland
+  - coast
+  - village
+card:
+  title: 'The Long Way Home: A Slow Evening Journey'
+  subtitle: A quiet walk down a coast road, through a sleeping village, to a banked fire
+  narrator: Read by Niamh from Kinsale
+  genreIDs:
+  - cozy-tales
+  bedtimeNote: There is no adventure in tonight's walk, only lanes and hedges and a lamp left burning in a window for whoever is still out. That lamp is for you too.
+  bestFor: Walking off the day
+  sleepPace: Unhurried, step by ste
+  atmosphere: Coastal, hedgerowed, hushed
+  description: You walk the long way home down an Irish coast road at dusk, with the sea keeping pace on one side and stone walls built to let the wind through on the other. The road passes a small harbor of knocking boats, a bridge over a talking stream, and a sleeping village where lamplight goes window by window from white to amber to out. Soft rain arrives in the hedges, right on time. A lamp burns in a neighbor's window for late travelers, an old coastal custom, and at last a whitewashed house appears with its own window lit, its turf fire banked low and patient under its ash, waiting to be climbed into.
+  colorHex: 2B2E3A
+  accentHex: E4703C
+  isFeatured: false
+  trialPreviewEligible: false
+  publishedAt: PENDING
+  durationSeconds: 2032
+script:
+  narrationFile: narration.md
+  ssmlFile: upload-to-elevenlabs.txt
+  words: 3289
+  breaks: 320
+  wordsPerBreak: 10.28
+  silenceSeconds: 644.4
+  estimatedMinutesAt118wpm: 38.6
+rights:
+  status: verified
+  evidence: Script written in-house for Lullable; narration rendered with our own licensed ElevenLabs voice; no third-party text, music or sound used. All rights owned by Lullable.
+  evidenceFiles: []
+render:
+  provider: amazon-polly
+  voiceId: Niamh
+  voiceName: Niamh
+  model: generative
+  settings:
+    stability: null
+    similarityBoost: null
+    style: null
+    speakerBoost: false
+  historyItemId: polly-task-id-not-logged;raw=polly-Niamh-raw.mp3
+  projectId: PENDING
+  renderedAt: '2026-08-20T18:54:36Z'
+audio:
+  master:
+    filename: master.wav
+    sha256: 288146b1a24aeb80763bddf73745b9288ab01308077bf41b9f7efdb73f16abeb
+    bytes: 179253326
+    durationSeconds: 2032.35
+    codec: pcm_s16le
+    sampleRate: 44100
+    channels: 1
+  delivery:
+    filename: delivery.m4a
+    sha256: 65c09caf4a29b7ce5064d4f738cf749fc36d92b88fbd14b124e2ff663d07f9b0
+    bytes: 14488935
+    durationSeconds: 2032.4
+    codec: aac
+    profile: LC
+    sampleRate: 44100
+    channels: 1
+    bitRateKbps: 56
+qa:
+  audioApproved: false
+  approvedBy: ''
+  approvedAt: ''
+  deviceAccepted: false
+  deviceNotes: ''
+publish:
+  audioAssetID: PENDING
+  supabaseAudioUploaded: false
+  catalogRowUpserted: false

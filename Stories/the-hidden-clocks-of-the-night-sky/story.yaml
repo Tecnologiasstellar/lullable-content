@@ -1,0 +1,90 @@
+# CANONICAL MANIFEST — edit this file and nothing else.
+# Everything in _generated/ is produced from here by: lullable.py build
+
+schemaVersion: 1
+storyID: the-hidden-clocks-of-the-night-sky
+supersedes: null
+identityResolved: true
+identityNote: ''
+workflowStatus: rendered
+accessDecision: PENDING
+episode:
+  id: 21
+  pillar: 1. Cosmology for Sleep
+  tags:
+  - sleep story
+  - astronomy
+  - night sky
+  - stars
+  - time
+card:
+  title: The Hidden Clocks of the Night Sky
+  subtitle: Stars, moonlight, and slow planets, each quietly keeping their own kind of time
+  narrator: Read by Amy from Greenwich
+  genreIDs:
+  - cosmic-journeys
+  bedtimeNote: The sky above your roof is the oldest clock there is, and it has never once run down or needed you to watch it. Let it keep the hour tonight. You can simply rest.
+  bestFor: Watching the sky turn
+  sleepPace: Slow, wide, unhurried
+  atmosphere: Starlit, quiet, vast
+  description: 'You lie back in a dark meadow and read the oldest clock there is: the night sky. The whole dome of stars turns once a day around a quiet pole star. The moon counts twenty-nine nights and tows the tides behind it. Five wandering planets keep their own slow paces, one of them lending its name to Saturday. Starlight even comes in colors that tell a star''s age, blue youth to red old age. And beneath every quick hand, one wobble of the Earth''s axis takes twenty-six thousand years to complete, mid-tick since before the first cities rose. None of these clocks needs winding, watching, or you.'
+  colorHex: 121A2E
+  accentHex: D9C9A0
+  isFeatured: false
+  trialPreviewEligible: false
+  publishedAt: PENDING
+  durationSeconds: 1148
+script:
+  narrationFile: narration.md
+  ssmlFile: upload-to-elevenlabs.txt
+  words: 1885
+  breaks: 180
+  wordsPerBreak: 10.47
+  silenceSeconds: 360.3
+  estimatedMinutesAt118wpm: 22.0
+rights:
+  status: verified
+  evidence: Script written in-house for Lullable; narration rendered with our own licensed ElevenLabs voice; no third-party text, music or sound used. All rights owned by Lullable.
+  evidenceFiles: []
+render:
+  provider: amazon-polly
+  voiceId: Amy
+  voiceName: Amy
+  model: generative
+  settings:
+    stability: null
+    similarityBoost: null
+    style: null
+    speakerBoost: false
+  historyItemId: polly-task-id-not-logged;raw=polly-Amy-raw.mp3
+  projectId: PENDING
+  renderedAt: '2026-08-20T18:56:13Z'
+audio:
+  master:
+    filename: master.wav
+    sha256: 2c60485b3d7a7a1036467b1cfec641ea9d1924d27aba6117401905a7e7abee3f
+    bytes: 101259342
+    durationSeconds: 1148.064
+    codec: pcm_s16le
+    sampleRate: 44100
+    channels: 1
+  delivery:
+    filename: delivery.m4a
+    sha256: 4b4b6218f3c77c42cb8e7b8b4bc2c516ab16878a40ee16d4b566ec1d3334ea45
+    bytes: 8941785
+    durationSeconds: 1148.1
+    codec: aac
+    profile: LC
+    sampleRate: 44100
+    channels: 1
+    bitRateKbps: 61
+qa:
+  audioApproved: false
+  approvedBy: ''
+  approvedAt: ''
+  deviceAccepted: false
+  deviceNotes: ''
+publish:
+  audioAssetID: PENDING
+  supabaseAudioUploaded: false
+  catalogRowUpserted: false

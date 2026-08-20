@@ -1,0 +1,90 @@
+# CANONICAL MANIFEST — edit this file and nothing else.
+# Everything in _generated/ is produced from here by: lullable.py build
+
+schemaVersion: 1
+storyID: the-lighthouse-on-the-windswept-island
+supersedes: null
+identityResolved: true
+identityNote: ''
+workflowStatus: rendered
+accessDecision: PENDING
+episode:
+  id: 22
+  pillar: 6. Craft & Quiet Work
+  tags:
+  - sleep story
+  - lighthouse
+  - ocean
+  - keeper
+  - coast
+card:
+  title: The Lighthouse on the Windswept Island
+  subtitle: A keeper winds the weight, lights the lens, and keeps the coast safe till dawn
+  narrator: Read by Patrick from Block Island, Rhode Island
+  genreIDs:
+  - cozy-tales
+  bedtimeNote: Somewhere on a cold coast tonight, a lighthouse keeper is turning a great patient light so that strangers can pass safely by. You are as watched-over as any ship out there.
+  bestFor: Feeling watched over
+  sleepPace: Steady and slow
+  atmosphere: Granite, lamplight, rain
+  description: 'You climb a windswept island to a granite lighthouse, where a keeper is beginning his night watch. Ninety-nine steps up, past the watch room, to a great Fresnel lens turning on a bath of mercury, sweeping one long beam over the sea. Below, a snug round room holds a stove, an armchair, and a logbook of a hundred years of nights that all end the same reassuring way: all well. Rain arrives off the sea and streams down the tower in one continuous whisper, and out in the dark a coaster''s mate counts the flashes and marks his position, never once thinking of the tower keeping him safe.'
+  colorHex: 1B2A33
+  accentHex: E8B84B
+  isFeatured: false
+  trialPreviewEligible: false
+  publishedAt: PENDING
+  durationSeconds: 1468
+script:
+  narrationFile: narration.md
+  ssmlFile: upload-to-elevenlabs.txt
+  words: 2426
+  breaks: 197
+  wordsPerBreak: 12.31
+  silenceSeconds: 414.8
+  estimatedMinutesAt118wpm: 27.5
+rights:
+  status: verified
+  evidence: Script written in-house for Lullable; narration rendered with our own licensed ElevenLabs voice; no third-party text, music or sound used. All rights owned by Lullable.
+  evidenceFiles: []
+render:
+  provider: amazon-polly
+  voiceId: Patrick
+  voiceName: Patrick
+  model: long-form
+  settings:
+    stability: null
+    similarityBoost: null
+    style: null
+    speakerBoost: false
+  historyItemId: polly-task-id-not-logged;raw=polly-Patrick-raw.mp3
+  projectId: PENDING
+  renderedAt: '2026-08-20T18:55:24Z'
+audio:
+  master:
+    filename: master.wav
+    sha256: 871733a7d385ccafa4d176345e944adab860891a849ca5bc6560143f50e0f165
+    bytes: 129435726
+    durationSeconds: 1467.524
+    codec: pcm_s16le
+    sampleRate: 44100
+    channels: 1
+  delivery:
+    filename: delivery.m4a
+    sha256: 2c02ec2b2557c06a255f7ccb4f13f6cf866f3713d6e7be616a73f3fa65ac5902
+    bytes: 12102687
+    durationSeconds: 1467.6
+    codec: aac
+    profile: LC
+    sampleRate: 44100
+    channels: 1
+    bitRateKbps: 65
+qa:
+  audioApproved: false
+  approvedBy: ''
+  approvedAt: ''
+  deviceAccepted: false
+  deviceNotes: ''
+publish:
+  audioAssetID: PENDING
+  supabaseAudioUploaded: false
+  catalogRowUpserted: false

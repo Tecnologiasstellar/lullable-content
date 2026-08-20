@@ -1,0 +1,90 @@
+# CANONICAL MANIFEST — edit this file and nothing else.
+# Everything in _generated/ is produced from here by: lullable.py build
+
+schemaVersion: 1
+storyID: the-quiet-observatory-questions-about-time
+supersedes: null
+identityResolved: true
+identityNote: ''
+workflowStatus: rendered
+accessDecision: PENDING
+episode:
+  id: 26
+  pillar: 1. Cosmology for Sleep
+  tags:
+  - sleep story
+  - astronomy
+  - time
+  - science
+  - observatory
+card:
+  title: 'The Quiet Observatory: Questions About Time'
+  subtitle: A gentle night among telescopes, old clocks, and the soft, bending nature of time itself
+  narrator: Read by Emma from Oxford
+  genreIDs:
+  - cosmic-journeys
+  bedtimeNote: Time only flows, never hurries, never waits. Tonight it is only asking you to lie still while it carries you, the way it has carried every sleeper before you.
+  bestFor: Quieting a busy mind
+  sleepPace: Slow and thoughtful
+  atmosphere: Starlit, hushed, timeless
+  description: 'You climb a small hill to a small observatory to spend the night with the gentlest big question there is: what is time. A telescope shows that starlight is an old patient archive, arriving from a hundred different pasts all at once, and that there is no single now shared by the whole universe. Pendulum clocks, water clocks, and candle clocks each try to hang a bucket in a stream that never pools. A carpenter''s son builds four clocks to solve longitude at sea, a hill at Greenwich becomes the world''s meridian, and modern clocks now count the hum inside an atom. At the end, the astronomer closes the logbook with one word, closed, and so can you.'
+  colorHex: 141B2E
+  accentHex: C9D6E8
+  isFeatured: false
+  trialPreviewEligible: false
+  publishedAt: PENDING
+  durationSeconds: 2115
+script:
+  narrationFile: narration.md
+  ssmlFile: upload-to-elevenlabs.txt
+  words: 3476
+  breaks: 256
+  wordsPerBreak: 13.58
+  silenceSeconds: 569.2
+  estimatedMinutesAt118wpm: 38.9
+rights:
+  status: verified
+  evidence: Script written in-house for Lullable; narration rendered with our own licensed ElevenLabs voice; no third-party text, music or sound used. All rights owned by Lullable.
+  evidenceFiles: []
+render:
+  provider: amazon-polly
+  voiceId: Emma
+  voiceName: Emma
+  model: neural
+  settings:
+    stability: null
+    similarityBoost: null
+    style: null
+    speakerBoost: false
+  historyItemId: polly-task-id-not-logged;raw=polly-Emma-raw.mp3
+  projectId: PENDING
+  renderedAt: '2026-08-20T18:54:32Z'
+audio:
+  master:
+    filename: master.wav
+    sha256: 2ee83b6ce28f2ddbaeefbfb2d81a83f982c23908f82e6a41529e3dfe4b16d0e4
+    bytes: 186501198
+    durationSeconds: 2114.525
+    codec: pcm_s16le
+    sampleRate: 44100
+    channels: 1
+  delivery:
+    filename: delivery.m4a
+    sha256: b60a75d92508b1c955b5c867c58b37560a15431bd5b9b0f44ce76e135b4b3ff3
+    bytes: 15550190
+    durationSeconds: 2114.6
+    codec: aac
+    profile: LC
+    sampleRate: 44100
+    channels: 1
+    bitRateKbps: 57
+qa:
+  audioApproved: false
+  approvedBy: ''
+  approvedAt: ''
+  deviceAccepted: false
+  deviceNotes: ''
+publish:
+  audioAssetID: PENDING
+  supabaseAudioUploaded: false
+  catalogRowUpserted: false
