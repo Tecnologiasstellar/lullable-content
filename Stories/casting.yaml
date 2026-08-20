@@ -1,0 +1,117 @@
+# Lullable — official narration casting & production config
+# Single source of truth for voice casting, personas, narrator bios, the
+# production recipe, and the audio file naming convention.
+# Casting, story→category mapping, personas and bios CONFIRMED by AV 2026-08-20.
+# Machine-readable on purpose: database ingestion and render scripts read this file.
+
+provider: amazon-polly
+region: us-east-1
+
+recipe:
+  pause_scale: 1.25        # multiply every authored <break> before rendering (silence, structurally)
+  master_tempo: 0.93       # pitch-preserving slowdown in mastering (safe floor 0.88)
+  master_warmth_db: 1.5    # low-shelf lift at 180 Hz
+  master_highs_db: -2      # gentle shelf at 7 kHz
+  master_lufs: -20         # bedtime loudness target
+  target_runtime_min: 45   # goal, not a gate — short episodes ship, texts lengthened later
+
+# One fixed voice per category. Engines verified against live Polly inventory
+# 2026-08-20. All modern engines (long-form / generative / neural) — the legacy
+# "standard" engine is banned from this catalogue.
+casting:
+  long-ago:
+    display: "Long Ago"
+    voice: Arthur
+    gender: male
+    accent: British
+    engine: neural
+    language_code: en-GB
+    persona: "Read by Arthur from Ludlow"
+    bio: "Arthur has spent his whole life among the timbered lanes and castle walls of Ludlow, where history is not a subject but a neighbour. He reads the way old towns keep time: slowly, and without any need to hurry."
+    measured_wpm: 183
+  stars-and-signs:
+    display: "Stars & Signs"
+    voice: Amy
+    gender: female
+    accent: British
+    engine: generative
+    language_code: en-GB
+    persona: "Read by Amy from Greenwich"
+    bio: "Amy grew up on the hill in Greenwich where the world keeps its time, falling asleep under the Royal Observatory's silent dome. She reads about the stars the way you point them out to a friend: softly, one at a time."
+    measured_wpm: 187
+  wild-places:
+    display: "Wild Places"
+    voice: Patrick
+    gender: male
+    accent: American
+    engine: long-form
+    language_code: en-US
+    persona: "Read by Patrick from Block Island, Rhode Island"
+    bio: "Patrick lives on Block Island, a windswept scrap of Rhode Island where the weather decides the day's plans. He reads like someone who has watched a thousand storms arrive and knows none of them last."
+    measured_wpm: 167
+  big-questions:
+    display: "Big Questions"
+    voice: Emma
+    gender: female
+    accent: British
+    engine: neural            # NOTE: long-form does not exist for en-GB voices;
+                              # neural is Emma's best (modern) engine
+    language_code: en-GB
+    persona: "Read by Emma from Oxford"
+    bio: "Emma has spent her evenings in Oxford's oldest reading rooms, where the biggest questions are asked in the quietest voices. She reads as if every idea has all night to unfold, because it does."
+    measured_wpm: 162
+  deep-ocean:
+    display: "Deep Ocean"
+    voice: Brian
+    gender: male
+    accent: British
+    engine: generative
+    language_code: en-GB
+    persona: "Read by Brian from St Ives"
+    bio: "Brian comes from St Ives, at the far end of Cornwall, where the Atlantic is the last sound anyone hears before sleep. He reads in the register of deep water: low, steady, and unhurried."
+    measured_wpm: 152
+  slow-journeys:
+    display: "Slow Journeys"
+    voice: Niamh
+    gender: female
+    accent: Irish
+    engine: generative
+    language_code: en-IE
+    persona: "Read by Niamh from Kinsale"
+    bio: "Niamh grew up in Kinsale, a small harbour town in County Cork where every journey starts slowly and ends with the tide. She reads the way the Irish tell stories: warmly, and never to be finished too soon."
+    measured_wpm: 178
+
+# Storage convention — identical in every Stories/<storyID>/audio/ folder:
+#   polly-<Voice>-raw.mp3   raw Polly render, 24 kHz mono (archival source)
+#   master.wav              mastered, 44.1 kHz 16-bit mono PCM
+#   delivery.m4a            mastered, AAC-LC 44.1 kHz mono 96 kbps (app upload format)
+# The SSML sent to Polly is written to _generated/polly.ssml in the story folder.
+# Persona string is injected into the story card as the narrator field at render time.
+naming:
+  raw: "polly-{voice}-raw.mp3"
+  master_wav: "master.wav"
+  delivery: "delivery.m4a"
+  ssml: "_generated/polly.ssml"
+
+# Story -> category mapping — APPROVED by AV 2026-08-20 (see word-targets.csv)
+story_categories:
+  a-roman-bathhouse-at-closing-time: long-ago
+  aristotle-the-greatest-philosopher: big-questions
+  dinosaurs-from-rule-to-ruin: long-ago
+  floating-through-the-pillars-of-creation: stars-and-signs
+  mapping-the-cosmic-web: stars-and-signs
+  the-bakery-before-dawn: slow-journeys
+  the-bay-that-glows-at-night: deep-ocean
+  the-building-of-a-cathedral: long-ago
+  the-clockmaker-s-workshop: slow-journeys
+  the-deep-ocean-trenches: deep-ocean
+  the-great-library-of-alexandria: long-ago
+  the-joinery-of-japan-s-wooden-temples: long-ago
+  the-journey-of-a-glacial-river: slow-journeys
+  the-life-cycle-of-a-red-dwarf-star: stars-and-signs
+  the-midnight-sleeper-train-across-the-alps: slow-journeys
+  the-moons-of-jupiter-europa-s-ice-and-ocean: stars-and-signs
+  the-observatory-on-ben-nevis: wild-places
+  the-rings-of-saturn: stars-and-signs   # AV approved re-voicing with Amy 2026-08-20
+  the-slow-life-of-a-redwood: wild-places
+  voyager-1-a-journey-to-interstellar-space: stars-and-signs
