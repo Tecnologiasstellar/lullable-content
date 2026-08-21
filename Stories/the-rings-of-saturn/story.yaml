@@ -29,7 +29,7 @@ card:
   description: 'You rise gently from your own roof and travel outward, past the Moon and Jupiter, until a tilted gold shape appears in the dark. Up close the rings resolve into thousands of fine bright lines, and then into ice: billions of frozen pieces, some finer than dust and some the size of mountains, all drifting the same way at once. You watch small moons carve clean lanes and raise slow waves behind them, hear a gentle unfinished argument about how old it all is, and then settle into the ring plane and stay.'
   colorHex: 1B2436
   accentHex: E8C89A
-  isFeatured: true
+  isFeatured: false
   trialPreviewEligible: false
   publishedAt: '2026-08-14T17:53:16Z'
   durationSeconds: 2298
