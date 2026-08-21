@@ -87,11 +87,10 @@ publish:
   bucketID: sleep-stories-public
   objectPath: aristotle-the-greatest-philosopher/audio-aristotle-en-v2-aac96/story.m4a
   staging:
-    uploadedAt: ''
-    rowUpsertedAt: ''
-    verifiedAt: ''
+    uploadedAt: '2026-08-21T02:03:01Z'
+    rowUpsertedAt: '2026-08-21T02:03:23Z'
+    verifiedAt: '2026-08-21T02:03:51Z'
   production:
     uploadedAt: '2026-08-09T00:00:00Z'
-    rowUpsertedAt: '2026-08-09T00:00:00Z'
-    verifiedAt: ''
-  legacyDirectToProduction: true
+    rowUpsertedAt: '2026-08-21T02:38:51Z'
+    verifiedAt: '2026-08-21T02:39:14Z'

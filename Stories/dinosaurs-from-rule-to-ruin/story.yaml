@@ -87,11 +87,10 @@ publish:
   bucketID: sleep-stories-premium
   objectPath: dinosaurs-from-rule-to-ruin/audio-dinosaurs-en-v2-aac96/story.m4a
   staging:
-    uploadedAt: ''
-    rowUpsertedAt: ''
-    verifiedAt: ''
+    uploadedAt: '2026-08-21T02:00:25Z'
+    rowUpsertedAt: '2026-08-21T02:00:49Z'
+    verifiedAt: '2026-08-21T02:01:21Z'
   production:
     uploadedAt: '2026-08-11T02:11:43Z'
-    rowUpsertedAt: '2026-08-11T02:11:43Z'
-    verifiedAt: ''
-  legacyDirectToProduction: true
+    rowUpsertedAt: '2026-08-21T02:38:28Z'
+    verifiedAt: '2026-08-21T02:39:03Z'
