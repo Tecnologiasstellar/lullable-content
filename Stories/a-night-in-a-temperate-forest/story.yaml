@@ -1,0 +1,94 @@
+# CANONICAL MANIFEST — edit this file and nothing else.
+# Everything in _generated/ is produced from here by: lullable.py build
+
+schemaVersion: 1
+storyID: a-night-in-a-temperate-forest
+supersedes: null
+identityResolved: true
+identityNote: ''
+workflowStatus: rendered
+accessDecision: PENDING
+episode:
+  id: 0
+  pillar: 3. Earth Science & Nature
+  tags:
+  - sleep story
+card:
+  title: A Night in a Temperate Forest
+  subtitle: A slow wander through moss, bark, and dew after dark falls.
+  narrator: Read by Patrick, Block Island
+  genreIDs:
+  - gentle-nature
+  bedtimeNote: For a mind still humming at day's end. The forest asks nothing of you tonight but to walk slowly and notice small, quiet things.
+  bestFor: Quieting a busy mind
+  sleepPace: Slow, close, unhurried
+  atmosphere: Mossy, cool, nocturnal
+  description: Follow a quiet path from the forest edge into deep woods after sunset, where moss holds the day's last water and an owl settles into a beech tree. Along the way — how dew forms, how tree roots trade sugar underground, how bats read the dark in echoes, and how a fallen log slowly becomes soil again. A gentle, factual wander built for drifting off.
+  colorHex: 121A14
+  accentHex: 9BB68C
+  isFeatured: false
+  trialPreviewEligible: false
+  publishedAt: PENDING
+  durationSeconds: 3295
+script:
+  narrationFile: narration.md
+  ssmlFile: upload-to-elevenlabs.txt
+  words: 5951
+  breaks: 521
+  wordsPerBreak: 11.42
+  silenceSeconds: 775.0
+  estimatedMinutesAt118wpm: 63.3
+rights:
+  status: verified
+  evidence: Script written in-house for Lullable; narration rendered with Amazon Polly (Patrick, long-form engine) under our AWS account; no third-party text, music or sound used. All rights owned by Lullable.
+  evidenceFiles: []
+render:
+  provider: amazon-polly
+  voiceId: Patrick
+  voiceName: Patrick
+  model: long-form
+  settings:
+    stability: null
+    similarityBoost: null
+    style: null
+    speakerBoost: false
+  historyItemId: 28ac51e2-b275-4375-812d-a6247f5dd1d3
+  projectId: PENDING
+  renderedAt: '2026-08-21T22:31:42Z'
+audio:
+  master:
+    filename: master.wav
+    sha256: 2d957cce69728b24749787666a19f7f59ef2f134253a9ebcd431598608179338
+    bytes: 290609230
+    durationSeconds: 3294.888
+    codec: pcm_s16le
+    sampleRate: 44100
+    channels: 1
+  delivery:
+    filename: delivery.m4a
+    sha256: 4dea74e2581654008ddd037de402feb73b88db40e01cab848b23c481b2975399
+    bytes: 29521441
+    durationSeconds: 3294.9
+    codec: aac
+    profile: LC
+    sampleRate: 44100
+    channels: 1
+    bitRateKbps: 70
+qa:
+  audioApproved: false
+  approvedBy: ''
+  approvedAt: ''
+  deviceAccepted: false
+  deviceNotes: ''
+publish:
+  audioAssetID: PENDING
+  bucketID: PENDING
+  objectPath: PENDING
+  staging:
+    uploadedAt: ''
+    rowUpsertedAt: ''
+    verifiedAt: ''
+  production:
+    uploadedAt: ''
+    rowUpsertedAt: ''
+    verifiedAt: ''

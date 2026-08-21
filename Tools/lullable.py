@@ -86,7 +86,7 @@ CARD_TARGETS = {   # field: (editorial min, editorial max, hard cap)
 TRACKER_COLUMNS = [
     "storyID","supersedes","workflowStatus","accessDecision","access","title","subtitle",
     "narrator","genreID_1","genreID_2","trialPreviewEligible","isFeatured","publishedAt",
-    "colorHex","accentHex","durationSeconds","bedtimeNote","bestFor","sleepPace","atmosphere",
+    "colorHex","accentHex","sigil","glowHex","baseHex","durationSeconds","bedtimeNote","bestFor","sleepPace","atmosphere",
     "description","audioAssetID","audioMasterFilename","commercialRightsStatus","audioDelivery"]
 
 def _p(*a): print(*a)
@@ -163,6 +163,10 @@ def blank_manifest():
                "genreIDs":[], "bedtimeNote":"PENDING","bestFor":"PENDING",
                "sleepPace":"PENDING","atmosphere":"PENDING","description":"PENDING",
                "colorHex":"PENDING","accentHex":"PENDING",
+               # Artwork identity. Optional but all-or-nothing (G05): a story
+               # without all three renders the shared echo mark. `sigil` is the
+               # id of a <=5-element mark; glow/base are the card's ground.
+               "sigil": None, "glowHex": None, "baseHex": None,
                "isFeatured": False, "trialPreviewEligible": False,
                "publishedAt":"PENDING", "durationSeconds": None},
       "script": {"narrationFile":"narration.md","ssmlFile":"upload-to-elevenlabs.txt",
@@ -267,7 +271,22 @@ def g04_copy(m, d):
 def g05_hex(m, d):
     bad = [k for k in ("colorHex","accentHex")
            if not re.fullmatch(r"[0-9A-F]{6}", str(_get(m,"card."+k,"")))]
-    return ("FAIL","not 6 uppercase hex chars: " + ", ".join(bad)) if bad else ("PASS","colour values valid")
+    # Artwork identity is optional — a story without it renders the echo
+    # fallback rather than nothing — but a malformed value is worse than an
+    # absent one: it reaches the app, fails to parse, and silently falls back.
+    for k in ("glowHex","baseHex"):
+        v = _get(m,"card."+k)
+        if v not in (None, "") and not re.fullmatch(r"[0-9A-F]{6}", str(v)):
+            bad.append(k)
+    sig = _get(m,"card.sigil")
+    if sig not in (None, "") and not re.fullmatch(r"[a-z][a-z0-9-]{1,31}", str(sig)):
+        return ("FAIL","card.sigil %r is not a lowercase slug" % sig)
+    art = [k for k in ("sigil","glowHex","baseHex") if _get(m,"card."+k) not in (None, "")]
+    if art and len(art) != 3:
+        return ("FAIL","artwork identity is all-or-nothing; have %s, need sigil+glowHex+baseHex" % ", ".join(art))
+    if bad:
+        return ("FAIL","not 6 uppercase hex chars: " + ", ".join(bad))
+    return ("PASS", "colour values valid" + (" (with artwork identity)" if art else ""))
 
 def g06_publishedat(m, d):
     v = _get(m,"card.publishedAt")
@@ -525,6 +544,8 @@ def tracker_row(m):
       "isFeatured": str(bool(_get(m,"card.isFeatured"))).lower(),
       "publishedAt": _get(m,"card.publishedAt",""),
       "colorHex": _get(m,"card.colorHex",""), "accentHex": _get(m,"card.accentHex",""),
+      "sigil": _get(m,"card.sigil","") or "", "glowHex": _get(m,"card.glowHex","") or "",
+      "baseHex": _get(m,"card.baseHex","") or "",
       "durationSeconds": dur if isinstance(dur,(int,float)) else "PENDING",
       "bedtimeNote": _get(m,"card.bedtimeNote",""), "bestFor": _get(m,"card.bestFor",""),
       "sleepPace": _get(m,"card.sleepPace",""), "atmosphere": _get(m,"card.atmosphere",""),
@@ -580,7 +601,7 @@ def asset_version(aid):
 # the app's design layer, are nullable, and appear in no manifest — writing them
 # from here would null out design work on every republish.
 def _story_columns(m):
-    return [
+    base = [
       ("id",                       m.get("storyID")),
       ("title",                    _get(m,"card.title")),
       ("subtitle",                 _get(m,"card.subtitle")),
@@ -598,6 +619,14 @@ def _story_columns(m):
       ("sleep_pace",               _get(m,"card.sleepPace")),
       ("atmosphere",               _get(m,"card.atmosphere")),
     ]
+    # Artwork identity, appended only when the manifest actually carries it.
+    # These columns must never be emitted as null: the upsert sets every column
+    # it names, so a story published before it had art would blank the art of a
+    # story that has it. Absent here means "leave whatever is in the row".
+    art = [("sigil",    _get(m,"card.sigil")),
+           ("glow_hex", _get(m,"card.glowHex")),
+           ("base_hex", _get(m,"card.baseHex"))]
+    return base + [(c, v) for c, v in art if v not in (None, "")]
 
 def catalog_sql(m, results, env):
     """The catalog upsert, in the shape the deployed schema actually has.
@@ -920,13 +949,14 @@ def build_tracker(root):
       "subtitle":"35-90 chars","narrator":"2-32 chars","genreID_1":"required","genreID_2":"optional",
       "trialPreviewEligible":"true | false","isFeatured":"true | false",
       "publishedAt":"ISO-8601 UTC","colorHex":"6 uppercase hex","accentHex":"6 uppercase hex",
+      "sigil":"mark id, blank = echo fallback","glowHex":"6 uppercase hex","baseHex":"6 uppercase hex",
       "durationSeconds":"measured from final audio","bedtimeNote":"90-180 chars","bestFor":"10-24 chars",
       "sleepPace":"8-22 chars","atmosphere":"10-28 chars","description":"220-650 chars",
       "audioAssetID":"immutable once minted","audioMasterFilename":"exact .wav name",
       "commercialRightsStatus":" | ".join(RIGHTS_STATUSES),"audioDelivery":"fixed"}
     widths = {"storyID":26,"supersedes":18,"workflowStatus":14,"accessDecision":14,"access":11,
               "title":30,"subtitle":38,"narrator":16,"genreID_1":16,"genreID_2":16,
-              "trialPreviewEligible":18,"isFeatured":11,"publishedAt":21,"colorHex":11,"accentHex":11,
+              "trialPreviewEligible":18,"isFeatured":11,"publishedAt":21,"colorHex":11,"accentHex":11,"sigil":16,"glowHex":11,"baseHex":11,
               "durationSeconds":15,"bedtimeNote":44,"bestFor":19,"sleepPace":17,"atmosphere":20,
               "description":48,"audioAssetID":20,"audioMasterFilename":26,
               "commercialRightsStatus":22,"audioDelivery":32}

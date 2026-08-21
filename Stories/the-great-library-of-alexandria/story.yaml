@@ -29,6 +29,9 @@ card:
   description: You arrive at a harbour in the evening, when the light is going gold and the sea wind is moving up through the streets. Inside the cool halls, thousands of scrolls lie in their niches, and scribes copy them by hand, one careful line at a time. You learn how papyrus was pressed from river reeds, how ink was made from soot, how the first catalogue was written, and how a man measured the whole earth from the length of a shadow. Then the lamps are lit, and the work is set down.
   colorHex: 3A2A18
   accentHex: D9A55C
+  sigil: alexandria
+  glowHex: 805C35
+  baseHex: 3A2A18
   isFeatured: false
   trialPreviewEligible: false
   publishedAt: '2026-08-20T19:30:00Z'
@@ -89,9 +92,9 @@ publish:
   objectPath: the-great-library-of-alexandria/audio-the-great-library-of-alexandria-en-v1-aac96/story.m4a
   staging:
     uploadedAt: '2026-08-21T02:58:56Z'
-    rowUpsertedAt: '2026-08-21T20:32:56Z'
+    rowUpsertedAt: '2026-08-21T22:42:57Z'
     verifiedAt: '2026-08-21T20:33:46Z'
   production:
     uploadedAt: '2026-08-20T19:30:00Z'
-    rowUpsertedAt: '2026-08-20T19:30:00Z'
-    verifiedAt: ''
+    rowUpsertedAt: '2026-08-21T22:43:46Z'
+    verifiedAt: '2026-08-21T20:37:43Z'

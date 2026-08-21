@@ -29,6 +29,9 @@ card:
   description: 'You rise gently from your own roof and travel outward, past the Moon and Jupiter, until a tilted gold shape appears in the dark. Up close the rings resolve into thousands of fine bright lines, and then into ice: billions of frozen pieces, some finer than dust and some the size of mountains, all drifting the same way at once. You watch small moons carve clean lanes and raise slow waves behind them, hear a gentle unfinished argument about how old it all is, and then settle into the ring plane and stay.'
   colorHex: 1B2436
   accentHex: E8C89A
+  sigil: saturn-rings
+  glowHex: 38506E
+  baseHex: 1B2231
   isFeatured: false
   trialPreviewEligible: false
   publishedAt: '2026-08-14T17:53:16Z'
@@ -92,9 +95,9 @@ publish:
   objectPath: the-rings-of-saturn/audio-the-rings-of-saturn-en-v3-aac96/story.m4a
   staging:
     uploadedAt: '2026-08-21T03:10:12Z'
-    rowUpsertedAt: '2026-08-21T03:10:36Z'
+    rowUpsertedAt: '2026-08-21T22:42:46Z'
     verifiedAt: '2026-08-21T03:10:50Z'
   production:
     uploadedAt: '2026-08-14T17:53:16Z'
-    rowUpsertedAt: '2026-08-14T17:53:16Z'
+    rowUpsertedAt: '2026-08-21T22:43:35Z'
     verifiedAt: ''

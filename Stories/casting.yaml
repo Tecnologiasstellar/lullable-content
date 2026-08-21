@@ -95,6 +95,7 @@ naming:
 
 # Story -> category mapping — APPROVED by AV 2026-08-20 (see word-targets.csv)
 story_categories:
+  a-night-in-a-temperate-forest: wild-places
   a-roman-bathhouse-at-closing-time: long-ago
   aristotle-the-greatest-philosopher: big-questions
   dinosaurs-from-rule-to-ruin: long-ago
