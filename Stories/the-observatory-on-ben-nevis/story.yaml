@@ -89,11 +89,10 @@ publish:
   bucketID: sleep-stories-premium
   objectPath: the-observatory-on-ben-nevis/audio-the-observatory-on-ben-nevis-en-v1-aac96/story.m4a
   staging:
-    uploadedAt: ''
-    rowUpsertedAt: ''
-    verifiedAt: ''
+    uploadedAt: '2026-08-21T03:08:23Z'
+    rowUpsertedAt: '2026-08-21T03:08:53Z'
+    verifiedAt: '2026-08-21T03:09:05Z'
   production:
     uploadedAt: '2026-08-20T19:30:00Z'
     rowUpsertedAt: '2026-08-20T19:30:00Z'
     verifiedAt: ''
-  legacyDirectToProduction: true

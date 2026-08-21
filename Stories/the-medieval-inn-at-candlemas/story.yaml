@@ -89,11 +89,10 @@ publish:
   bucketID: sleep-stories-premium
   objectPath: the-medieval-inn-at-candlemas/audio-the-medieval-inn-at-candlemas-en-v1-aac96/story.m4a
   staging:
-    uploadedAt: ''
-    rowUpsertedAt: ''
-    verifiedAt: ''
+    uploadedAt: '2026-08-21T03:04:42Z'
+    rowUpsertedAt: '2026-08-21T03:05:06Z'
+    verifiedAt: '2026-08-21T03:05:24Z'
   production:
     uploadedAt: '2026-08-20T19:30:00Z'
     rowUpsertedAt: '2026-08-20T19:30:00Z'
     verifiedAt: ''
-  legacyDirectToProduction: true

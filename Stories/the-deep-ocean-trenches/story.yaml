@@ -90,11 +90,10 @@ publish:
   bucketID: sleep-stories-premium
   objectPath: the-deep-ocean-trenches/audio-the-deep-ocean-trenches-en-v1-aac96/story.m4a
   staging:
-    uploadedAt: ''
-    rowUpsertedAt: ''
-    verifiedAt: ''
+    uploadedAt: '2026-08-21T02:57:55Z'
+    rowUpsertedAt: '2026-08-21T02:58:30Z'
+    verifiedAt: '2026-08-21T02:58:44Z'
   production:
     uploadedAt: '2026-08-20T19:30:00Z'
     rowUpsertedAt: '2026-08-20T19:30:00Z'
     verifiedAt: ''
-  legacyDirectToProduction: true

@@ -88,11 +88,10 @@ publish:
   bucketID: sleep-stories-public
   objectPath: the-bakery-before-dawn/audio-the-bakery-before-dawn-en-v2-aac96/story.m4a
   staging:
-    uploadedAt: ''
-    rowUpsertedAt: ''
-    verifiedAt: ''
+    uploadedAt: '2026-08-21T02:54:33Z'
+    rowUpsertedAt: '2026-08-21T02:54:57Z'
+    verifiedAt: '2026-08-21T02:55:13Z'
   production:
     uploadedAt: '2026-08-16T15:26:08Z'
     rowUpsertedAt: '2026-08-16T15:26:08Z'
     verifiedAt: ''
-  legacyDirectToProduction: true

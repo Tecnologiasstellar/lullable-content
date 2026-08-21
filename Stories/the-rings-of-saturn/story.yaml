@@ -91,11 +91,10 @@ publish:
   bucketID: sleep-stories-public
   objectPath: the-rings-of-saturn/audio-the-rings-of-saturn-en-v3-aac96/story.m4a
   staging:
-    uploadedAt: ''
-    rowUpsertedAt: ''
-    verifiedAt: ''
+    uploadedAt: '2026-08-21T03:10:12Z'
+    rowUpsertedAt: '2026-08-21T03:10:36Z'
+    verifiedAt: '2026-08-21T03:10:50Z'
   production:
     uploadedAt: '2026-08-14T17:53:16Z'
     rowUpsertedAt: '2026-08-14T17:53:16Z'
     verifiedAt: ''
-  legacyDirectToProduction: true

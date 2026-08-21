@@ -88,11 +88,10 @@ publish:
   bucketID: sleep-stories-premium
   objectPath: the-joinery-of-japan-s-wooden-temples/audio-the-joinery-of-japan-s-wooden-temples-en-v1-aac96/story.m4a
   staging:
-    uploadedAt: ''
-    rowUpsertedAt: ''
-    verifiedAt: ''
+    uploadedAt: '2026-08-21T02:59:59Z'
+    rowUpsertedAt: '2026-08-21T03:00:24Z'
+    verifiedAt: '2026-08-21T03:00:36Z'
   production:
     uploadedAt: '2026-08-20T19:30:00Z'
     rowUpsertedAt: '2026-08-20T19:30:00Z'
     verifiedAt: ''
-  legacyDirectToProduction: true

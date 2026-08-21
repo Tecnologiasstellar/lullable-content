@@ -85,11 +85,10 @@ publish:
   bucketID: sleep-stories-premium
   objectPath: the-bay-that-glows-at-night/audio-the-bay-that-glows-at-night-en-v1-aac96/story.m4a
   staging:
-    uploadedAt: ''
-    rowUpsertedAt: ''
-    verifiedAt: ''
+    uploadedAt: '2026-08-21T02:55:23Z'
+    rowUpsertedAt: '2026-08-21T02:55:50Z'
+    verifiedAt: '2026-08-21T02:56:02Z'
   production:
     uploadedAt: '2026-08-20T19:30:00Z'
     rowUpsertedAt: '2026-08-20T19:30:00Z'
     verifiedAt: ''
-  legacyDirectToProduction: true

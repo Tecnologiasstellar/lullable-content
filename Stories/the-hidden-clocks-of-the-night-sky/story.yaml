@@ -90,8 +90,8 @@ publish:
   objectPath: the-hidden-clocks-of-the-night-sky/audio-the-hidden-clocks-of-the-night-sky-en-v1-aac96/story.m4a
   staging:
     uploadedAt: '2026-08-20T22:52:14Z'
-    rowUpsertedAt: '2026-08-20T22:58:07Z'
-    verifiedAt: '2026-08-20T23:17:28Z'
+    rowUpsertedAt: '2026-08-21T02:59:40Z'
+    verifiedAt: '2026-08-21T02:59:51Z'
   production:
     uploadedAt: '2026-08-20T19:30:00Z'
     rowUpsertedAt: '2026-08-20T22:56:09Z'

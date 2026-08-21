@@ -88,11 +88,10 @@ publish:
   bucketID: sleep-stories-premium
   objectPath: voyager-1-a-journey-to-interstellar-space/audio-voyager-1-a-journey-to-interstellar-space-en-v1-aac96/story.m4a
   staging:
-    uploadedAt: ''
-    rowUpsertedAt: ''
-    verifiedAt: ''
+    uploadedAt: '2026-08-21T03:11:46Z'
+    rowUpsertedAt: '2026-08-21T03:12:07Z'
+    verifiedAt: '2026-08-21T03:12:18Z'
   production:
     uploadedAt: '2026-08-20T19:30:00Z'
     rowUpsertedAt: '2026-08-20T19:30:00Z'
     verifiedAt: ''
-  legacyDirectToProduction: true

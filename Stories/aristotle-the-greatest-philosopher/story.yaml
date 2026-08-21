@@ -88,8 +88,8 @@ publish:
   objectPath: aristotle-the-greatest-philosopher/audio-aristotle-en-v2-aac96/story.m4a
   staging:
     uploadedAt: '2026-08-21T02:03:01Z'
-    rowUpsertedAt: '2026-08-21T02:03:23Z'
-    verifiedAt: '2026-08-21T02:03:51Z'
+    rowUpsertedAt: '2026-08-21T02:51:54Z'
+    verifiedAt: '2026-08-21T02:52:07Z'
   production:
     uploadedAt: '2026-08-09T00:00:00Z'
     rowUpsertedAt: '2026-08-21T02:38:51Z'
