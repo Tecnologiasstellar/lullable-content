@@ -30,6 +30,8 @@ card:
   description: 'You lie back in a dark meadow and read the oldest clock there is: the night sky. The whole dome of stars turns once a day around a quiet pole star. The moon counts twenty-nine nights and tows the tides behind it. Five wandering planets keep their own slow paces, one of them lending its name to Saturday. Starlight even comes in colors that tell a star''s age, blue youth to red old age. And beneath every quick hand, one wobble of the Earth''s axis takes twenty-six thousand years to complete, mid-tick since before the first cities rose. None of these clocks needs winding, watching, or you.'
   colorHex: 121A2E
   accentHex: D9C9A0
+  glowHex: 283965
+  baseHex: 121A2E
   isFeatured: false
   trialPreviewEligible: false
   publishedAt: '2026-08-20T19:30:00Z'
@@ -90,7 +92,7 @@ publish:
   objectPath: the-hidden-clocks-of-the-night-sky/audio-the-hidden-clocks-of-the-night-sky-en-v1-aac96/story.m4a
   staging:
     uploadedAt: '2026-08-20T22:52:14Z'
-    rowUpsertedAt: '2026-08-21T02:59:40Z'
+    rowUpsertedAt: '2026-08-21T23:12:06Z'
     verifiedAt: '2026-08-21T02:59:51Z'
   production:
     uploadedAt: '2026-08-20T19:30:00Z'

@@ -30,6 +30,8 @@ card:
   description: 'You climb a windswept island to a granite lighthouse, where a keeper is beginning his night watch. Ninety-nine steps up, past the watch room, to a great Fresnel lens turning on a bath of mercury, sweeping one long beam over the sea. Below, a snug round room holds a stove, an armchair, and a logbook of a hundred years of nights that all end the same reassuring way: all well. Rain arrives off the sea and streams down the tower in one continuous whisper, and out in the dark a coaster''s mate counts the flashes and marks his position, never once thinking of the tower keeping him safe.'
   colorHex: 1B2A33
   accentHex: E8B84B
+  glowHex: 3B5C70
+  baseHex: 1B2A33
   isFeatured: false
   trialPreviewEligible: false
   publishedAt: '2026-08-20T19:30:00Z'
@@ -90,7 +92,7 @@ publish:
   objectPath: the-lighthouse-on-the-windswept-island/audio-the-lighthouse-on-the-windswept-island-en-v1-aac96/story.m4a
   staging:
     uploadedAt: '2026-08-21T03:02:32Z'
-    rowUpsertedAt: '2026-08-21T03:02:54Z'
+    rowUpsertedAt: '2026-08-21T23:12:53Z'
     verifiedAt: '2026-08-21T03:03:21Z'
   production:
     uploadedAt: '2026-08-20T19:30:00Z'

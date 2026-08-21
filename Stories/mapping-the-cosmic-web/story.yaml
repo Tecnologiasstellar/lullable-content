@@ -30,6 +30,8 @@ card:
   description: Sit in a cold dome in Arizona in the 1980s, while somebody points a telescope at one faint smudge after another and writes down a number. Do that for years, plot the results, and a shape appears that nobody expected — galaxies strung along threads, gathered at knots, wrapped around enormous quiet rooms with almost nothing inside. Along the way, the mule driver who became one of the great observers, a sound from the early universe frozen into the sky as a ruler, and five thousand small robots that rearrange themselves in the dark.
   colorHex: 10131F
   accentHex: 8E9FD0
+  glowHex: 232A44
+  baseHex: 10131F
   isFeatured: false
   trialPreviewEligible: false
   publishedAt: '2026-08-20T19:30:00Z'
@@ -90,7 +92,7 @@ publish:
   objectPath: mapping-the-cosmic-web/audio-mapping-the-cosmic-web-en-v1-aac96/story.m4a
   staging:
     uploadedAt: '2026-08-21T02:53:42Z'
-    rowUpsertedAt: '2026-08-21T02:54:08Z'
+    rowUpsertedAt: '2026-08-21T23:10:43Z'
     verifiedAt: '2026-08-21T02:54:22Z'
   production:
     uploadedAt: '2026-08-20T19:30:00Z'

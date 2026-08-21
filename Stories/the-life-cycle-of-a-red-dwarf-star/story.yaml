@@ -30,6 +30,8 @@ card:
   description: Travel four light years to Proxima Centauri, a small orange star so dim you could look straight at it, and so ordinary that three quarters of the galaxy is made of stars like it. Inside, the whole body slowly turns itself over, which is why it will still be burning in ten trillion years. Along the way, why nature makes far more small stars than large ones, the women at Harvard who sorted the spectra by hand, the titanium chemistry that survives in a star's atmosphere, and the quiet fact that not one red dwarf anywhere has ever finished.
   colorHex: 1C1013
   accentHex: D97A55
+  glowHex: 3E232A
+  baseHex: 1C1013
   isFeatured: false
   trialPreviewEligible: false
   publishedAt: '2026-08-20T19:30:00Z'
@@ -90,7 +92,7 @@ publish:
   objectPath: the-life-cycle-of-a-red-dwarf-star/audio-the-life-cycle-of-a-red-dwarf-star-en-v1-aac96/story.m4a
   staging:
     uploadedAt: '2026-08-21T03:01:38Z'
-    rowUpsertedAt: '2026-08-21T03:02:01Z'
+    rowUpsertedAt: '2026-08-21T23:12:43Z'
     verifiedAt: '2026-08-21T03:02:13Z'
   production:
     uploadedAt: '2026-08-20T19:30:00Z'

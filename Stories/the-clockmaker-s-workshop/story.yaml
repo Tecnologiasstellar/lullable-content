@@ -26,6 +26,8 @@ card:
   description: Step through a door with a brass bell into a small-town shop where a hundred clocks tick softly out of step, like rain on a roof. At the bench, an unhurried craftsman tends a movement of polished wheels with tools that have not changed in two centuries. Learn what a clock really is, a falling weight let down slowly over a week, and why two clocks on the same wall drift into perfect step with each other, a mystery first noticed from a sickbed in 1665. With painted moon dials, a drawer of orphaned keys that all fit something somewhere, winding day, house calls taken over tea, and the repairers' names penciled inside case doors, a century apart.
   colorHex: 1C140E
   accentHex: C98F3D
+  glowHex: 3E2C1F
+  baseHex: 1C140E
   isFeatured: false
   trialPreviewEligible: false
   publishedAt: '2026-08-20T19:30:00Z'
@@ -86,7 +88,7 @@ publish:
   objectPath: the-clockmaker-s-workshop/audio-the-clockmaker-s-workshop-en-v1-aac96/story.m4a
   staging:
     uploadedAt: '2026-08-21T02:57:02Z'
-    rowUpsertedAt: '2026-08-21T02:57:28Z'
+    rowUpsertedAt: '2026-08-21T23:11:31Z'
     verifiedAt: '2026-08-21T02:57:42Z'
   production:
     uploadedAt: '2026-08-20T19:30:00Z'

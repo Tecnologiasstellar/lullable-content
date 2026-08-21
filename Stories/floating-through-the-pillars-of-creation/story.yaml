@@ -30,6 +30,8 @@ card:
   description: You rise from your own roof and travel outward, past every planet, until the stars themselves begin to thicken into a glowing cloud. Three dark columns stand in the middle of it, each one taller than the gap between our sun and its nearest neighbour. You learn what they are made of, how starlight is quietly carving them, why they are pillars at all, and what is forming in the pockets of shadow inside. Then the light goes on arriving, as it has for six thousand years, and you let all of it go.
   colorHex: 1A1026
   accentHex: C98A6B
+  glowHex: 392354
+  baseHex: 1A1026
   isFeatured: false
   trialPreviewEligible: false
   publishedAt: '2026-08-20T19:30:00Z'
@@ -90,7 +92,7 @@ publish:
   objectPath: floating-through-the-pillars-of-creation/audio-floating-through-the-pillars-of-creation-en-v1-aac96/story.m4a
   staging:
     uploadedAt: '2026-08-21T02:52:57Z'
-    rowUpsertedAt: '2026-08-21T02:53:22Z'
+    rowUpsertedAt: '2026-08-21T23:10:32Z'
     verifiedAt: '2026-08-21T02:53:33Z'
   production:
     uploadedAt: '2026-08-20T19:30:00Z'

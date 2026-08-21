@@ -29,6 +29,8 @@ card:
   description: Follow the most distant object people have ever made, out past Jupiter and Saturn and into the space between the stars. A gold record bolted to its side, a transmitter no brighter than a refrigerator bulb, and a whisper of radio that takes almost a full day to reach a dish in the Australian grass. Along the way, the gentle theft of a gravity assist, the choice to look at Titan, and the faint steady hum the gas out there turns out to make. Nothing about it is urgent. Nothing about it ever was.
   colorHex: 0A0F1C
   accentHex: C7B27A
+  glowHex: 16213E
+  baseHex: 0A0F1C
   isFeatured: false
   trialPreviewEligible: false
   publishedAt: '2026-08-20T19:30:00Z'
@@ -89,7 +91,7 @@ publish:
   objectPath: voyager-1-a-journey-to-interstellar-space/audio-voyager-1-a-journey-to-interstellar-space-en-v1-aac96/story.m4a
   staging:
     uploadedAt: '2026-08-21T03:11:46Z'
-    rowUpsertedAt: '2026-08-21T03:12:07Z'
+    rowUpsertedAt: '2026-08-21T23:14:51Z'
     verifiedAt: '2026-08-21T03:12:18Z'
   production:
     uploadedAt: '2026-08-20T19:30:00Z'

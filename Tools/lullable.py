@@ -281,9 +281,14 @@ def g05_hex(m, d):
     sig = _get(m,"card.sigil")
     if sig not in (None, "") and not re.fullmatch(r"[a-z][a-z0-9-]{1,31}", str(sig)):
         return ("FAIL","card.sigil %r is not a lowercase slug" % sig)
-    art = [k for k in ("sigil","glowHex","baseHex") if _get(m,"card."+k) not in (None, "")]
-    if art and len(art) != 3:
-        return ("FAIL","artwork identity is all-or-nothing; have %s, need sigil+glowHex+baseHex" % ", ".join(art))
+    # The hue pair is all-or-nothing — one hue cannot make a gradient. The mark
+    # is independent: every story's ground is derived from the colour it already
+    # has, but a hand-drawn mark cannot be derived, so most stories carry a
+    # ground and no mark and render the shared echo on their own colour.
+    hues = [k for k in ("glowHex","baseHex") if _get(m,"card."+k) not in (None, "")]
+    if len(hues) == 1:
+        return ("FAIL","half a hue pair: %s without the other" % hues[0])
+    art = hues + ([  "sigil"] if _get(m,"card.sigil") not in (None, "") else [])
     if bad:
         return ("FAIL","not 6 uppercase hex chars: " + ", ".join(bad))
     return ("PASS", "colour values valid" + (" (with artwork identity)" if art else ""))

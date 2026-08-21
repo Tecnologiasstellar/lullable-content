@@ -29,6 +29,8 @@ card:
   description: Slip into a provincial Roman bathhouse at the gentlest hour of its day, just as the crowds drift home and the attendants light the evening lamps. Walk the warm rooms in their proper order, stand on a floor heated by a fire nobody sees, and listen to water that has been arriving from the hills without pause for a hundred years. Along the way, the bronze strigil and the oil, Seneca's famous list of bathhouse noises, the spring in Britain where the earth itself stokes the furnace, and the banked fire that will breathe warmth under the mosaics all night long.
   colorHex: 2B1B12
   accentHex: E0A96D
+  glowHex: 5F3B28
+  baseHex: 2B1B12
   isFeatured: false
   trialPreviewEligible: false
   publishedAt: '2026-08-20T19:30:00Z'
@@ -89,7 +91,7 @@ publish:
   objectPath: a-roman-bathhouse-at-closing-time/audio-a-roman-bathhouse-at-closing-time-en-v1-aac96/story.m4a
   staging:
     uploadedAt: '2026-08-21T02:51:00Z'
-    rowUpsertedAt: '2026-08-21T02:51:30Z'
+    rowUpsertedAt: '2026-08-21T23:09:51Z'
     verifiedAt: '2026-08-21T02:51:42Z'
   production:
     uploadedAt: '2026-08-20T19:30:00Z'

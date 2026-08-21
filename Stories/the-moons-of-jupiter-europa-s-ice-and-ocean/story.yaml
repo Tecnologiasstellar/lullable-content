@@ -30,6 +30,9 @@ card:
   description: You travel out past Mars to a banded planet eleven times the width of the Earth, and find four small worlds standing beside it in a line. The second one is white, smooth as a billiard ball, and cracked all over like a glazed bowl. You learn why it has almost no craters, how a tiny wobble in its orbit keeps an ocean liquid where nothing should be, and how that ocean was found from the outside without anyone touching it. Then you sink through the ice into water that has never once seen light.
   colorHex: 0E1A2B
   accentHex: 9FC8DA
+  sigil: saturn-edge
+  glowHex: 1F395E
+  baseHex: 0E1A2B
   isFeatured: false
   trialPreviewEligible: false
   publishedAt: '2026-08-20T19:30:00Z'
@@ -90,7 +93,7 @@ publish:
   objectPath: the-moons-of-jupiter-europa-s-ice-and-ocean/audio-the-moons-of-jupiter-europa-s-ice-and-ocean-en-v1-aac96/story.m4a
   staging:
     uploadedAt: '2026-08-21T03:07:32Z'
-    rowUpsertedAt: '2026-08-21T03:07:59Z'
+    rowUpsertedAt: '2026-08-21T23:13:52Z'
     verifiedAt: '2026-08-21T03:08:14Z'
   production:
     uploadedAt: '2026-08-20T19:30:00Z'

@@ -28,6 +28,8 @@ card:
   description: Drift through the rise, reign, and quiet fading of the dinosaurs in a calm story of deep time. You move slowly across changing continents and warm shallow seas, through long ages when giants grazed in the light of an older sun, and follow the traces they left behind in stone — a world that never fully ended, still with us in every morning’s birdsong.
   colorHex: 26384A
   accentHex: B89A6A
+  glowHex: 547BA3
+  baseHex: 26384A
   isFeatured: false
   trialPreviewEligible: false
   publishedAt: '2026-08-11T02:11:43Z'
@@ -88,7 +90,7 @@ publish:
   objectPath: dinosaurs-from-rule-to-ruin/audio-dinosaurs-en-v2-aac96/story.m4a
   staging:
     uploadedAt: '2026-08-21T02:00:25Z'
-    rowUpsertedAt: '2026-08-21T02:52:26Z'
+    rowUpsertedAt: '2026-08-21T23:10:20Z'
     verifiedAt: '2026-08-21T02:52:44Z'
   production:
     uploadedAt: '2026-08-11T02:11:43Z'

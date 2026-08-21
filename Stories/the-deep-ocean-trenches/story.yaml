@@ -31,6 +31,8 @@ card:
   description: You slip beneath a starlit sea and sink, without effort, through the sunlit water and the long blue twilight into a darkness the sun has never reached. Small living lights blink on and drift away. Marine snow falls, soft and endless, all the way down to a floor of pale sediment older than memory. Further down still lie the trenches, where the pressure feels only like stillness and there is nowhere deeper to go.
   colorHex: 0B1F33
   accentHex: 5FA8C4
+  glowHex: 224466
+  baseHex: 0B1F33
   isFeatured: false
   trialPreviewEligible: false
   publishedAt: '2026-08-20T19:30:00Z'
@@ -91,7 +93,7 @@ publish:
   objectPath: the-deep-ocean-trenches/audio-the-deep-ocean-trenches-en-v1-aac96/story.m4a
   staging:
     uploadedAt: '2026-08-21T02:57:55Z'
-    rowUpsertedAt: '2026-08-21T20:32:45Z'
+    rowUpsertedAt: '2026-08-21T23:11:43Z'
     verifiedAt: '2026-08-21T20:33:35Z'
   production:
     uploadedAt: '2026-08-20T19:30:00Z'

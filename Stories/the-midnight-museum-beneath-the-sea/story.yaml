@@ -30,6 +30,8 @@ card:
   description: You sink through the ocean's floors of light, from sunlit gold down through a deep cathedral blue into the midnight zone, where nine of ten creatures make their own cold light to say here I am. You drift past a lanternfish's blinking rows, an anglerfish's small warm lamp, and glass sponges that have filtered the same gentle current for ten thousand years. Marine snow falls without pause through halls holding an old ship and a whale fall's soft, fed city, all the way down to a trench floor where a small pink snailfish is entirely at home. The museum keeps everything for you until morning, softly, with its own lamps.
   colorHex: 071826
   accentHex: 4FD1C5
+  glowHex: 19344A
+  baseHex: 071826
   isFeatured: false
   trialPreviewEligible: false
   publishedAt: '2026-08-20T19:30:00Z'
@@ -90,7 +92,7 @@ publish:
   objectPath: the-midnight-museum-beneath-the-sea/audio-the-midnight-museum-beneath-the-sea-en-v1-aac96/story.m4a
   staging:
     uploadedAt: '2026-08-21T03:05:34Z'
-    rowUpsertedAt: '2026-08-21T03:05:53Z'
+    rowUpsertedAt: '2026-08-21T23:13:27Z'
     verifiedAt: '2026-08-21T03:06:05Z'
   production:
     uploadedAt: '2026-08-20T19:30:00Z'

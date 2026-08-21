@@ -92,7 +92,7 @@ publish:
   objectPath: the-bakery-before-dawn/audio-the-bakery-before-dawn-en-v2-aac96/story.m4a
   staging:
     uploadedAt: '2026-08-21T02:54:33Z'
-    rowUpsertedAt: '2026-08-21T22:42:34Z'
+    rowUpsertedAt: '2026-08-21T23:10:56Z'
     verifiedAt: '2026-08-21T20:33:24Z'
   production:
     uploadedAt: '2026-08-16T15:26:08Z'

@@ -29,6 +29,8 @@ card:
   description: Walk into a coastal grove at dusk and stand at the foot of a tree over three hundred feet tall, wrapped in a foot of soft bark, older than the cathedrals. Follow one unbroken thread of water from the roots to the highest needle, and wait for the summer fog to roll in off the cold Pacific so the forest can water itself in the dark. Along the way, roots that graft into their neighbours and hold each other up, rings of trees standing where their elders stood, a ghost-white redwood fed by its family, and a garden of ferns and huckleberries growing a metre deep in the crown.
   colorHex: 14201A
   accentHex: A8C3A0
+  glowHex: 2C4639
+  baseHex: 14201A
   isFeatured: false
   trialPreviewEligible: false
   publishedAt: '2026-08-20T19:30:00Z'
@@ -89,7 +91,7 @@ publish:
   objectPath: the-slow-life-of-a-redwood/audio-the-slow-life-of-a-redwood-en-v1-aac96/story.m4a
   staging:
     uploadedAt: '2026-08-21T03:10:58Z'
-    rowUpsertedAt: '2026-08-21T03:11:26Z'
+    rowUpsertedAt: '2026-08-21T23:14:40Z'
     verifiedAt: '2026-08-21T03:11:37Z'
   production:
     uploadedAt: '2026-08-20T19:30:00Z'

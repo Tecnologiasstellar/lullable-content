@@ -30,6 +30,8 @@ card:
   description: You climb into the cloud that sits on the highest ground in Britain, and step through a low stone door into lamplight, a warm stove, and a kettle that is always on. For twenty-one years, somebody here walked out into the weather every hour of every night and wrote down what it was doing. You learn how a wet sleeve of muslin measures the dryness of the air, why the thermometer boxes had to be lifted as the snow came up to meet them, and how ice grows sideways into the wind. Then the lamp is turned low, a wet coat goes on the hook, and the mountain carries on without you.
   colorHex: 1F2A2E
   accentHex: B9C9CE
+  glowHex: 445C65
+  baseHex: 1F2A2E
   isFeatured: false
   trialPreviewEligible: false
   publishedAt: '2026-08-20T19:30:00Z'
@@ -90,7 +92,7 @@ publish:
   objectPath: the-observatory-on-ben-nevis/audio-the-observatory-on-ben-nevis-en-v1-aac96/story.m4a
   staging:
     uploadedAt: '2026-08-21T03:08:23Z'
-    rowUpsertedAt: '2026-08-21T20:33:07Z'
+    rowUpsertedAt: '2026-08-21T23:14:04Z'
     verifiedAt: '2026-08-21T20:33:57Z'
   production:
     uploadedAt: '2026-08-20T19:30:00Z'

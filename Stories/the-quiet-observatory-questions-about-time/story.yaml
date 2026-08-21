@@ -30,6 +30,8 @@ card:
   description: 'You climb a small hill to a small observatory to spend the night with the gentlest big question there is: what is time. A telescope shows that starlight is an old patient archive, arriving from a hundred different pasts all at once, and that there is no single now shared by the whole universe. Pendulum clocks, water clocks, and candle clocks each try to hang a bucket in a stream that never pools. A carpenter''s son builds four clocks to solve longitude at sea, a hill at Greenwich becomes the world''s meridian, and modern clocks now count the hum inside an atom. At the end, the astronomer closes the logbook with one word, closed, and so can you.'
   colorHex: 141B2E
   accentHex: C9D6E8
+  glowHex: 2C3B65
+  baseHex: 141B2E
   isFeatured: false
   trialPreviewEligible: false
   publishedAt: '2026-08-20T19:30:00Z'
@@ -90,7 +92,7 @@ publish:
   objectPath: the-quiet-observatory-questions-about-time/audio-the-quiet-observatory-questions-about-time-en-v1-aac96/story.m4a
   staging:
     uploadedAt: '2026-08-21T03:09:15Z'
-    rowUpsertedAt: '2026-08-21T03:09:50Z'
+    rowUpsertedAt: '2026-08-21T23:14:16Z'
     verifiedAt: '2026-08-21T03:10:02Z'
   production:
     uploadedAt: '2026-08-20T19:30:00Z'

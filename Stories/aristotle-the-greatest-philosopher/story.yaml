@@ -28,6 +28,8 @@ card:
   description: You settle in beside one of history’s calmest minds. This is a slow exploration of Aristotle’s life and ideas — how he watched the natural world, what he taught about knowledge, character, and friendship, and why his patient way of thinking still shapes how we understand ourselves. The questions are old, the pace is gentle, and nothing needs deciding tonight.
   colorHex: 26384A
   accentHex: B89A6A
+  glowHex: 547BA3
+  baseHex: 26384A
   isFeatured: true
   trialPreviewEligible: false
   publishedAt: '2026-08-09T00:00:00Z'
@@ -88,7 +90,7 @@ publish:
   objectPath: aristotle-the-greatest-philosopher/audio-aristotle-en-v2-aac96/story.m4a
   staging:
     uploadedAt: '2026-08-21T02:03:01Z'
-    rowUpsertedAt: '2026-08-21T02:51:54Z'
+    rowUpsertedAt: '2026-08-21T23:10:06Z'
     verifiedAt: '2026-08-21T02:52:07Z'
   production:
     uploadedAt: '2026-08-09T00:00:00Z'

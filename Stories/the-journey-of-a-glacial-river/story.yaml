@@ -29,6 +29,8 @@ card:
   description: Follow a single snowflake from a windless high snowfield down to the salt water, a journey of two centuries in one direction only. Be buried into blue glacier ice with a breath of old sky sealed inside, ride the slowest river there is, and emerge at the ice cave where the young river is born, milky with the flour of ground mountains. Then down through the braided gravel plains, into a turquoise lake that sorts the sunlight, through pine forests where a small brown bird walks underwater, and out at last across the mudflats to the sea, where the sun is already lifting the water to begin again.
   colorHex: 0F2230
   accentHex: 7FD0C9
+  glowHex: 234B68
+  baseHex: 0F2230
   isFeatured: false
   trialPreviewEligible: false
   publishedAt: '2026-08-20T19:30:00Z'
@@ -89,7 +91,7 @@ publish:
   objectPath: the-journey-of-a-glacial-river/audio-the-journey-of-a-glacial-river-en-v1-aac96/story.m4a
   staging:
     uploadedAt: '2026-08-21T03:00:46Z'
-    rowUpsertedAt: '2026-08-21T03:01:14Z'
+    rowUpsertedAt: '2026-08-21T23:12:30Z'
     verifiedAt: '2026-08-21T03:01:26Z'
   production:
     uploadedAt: '2026-08-20T19:30:00Z'

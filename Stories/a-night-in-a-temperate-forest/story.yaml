@@ -26,6 +26,8 @@ card:
   description: Follow a quiet path from the forest edge into deep woods after sunset, where moss holds the day's last water and an owl settles into a beech tree. Along the way — how dew forms, how tree roots trade sugar underground, how bats read the dark in echoes, and how a fallen log slowly becomes soil again. A gentle, factual wander built for drifting off.
   colorHex: 121A14
   accentHex: 9BB68C
+  glowHex: 28392C
+  baseHex: 121A14
   isFeatured: false
   trialPreviewEligible: false
   publishedAt: PENDING

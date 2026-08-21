@@ -29,6 +29,8 @@ card:
   description: Board the midnight-blue sleeper in Vienna, hand your passport to the attendant, and let the train do the rest. Cross the Alps in a rocking berth while borders pass over you like weather, carriages are quietly sorted toward separate mornings, and a freight train washes past in the dark. Along the way, why the clickety-clack disappeared when the rails were welded into seamless miles, the 1884 tunnel bored from both ends to meet like a handshake, and the whole quiet profession of people who stay awake so that everyone else can sleep at seventy miles an hour.
   colorHex: 151A2E
   accentHex: D9B36C
+  glowHex: 2E3965
+  baseHex: 151A2E
   isFeatured: false
   trialPreviewEligible: false
   publishedAt: '2026-08-20T19:30:00Z'
@@ -89,7 +91,7 @@ publish:
   objectPath: the-midnight-sleeper-train-across-the-alps/audio-the-midnight-sleeper-train-across-the-alps-en-v1-aac96/story.m4a
   staging:
     uploadedAt: '2026-08-21T03:06:22Z'
-    rowUpsertedAt: '2026-08-21T03:07:04Z'
+    rowUpsertedAt: '2026-08-21T23:13:39Z'
     verifiedAt: '2026-08-21T03:07:19Z'
   production:
     uploadedAt: '2026-08-20T19:30:00Z'
