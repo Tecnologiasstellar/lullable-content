@@ -21,7 +21,7 @@ episode:
 card:
   title: The Deep Ocean Trenches
   subtitle: A slow descent past the last of the light, into the stillest water on earth
-  narrator: Read by Brian from St Ives
+  narrator: Lullable
   genreIDs:
   - gentle-nature
   bedtimeNote: One slow direction, downward, and nothing waiting at the end of it. An easy thing to follow, and an easier thing to let go of.
@@ -91,8 +91,8 @@ publish:
   objectPath: the-deep-ocean-trenches/audio-the-deep-ocean-trenches-en-v1-aac96/story.m4a
   staging:
     uploadedAt: '2026-08-21T02:57:55Z'
-    rowUpsertedAt: '2026-08-21T02:58:30Z'
-    verifiedAt: '2026-08-21T02:58:44Z'
+    rowUpsertedAt: '2026-08-21T20:32:45Z'
+    verifiedAt: '2026-08-21T20:33:35Z'
   production:
     uploadedAt: '2026-08-20T19:30:00Z'
     rowUpsertedAt: '2026-08-20T19:30:00Z'

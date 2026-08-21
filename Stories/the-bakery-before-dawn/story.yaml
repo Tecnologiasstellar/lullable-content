@@ -19,7 +19,7 @@ episode:
 card:
   title: The Bakery Before Dawn
   subtitle: Warm flour, a slow rising, and the long quiet hours before a town wakes
-  narrator: Read by Niamh from Kinsale
+  narrator: Lullable
   genreIDs:
   - cozy-tales
   bedtimeNote: Someone else is already awake, working gently in the warm, at something that cannot be hurried. There is nothing here you need to do.
@@ -89,8 +89,8 @@ publish:
   objectPath: the-bakery-before-dawn/audio-the-bakery-before-dawn-en-v2-aac96/story.m4a
   staging:
     uploadedAt: '2026-08-21T02:54:33Z'
-    rowUpsertedAt: '2026-08-21T02:54:57Z'
-    verifiedAt: '2026-08-21T02:55:13Z'
+    rowUpsertedAt: '2026-08-21T20:32:27Z'
+    verifiedAt: '2026-08-21T20:33:24Z'
   production:
     uploadedAt: '2026-08-16T15:26:08Z'
     rowUpsertedAt: '2026-08-16T15:26:08Z'

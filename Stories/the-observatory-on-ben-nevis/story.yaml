@@ -20,7 +20,7 @@ episode:
 card:
   title: The Observatory on Ben Nevis
   subtitle: Twenty-one years of hourly weather readings, taken by lamplight inside a cloud
-  narrator: Read by Patrick, Block Island
+  narrator: Lullable
   genreIDs:
   - cozy-tales
   bedtimeNote: Somebody is awake on a mountain, taking a reading on the hour, whether or not you are. The next one is not yours, and it will be taken anyway.
@@ -90,8 +90,8 @@ publish:
   objectPath: the-observatory-on-ben-nevis/audio-the-observatory-on-ben-nevis-en-v1-aac96/story.m4a
   staging:
     uploadedAt: '2026-08-21T03:08:23Z'
-    rowUpsertedAt: '2026-08-21T03:08:53Z'
-    verifiedAt: '2026-08-21T03:09:05Z'
+    rowUpsertedAt: '2026-08-21T20:33:07Z'
+    verifiedAt: '2026-08-21T20:33:57Z'
   production:
     uploadedAt: '2026-08-20T19:30:00Z'
     rowUpsertedAt: '2026-08-20T19:30:00Z'

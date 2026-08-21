@@ -19,7 +19,7 @@ episode:
 card:
   title: The Great Library of Alexandria
   subtitle: Lamplight, papyrus and patient work beside a warm and quiet sea
-  narrator: Read by Arthur from Ludlow
+  narrator: Lullable
   genreIDs:
   - ancient-worlds
   bedtimeNote: Nothing here is urgent and nothing needs remembering. Only scribes at their tables, copying one careful line at a time.
@@ -89,8 +89,8 @@ publish:
   objectPath: the-great-library-of-alexandria/audio-the-great-library-of-alexandria-en-v1-aac96/story.m4a
   staging:
     uploadedAt: '2026-08-21T02:58:56Z'
-    rowUpsertedAt: '2026-08-21T02:59:17Z'
-    verifiedAt: '2026-08-21T02:59:29Z'
+    rowUpsertedAt: '2026-08-21T20:32:56Z'
+    verifiedAt: '2026-08-21T20:33:46Z'
   production:
     uploadedAt: '2026-08-20T19:30:00Z'
     rowUpsertedAt: '2026-08-20T19:30:00Z'
