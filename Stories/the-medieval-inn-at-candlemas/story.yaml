@@ -32,6 +32,14 @@ card:
   accentHex: E0A855
   glowHex: 4F3928
   baseHex: 241A12
+  sigilPaths:
+  - d: M46,74 L46,42 M54,74 L54,42 M42,74 L58,74
+  - d: M50,42 C47,36 47,30 50,26 C53,30 53,36 50,42
+    opacity: 0.85
+    filled: true
+  - d: M28.8,26 A1,1 0 1 1 30.8,26 A1,1 0 1 1 28.8,26 M70.8,32 A1,1 0 1 1 72.8,32 A1,1 0 1 1 70.8,32 M24.8,50 A1,1 0 1 1 26.8,50 A1,1 0 1 1 24.8,50
+    opacity: 0.35
+    filled: true
   isFeatured: false
   trialPreviewEligible: false
   publishedAt: '2026-08-20T19:30:00Z'
@@ -92,8 +100,8 @@ publish:
   objectPath: the-medieval-inn-at-candlemas/audio-the-medieval-inn-at-candlemas-en-v1-aac96/story.m4a
   staging:
     uploadedAt: '2026-08-21T03:04:42Z'
-    rowUpsertedAt: '2026-08-21T23:13:15Z'
-    verifiedAt: '2026-08-21T03:05:24Z'
+    rowUpsertedAt: '2026-08-22T16:51:16Z'
+    verifiedAt: '2026-08-22T16:52:35Z'
   production:
     uploadedAt: '2026-08-20T19:30:00Z'
     rowUpsertedAt: '2026-08-20T19:30:00Z'

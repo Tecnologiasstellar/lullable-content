@@ -31,6 +31,11 @@ card:
   accentHex: C4B49A
   glowHex: 424F3E
   baseHex: 1E241C
+  sigilPaths:
+  - d: M28,36 C36,26 64,26 72,36
+  - d: M18,54 C30,40 70,40 82,54
+  - d: M50,54 L50,78 M40,66 L60,66
+    opacity: 0.6
   isFeatured: false
   trialPreviewEligible: false
   publishedAt: '2026-08-20T19:30:00Z'
@@ -91,8 +96,8 @@ publish:
   objectPath: the-joinery-of-japan-s-wooden-temples/audio-the-joinery-of-japan-s-wooden-temples-en-v1-aac96/story.m4a
   staging:
     uploadedAt: '2026-08-21T02:59:59Z'
-    rowUpsertedAt: '2026-08-21T23:12:17Z'
-    verifiedAt: '2026-08-21T03:00:36Z'
+    rowUpsertedAt: '2026-08-22T16:50:50Z'
+    verifiedAt: '2026-08-22T16:51:48Z'
   production:
     uploadedAt: '2026-08-20T19:30:00Z'
     rowUpsertedAt: '2026-08-20T19:30:00Z'

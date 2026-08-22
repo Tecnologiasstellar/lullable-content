@@ -32,6 +32,13 @@ card:
   accentHex: D9C9A0
   glowHex: 283965
   baseHex: 121A2E
+  sigilPaths:
+  - d: M20,50 A30,30 0 1 1 80,50 A30,30 0 1 1 20,50
+    opacity: 0.45
+  - d: M30,50 A20,20 0 1 1 70,50 A20,20 0 1 1 30,50
+    opacity: 0.3
+  - d: M47.6,50 A2.4,2.4 0 1 1 52.4,50 A2.4,2.4 0 1 1 47.6,50
+    filled: true
   isFeatured: false
   trialPreviewEligible: false
   publishedAt: '2026-08-20T19:30:00Z'
@@ -92,8 +99,8 @@ publish:
   objectPath: the-hidden-clocks-of-the-night-sky/audio-the-hidden-clocks-of-the-night-sky-en-v1-aac96/story.m4a
   staging:
     uploadedAt: '2026-08-20T22:52:14Z'
-    rowUpsertedAt: '2026-08-21T23:12:06Z'
-    verifiedAt: '2026-08-21T02:59:51Z'
+    rowUpsertedAt: '2026-08-22T16:50:35Z'
+    verifiedAt: '2026-08-22T16:51:39Z'
   production:
     uploadedAt: '2026-08-20T19:30:00Z'
     rowUpsertedAt: '2026-08-20T22:56:09Z'
