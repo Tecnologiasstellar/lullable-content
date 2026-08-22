@@ -31,11 +31,11 @@ card:
   glowHex: 547BA3
   baseHex: 26384A
   sigilPaths:
-  - d: M34,34 L66,34
-  - d: M41,34 L38,70
-  - d: M59,34 L62,70
-  - d: M32,70 L68,70
-  - d: M38,27 A17,11 0 0 1 62,27
+  - d: M39,28 L61,28
+  - d: M43,28 L41,74
+  - d: M57,28 L59,74
+  - d: M36,74 L64,74
+  - d: M35,22 A18,9 0 0 1 65,22
     opacity: 0.35
   isFeatured: true
   trialPreviewEligible: false
@@ -97,8 +97,8 @@ publish:
   objectPath: aristotle-the-greatest-philosopher/audio-aristotle-en-v2-aac96/story.m4a
   staging:
     uploadedAt: '2026-08-21T02:03:01Z'
-    rowUpsertedAt: '2026-08-21T23:10:06Z'
-    verifiedAt: '2026-08-21T02:52:07Z'
+    rowUpsertedAt: '2026-08-22T03:58:55Z'
+    verifiedAt: '2026-08-22T03:54:02Z'
   production:
     uploadedAt: '2026-08-09T00:00:00Z'
     rowUpsertedAt: '2026-08-21T02:38:51Z'
