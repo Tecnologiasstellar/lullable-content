@@ -32,6 +32,13 @@ card:
   accentHex: C9D6E8
   glowHex: 2C3B65
   baseHex: 141B2E
+  sigilPaths:
+  - d: M36,26 L64,26 L50,50 L64,74 L36,74 L50,50 Z
+  - d: M30,24 L70,24 M30,76 L70,76
+    opacity: 0.5
+  - d: M25,32 A1,1 0 1 1 27,32 A1,1 0 1 1 25,32 M73,68 A1,1 0 1 1 75,68 A1,1 0 1 1 73,68 M27,70 A1,1 0 1 1 29,70 A1,1 0 1 1 27,70
+    opacity: 0.4
+    filled: true
   isFeatured: false
   trialPreviewEligible: false
   publishedAt: '2026-08-20T19:30:00Z'
@@ -92,8 +99,8 @@ publish:
   objectPath: the-quiet-observatory-questions-about-time/audio-the-quiet-observatory-questions-about-time-en-v1-aac96/story.m4a
   staging:
     uploadedAt: '2026-08-21T03:09:15Z'
-    rowUpsertedAt: '2026-08-21T23:14:16Z'
-    verifiedAt: '2026-08-21T03:10:02Z'
+    rowUpsertedAt: '2026-08-22T17:05:57Z'
+    verifiedAt: '2026-08-22T17:07:12Z'
   production:
     uploadedAt: '2026-08-20T19:30:00Z'
     rowUpsertedAt: '2026-08-20T19:30:00Z'

@@ -31,6 +31,12 @@ card:
   accentHex: C7B27A
   glowHex: 16213E
   baseHex: 0A0F1C
+  sigilPaths:
+  - d: M32,34 A18,7 0 1 1 68,34 A18,7 0 1 1 32,34
+  - d: M50,34 L50,54 M50,54 L64,74 M50,54 L36,74
+  - d: M70.6,30 A1.4,1.4 0 1 1 73.4,30 A1.4,1.4 0 1 1 70.6,30
+    opacity: 0.4
+    filled: true
   isFeatured: false
   trialPreviewEligible: false
   publishedAt: '2026-08-20T19:30:00Z'
@@ -91,8 +97,8 @@ publish:
   objectPath: voyager-1-a-journey-to-interstellar-space/audio-voyager-1-a-journey-to-interstellar-space-en-v1-aac96/story.m4a
   staging:
     uploadedAt: '2026-08-21T03:11:46Z'
-    rowUpsertedAt: '2026-08-21T23:14:51Z'
-    verifiedAt: '2026-08-21T03:12:18Z'
+    rowUpsertedAt: '2026-08-22T17:06:24Z'
+    verifiedAt: '2026-08-22T17:07:32Z'
   production:
     uploadedAt: '2026-08-20T19:30:00Z'
     rowUpsertedAt: '2026-08-20T19:30:00Z'

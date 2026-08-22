@@ -32,6 +32,14 @@ card:
   accentHex: 4FD1C5
   glowHex: 19344A
   baseHex: 071826
+  sigilPaths:
+  - d: M30,34 L30,74 L70,74 L70,34 L30,34
+    opacity: 0.7
+  - d: M42,48 A8,8 0 1 1 58,48 A8,8 0 1 1 42,48
+    opacity: 0.9
+    filled: true
+  - d: M45,55 C44,60 46,64 44,68 M50,55 L50,70 M55,55 C56,60 54,64 56,68
+    opacity: 0.5
   isFeatured: false
   trialPreviewEligible: false
   publishedAt: '2026-08-20T19:30:00Z'
@@ -92,8 +100,8 @@ publish:
   objectPath: the-midnight-museum-beneath-the-sea/audio-the-midnight-museum-beneath-the-sea-en-v1-aac96/story.m4a
   staging:
     uploadedAt: '2026-08-21T03:05:34Z'
-    rowUpsertedAt: '2026-08-21T23:13:27Z'
-    verifiedAt: '2026-08-21T03:06:05Z'
+    rowUpsertedAt: '2026-08-22T17:05:47Z'
+    verifiedAt: '2026-08-22T17:07:00Z'
   production:
     uploadedAt: '2026-08-20T19:30:00Z'
     rowUpsertedAt: '2026-08-20T19:30:00Z'

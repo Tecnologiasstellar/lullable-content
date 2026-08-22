@@ -31,6 +31,12 @@ card:
   accentHex: A8C3A0
   glowHex: 2C4639
   baseHex: 14201A
+  sigilPaths:
+  - d: M46,80 L44,30 M54,80 L56,30
+  - d: M40,32 C44,24 56,24 60,32
+    opacity: 0.8
+  - d: M20,50 L38,50 M62,60 L82,60
+    opacity: 0.3
   isFeatured: false
   trialPreviewEligible: false
   publishedAt: '2026-08-20T19:30:00Z'
@@ -91,8 +97,8 @@ publish:
   objectPath: the-slow-life-of-a-redwood/audio-the-slow-life-of-a-redwood-en-v1-aac96/story.m4a
   staging:
     uploadedAt: '2026-08-21T03:10:58Z'
-    rowUpsertedAt: '2026-08-21T23:14:40Z'
-    verifiedAt: '2026-08-21T03:11:37Z'
+    rowUpsertedAt: '2026-08-22T17:06:09Z'
+    verifiedAt: '2026-08-22T17:07:22Z'
   production:
     uploadedAt: '2026-08-20T19:30:00Z'
     rowUpsertedAt: '2026-08-20T19:30:00Z'

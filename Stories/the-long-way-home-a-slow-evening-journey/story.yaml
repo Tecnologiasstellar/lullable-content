@@ -32,6 +32,12 @@ card:
   accentHex: E4703C
   glowHex: 5F6580
   baseHex: 2B2E3A
+  sigilPaths:
+  - d: M32,78 C40,66 34,50 48,42 C58,36 54,26 50,18
+  - d: M62,54 L62,46 L70,46 L70,54
+    opacity: 0.6
+  - d: M24,66 L29,62 M76,68 L71,64 M26,50 L31,47
+    opacity: 0.4
   isFeatured: false
   trialPreviewEligible: false
   publishedAt: '2026-08-20T19:30:00Z'
@@ -92,8 +98,8 @@ publish:
   objectPath: the-long-way-home-a-slow-evening-journey/audio-the-long-way-home-a-slow-evening-journey-en-v1-aac96/story.m4a
   staging:
     uploadedAt: '2026-08-21T03:03:45Z'
-    rowUpsertedAt: '2026-08-21T23:13:04Z'
-    verifiedAt: '2026-08-21T03:04:33Z'
+    rowUpsertedAt: '2026-08-22T17:05:37Z'
+    verifiedAt: '2026-08-22T17:06:49Z'
   production:
     uploadedAt: '2026-08-20T19:30:00Z'
     rowUpsertedAt: '2026-08-20T19:30:00Z'
