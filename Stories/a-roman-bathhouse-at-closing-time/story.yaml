@@ -31,6 +31,12 @@ card:
   accentHex: E0A96D
   glowHex: 5F3B28
   baseHex: 2B1B12
+  sigilPaths:
+  - d: M36,74 L36,40 A14,14 0 1 1 64,40 L64,74
+  - d: M32,78 L68,78
+    opacity: 0.5
+  - d: M46,38 C44,30 48,26 46,18 M54,38 C56,30 52,26 54,18
+    opacity: 0.4
   isFeatured: false
   trialPreviewEligible: false
   publishedAt: '2026-08-20T19:30:00Z'
@@ -91,8 +97,8 @@ publish:
   objectPath: a-roman-bathhouse-at-closing-time/audio-a-roman-bathhouse-at-closing-time-en-v1-aac96/story.m4a
   staging:
     uploadedAt: '2026-08-21T02:51:00Z'
-    rowUpsertedAt: '2026-08-21T23:09:51Z'
-    verifiedAt: '2026-08-21T02:51:42Z'
+    rowUpsertedAt: '2026-08-22T16:34:33Z'
+    verifiedAt: '2026-08-22T16:35:45Z'
   production:
     uploadedAt: '2026-08-20T19:30:00Z'
     rowUpsertedAt: '2026-08-20T19:30:00Z'

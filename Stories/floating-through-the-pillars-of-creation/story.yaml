@@ -32,6 +32,14 @@ card:
   accentHex: C98A6B
   glowHex: 392354
   baseHex: 1A1026
+  sigilPaths:
+  - d: M32,78 C30,60 34,50 32,30 M50,82 C48,58 52,46 50,22 M68,78 C66,60 70,50 68,34
+  - d: M24.9,30 A1.1,1.1 0 1 1 27.1,30 A1.1,1.1 0 1 1 24.9,30 M72.9,32 A1.1,1.1 0 1 1 75.1,32 A1.1,1.1 0 1 1 72.9,32 M38.9,22 A1.1,1.1 0 1 1 41.1,22 A1.1,1.1 0 1 1 38.9,22
+    opacity: 0.4
+    filled: true
+  - d: M39,26 A2,2 0 1 1 43,26 A2,2 0 1 1 39,26
+    opacity: 0.9
+    filled: true
   isFeatured: false
   trialPreviewEligible: false
   publishedAt: '2026-08-20T19:30:00Z'
@@ -92,8 +100,8 @@ publish:
   objectPath: floating-through-the-pillars-of-creation/audio-floating-through-the-pillars-of-creation-en-v1-aac96/story.m4a
   staging:
     uploadedAt: '2026-08-21T02:52:57Z'
-    rowUpsertedAt: '2026-08-21T23:10:32Z'
-    verifiedAt: '2026-08-21T02:53:33Z'
+    rowUpsertedAt: '2026-08-22T16:34:44Z'
+    verifiedAt: '2026-08-22T16:35:55Z'
   production:
     uploadedAt: '2026-08-20T19:30:00Z'
     rowUpsertedAt: '2026-08-20T19:30:00Z'

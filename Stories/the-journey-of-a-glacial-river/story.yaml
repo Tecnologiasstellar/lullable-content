@@ -31,6 +31,12 @@ card:
   accentHex: 7FD0C9
   glowHex: 234B68
   baseHex: 0F2230
+  sigilPaths:
+  - d: M50,18 C40,30 60,42 46,56 C36,68 54,74 50,82
+  - d: M44,24 L50,20 L56,24
+    opacity: 0.4
+  - d: M40,76 Q50,82 60,76
+    opacity: 0.3
   isFeatured: false
   trialPreviewEligible: false
   publishedAt: '2026-08-20T19:30:00Z'
@@ -91,8 +97,8 @@ publish:
   objectPath: the-journey-of-a-glacial-river/audio-the-journey-of-a-glacial-river-en-v1-aac96/story.m4a
   staging:
     uploadedAt: '2026-08-21T03:00:46Z'
-    rowUpsertedAt: '2026-08-21T23:12:30Z'
-    verifiedAt: '2026-08-21T03:01:26Z'
+    rowUpsertedAt: '2026-08-22T16:35:09Z'
+    verifiedAt: '2026-08-22T16:36:18Z'
   production:
     uploadedAt: '2026-08-20T19:30:00Z'
     rowUpsertedAt: '2026-08-20T19:30:00Z'

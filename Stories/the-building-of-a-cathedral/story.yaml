@@ -31,6 +31,12 @@ card:
   accentHex: C9A2C8
   glowHex: 544B5F
   baseHex: 26222B
+  sigilPaths:
+  - d: M32,76 L32,46 C32,30 40,20 50,20 C60,20 68,30 68,46 L68,76
+  - d: M42,42 A8,8 0 1 1 58,42 A8,8 0 1 1 42,42
+    opacity: 0.55
+  - d: M30,76 L70,76
+    opacity: 0.4
   isFeatured: false
   trialPreviewEligible: false
   publishedAt: '2026-08-20T19:30:00Z'
@@ -91,8 +97,8 @@ publish:
   objectPath: the-building-of-a-cathedral/audio-the-building-of-a-cathedral-en-v1-aac96/story.m4a
   staging:
     uploadedAt: '2026-08-21T02:56:11Z'
-    rowUpsertedAt: '2026-08-21T23:11:19Z'
-    verifiedAt: '2026-08-21T02:56:53Z'
+    rowUpsertedAt: '2026-08-22T16:34:57Z'
+    verifiedAt: '2026-08-22T16:36:06Z'
   production:
     uploadedAt: '2026-08-20T19:30:00Z'
     rowUpsertedAt: '2026-08-20T19:30:00Z'

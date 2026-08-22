@@ -30,6 +30,11 @@ card:
   accentHex: B89A6A
   glowHex: 547BA3
   baseHex: 26384A
+  sigilPaths:
+  - d: M22,68 C28,58 32,64 38,60 C48,54 56,40 68,26
+  - d: M32,62 L30,74 M44,60 L46,74
+  - d: M65.8,26 A2.2,2.2 0 1 1 70.2,26 A2.2,2.2 0 1 1 65.8,26
+    filled: true
   isFeatured: false
   trialPreviewEligible: false
   publishedAt: '2026-08-11T02:11:43Z'
@@ -90,8 +95,8 @@ publish:
   objectPath: dinosaurs-from-rule-to-ruin/audio-dinosaurs-en-v2-aac96/story.m4a
   staging:
     uploadedAt: '2026-08-21T02:00:25Z'
-    rowUpsertedAt: '2026-08-21T23:10:20Z'
-    verifiedAt: '2026-08-21T02:52:44Z'
+    rowUpsertedAt: '2026-08-22T16:44:16Z'
+    verifiedAt: '2026-08-22T16:44:28Z'
   production:
     uploadedAt: '2026-08-11T02:11:43Z'
     rowUpsertedAt: '2026-08-21T02:38:28Z'
