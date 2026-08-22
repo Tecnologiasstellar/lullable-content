@@ -28,6 +28,13 @@ card:
   accentHex: C98F3D
   glowHex: 3E2C1F
   baseHex: 1C140E
+  sigilPaths:
+  - d: M26,50 A24,24 0 1 1 74,50 A24,24 0 1 1 26,50
+  - d: M50,50 L50,30 M50,50 L38,58
+  - d: M48.2,50 A1.8,1.8 0 1 1 51.8,50 A1.8,1.8 0 1 1 48.2,50
+    filled: true
+  - d: M48,26 L48,20 L52,20 L52,26
+    opacity: 0.4
   isFeatured: false
   trialPreviewEligible: false
   publishedAt: '2026-08-20T19:30:00Z'
@@ -88,8 +95,8 @@ publish:
   objectPath: the-clockmaker-s-workshop/audio-the-clockmaker-s-workshop-en-v1-aac96/story.m4a
   staging:
     uploadedAt: '2026-08-21T02:57:02Z'
-    rowUpsertedAt: '2026-08-21T23:11:31Z'
-    verifiedAt: '2026-08-21T02:57:42Z'
+    rowUpsertedAt: '2026-08-22T16:07:21Z'
+    verifiedAt: '2026-08-22T16:08:24Z'
   production:
     uploadedAt: '2026-08-20T19:30:00Z'
     rowUpsertedAt: '2026-08-20T19:30:00Z'

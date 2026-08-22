@@ -32,6 +32,13 @@ card:
   accentHex: B9C9CE
   glowHex: 445C65
   baseHex: 1F2A2E
+  sigilPaths:
+  - d: M28,50 A22,22 0 0 1 72,50
+  - d: M42,54 L64,26 M48,58 L70,30
+  - d: M50,58 L50,74 L40,80 M50,74 L60,80
+    opacity: 0.6
+  - d: M66.2,24 A1.8,1.8 0 1 1 69.8,24 A1.8,1.8 0 1 1 66.2,24
+    filled: true
   isFeatured: false
   trialPreviewEligible: false
   publishedAt: '2026-08-20T19:30:00Z'
@@ -92,8 +99,8 @@ publish:
   objectPath: the-observatory-on-ben-nevis/audio-the-observatory-on-ben-nevis-en-v1-aac96/story.m4a
   staging:
     uploadedAt: '2026-08-21T03:08:23Z'
-    rowUpsertedAt: '2026-08-21T23:14:04Z'
-    verifiedAt: '2026-08-21T20:33:57Z'
+    rowUpsertedAt: '2026-08-22T16:07:55Z'
+    verifiedAt: '2026-08-22T16:08:56Z'
   production:
     uploadedAt: '2026-08-20T19:30:00Z'
     rowUpsertedAt: '2026-08-21T20:36:53Z'

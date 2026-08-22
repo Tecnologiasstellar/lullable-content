@@ -33,6 +33,15 @@ card:
   accentHex: 5FA8C4
   glowHex: 224466
   baseHex: 0B1F33
+  sigilPaths:
+  - d: M24,30 L38,30 L43,50 L38,64 L50,80 L62,64 L57,50 L62,30 L76,30
+  - d: M30,42 L46,42 M54,58 L70,58
+    opacity: 0.3
+  - d: M48.2,74 A2.2,2.2 0 1 1 51.8,74 A2.2,2.2 0 1 1 48.2,74
+    filled: true
+  - d: M38.5,52 A1.6,1.6 0 1 1 41.5,52 A1.6,1.6 0 1 1 38.5,52
+    opacity: 0.5
+    filled: true
   isFeatured: false
   trialPreviewEligible: false
   publishedAt: '2026-08-20T19:30:00Z'
@@ -93,8 +102,8 @@ publish:
   objectPath: the-deep-ocean-trenches/audio-the-deep-ocean-trenches-en-v1-aac96/story.m4a
   staging:
     uploadedAt: '2026-08-21T02:57:55Z'
-    rowUpsertedAt: '2026-08-21T23:11:43Z'
-    verifiedAt: '2026-08-21T20:33:35Z'
+    rowUpsertedAt: '2026-08-22T16:08:08Z'
+    verifiedAt: '2026-08-22T16:09:06Z'
   production:
     uploadedAt: '2026-08-20T19:30:00Z'
     rowUpsertedAt: '2026-08-21T20:36:27Z'

@@ -32,6 +32,14 @@ card:
   accentHex: E8B84B
   glowHex: 3B5C70
   baseHex: 1B2A33
+  sigilPaths:
+  - d: M44,74 L46,32 L54,32 L56,74
+    opacity: 1
+  - d: M45,32 A5,5 0 1 1 55,32
+  - d: M56,34 L72,28 M56,40 L74,40
+    opacity: 0.45
+  - d: M32,76 L68,76
+    opacity: 0.5
   isFeatured: false
   trialPreviewEligible: false
   publishedAt: '2026-08-20T19:30:00Z'
@@ -92,8 +100,8 @@ publish:
   objectPath: the-lighthouse-on-the-windswept-island/audio-the-lighthouse-on-the-windswept-island-en-v1-aac96/story.m4a
   staging:
     uploadedAt: '2026-08-21T03:02:32Z'
-    rowUpsertedAt: '2026-08-21T23:12:53Z'
-    verifiedAt: '2026-08-21T03:03:21Z'
+    rowUpsertedAt: '2026-08-22T16:07:32Z'
+    verifiedAt: '2026-08-22T16:08:36Z'
   production:
     uploadedAt: '2026-08-20T19:30:00Z'
     rowUpsertedAt: '2026-08-20T19:30:00Z'

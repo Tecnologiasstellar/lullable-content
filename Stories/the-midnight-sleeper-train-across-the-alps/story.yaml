@@ -31,6 +31,13 @@ card:
   accentHex: D9B36C
   glowHex: 2E3965
   baseHex: 151A2E
+  sigilPaths:
+  - d: M20,58 L34,34 L46,50 L58,26 L70,50 L80,40
+  - d: M22,66 L78,66 M30,64 L30,68 M40,64 L40,68 M50,64 L50,68 M60,64 L60,68 M70,64 L70,68
+    opacity: 0.5
+  - d: M65.2,29 A2.8,2.8 0 1 1 70.8,29 A2.8,2.8 0 1 1 65.2,29
+    opacity: 0.85
+    filled: true
   isFeatured: false
   trialPreviewEligible: false
   publishedAt: '2026-08-20T19:30:00Z'
@@ -91,8 +98,8 @@ publish:
   objectPath: the-midnight-sleeper-train-across-the-alps/audio-the-midnight-sleeper-train-across-the-alps-en-v1-aac96/story.m4a
   staging:
     uploadedAt: '2026-08-21T03:06:22Z'
-    rowUpsertedAt: '2026-08-21T23:13:39Z'
-    verifiedAt: '2026-08-21T03:07:19Z'
+    rowUpsertedAt: '2026-08-22T16:24:14Z'
+    verifiedAt: '2026-08-22T16:24:24Z'
   production:
     uploadedAt: '2026-08-20T19:30:00Z'
     rowUpsertedAt: '2026-08-20T19:30:00Z'
