@@ -30,6 +30,13 @@ card:
   accentHex: B89A6A
   glowHex: 547BA3
   baseHex: 26384A
+  sigilPaths:
+  - d: M34,34 L66,34
+  - d: M41,34 L38,70
+  - d: M59,34 L62,70
+  - d: M32,70 L68,70
+  - d: M38,27 A17,11 0 0 1 62,27
+    opacity: 0.35
   isFeatured: true
   trialPreviewEligible: false
   publishedAt: '2026-08-09T00:00:00Z'
