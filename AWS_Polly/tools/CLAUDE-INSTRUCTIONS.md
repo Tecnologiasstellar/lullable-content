@@ -1,7 +1,7 @@
 # Lullable — Claude Code instructions: text → finished Polly audio
 *How to take a story text and produce the three canonical audio files. Read
 `PIPELINE-MEMORY.md` first for what exists and why. Work from
-`~/Documents/CLAUDE/02_LULLABLE/lullable_audio/`.*
+`~/developer/lullable-content/`.*
 
 ## Prerequisites (one-time per machine)
 
@@ -59,7 +59,7 @@ When AV supplies a sample text (e.g. a YouTube transcript) plus the URL:
 ## Step 2 — Convert (applies pause_scale 1.25)
 
 ```bash
-cd ~/Documents/CLAUDE/02_LULLABLE/lullable_audio
+cd ~/developer/lullable-content
 python3 AWS_Polly/tools/lullable_polly.py convert \
   "Stories/<storyID>/upload-to-elevenlabs.txt" \
   --pause-scale 1.25 --out "Stories/<storyID>/_generated/polly.ssml"

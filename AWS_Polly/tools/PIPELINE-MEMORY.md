@@ -45,7 +45,7 @@
 
 ## Where everything lives (on the MacBook Air)
 
-Root: `~/Documents/CLAUDE/02_LULLABLE/lullable_audio/`
+Root: `~/developer/lullable-content/`
 - `Stories/<storyID>/` — one folder per episode: `story.yaml` (canonical manifest),
   `narration.md` (§-sectioned prose), `upload-to-elevenlabs.txt` (prose + `<break>` tags —
   despite the legacy name, this is now the Polly source too), `audio/`, `_generated/`

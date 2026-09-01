@@ -3,7 +3,7 @@
 Verified by inspection on 2026-08-13, with access to the whole `LULLABLE/`
 directory. Facts here were checked, not assumed.
 
-## What is actually in `~/Documents/CLAUDE/LULLABLE/`
+## What is actually in `~/developer/lullable-content/`
 
 ```
 LULLABLE/                                  ← NOT a git repository

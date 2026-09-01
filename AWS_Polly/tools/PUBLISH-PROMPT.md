@@ -1,6 +1,6 @@
 # Prompt for Claude Code — Ship the Lullable catalogue: gates → closeout → Supabase
 
-Copy everything below into Claude Code, run from `~/Documents/CLAUDE/02_LULLABLE/lullable_audio/`.
+Copy everything below into Claude Code, run from `~/developer/lullable-content/`.
 
 ---
 
