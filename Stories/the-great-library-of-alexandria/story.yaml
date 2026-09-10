@@ -30,6 +30,12 @@ card:
   colorHex: 3A2A18
   accentHex: D9A55C
   sigil: alexandria
+  sigilPaths:
+  - d: M44.4,70.8 L46.8,40.4 M55.6,70.8 L53.2,40.4 M46,40.4 L54,40.4 M37.2,70.8 L62.8,70.8
+  - d: M34,35.6 A20.8,20.8 0 0 1 66,35.6
+    opacity: 0.55
+  - d: M24.4,29.2 A32,32 0 0 1 75.6,29.2
+    opacity: 0.28
   glowHex: 805C35
   baseHex: 3A2A18
   isFeatured: false
