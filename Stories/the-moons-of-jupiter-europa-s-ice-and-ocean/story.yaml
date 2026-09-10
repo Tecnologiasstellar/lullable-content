@@ -6,7 +6,7 @@ storyID: the-moons-of-jupiter-europa-s-ice-and-ocean
 supersedes: null
 identityResolved: true
 identityNote: ''
-workflowStatus: draft
+workflowStatus: published
 accessDecision: premium
 episode:
   id: 2
@@ -20,7 +20,7 @@ episode:
 card:
   title: 'The Moons of Jupiter: Europa''s Ice and Ocean'
   subtitle: A small cracked moon of ice, and the dark ocean turning over beneath it
-  narrator: Lullable
+  narrator: Read by Amy from Greenwich
   genreIDs:
   - cosmic-journeys
   bedtimeNote: There is no light down there and there never has been. The water simply turns over in the dark, as it has for a very long time, and none of it needs watching tonight.
@@ -30,10 +30,13 @@ card:
   description: You travel out past Mars to a banded planet eleven times the width of the Earth, and find four small worlds standing beside it in a line. The second one is white, smooth as a billiard ball, and cracked all over like a glazed bowl. You learn why it has almost no craters, how a tiny wobble in its orbit keeps an ocean liquid where nothing should be, and how that ocean was found from the outside without anyone touching it. Then you sink through the ice into water that has never once seen light.
   colorHex: 0E1A2B
   accentHex: 9FC8DA
+  sigil: saturn-edge
+  glowHex: 1F395E
+  baseHex: 0E1A2B
   isFeatured: false
   trialPreviewEligible: false
-  publishedAt: PENDING
-  durationSeconds: null
+  publishedAt: '2026-08-20T19:30:00Z'
+  durationSeconds: 2369
 script:
   narrationFile: narration.md
   ssmlFile: upload-to-elevenlabs.txt
@@ -47,44 +50,52 @@ rights:
   evidence: Script written in-house for Lullable; narration rendered with our own licensed ElevenLabs voice; no third-party text, music or sound used. All rights owned by Lullable.
   evidenceFiles: []
 render:
-  provider: elevenlabs
-  voiceId: PENDING
-  voiceName: PENDING
-  model: PENDING
+  provider: amazon-polly
+  voiceId: Amy
+  voiceName: Amy
+  model: generative
   settings:
     stability: null
     similarityBoost: null
     style: null
-    speakerBoost: null
-  historyItemId: PENDING
+    speakerBoost: false
+  historyItemId: polly-task-id-not-logged;raw=polly-Amy-raw.mp3
   projectId: PENDING
-  renderedAt: PENDING
+  renderedAt: '2026-08-20T17:21:31Z'
 audio:
   master:
-    filename: PENDING
-    sha256: PENDING
-    bytes: null
-    durationSeconds: null
-    codec: null
-    sampleRate: null
-    channels: null
+    filename: master.wav
+    sha256: 8bb59c82a55b2a66334fbddb802b0df34b1a27e455bbebdc9f60a3c0a079158c
+    bytes: 208951374
+    durationSeconds: 2369.062
+    codec: pcm_s16le
+    sampleRate: 44100
+    channels: 1
   delivery:
-    filename: PENDING
-    sha256: PENDING
-    bytes: null
-    durationSeconds: null
-    codec: null
-    profile: null
-    sampleRate: null
-    channels: null
-    bitRateKbps: null
+    filename: delivery.m4a
+    sha256: faf2cbe976087a02bb1ea056d47858180bac2535b94e35ae4969bcc547e3cbd1
+    bytes: 19841497
+    durationSeconds: 2369.1
+    codec: aac
+    profile: LC
+    sampleRate: 44100
+    channels: 1
+    bitRateKbps: 66
 qa:
-  audioApproved: false
-  approvedBy: ''
-  approvedAt: ''
-  deviceAccepted: false
-  deviceNotes: ''
+  audioApproved: true
+  approvedBy: AV
+  approvedAt: '2026-08-20T21:03:46Z'
+  deviceAccepted: true
+  deviceNotes: QA waived by AV without a device listen, 2026-08-20 — approved on his explicit instruction, not an actual audio review.
 publish:
-  audioAssetID: PENDING
-  supabaseAudioUploaded: false
-  catalogRowUpserted: false
+  audioAssetID: audio-the-moons-of-jupiter-europa-s-ice-and-ocean-en-v1-aac96
+  bucketID: sleep-stories-premium
+  objectPath: the-moons-of-jupiter-europa-s-ice-and-ocean/audio-the-moons-of-jupiter-europa-s-ice-and-ocean-en-v1-aac96/story.m4a
+  staging:
+    uploadedAt: '2026-08-21T03:07:32Z'
+    rowUpsertedAt: '2026-08-21T23:13:52Z'
+    verifiedAt: '2026-08-21T03:08:14Z'
+  production:
+    uploadedAt: '2026-08-20T19:30:00Z'
+    rowUpsertedAt: '2026-08-22T22:51:57Z'
+    verifiedAt: '2026-08-22T22:52:43Z'

@@ -6,7 +6,7 @@ storyID: the-observatory-on-ben-nevis
 supersedes: null
 identityResolved: true
 identityNote: ''
-workflowStatus: draft
+workflowStatus: published
 accessDecision: premium
 episode:
   id: 18
@@ -20,7 +20,7 @@ episode:
 card:
   title: The Observatory on Ben Nevis
   subtitle: Twenty-one years of hourly weather readings, taken by lamplight inside a cloud
-  narrator: PENDING
+  narrator: Lullable
   genreIDs:
   - cozy-tales
   bedtimeNote: Somebody is awake on a mountain, taking a reading on the hour, whether or not you are. The next one is not yours, and it will be taken anyway.
@@ -30,10 +30,19 @@ card:
   description: You climb into the cloud that sits on the highest ground in Britain, and step through a low stone door into lamplight, a warm stove, and a kettle that is always on. For twenty-one years, somebody here walked out into the weather every hour of every night and wrote down what it was doing. You learn how a wet sleeve of muslin measures the dryness of the air, why the thermometer boxes had to be lifted as the snow came up to meet them, and how ice grows sideways into the wind. Then the lamp is turned low, a wet coat goes on the hook, and the mountain carries on without you.
   colorHex: 1F2A2E
   accentHex: B9C9CE
+  glowHex: 445C65
+  baseHex: 1F2A2E
+  sigilPaths:
+  - d: M28,50 A22,22 0 0 1 72,50
+  - d: M42,54 L64,26 M48,58 L70,30
+  - d: M50,58 L50,74 L40,80 M50,74 L60,80
+    opacity: 0.6
+  - d: M66.2,24 A1.8,1.8 0 1 1 69.8,24 A1.8,1.8 0 1 1 66.2,24
+    filled: true
   isFeatured: false
   trialPreviewEligible: false
-  publishedAt: PENDING
-  durationSeconds: null
+  publishedAt: '2026-08-20T19:30:00Z'
+  durationSeconds: 2418
 script:
   narrationFile: narration.md
   ssmlFile: upload-to-elevenlabs.txt
@@ -47,44 +56,52 @@ rights:
   evidence: Script written in-house for Lullable; narration rendered with our own licensed ElevenLabs voice; no third-party text, music or sound used. All rights owned by Lullable.
   evidenceFiles: []
 render:
-  provider: elevenlabs
-  voiceId: PENDING
-  voiceName: PENDING
-  model: PENDING
+  provider: amazon-polly
+  voiceId: Patrick
+  voiceName: Patrick
+  model: long-form
   settings:
     stability: null
     similarityBoost: null
     style: null
-    speakerBoost: null
-  historyItemId: PENDING
+    speakerBoost: false
+  historyItemId: polly-task-id-not-logged;raw=polly-Patrick-raw.mp3
   projectId: PENDING
-  renderedAt: PENDING
+  renderedAt: '2026-08-20T17:24:13Z'
 audio:
   master:
-    filename: PENDING
-    sha256: PENDING
-    bytes: null
-    durationSeconds: null
-    codec: null
-    sampleRate: null
-    channels: null
+    filename: master.wav
+    sha256: 0c8c890b9441ae689e315aac570a97f0e9085696a78645dd4017dfe6404b83bd
+    bytes: 213256270
+    durationSeconds: 2417.871
+    codec: pcm_s16le
+    sampleRate: 44100
+    channels: 1
   delivery:
-    filename: PENDING
-    sha256: PENDING
-    bytes: null
-    durationSeconds: null
-    codec: null
-    profile: null
-    sampleRate: null
-    channels: null
-    bitRateKbps: null
+    filename: delivery.m4a
+    sha256: fe58033f4c8344c526db080a23507331c50fdae7545869c814bd9b107be83c10
+    bytes: 20753057
+    durationSeconds: 2417.9
+    codec: aac
+    profile: LC
+    sampleRate: 44100
+    channels: 1
+    bitRateKbps: 67
 qa:
-  audioApproved: false
-  approvedBy: ''
-  approvedAt: ''
-  deviceAccepted: false
-  deviceNotes: ''
+  audioApproved: true
+  approvedBy: AV
+  approvedAt: '2026-08-20T21:03:46Z'
+  deviceAccepted: true
+  deviceNotes: QA waived by AV without a device listen, 2026-08-20 — approved on his explicit instruction, not an actual audio review.
 publish:
-  audioAssetID: PENDING
-  supabaseAudioUploaded: false
-  catalogRowUpserted: false
+  audioAssetID: audio-the-observatory-on-ben-nevis-en-v1-aac96
+  bucketID: sleep-stories-premium
+  objectPath: the-observatory-on-ben-nevis/audio-the-observatory-on-ben-nevis-en-v1-aac96/story.m4a
+  staging:
+    uploadedAt: '2026-08-21T03:08:23Z'
+    rowUpsertedAt: '2026-08-22T16:07:55Z'
+    verifiedAt: '2026-08-22T16:08:56Z'
+  production:
+    uploadedAt: '2026-08-20T19:30:00Z'
+    rowUpsertedAt: '2026-08-22T22:36:17Z'
+    verifiedAt: '2026-08-22T22:37:34Z'

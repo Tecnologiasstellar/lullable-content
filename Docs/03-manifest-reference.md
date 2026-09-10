@@ -145,9 +145,19 @@ wrong in the ear — `deviceAccepted` means a person listened on a real phone.
 
 | Field | Notes |
 |---|---|
+Set by `publish` and `verify` — never by hand. Docs/06-decisions.md D28.
+
+| Field | Notes |
+|---|---|
 | `audioAssetID` | Immutable delivery ID. **Mint a new one if the audio bytes ever change.** |
-| `supabaseAudioUploaded` | bool |
-| `catalogRowUpserted` | bool |
+| `bucketID` | `sleep-stories-public` or `-premium`, from `accessDecision`. Not a choice. |
+| `objectPath` | `<storyID>/<audioAssetID>/story.m4a`. Identical in both environments. |
+| `staging.uploadedAt` / `.rowUpsertedAt` / `.verifiedAt` | ISO-8601 UTC, or `''` |
+| `production.uploadedAt` / `.rowUpsertedAt` / `.verifiedAt` | ISO-8601 UTC, or `''` |
+| `legacyDirectToProduction` | Present only on stories that shipped before a staging environment existed. Makes G14 report n/a. Dropped on the first real staging publish. |
+
+`production` is unreachable until `staging.verifiedAt` is set — that is G18, and
+`publish --env production` refuses before it touches the network.
 
 ---
 

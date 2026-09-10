@@ -6,7 +6,7 @@ storyID: the-life-cycle-of-a-red-dwarf-star
 supersedes: null
 identityResolved: true
 identityNote: ''
-workflowStatus: draft
+workflowStatus: published
 accessDecision: premium
 episode:
   id: 4
@@ -20,7 +20,7 @@ episode:
 card:
   title: The Life Cycle of a Red Dwarf Star
   subtitle: The commonest star in the galaxy, burning so slowly that none has ever finished
-  narrator: Lullable
+  narrator: Read by Amy from Greenwich
   genreIDs:
   - cosmic-journeys
   bedtimeNote: Not one red dwarf has ever run down. The universe is far too young. Every single one ever made is still quietly burning, and none of it needs watching tonight.
@@ -30,10 +30,20 @@ card:
   description: Travel four light years to Proxima Centauri, a small orange star so dim you could look straight at it, and so ordinary that three quarters of the galaxy is made of stars like it. Inside, the whole body slowly turns itself over, which is why it will still be burning in ten trillion years. Along the way, why nature makes far more small stars than large ones, the women at Harvard who sorted the spectra by hand, the titanium chemistry that survives in a star's atmosphere, and the quiet fact that not one red dwarf anywhere has ever finished.
   colorHex: 1C1013
   accentHex: D97A55
+  glowHex: 3E232A
+  baseHex: 1C1013
+  sigilPaths:
+  - d: M44,38 A6,6 0 1 1 56,38 A6,6 0 1 1 44,38
+    filled: true
+  - d: M50,24 L50,30 M50,52 L50,58 M30,38 L36,38 M64,38 L70,38
+    opacity: 0.4
+  - d: M70.4,48 A1.6,1.6 0 1 1 73.6,48 A1.6,1.6 0 1 1 70.4,48
+    opacity: 0.5
+    filled: true
   isFeatured: false
   trialPreviewEligible: false
-  publishedAt: PENDING
-  durationSeconds: null
+  publishedAt: '2026-08-20T19:30:00Z'
+  durationSeconds: 2341
 script:
   narrationFile: narration.md
   ssmlFile: upload-to-elevenlabs.txt
@@ -47,44 +57,52 @@ rights:
   evidence: Script written in-house for Lullable; narration rendered with our own licensed ElevenLabs voice; no third-party text, music or sound used. All rights owned by Lullable.
   evidenceFiles: []
 render:
-  provider: elevenlabs
-  voiceId: PENDING
-  voiceName: PENDING
-  model: PENDING
+  provider: amazon-polly
+  voiceId: Amy
+  voiceName: Amy
+  model: generative
   settings:
     stability: null
     similarityBoost: null
     style: null
-    speakerBoost: null
-  historyItemId: PENDING
+    speakerBoost: false
+  historyItemId: polly-task-id-not-logged;raw=polly-Amy-raw.mp3
   projectId: PENDING
-  renderedAt: PENDING
+  renderedAt: '2026-08-20T17:21:26Z'
 audio:
   master:
-    filename: PENDING
-    sha256: PENDING
-    bytes: null
-    durationSeconds: null
-    codec: null
-    sampleRate: null
-    channels: null
+    filename: master.wav
+    sha256: 8dc4d654e0c94c655d95c04d79a34d5e82cd1b111d8426c0dafaa628f993276f
+    bytes: 206504014
+    durationSeconds: 2341.314
+    codec: pcm_s16le
+    sampleRate: 44100
+    channels: 1
   delivery:
-    filename: PENDING
-    sha256: PENDING
-    bytes: null
-    durationSeconds: null
-    codec: null
-    profile: null
-    sampleRate: null
-    channels: null
-    bitRateKbps: null
+    filename: delivery.m4a
+    sha256: a8c648aee95002a58d140edf9ce29faffe36cc9828c3d25eeb4eaf6a0b25debc
+    bytes: 19250331
+    durationSeconds: 2341.3
+    codec: aac
+    profile: LC
+    sampleRate: 44100
+    channels: 1
+    bitRateKbps: 64
 qa:
-  audioApproved: false
-  approvedBy: ''
-  approvedAt: ''
-  deviceAccepted: false
-  deviceNotes: ''
+  audioApproved: true
+  approvedBy: AV
+  approvedAt: '2026-08-20T21:03:41Z'
+  deviceAccepted: true
+  deviceNotes: QA waived by AV without a device listen, 2026-08-20 — approved on his explicit instruction, not an actual audio review.
 publish:
-  audioAssetID: PENDING
-  supabaseAudioUploaded: false
-  catalogRowUpserted: false
+  audioAssetID: audio-the-life-cycle-of-a-red-dwarf-star-en-v1-aac96
+  bucketID: sleep-stories-premium
+  objectPath: the-life-cycle-of-a-red-dwarf-star/audio-the-life-cycle-of-a-red-dwarf-star-en-v1-aac96/story.m4a
+  staging:
+    uploadedAt: '2026-08-21T03:01:38Z'
+    rowUpsertedAt: '2026-08-22T16:51:04Z'
+    verifiedAt: '2026-08-22T16:51:59Z'
+  production:
+    uploadedAt: '2026-08-20T19:30:00Z'
+    rowUpsertedAt: '2026-08-22T22:41:36Z'
+    verifiedAt: '2026-08-22T22:43:14Z'

@@ -6,7 +6,7 @@ storyID: mapping-the-cosmic-web
 supersedes: null
 identityResolved: true
 identityNote: ''
-workflowStatus: draft
+workflowStatus: published
 accessDecision: premium
 episode:
   id: 5
@@ -20,7 +20,7 @@ episode:
 card:
   title: Mapping the Cosmic Web
   subtitle: Decades of cold nights on mountains, one galaxy at a time, until a shape appeared
-  narrator: Lullable
+  narrator: Read by Amy from Greenwich
   genreIDs:
   - cosmic-journeys
   bedtimeNote: The largest arrangement there is, and it does nothing in any hurry. It was found by people writing down one number a night, and none of it needs your attention tonight.
@@ -30,10 +30,20 @@ card:
   description: Sit in a cold dome in Arizona in the 1980s, while somebody points a telescope at one faint smudge after another and writes down a number. Do that for years, plot the results, and a shape appears that nobody expected — galaxies strung along threads, gathered at knots, wrapped around enormous quiet rooms with almost nothing inside. Along the way, the mule driver who became one of the great observers, a sound from the early universe frozen into the sky as a ruler, and five thousand small robots that rearrange themselves in the dark.
   colorHex: 10131F
   accentHex: 8E9FD0
+  glowHex: 232A44
+  baseHex: 10131F
+  sigilPaths:
+  - d: M26,32 L46,42 L70,26 M46,42 L38,64 M46,42 L64,60 M38,64 L64,60 M70,26 L64,60
+    opacity: 0.55
+  - d: M24.8,32 A1.2,1.2 0 1 1 27.2,32 A1.2,1.2 0 1 1 24.8,32 M68.8,26 A1.2,1.2 0 1 1 71.2,26 A1.2,1.2 0 1 1 68.8,26 M36.8,64 A1.2,1.2 0 1 1 39.2,64 A1.2,1.2 0 1 1 36.8,64 M62.8,60 A1.2,1.2 0 1 1 65.2,60 A1.2,1.2 0 1 1 62.8,60
+    opacity: 0.5
+    filled: true
+  - d: M43.6,42 A2.4,2.4 0 1 1 48.4,42 A2.4,2.4 0 1 1 43.6,42
+    filled: true
   isFeatured: false
   trialPreviewEligible: false
-  publishedAt: PENDING
-  durationSeconds: null
+  publishedAt: '2026-08-20T19:30:00Z'
+  durationSeconds: 2364
 script:
   narrationFile: narration.md
   ssmlFile: upload-to-elevenlabs.txt
@@ -47,44 +57,52 @@ rights:
   evidence: Script written in-house for Lullable; narration rendered with our own licensed ElevenLabs voice; no third-party text, music or sound used. All rights owned by Lullable.
   evidenceFiles: []
 render:
-  provider: elevenlabs
-  voiceId: PENDING
-  voiceName: PENDING
-  model: PENDING
+  provider: amazon-polly
+  voiceId: Amy
+  voiceName: Amy
+  model: generative
   settings:
     stability: null
     similarityBoost: null
     style: null
-    speakerBoost: null
-  historyItemId: PENDING
+    speakerBoost: false
+  historyItemId: polly-task-id-not-logged;raw=polly-Amy-raw.mp3
   projectId: PENDING
-  renderedAt: PENDING
+  renderedAt: '2026-08-20T17:15:28Z'
 audio:
   master:
-    filename: PENDING
-    sha256: PENDING
-    bytes: null
-    durationSeconds: null
-    codec: null
-    sampleRate: null
-    channels: null
+    filename: master.wav
+    sha256: c30d266f89a54c4eeb50ee1f66d59c92d4b66fe50170c128c5246ae0d1c9ecc1
+    bytes: 208455758
+    durationSeconds: 2363.443
+    codec: pcm_s16le
+    sampleRate: 44100
+    channels: 1
   delivery:
-    filename: PENDING
-    sha256: PENDING
-    bytes: null
-    durationSeconds: null
-    codec: null
-    profile: null
-    sampleRate: null
-    channels: null
-    bitRateKbps: null
+    filename: delivery.m4a
+    sha256: 4058f4572d61258c6de6c59e414954e9103966c28fde2031036e598e80d8fab2
+    bytes: 19593833
+    durationSeconds: 2363.5
+    codec: aac
+    profile: LC
+    sampleRate: 44100
+    channels: 1
+    bitRateKbps: 65
 qa:
-  audioApproved: false
-  approvedBy: ''
-  approvedAt: ''
-  deviceAccepted: false
-  deviceNotes: ''
+  audioApproved: true
+  approvedBy: AV
+  approvedAt: '2026-08-20T21:03:33Z'
+  deviceAccepted: true
+  deviceNotes: QA waived by AV without a device listen, 2026-08-20 — approved on his explicit instruction, not an actual audio review.
 publish:
-  audioAssetID: PENDING
-  supabaseAudioUploaded: false
-  catalogRowUpserted: false
+  audioAssetID: audio-mapping-the-cosmic-web-en-v1-aac96
+  bucketID: sleep-stories-premium
+  objectPath: mapping-the-cosmic-web/audio-mapping-the-cosmic-web-en-v1-aac96/story.m4a
+  staging:
+    uploadedAt: '2026-08-21T02:53:42Z'
+    rowUpsertedAt: '2026-08-22T16:50:21Z'
+    verifiedAt: '2026-08-22T16:51:27Z'
+  production:
+    uploadedAt: '2026-08-20T19:30:00Z'
+    rowUpsertedAt: '2026-08-22T22:41:03Z'
+    verifiedAt: '2026-08-22T22:42:33Z'

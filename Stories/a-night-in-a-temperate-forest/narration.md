@@ -1,0 +1,185 @@
+Good evening.
+
+The day is folding itself away now. The last bit of light has gone soft at the edges. The things you held today can be set down. Your shoulders know this. Let them fall just a little. Your hands can uncurl. The breath in your chest can slow to a long, easy tide.
+
+There is nothing to fix right now. Nothing to arrange or remember or solve. The only thing asked of you is to lie still and let the evening hold you. Feel the weight of your body settling into the surface below. Feel your breathing become slower and rounder. Each exhale is a small release. Each inhale is simply air, arriving.
+
+Tonight we are going to a temperate forest. A sleeping place of oak and beech and soft moss. We will wander through it slowly, from dusk into deep night. We will look at small things. The wet shine on a leaf. The cool skin of bark. The quiet work of the soil. Nothing more than that.
+
+If your attention drifts, let it drift. The thread is only here to give you something gentle to let go of. You do not need to follow every word. You do not need to hold any of it. Let the sounds come to you like weather. When you notice you have gone somewhere else, that is fine. That is the mind resting. Take one slow breath in through your nose. Let it leave through your mouth, soft and unhurried. And let us begin.
+
+§
+
+The forest appears first as a change in the air. The path away from the open fields is cooling now. The light has gone the color of old silver. Dusk sits low between the trunks. The temperature is dropping by a few slow degrees. It is not cold. It is simply softer. The day's heat is lifting from the ground in thin ribbons. The air smells of wet earth and green leaves. A first few crickets begin their night pulse, far off and even.
+
+You step under the canopy. The trees are wide here, old and patient. Oak and beech stand with their branches overlapping. The light underneath is dim and blue. Not dark. Just shaded. The leaves above still hold a memory of the sky. Their undersides catch the last light and turn it pale. The ground underfoot is dense with leaf litter. It gives slightly with each step. The sound is hushed. A soft rustle, a small crisp sound, then stillness again. The forest does not resist your arrival. It simply makes room.
+
+§
+
+You move deeper now. The path narrows and then dissolves into moss and root. The trees are closer. The air is heavier with the smell of humus and damp bark. Your own breathing feels louder here. Your footsteps are smaller. The forest asks you, without asking, to slow down. The sound of your movement becomes part of the place. A soft scuff on soil. A pause. Another.
+
+Your senses begin to narrow. You notice the temperature first. It is a few degrees cooler beneath the leaves. The soil holds the day's warmth only lightly now. Then you notice the texture of the air. It is damp, but not wet. There is a fine, cool moisture against your face and hands. The sounds are closer too. A beetle taps against a stem. The leaves settle. Far off, a stream runs over stones in a low, steady hush. No birds now. The day birds have gone quiet. The night is beginning its own voice.
+
+§
+
+The moss grows thick along the base of an oak. You can see it in the low light, a soft green carpet running up the root flare. Moss is a simple plant. It has no roots that dig deep. It drinks directly through its leaves. The moss holds water the way a cloth holds water. It soaks it in when the air is wet. It lets it go slowly when the air dries. Right now it is plump and cool. If you touched it, it would feel like a damp velvet. Underneath the moss, the bark is dark with moisture. The moss keeps the bark shaded and hydrated. It is a small, living blanket.
+
+§
+
+The soil is not still, even at night. Beneath the leaf litter, there is movement. Earthworms rise closer to the surface after dark. The night is safer for them. The air is moist, and their skin needs moisture to breathe. They pull fallen leaves into their burrows. They eat the soft parts. They leave behind casts that become part of the soil. This is decomposition. It is not an ending. It is a transformation. A leaf from last autumn becomes soil by next spring. The forest floor is always in this slow, quiet exchange.
+
+§
+
+Look up. The canopy is a dark lace against the sky. An owl is settling on a branch high in a beech. A barred owl, perhaps. Its feathers are soft at the edges. The leading edge of its flight feathers is fringed, not smooth. This breaks up the air as it moves. That is why an owl flies in near silence. Its face is a disc of fine feathers. The disc collects sound the way a cupped hand collects water. The owl hears a mouse under the leaves from far above. It hears the rustle, the small heartbeat, the shift of tiny feet. Its eyes are large and fixed forward. It sees in low light better than we do. But its ears are what guide it in the dark. The night is not empty to the owl. It is full of small, clear signals.
+
+The owl settles its weight onto the branch. It folds its wings. It turns its head a little, then a little more. The feathers on its chest are pale in the dusk. It blinks once, slow and calm. Then it is still. The branch does not sway. The owl has become part of the tree.
+
+§
+
+The trees themselves are slowing now. During the day, leaves do their bright work. They take in carbon dioxide. They give out oxygen. They lose water through tiny pores on the leaf surface, called stomata. But at night, most trees close those pores partially. They are conserving water. Their metabolism slows. They are not asleep the way we are. But they are resting. The sap in the trunk moves more slowly. The roots still take up some water from the soil. The tree is repairing cells. It is storing what it made during the day. The night is the tree's quiet time of maintenance and restore.
+
+§
+
+Dew is beginning to form. Long after sunset, when the sky is clear and the air is still, the ground cools. The warmth of the day radiates away into the high air. When the surface of a leaf or a blade of grass cools enough, the water vapor in the air touches it and turns to liquid. That is dew. It forms first on the things that cool fastest. Grass tips. Leaf edges. The furry underside of a fern. Then it spreads in tiny beads. Each bead is a small lens for the first moonlight. By early morning, the whole forest floor will be wet without rain.
+
+§
+
+Under the soil, there is another forest. A fungal network runs through the earth like fine threads. These are mycorrhizae. The threads connect the roots of different trees. They pass nutrients and water from one place to another. A beech seedling in deep shade can receive sugar from an older tree. The fungi trade minerals for carbon. This network is always working, day and night. But at night, the exchange is slower and steadier. It is the forest's underground conversation. No sound. No rush. Just the slow movement of resources from where they are to where they are needed.
+
+§
+
+High above the moss, the bats have begun their work. They move in quick, silent arcs between the crowns of the oaks. A little brown bat may weigh no more than a few pennies. Its wings are thin membranes stretched over long finger bones. At night, it uses sound to see. The bat sends out a high call, too high for human ears. That call travels through the air, touches a moth or a branch, and returns as an echo. The bat reads the echo the way you might read a map. It knows the shape of the leaves ahead. It knows the distance to the next tree. It knows the wingbeat of a midge in the dark. The calls come faster when it is hunting, sometimes hundreds in a second. Then the bat dips and turns, and the midge is gone. It is not violence. It is the forest's own economy of energy, calm and efficient. The bat's flight is not silent to itself. It is a world made of echoes, a shimmering map of sound laid over the shadowed air.
+
+§
+
+Between two ferns, a spider's web is barely visible. It is a wheel of fine threads strung across an opening in the understory. The spider spent the early evening rebuilding it. The old threads were torn by wind and falling leaves. The new silk is fresh and slightly elastic. It dries quickly in the night air. Dew has begun to settle on the threads. Each strand now holds a row of tiny silver beads. The web becomes a pattern of jewels, revealed by the moisture. The spider rests at the center, patient. Its body is small and still. It feels the web through its legs. The lightest touch of a moth or a stray leaf sends a ripple through the threads. The spider reads the ripple and knows what has arrived. The web is not a trap so much as an instrument. It is tuned to the fine movements of the night.
+
+§
+
+Beneath the moss and leaf litter, the roots of the oaks and beeches spread wide. A tree's root system is often larger than its crown. The roots reach out in all directions, shallow but broad. They anchor the trunk against wind and the slow pull of gravity. The largest roots are thick as your arm. The smallest are fine as thread. They weave through the soil, searching for water and minerals. At night, the roots are still working. They take up water from the ground. They exchange nutrients with the fungal network. They send chemical signals to neighboring trees. A root tip can detect the difference between a stone and a root of its own kind. It grows toward rich, damp soil. It turns away from compacted earth. The root system is the underground body of the tree. It is half the tree's life, hidden and quiet.
+
+§
+
+A standing dead tree rises near the path. It is a snag, a skeleton of pale wood still upright. Its bark has loosened in long plates. Some plates have fallen away. Woodpeckers have carved neat holes into the softened wood. At night, those holes are dark pockets in the moonlight. A snag is not a sad thing. It is a busy place. Cavity-nesting birds rest in the old woodpecker hollows. Bats sometimes slip into the cracks to roost. Insects live under the loosened bark. Fungi spread through the heartwood in pale sheets. The snag is warmer than the living trees because it no longer moves water through its trunk. It holds the day's heat and lets it go slowly. The hollow spaces are like small rooms. Each one holds a different temperature, a different texture, a different life. The snag is not finished. It has simply changed its shape.
+
+§
+
+Lichen grows on the trunk of an old beech. It is not one organism, but two. A fungus and an alga live together. The alga makes food from sunlight. The fungus provides shelter and moisture. Together they make a body that is gray-green and thin, like a crust or a loose network of tiny lobes. Lichen grows very slowly. A patch the size of your palm may be decades old. The largest patches on the oldest trees have been there for a century or more. Lichen does not harm the tree. It is simply a guest, using the bark as a place to rest. It is a sign of clean air. Lichen absorbs moisture and nutrients directly from the atmosphere. It cannot tolerate heavy pollution. The quieter, cleaner forests hold the richest lichen. On the dark trunk, it looks like a map of slow time, spreading one fraction of an inch each year.
+
+§
+
+The forest has layers, like a building turned inside out. The top layer is the canopy, where the tallest trees spread their leaves. The next is the understory, the younger trees and tall shrubs growing in the shade. Below that is the shrub layer, thick with low branches and ferns. Then the herb layer, the soft green plants growing close to the soil. And finally the forest floor, the place of leaf litter and damp wood. At night, each layer holds a different temperature. The canopy is warmer, because it still touches the last of the day's air. The floor is cooler, because the soil releases its heat quickly. Each layer holds different sounds too. The canopy is where the wind moves. The floor is where the crickets pulse. The middle layers are quieter, sheltered and still. Moving through the forest at night is like walking down through floors of a house, each one with its own climate, its own light, its own kind of silence.
+
+§
+
+The wind arrives now in a slow pressure from the west. It starts high, in the crowns of the tallest oaks. The leaves up there are dry and loose. They rustle with a sound like a soft stream over stones. The wind moves downward in stages. It reaches the middle branches next. The beeches have smooth, thin leaves. They flicker and whisper. The sound is lighter here, a papery hush. The lower shrubs barely move. The wind is spent before it reaches the ground. Only a small breath of cooler air passes over your hands and face. Each tree has its own voice in the wind. The oak is deep and rough. The beech is fine and quick. The maple, if there is one, is dry and clattering. The forest is not one sound but many, layered by the shape and thickness of each leaf.
+
+§
+
+Near the path, a patch of evening primrose has opened its flowers. Night-blooming flowers do not wait for bees. They open after sunset, when the air cools and the light fades. Their petals are pale yellow or white, almost luminous in the low light. They release a sweet, faint scent that pools low over the ground. The scent is a signal, carried on the still night air. It calls to moths. A hawkmoth arrives on wings that blur as it hovers. It unrolls a long proboscis and drinks from the flower's tube. The moth's body brushes the stamens. Pollen clings to its legs and sides. When it visits the next flower, it delivers the pollen. This is a careful transaction. The flower offers nectar. The moth carries the flower's future. It happens without sound, without hurry, in the cool hours when the bees are asleep.
+
+§
+
+The trunk of the old oak is a record of time. If you were to look at a cross-section of the wood, you would see rings. Each ring is one year of growth. In spring, the tree grows quickly and the wood is light and porous. In summer, growth slows and the wood becomes dense and dark. The pair of light and dark bands makes one ring. Wide rings mean a good year, with rain and sun. Narrow rings mean a hard year. The rings can show a fire long ago, or a decade of drought, or a gentle stretch of steady weather. The tree does not remember these things in words. It remembers them in wood. The trunk is an archive of the forest's weather. Each year, the oak adds a new page to itself, under the bark, quiet and unseen. The outer bark is old and furrowed. The inner wood is new and alive. Time is written there, in circles.
+
+§
+
+The forest edge is different from the forest interior. At the edge, the trees meet open ground. The air moves more freely there. It is usually a little warmer by night, because the open sky radiates less cold than the shaded soil. The wind reaches the edge trees fully. Their branches grow lower and wider, because there is more light at the sides. The edge is a place of transition. It has one foot in the forest and one foot in the field. The interior, where you are now, is more protected. The air is still. The temperature is steadier. The moisture stays longer. The sounds are softer, because the leaves and trunks absorb them. The interior holds the night like a cupped hand. It is a deeper, older kind of quiet. Even the moonlight seems different here, more filtered, more diffuse. The forest interior is a room with many walls, and the walls are made of living wood.
+
+§
+
+Trees do not simply stand in the air. They breathe it. During the day, they draw water up from the roots and release it through the leaves. That is transpiration. It is a slow, invisible exhale. At night, the rate drops. The stomata close partially. But the tree still moves water. The trunk still holds moisture. The coolness you feel near a group of trees is partly the shade, and partly the water they have released. A large oak can move a hundred gallons of water on a warm day. At night, that water is still there, held in the wood and leaves. The air right around the trees is slightly more humid than the air in the open. It feels softer on your skin. It carries the smell of the forest more strongly. The trees are not only shapes in the dark. They are slow fountains of moisture, gently changing the air around them.
+
+§
+
+A small burrow opens at the base of a beech. It is the entrance to a tunnel that goes down and then sideways, under the roots. A chipmunk or a field mouse built it. It is dug so that rainwater runs away from the opening. The entrance is just wide enough for one small body. Inside, the tunnel widens into chambers. One chamber is lined with dry grass and soft leaves. That is the sleeping place. Another chamber is for storing seeds. The earth around the burrow is loose and dark. The animal's body heat warms the air inside. It is a small pocket of warmth in the cool night. The burrow is not empty. It is inhabited, quietly, by a small breathing creature. The forest floor is full of these hidden rooms. They are not visible from the path. But they are there, tucked under the roots, holding the night's warmth in the soil.
+
+§
+
+A fallen log lies across the forest floor, half buried in leaves. It has been there for years. The bark has loosened and slipped. The wood is soft now, damp and dark. When you press a finger to it, it gives slightly. It is not solid anymore. It is becoming something else. Moss covers the upper surface. Fungi spread through the wood in pale threads. Beetles and termites have carved winding galleries under the bark. The log is a whole landscape in miniature. It is a place of moisture and shade and slow change. Each year, the wood breaks down a little more. The insects eat it. The fungi digest it. The rain softens it. The log sinks lower into the soil. In another few years, it will be a low ridge of dark earth with ferns growing from one end. Then it will be gone, and the soil will be a little deeper, a little richer. The log is not lost. It is becoming soil. It is a slow gift that takes a decade to give.
+
+§
+
+There is a faint light at the base of the log. It is not moonlight. It is green and pale, like a small ember of cool fire. It comes from a patch of bioluminescent fungi. This is foxfire, sometimes seen on rotting wood in temperate forests. The fungus glows as it grows. It uses an enzyme to produce a soft light, a reaction that needs no heat. The glow is steady. It does not flicker. It is just there, a greenish mist of light on the dark wood. Scientists believe the light may attract insects that help spread the fungal spores. Or it may simply be a byproduct of the fungus's metabolism. Either way, it is a quiet wonder. The light is too dim to read by. It is just enough to see the shape of the log, the curve of the moss, the small outline of a fern nearby. It is the forest's own nightlight, made of living chemistry.
+
+§
+
+Sound travels differently now. The air is humid, and the moisture in it carries sound waves more efficiently than dry air. The high faint calls of the insects seem to float. They arrive with a slight delay, softer around the edges. The low sound of the stream seems to come from everywhere at once. It is not louder. It is more present. The leaves overhead absorb some of the sound. The moss and leaf litter absorb more. So the distant sounds carry clearly while the near sounds are muffled. Your own breathing sounds close and soft. The rustle of your clothing is swallowed by the leaf litter. In the humid night air, the forest's sounds are both farther and nearer at once. It is a strange, pleasant acoustic, like listening to the world through a smooth pane of old glass. Every sound is rounded and slowed, clear but unhurried, as if the night itself is listening with you.
+
+§
+
+The bark of an old oak is a world in itself. It is thick and deeply furrowed. The outer bark is mostly dead cells. It does not feel pain or cold. Its job is protection. It insulates the living tissue underneath from rapid temperature change. In the day, the bark soaks up warmth. At night, it releases that warmth slowly. The air around the trunk is slightly warmer than the air at the edge of the clearing. That is why small insects rest in the bark's crevices. That is why lichen grows on the north side. The bark is not smooth armor. It is a textured landscape of shelter and slow heat.
+
+§
+
+Nocturnal insects move through the understory now. Moths navigate by the angle of the moon. They keep the light at a fixed position to fly in a straight line. But near your path, there is no artificial light to confuse them. So they drift steady and low. A firefly beetle clings to a stem. Its abdomen flashes in a cool green pulse. The flash is a language. A code of light between potential mates. Each species has its own rhythm. The flashes are sparse now, a few seconds apart. The forest holds them like small green stars.
+
+§
+
+There is a deer moving through the leaves. It steps with care. A white-tailed deer has hooves that land precisely. It walks on the tips of its toes. Its legs fold and lift with almost no sound. The soft edges of the leaves muffle the footfalls. The deer pauses. It raises its head. Its ears swivel like small dishes, each one independent. It hears you. But not as a threat. It hears the slow rhythm of your breathing, the shift of your weight. It listens for a long moment. Then it lowers its head and steps on, into the deeper shade.
+
+§
+
+Moonlight now reaches through the canopy. The leaves filter it into patches and lines. Some places on the forest floor are pale silver. Others are black. The light moves as the air moves. It is a slow, broken river on the soil. The moon does not illuminate the forest the way the sun does. It drains color and leaves shape. A fern becomes a lace of shadow. A log becomes a long, dark ridge. The world is monochrome and soft. Under this light, the forest seems to breathe in slow motion.
+
+§
+
+The soundscape layers itself like water. The lowest layer is the stream, far off, a continuous murmur under everything. Above that is the wind. It comes in long, slow pushes through the high branches. Each gust has a rise and a fall. The leaves respond in a wash of sound, like a hushed crowd turning pages. Then the insects resume. Crickets pulse in overlapping fields. A katydid repeats its two-note call, dry and steady. Far away, the barred owl gives its eight-note call. It is not a warning. It is a statement of place. I am here. The forest accepts it. The sound rolls out and fades.
+
+§
+
+Near the ground, the air is different. It is cooler than the air above. Cool air is dense. It sinks and settles in the low places. This is a temperature inversion. The forest floor holds a pool of cool, still air. The dew is heavier here. The smells are richer. The scent of wet leaves and soil stays close to the earth. It does not rise. It waits. Each step through this layer is like wading through a shallow, invisible pond of coolness. It touches the ankles. Then the knees. Then it wraps the whole body in a gentle cold that is not unpleasant.
+
+§
+
+The water in the trees is still moving, even now. It rises from the roots through a thin layer of living wood called xylem. The xylem is not one wide tube but many narrow vessels, each no wider than a hair. Water climbs these vessels by two quiet forces. The first is capillary action, the way water creeps up a narrow space. The second is the pull from the leaves. When water escapes through the stomata, it tugs the chain of water behind it. This tug travels all the way down to the roots. It is a slow, constant column of water, stretched from soil to crown. At night, the pull lessens. The tree's thirst softens. But the water still rises, a gentle tide in the dark. You cannot hear it. You can only feel the cool, damp air near the trunk. The tree is drinking without sound, steady as a slow breath.
+
+§
+
+Beneath the loose bark of a dead branch, bark beetles have left their mark. The adult beetles bore small holes through the outer bark. They carve long galleries in the living layer just underneath. Each gallery is a winding channel, no wider than a pencil line. The female lays eggs along its walls. When the larvae hatch, they chew their own smaller tunnels away from the main channel. The result is a delicate pattern, like a map of tiny rivers. The larvae eat the nutritive layer of the tree, the soft tissue just under the bark. They do not eat the hard wood. They leave the inner trunk untouched. By the time the bark falls away, the beetles are long gone. The pattern remains, etched in the wood. It is a record of a quiet life, lived in the narrow space between bark and heartwood, hidden and unhurried.
+
+§
+
+A dormouse is resting in a hollow near the path. It is not fully asleep for the night. It has entered a shallow torpor. Its body temperature drops by a few degrees. Its heartbeat slows to a fraction of its daytime pace. Its breathing becomes so light it is hard to detect. Torpor is different from deep hibernation. It can last a single night. The dormouse rolls into a tight ball. Its tail curls over its face like a soft muff. It is not dreaming, not in the way we understand. It is simply conserving. The small body is running on the lowest possible flame. By morning, it will wake slowly. It will stretch. It will uncurl and begin to move again. But for now, it is a small warm knot of life, tucked into the dark hollow, waiting out the cool hours with patience older than memory.
+
+§
+
+In a small clearing just off the path, the air is changing. The sky is clear and the ground is losing heat. When the surface cools enough, the air just above it cools too. If the air is calm and the moisture is right, a thin ground fog begins to form. It rises not from the soil but from the air, as water vapor condenses into tiny droplets. The fog clings to the lowest places first. It pools in the dips and hollows. It follows the shape of the land like a slow, white river. It is not thick. It is a shallow layer, no higher than your knees. The grass disappears into it. The stones become soft outlines. If the temperature drops further, the fog may leave a fine frost on the leaves. But for now it is only mist, cool and still, gathering in the clearing like a held breath.
+
+§
+
+High on the trunk of a dead oak, a woodpecker's roost hole opens like a dark circle. The hole is not random. The woodpecker chose a place where the wood was already softened by fungus. It chiseled through the outer shell, then hollowed out a chamber inside. The entrance is just wide enough for the bird to slip through. The chamber is lined with fresh wood chips, left behind from the excavation. It is dry and sheltered. The walls are thick, and the wood holds a little warmth from the day. The woodpecker uses this hole for sleeping, not for raising young. It clings to the inside wall at night, its body pressed against the wood. Its tail feathers brace against the chamber's side. It is a small, safe room, suspended in the dark trunk. The tree does not mind. It has already given up its leaves and sap. The hole is now a quiet shape in the moonlight, a doorway to rest.
+
+§
+
+The wind has picked up in the canopy. It carries a few last seeds from the maples. These seeds are shaped like small wings, each one paired with a papery blade. When the wind takes them, they spin. They fall slowly, rocking back and forth. The spinning motion keeps them aloft longer than a simple drop. It gives the wind more time to carry them away from the parent tree. This is called autorotation. The seed does not fight the fall. It uses the air to slow it. Other seeds have hooks or barbs. They catch on the fur of a passing animal or the weave of your sleeve. They travel by clinging. The maple seed travels by turning. In the low light, the spinning seeds look like tiny pale moths, drifting down from the high branches. They land on the leaf litter without a sound. There they wait, patient, for the slow season of roots.
+
+§
+
+The last few leaves still cling to the branches above. They are not green. They are the color of embers, deep red and dull gold. The color was always there, hidden under the green. Chlorophyll made the leaves green all summer. In autumn, the tree withdrew the chlorophyll. It broke it down and pulled the useful parts back into the twigs. When the green faded, the other pigments remained. Carotenoids made the yellows and oranges. Anthocyanins made the reds and purples. The anthocyanins are not simply leftover. The tree makes them fresh in autumn. They help protect the leaf from too much light while the tree reabsorbs its nutrients. It is a careful, orderly retreat. The leaf does not simply die. It is dismantled, piece by piece, until only the woody stem remains. Then it lets go. A few leaves hold on longer, through early winter. They are the last pages of the tree's summer, still bright in the dark air.
+
+§
+
+Leaf litter is the forest's slow diary. Each autumn, the leaves fall. They land in layers. The top layer is dry and loose. The next is damp. The next is darkening and soft. The next is no longer leaves at all. It is crumbly, rich soil. This process takes years. In a temperate forest, a leaf may take two or three years to fully become part of the earth. The soil grows up, not down. A century of leaves makes a deep, dark bed of humus. It holds water like a sponge. It feeds the roots. It is the forest's memory, built one fall at a time.
+
+§
+
+Scientists still wonder about the night forest. They study how trees share resources underground. They ask whether the mycorrhizal network is a cooperative system or simply a series of exchanges. Some think trees can recognize their own kin and send more carbon to them. Others think the fungi are the real drivers, moving nutrients toward the strongest partners. The question is not settled. It is a calm debate, carried out in journals and quiet field stations. The forest does not seem to mind the uncertainty. It simply continues. The threads in the dark remain connected. The questions remain open. That is a gentle thing.
+
+§
+
+A red fox crosses the clearing up ahead. You see it as a low, fluid shape. Its tail is full and pale at the tip. It trots with a light, easy gait. It is not hunting. It is simply moving through. It pauses at the edge of the stream. The water catches the moonlight. The fox lowers its head and drinks with small, neat laps. Its ears stay forward. Then it lifts its head. A few drops fall from its chin. It looks in your direction for a long, peaceful moment. Then it turns and continues into the trees. The movement is so quiet it leaves no trace.
+
+§
+
+The forest is still again. The stream keeps its low note. The owl is silent on its branch. The deer has moved far off. The fox has gone. There is no one left to watch. Only the trees and the soil and the soft weight of the night. The moon has shifted higher, and the patches of light on the ground have moved a little. The air is still. The dew is gathering on every surface now. There is a sense of settling. A sense of completion. Nothing more is going to happen.
+
+§
+
+You do not need to keep any of it. The shapes and sounds have done their work. They were only a place to rest your attention. You can let them go like leaves drifting down a slow stream. They will not be gone entirely. They will settle somewhere in the back of your mind, soft and indistinct. The forest will carry on without you. The trees will breathe. The moss will hold its water. The soil will turn. And you can lie here, empty of the need to follow. You can let the body become heavy. You can let the breath become long and easy. The night is wide enough to hold you without effort.
+
+You are held. You are safe. There is nothing left to do but rest.
+
+Sleep now. Easy, and unhurried, and deep.
+
+Goodnight.

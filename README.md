@@ -21,7 +21,7 @@ lullable_audio/
 │   ├── 01-pipeline-runbook.md         the seven stages, operationally
 │   ├── 02-house-voice.md              the writing rules
 │   ├── 03-manifest-reference.md       every story.yaml field
-│   ├── 04-gates-reference.md          all 17 gates and how to fix each
+│   ├── 04-gates-reference.md          all 18 gates and how to fix each
 │   ├── 05-genres-and-pillars.md       genre registry and palettes
 │   ├── 06-decisions.md                why the system is like this
 │   ├── 07-glossary.md                 every term, defined
@@ -63,12 +63,14 @@ Ask Claude to run these.
 |---|---|
 | `new "<Title>" --genre <g> --pillar "<p>"` | Scaffold a new episode folder |
 | `compile Stories/<id>` | Narration → SSML; refuses on bad cadence |
-| `validate --all` | Run the 17 gates over every story |
+| `validate --all` | Run the 18 gates over every story |
 | `status` | One-screen view of the whole catalogue |
 | `build --all` | Regenerate every derived artifact |
 | `tracker` | Rebuild the spreadsheet from the manifests |
 | `closeout <id> --voice-id … --model …` | Fill render + audio blocks from the real files |
 | `approve <id> --by "AV" --device` | Record QA and device sign-off |
+| `publish <id> --env staging` | Upload the audio and upsert the catalog row in one environment |
+| `verify <id> --env staging` | Check what actually landed there against the manifest |
 | `website-export --all` | Generate the website's `catalog/*.md` from the manifests |
 
 All take `--root .` from inside this folder. Full usage in
@@ -112,6 +114,6 @@ Both recorded in `Docs/06-decisions.md`.
 
 ## Not in scope here
 
-The Supabase migration that carries `bedtimeNote`, `bestFor`, `sleepPace` and
-`atmosphere` through to the hosted catalog. The phone app already understands
-them. `_generated/catalog-payload.json` is already shaped for that move.
+The app itself, and the Supabase schema. This repo generates the upsert
+(`_generated/catalog-<env>.sql`) and runs it; the migrations that define the
+columns live in the app repo.

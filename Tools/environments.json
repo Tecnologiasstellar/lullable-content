@@ -1,0 +1,5 @@
+{
+  "_note": "Supabase project refs. Not secret — visible via `supabase projects list`. displayName is the dashboard name; both projects were renamed 2026-08-20.",
+  "staging":    {"projectRef": "lpzejlunebjogkfvzzdk", "displayName": "lullable-staging"},
+  "production": {"projectRef": "wamsqjzstezqfpemhucm", "displayName": "lullable-production"}
+}

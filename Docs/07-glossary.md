@@ -35,7 +35,7 @@ typed.
 rate, channels, bitrate, duration. Used by G10 and G11 so the gates measure the
 file rather than trusting the manifest.
 
-**gate** — one of seventeen automated checks. Each returns PASS or FAIL with a
+**gate** — one of eighteen automated checks. Each returns PASS or FAIL with a
 message naming the problem.
 
 **genreID** — one of four fixed values: `ancient-worlds`, `gentle-nature`,

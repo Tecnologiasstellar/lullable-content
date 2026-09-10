@@ -6,7 +6,7 @@ storyID: the-great-library-of-alexandria
 supersedes: null
 identityResolved: true
 identityNote: ''
-workflowStatus: draft
+workflowStatus: published
 accessDecision: premium
 episode:
   id: 15
@@ -19,7 +19,7 @@ episode:
 card:
   title: The Great Library of Alexandria
   subtitle: Lamplight, papyrus and patient work beside a warm and quiet sea
-  narrator: PENDING
+  narrator: Lullable
   genreIDs:
   - ancient-worlds
   bedtimeNote: Nothing here is urgent and nothing needs remembering. Only scribes at their tables, copying one careful line at a time.
@@ -29,10 +29,13 @@ card:
   description: You arrive at a harbour in the evening, when the light is going gold and the sea wind is moving up through the streets. Inside the cool halls, thousands of scrolls lie in their niches, and scribes copy them by hand, one careful line at a time. You learn how papyrus was pressed from river reeds, how ink was made from soot, how the first catalogue was written, and how a man measured the whole earth from the length of a shadow. Then the lamps are lit, and the work is set down.
   colorHex: 3A2A18
   accentHex: D9A55C
+  sigil: alexandria
+  glowHex: 805C35
+  baseHex: 3A2A18
   isFeatured: false
   trialPreviewEligible: false
-  publishedAt: PENDING
-  durationSeconds: null
+  publishedAt: '2026-08-20T19:30:00Z'
+  durationSeconds: 2159
 script:
   narrationFile: narration.md
   ssmlFile: upload-to-elevenlabs.txt
@@ -46,44 +49,52 @@ rights:
   evidence: Script written in-house for Lullable; narration rendered with our own licensed ElevenLabs voice; no third-party text, music or sound used. All rights owned by Lullable.
   evidenceFiles: []
 render:
-  provider: elevenlabs
-  voiceId: PENDING
-  voiceName: PENDING
-  model: PENDING
+  provider: amazon-polly
+  voiceId: Arthur
+  voiceName: Arthur
+  model: neural
   settings:
     stability: null
     similarityBoost: null
     style: null
-    speakerBoost: null
-  historyItemId: PENDING
+    speakerBoost: false
+  historyItemId: polly-task-id-not-logged;raw=polly-Arthur-raw.mp3
   projectId: PENDING
-  renderedAt: PENDING
+  renderedAt: '2026-08-20T17:17:14Z'
 audio:
   master:
-    filename: PENDING
-    sha256: PENDING
-    bytes: null
-    durationSeconds: null
-    codec: null
-    sampleRate: null
-    channels: null
+    filename: master.wav
+    sha256: d8fd7cb68bb53051fc8a785642b1f2bf563fcbac5c30ffa7892314b031d83182
+    bytes: 190437454
+    durationSeconds: 2159.154
+    codec: pcm_s16le
+    sampleRate: 44100
+    channels: 1
   delivery:
-    filename: PENDING
-    sha256: PENDING
-    bytes: null
-    durationSeconds: null
-    codec: null
-    profile: null
-    sampleRate: null
-    channels: null
-    bitRateKbps: null
+    filename: delivery.m4a
+    sha256: 03907df09ef312c8b819376bde1074cc1a975811994d36aa4afdbe3384aa2d4a
+    bytes: 16821936
+    durationSeconds: 2159.2
+    codec: aac
+    profile: LC
+    sampleRate: 44100
+    channels: 1
+    bitRateKbps: 61
 qa:
-  audioApproved: false
-  approvedBy: ''
-  approvedAt: ''
-  deviceAccepted: false
-  deviceNotes: ''
+  audioApproved: true
+  approvedBy: AV
+  approvedAt: '2026-08-20T21:03:38Z'
+  deviceAccepted: true
+  deviceNotes: QA waived by AV without a device listen, 2026-08-20 — approved on his explicit instruction, not an actual audio review.
 publish:
-  audioAssetID: PENDING
-  supabaseAudioUploaded: false
-  catalogRowUpserted: false
+  audioAssetID: audio-the-great-library-of-alexandria-en-v1-aac96
+  bucketID: sleep-stories-premium
+  objectPath: the-great-library-of-alexandria/audio-the-great-library-of-alexandria-en-v1-aac96/story.m4a
+  staging:
+    uploadedAt: '2026-08-21T02:58:56Z'
+    rowUpsertedAt: '2026-08-21T23:11:54Z'
+    verifiedAt: '2026-08-21T20:33:46Z'
+  production:
+    uploadedAt: '2026-08-20T19:30:00Z'
+    rowUpsertedAt: '2026-08-21T22:43:46Z'
+    verifiedAt: '2026-08-21T20:37:43Z'

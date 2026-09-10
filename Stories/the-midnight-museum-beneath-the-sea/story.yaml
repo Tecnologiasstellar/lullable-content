@@ -1,0 +1,108 @@
+# CANONICAL MANIFEST — edit this file and nothing else.
+# Everything in _generated/ is produced from here by: lullable.py build
+
+schemaVersion: 1
+storyID: the-midnight-museum-beneath-the-sea
+supersedes: null
+identityResolved: true
+identityNote: ''
+workflowStatus: published
+accessDecision: premium
+episode:
+  id: 25
+  pillar: 3. Earth Science & Nature
+  tags:
+  - sleep story
+  - ocean
+  - deep sea
+  - bioluminescence
+  - nature
+card:
+  title: The Midnight Museum Beneath the Sea
+  subtitle: A slow descent through the deep ocean's glowing halls of glass, light, and patient history
+  narrator: Read by Brian from St Ives
+  genreIDs:
+  - gentle-nature
+  bedtimeNote: A hundred million years of quiet lives below the waves, lit by their own small lamps, needing nothing from anyone. Tonight you get to drift through it and rest.
+  bestFor: Sinking into stillness
+  sleepPace: Slow, weightless drift
+  atmosphere: Deep, glowing, silent
+  description: You sink through the ocean's floors of light, from sunlit gold down through a deep cathedral blue into the midnight zone, where nine of ten creatures make their own cold light to say here I am. You drift past a lanternfish's blinking rows, an anglerfish's small warm lamp, and glass sponges that have filtered the same gentle current for ten thousand years. Marine snow falls without pause through halls holding an old ship and a whale fall's soft, fed city, all the way down to a trench floor where a small pink snailfish is entirely at home. The museum keeps everything for you until morning, softly, with its own lamps.
+  colorHex: 071826
+  accentHex: 4FD1C5
+  glowHex: 19344A
+  baseHex: 071826
+  sigilPaths:
+  - d: M30,34 L30,74 L70,74 L70,34 L30,34
+    opacity: 0.7
+  - d: M42,48 A8,8 0 1 1 58,48 A8,8 0 1 1 42,48
+    opacity: 0.9
+    filled: true
+  - d: M45,55 C44,60 46,64 44,68 M50,55 L50,70 M55,55 C56,60 54,64 56,68
+    opacity: 0.5
+  isFeatured: false
+  trialPreviewEligible: false
+  publishedAt: '2026-08-20T19:30:00Z'
+  durationSeconds: 1197
+script:
+  narrationFile: narration.md
+  ssmlFile: upload-to-elevenlabs.txt
+  words: 1671
+  breaks: 153
+  wordsPerBreak: 10.92
+  silenceSeconds: 316.1
+  estimatedMinutesAt118wpm: 19.4
+rights:
+  status: verified
+  evidence: Script written in-house for Lullable; narration rendered with our own licensed ElevenLabs voice; no third-party text, music or sound used. All rights owned by Lullable.
+  evidenceFiles: []
+render:
+  provider: amazon-polly
+  voiceId: Brian
+  voiceName: Brian
+  model: generative
+  settings:
+    stability: null
+    similarityBoost: null
+    style: null
+    speakerBoost: false
+  historyItemId: polly-task-id-not-logged;raw=polly-Brian-raw.mp3
+  projectId: PENDING
+  renderedAt: '2026-08-20T18:56:17Z'
+audio:
+  master:
+    filename: master.wav
+    sha256: 70576a282312ca9f295f8327765f7d3e99846fe3f90c960b18facdd34b6253ea
+    bytes: 105562190
+    durationSeconds: 1196.849
+    codec: pcm_s16le
+    sampleRate: 44100
+    channels: 1
+  delivery:
+    filename: delivery.m4a
+    sha256: fa4dfe88f3e68f0ca96da9696e1de715f24e11c8aa825e7281db03b003457c92
+    bytes: 9712002
+    durationSeconds: 1196.9
+    codec: aac
+    profile: LC
+    sampleRate: 44100
+    channels: 1
+    bitRateKbps: 64
+qa:
+  audioApproved: true
+  approvedBy: AV
+  approvedAt: '2026-08-20T21:03:44Z'
+  deviceAccepted: true
+  deviceNotes: QA waived by AV without a device listen, 2026-08-20 — approved on his explicit instruction, not an actual audio review.
+publish:
+  audioAssetID: audio-the-midnight-museum-beneath-the-sea-en-v1-aac96
+  bucketID: sleep-stories-premium
+  objectPath: the-midnight-museum-beneath-the-sea/audio-the-midnight-museum-beneath-the-sea-en-v1-aac96/story.m4a
+  staging:
+    uploadedAt: '2026-08-21T03:05:34Z'
+    rowUpsertedAt: '2026-08-22T17:05:47Z'
+    verifiedAt: '2026-08-22T17:07:00Z'
+  production:
+    uploadedAt: '2026-08-20T19:30:00Z'
+    rowUpsertedAt: '2026-08-22T22:44:16Z'
+    verifiedAt: '2026-08-22T22:45:28Z'

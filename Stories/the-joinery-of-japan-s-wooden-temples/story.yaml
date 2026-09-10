@@ -6,7 +6,7 @@ storyID: the-joinery-of-japan-s-wooden-temples
 supersedes: null
 identityResolved: true
 identityNote: ''
-workflowStatus: draft
+workflowStatus: published
 accessDecision: premium
 episode:
   id: 6
@@ -19,7 +19,7 @@ episode:
 card:
   title: The Joinery of Japan's Wooden Temples
   subtitle: Thirteen centuries of buildings held together by shape alone, and not one nail
-  narrator: Lullable
+  narrator: Read by Arthur from Ludlow
   genreIDs:
   - ancient-worlds
   bedtimeNote: Nothing here was ever nailed, so nothing is ever finished. It has been taken apart and put back together for thirteen hundred years, and none of it needs watching tonight.
@@ -29,10 +29,17 @@ card:
   description: Stand in a raked gravel courtyard at dawn and look up at a building with no nails in it. No screws, no brackets, nothing but wood cut to hold wood. Along the way, the joint that grips harder the more you load it, the carpenter who said to buy the mountain rather than the timber, a central pillar that holds up nothing and rests loose on a stone, and roof bark peeled from living trees that grow it back in ten years. And at Ise, a shrine rebuilt from new wood every twenty years for thirteen centuries, because twenty years is the length of human memory.
   colorHex: 1E241C
   accentHex: C4B49A
+  glowHex: 424F3E
+  baseHex: 1E241C
+  sigilPaths:
+  - d: M28,36 C36,26 64,26 72,36
+  - d: M18,54 C30,40 70,40 82,54
+  - d: M50,54 L50,78 M40,66 L60,66
+    opacity: 0.6
   isFeatured: false
   trialPreviewEligible: false
-  publishedAt: PENDING
-  durationSeconds: null
+  publishedAt: '2026-08-20T19:30:00Z'
+  durationSeconds: 2226
 script:
   narrationFile: narration.md
   ssmlFile: upload-to-elevenlabs.txt
@@ -46,44 +53,52 @@ rights:
   evidence: Script written in-house for Lullable; narration rendered with our own licensed ElevenLabs voice; no third-party text, music or sound used. All rights owned by Lullable.
   evidenceFiles: []
 render:
-  provider: elevenlabs
-  voiceId: PENDING
-  voiceName: PENDING
-  model: PENDING
+  provider: amazon-polly
+  voiceId: Arthur
+  voiceName: Arthur
+  model: neural
   settings:
     stability: null
     similarityBoost: null
     style: null
-    speakerBoost: null
-  historyItemId: PENDING
+    speakerBoost: false
+  historyItemId: polly-task-id-not-logged;raw=polly-Arthur-raw.mp3
   projectId: PENDING
-  renderedAt: PENDING
+  renderedAt: '2026-08-20T17:17:18Z'
 audio:
   master:
-    filename: PENDING
-    sha256: PENDING
-    bytes: null
-    durationSeconds: null
-    codec: null
-    sampleRate: null
-    channels: null
+    filename: master.wav
+    sha256: 82b3a152c2aa746e3774410c18b7582a33af5cbad03089ce272ee25fb36146c5
+    bytes: 196333646
+    durationSeconds: 2226.004
+    codec: pcm_s16le
+    sampleRate: 44100
+    channels: 1
   delivery:
-    filename: PENDING
-    sha256: PENDING
-    bytes: null
-    durationSeconds: null
-    codec: null
-    profile: null
-    sampleRate: null
-    channels: null
-    bitRateKbps: null
+    filename: delivery.m4a
+    sha256: 9ed8f235298d5f8fe3b1038e39878960b93a157b2ad1578b87f19a06e89ac598
+    bytes: 16470876
+    durationSeconds: 2226.0
+    codec: aac
+    profile: LC
+    sampleRate: 44100
+    channels: 1
+    bitRateKbps: 58
 qa:
-  audioApproved: false
-  approvedBy: ''
-  approvedAt: ''
-  deviceAccepted: false
-  deviceNotes: ''
+  audioApproved: true
+  approvedBy: AV
+  approvedAt: '2026-08-20T21:03:39Z'
+  deviceAccepted: true
+  deviceNotes: QA waived by AV without a device listen, 2026-08-20 — approved on his explicit instruction, not an actual audio review.
 publish:
-  audioAssetID: PENDING
-  supabaseAudioUploaded: false
-  catalogRowUpserted: false
+  audioAssetID: audio-the-joinery-of-japan-s-wooden-temples-en-v1-aac96
+  bucketID: sleep-stories-premium
+  objectPath: the-joinery-of-japan-s-wooden-temples/audio-the-joinery-of-japan-s-wooden-temples-en-v1-aac96/story.m4a
+  staging:
+    uploadedAt: '2026-08-21T02:59:59Z'
+    rowUpsertedAt: '2026-08-22T16:50:50Z'
+    verifiedAt: '2026-08-22T16:51:48Z'
+  production:
+    uploadedAt: '2026-08-20T19:30:00Z'
+    rowUpsertedAt: '2026-08-22T22:41:25Z'
+    verifiedAt: '2026-08-22T22:42:57Z'

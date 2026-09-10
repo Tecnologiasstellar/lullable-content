@@ -110,8 +110,8 @@ python3 Tools/lullable.py --root . build --all
 ```
 
 Regenerates `_generated/` from the manifest: the story card, the tracker row, the
-Supabase payload, the Neon record, the publish commands. Never edit anything in
-there — it is overwritten.
+Supabase upsert SQL and shipping commands for each environment, the Neon record.
+Never edit anything in there — it is overwritten.
 
 Run `build` after **any** manifest change. `validate` will warn you if you forget.
 
@@ -165,12 +165,24 @@ Listen to the whole thing on a real device before running this. The gate exists
 because a render can be technically perfect and still wrong.
 
 **Decide access.** Set `accessDecision` to `free` or `premium` in the manifest,
-and `publishedAt` to a strict ISO-8601 UTC timestamp. Move `workflowStatus` to
-`staging`.
+and `publishedAt` to a strict ISO-8601 UTC timestamp. The bucket follows from the
+access decision; you do not choose it.
 
-**Publish.** `_generated/publish-commands.sh` contains the actual commands, and
-refuses to generate them while any staging gate fails. Then set
-`workflowStatus: published`, fill the `publish` block, and rebuild.
+**Publish to staging, look at it, then promote.** Two Supabase projects, one
+catalogue — see Docs/06-decisions.md D28.
+
+```bash
+python3 Tools/lullable.py publish <id> --env staging --dry-run   # read the SQL first
+python3 Tools/lullable.py publish <id> --env staging
+python3 Tools/lullable.py verify  <id> --env staging             # stamps verifiedAt
+# look at the staging row yourself, then:
+python3 Tools/lullable.py publish <id> --env production
+python3 Tools/lullable.py verify  <id> --env production
+```
+
+`publish` stamps the manifest and moves `workflowStatus` itself — do not fill the
+`publish` block by hand. Promoting refuses outright until staging is verified, so
+there is no path to production that skips it.
 
 ---
 

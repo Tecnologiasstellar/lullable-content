@@ -6,7 +6,7 @@ storyID: the-bakery-before-dawn
 supersedes: null
 identityResolved: true
 identityNote: ''
-workflowStatus: draft
+workflowStatus: published
 accessDecision: free
 episode:
   id: 17
@@ -29,10 +29,13 @@ card:
   description: You cross a frozen street at two in the morning toward the one lit window on the corner, and step into a small tiled room that smells of warm flour. A baker works alone at a wooden bench, unhurried, feeding a glass jar that is older than she is. You learn what is living inside it, why the dough rests before it is touched, what the salt is quietly doing, and how a loaf lifts and sets and turns gold in the last half hour. Then the light goes off, and she walks home to sleep.
   colorHex: 2E1F14
   accentHex: E3B778
+  sigil: bakery
+  glowHex: 6B4638
+  baseHex: 2B1F1B
   isFeatured: false
   trialPreviewEligible: false
-  publishedAt: PENDING
-  durationSeconds: null
+  publishedAt: '2026-08-16T15:26:08Z'
+  durationSeconds: 2394
 script:
   narrationFile: narration.md
   ssmlFile: upload-to-elevenlabs.txt
@@ -46,44 +49,52 @@ rights:
   evidence: Script written in-house for Lullable; narration rendered with our own licensed ElevenLabs voice; no third-party text, music or sound used. All rights owned by Lullable.
   evidenceFiles: []
 render:
-  provider: elevenlabs
-  voiceId: PENDING
-  voiceName: Lullable_Femal
-  model: PENDING
+  provider: amazon-polly
+  voiceId: Niamh
+  voiceName: Niamh
+  model: generative
   settings:
     stability: null
     similarityBoost: null
     style: null
-    speakerBoost: null
-  historyItemId: PENDING
+    speakerBoost: false
+  historyItemId: polly-task-id-not-logged;raw=polly-Niamh-raw.mp3
   projectId: PENDING
-  renderedAt: PENDING
+  renderedAt: '2026-08-20T17:24:18Z'
 audio:
   master:
-    filename: PENDING
-    sha256: PENDING
-    bytes: null
-    durationSeconds: null
-    codec: null
-    sampleRate: null
-    channels: null
+    filename: master.wav
+    sha256: da5488fa634ef94610e29080ffaeabbc70542bd83093dbe94ba262945ccf4197
+    bytes: 211114062
+    durationSeconds: 2393.583
+    codec: pcm_s16le
+    sampleRate: 44100
+    channels: 1
   delivery:
-    filename: PENDING
-    sha256: PENDING
-    bytes: null
-    durationSeconds: null
-    codec: null
-    profile: null
-    sampleRate: null
-    channels: null
-    bitRateKbps: null
+    filename: delivery.m4a
+    sha256: 4e262f91bf9c79f89e1d2c333886f6599fb98000c86f1217071e68c98084e71e
+    bytes: 18766359
+    durationSeconds: 2393.6
+    codec: aac
+    profile: LC
+    sampleRate: 44100
+    channels: 1
+    bitRateKbps: 61
 qa:
-  audioApproved: false
-  approvedBy: ''
-  approvedAt: ''
-  deviceAccepted: false
-  deviceNotes: ''
+  audioApproved: true
+  approvedBy: AV
+  approvedAt: '2026-08-20T21:03:34Z'
+  deviceAccepted: true
+  deviceNotes: QA waived by AV without a device listen, 2026-08-20 — approved on his explicit instruction, not an actual audio review.
 publish:
-  audioAssetID: PENDING
-  supabaseAudioUploaded: false
-  catalogRowUpserted: false
+  audioAssetID: audio-the-bakery-before-dawn-en-v2-aac96
+  bucketID: sleep-stories-public
+  objectPath: the-bakery-before-dawn/audio-the-bakery-before-dawn-en-v2-aac96/story.m4a
+  staging:
+    uploadedAt: '2026-08-21T02:54:33Z'
+    rowUpsertedAt: '2026-08-21T23:10:56Z'
+    verifiedAt: '2026-08-21T20:33:24Z'
+  production:
+    uploadedAt: '2026-08-16T15:26:08Z'
+    rowUpsertedAt: '2026-08-21T22:43:23Z'
+    verifiedAt: '2026-08-21T20:37:18Z'

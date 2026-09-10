@@ -1,10 +1,10 @@
-# The seventeen gates
+# The eighteen gates
 
 `lullable.py validate --all`
 
 Each gate returns PASS or FAIL with a message that names the problem. Gates are
 **staged**: a story only has to pass the subset required at its current
-`workflowStatus`. `PUBLISH READY` means all seventeen pass.
+`workflowStatus`. `PUBLISH READY` means all eighteen pass (or are n/a).
 
 The point of the design: these check **reality, not typing**. G09 hashes the
 actual bytes, G10 shells out to `ffprobe`, G11 compares the card against the
@@ -19,8 +19,8 @@ measured audio. A wrong number cannot pass by being confidently entered.
 | `draft` | G01 G02 G03 G04 G05 G15 G17 |
 | `rendered` | + G08 G09 G10 G11 G12 |
 | `qa-approved` | + G13 |
-| `staging` | + G16 |
-| `published` | all seventeen |
+| `staging` | + G16 G14 |
+| `published` | all eighteen |
 
 A fresh episode legitimately fails the audio gates. That is the system working.
 
@@ -88,8 +88,24 @@ itself is wrong — v3 ignores break tags, so the pauses are gone. Re-render.
 `audioApproved` with a named approver and ISO timestamp, plus `deviceAccepted`.
 **Fix:** listen to the whole thing on a real phone, then run `approve --device`.
 
-### G14 — Supabase and catalog
-`audioAssetID` minted, audio uploaded, catalog row upserted.
+### G14 — staging landed
+`audioAssetID`, `bucketID` and `objectPath` minted, and
+`publish.staging.uploadedAt` / `rowUpsertedAt` recorded.
+**Fix:** `publish <story> --env staging`.
+Reports **n/a**, not a failure, for stories carrying
+`publish.legacyDirectToProduction: true` — the 26 that shipped before a staging
+environment existed. See Docs/06-decisions.md D28. The flag is dropped the first
+time a story actually goes through staging, and the gate starts applying to it.
+
+### G18 — production landed
+`publish.production.uploadedAt` / `rowUpsertedAt` recorded, **and**
+`publish.staging.verifiedAt` non-empty.
+**Fix:** `publish <story> --env staging`, `verify <story> --env staging`, then
+`publish <story> --env production`.
+That last condition is the whole point: production is only ever reached by
+promoting something already proven in staging. `publish --env production`
+refuses before it touches the network, so the error arrives in a readable form
+rather than as a constraint violation.
 
 ### G15 — commercial rights
 `rights.status` is `verified` and evidence is recorded.
@@ -122,7 +138,7 @@ a manifest by hand.
 ## Proving the gates work
 
 The gates were verified against a synthetic story with a real WAV master and a
-real AAC-LC delivery. It passed all seventeen, then each fault was introduced
+real AAC-LC delivery. It passed all of them, then each fault was introduced
 deliberately:
 
 | Mutation | Caught by |
@@ -135,7 +151,8 @@ deliberately:
 | `accessDecision` back to PENDING | G16 |
 | genre typed as `made-up-genre` | G03 not an allowed value |
 | device acceptance revoked | G13 |
-| catalog row not upserted | G14 |
+| catalog row not upserted in staging | G14 |
+| promoted to production with no staging verification | G18 |
 | `master.wav` deleted | G08 missing file |
 
 Re-run that test after any change to the gate logic.
