@@ -99,5 +99,5 @@ publish:
     verifiedAt: '2026-08-22T16:08:24Z'
   production:
     uploadedAt: '2026-08-20T19:30:00Z'
-    rowUpsertedAt: '2026-08-20T19:30:00Z'
-    verifiedAt: ''
+    rowUpsertedAt: '2026-08-22T22:35:40Z'
+    verifiedAt: '2026-08-22T22:37:00Z'

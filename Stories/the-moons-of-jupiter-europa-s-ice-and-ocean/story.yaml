@@ -97,5 +97,5 @@ publish:
     verifiedAt: '2026-08-21T03:08:14Z'
   production:
     uploadedAt: '2026-08-20T19:30:00Z'
-    rowUpsertedAt: '2026-08-20T19:30:00Z'
-    verifiedAt: ''
+    rowUpsertedAt: '2026-08-22T22:51:57Z'
+    verifiedAt: '2026-08-22T22:52:43Z'

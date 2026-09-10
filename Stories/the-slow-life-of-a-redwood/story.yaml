@@ -101,5 +101,5 @@ publish:
     verifiedAt: '2026-08-22T17:07:22Z'
   production:
     uploadedAt: '2026-08-20T19:30:00Z'
-    rowUpsertedAt: '2026-08-20T19:30:00Z'
-    verifiedAt: ''
+    rowUpsertedAt: '2026-08-22T22:44:40Z'
+    verifiedAt: '2026-08-22T22:45:51Z'
