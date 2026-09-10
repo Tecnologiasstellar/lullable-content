@@ -1024,6 +1024,8 @@ def build_story(story_dir, quiet=False):
         with open(os.path.join(out,"publish-%s.sh" % env),"w",encoding="utf-8") as f:
             f.write("#!/usr/bin/env bash\n# GENERATED FROM story.yaml — do not edit.\nset -euo pipefail\n\n")
             f.write("\n".join(publish_commands(m, results, env)) + "\n")
+    with open(os.path.join(out,".source-sha256"),"w",encoding="utf-8") as f:
+        f.write(sha256_of(os.path.join(story_dir,"story.yaml")) + "\n")   # read by stale_artifacts
     for stale in ("catalog-payload.json","publish-commands.sh"):   # pre-D28 names
         sp = os.path.join(out, stale)
         if os.path.exists(sp): os.remove(sp)
@@ -1107,11 +1109,17 @@ def story_dirs(root):
 
 
 def stale_artifacts(story_dir):
-    """True when story.yaml is newer than what was generated from it."""
+    """True when _generated/ was not built from the story.yaml on disk.
+
+    Compared by content, not mtime: a git checkout or a folder move rewrites
+    every manifest's timestamp and made all 27 stories read as stale on
+    2026-09-10 with nothing actually changed. build_story stamps the sha256 of
+    the manifest it read; a missing stamp (pre-stamp build) counts as stale
+    once, and the next build clears it."""
     man = os.path.join(story_dir, "story.yaml")
-    gen = os.path.join(story_dir, "_generated", "tracker-row.tsv")
-    if not os.path.exists(gen): return True
-    return os.path.getmtime(man) > os.path.getmtime(gen) + 1
+    stamp = os.path.join(story_dir, "_generated", ".source-sha256")
+    if not os.path.exists(stamp): return True
+    return open(stamp, encoding="utf-8").read().strip() != sha256_of(man)
 
 def cmd_validate(a):
     dirs = story_dirs(a.root) if a.all else [os.path.join(a.root,"Stories",a.story)]
@@ -1791,7 +1799,7 @@ def main():
 
     v = sub.add_parser("validate", help="run the staged gate model")
     v.add_argument("story", nargs="?"); v.add_argument("--all", action="store_true")
-    v.add_argument("--strict", action="store_true", help="exit non-zero if any required gate fails")
+    v.add_argument("--strict", action="store_true", help="exit non-zero if any required gate fails or _generated/ is stale")
     v.set_defaults(fn=cmd_validate)
 
     b = sub.add_parser("build", help="regenerate _generated/ from story.yaml")

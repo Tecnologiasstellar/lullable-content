@@ -137,6 +137,11 @@ Not a gate, but `validate` prints it:
 
 ```
 !! _generated/ is older than story.yaml — run lullable.py build <storyID>
+
+Staleness is judged by content: `build` stamps the sha256 of the manifest it read
+into `_generated/.source-sha256`, and `validate` compares. Moving the folder or
+checking out a branch no longer trips it. `--strict` exits non-zero for a stale
+`_generated/` as well as for a failing required gate — both block a correct publish.
 ```
 
 The derived artifacts no longer match the manifest. Always `build` after editing

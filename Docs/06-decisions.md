@@ -185,6 +185,10 @@ result against **stale** derived files. The catalog payload still said
 
 ---
 
+*Amended 2026-09-10:* the check compares a sha256 stamp written by `build`, not
+file timestamps — a checkout or a folder move rewrote every mtime and flagged all 27
+stories at once with nothing changed.
+
 ## D15 — Verified: this folder is outside the git repo
 
 Checked with access to the whole `LULLABLE/` directory. `LULLABLE/` itself is not
