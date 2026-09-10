@@ -583,3 +583,31 @@ the backlog, not part of the flow.
 `publish --env staging` → `verify --env staging` → look at staging →
 `publish --env production` → `verify --env production`. Anything skipping
 staging is refused by the tool, not by convention.
+
+## D29 — YouTube-only stories live in the same folder, behind one field  *(settled 2026-09-10)*
+
+YouTube is becoming the primary distribution channel (`lullable-marketing`
+renders every episode as a 90-minute long-form). The catalogue will grow past
+what the app should carry, and a story made for the channel is the same
+artifact as a story made for the app: manifest, narration, Polly render,
+`delivery.m4a`. The tempting alternative — a second folder or repo "for
+YouTube content" — is the second pipeline D24 already refused for ambient beds:
+two compilers, two gate sets, two trackers, and the same fact drifting between them.
+
+So: one field, `channels`, a list from `app` and `youtube`. Absent means
+`[app]`, which keeps the 27 existing manifests untouched. A story with
+`[youtube]` alone never touches Supabase — G14, G16 and G18 report n/a, G13
+takes a named spot-listen instead of a device listen (a YouTube upload can be
+pulled in a minute; an App Store catalogue entry cannot), `publish` refuses it,
+and its terminal stage is `qa-approved`, which `status` labels `YOUTUBE READY`.
+Where it went on YouTube is recorded on the marketing side
+(`shorts-posted.json`), not in the manifest — the manifest describes the
+story, not every place it was posted.
+
+New stories default to `[app, youtube]`. Moving a youtube-only story into the
+app later is adding `app` to the list and then passing the gates it skipped.
+
+The topic queue stays in `Backlog/episode-backlog.md`, now with a
+search-phrase column for YouTube-first ideas — a wider table, not a second
+database.
+

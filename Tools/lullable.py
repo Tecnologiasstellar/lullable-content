@@ -41,6 +41,11 @@ LONG_SENTENCE = 22
 GENRES            = ("ancient-worlds","gentle-nature","cosmic-journeys","cozy-tales")
 WORKFLOW_STATUSES = ("draft","rendered","qa-approved","staging","published")
 ACCESS_DECISIONS  = ("PENDING","free","premium")
+# Where a story is distributed. Absent means ("app",) — the 27 stories that
+# predate the field. A youtube-only story never touches Supabase, so the
+# Supabase gates report n/a for it and its terminal stage is qa-approved.
+# Docs/06-decisions.md D29.
+CHANNELS          = ("app","youtube")
 RIGHTS_STATUSES   = ("pending-verification","verified","restricted")
 V2_MODELS         = ("eleven_multilingual_v2","eleven_english_v2","eleven_turbo_v2","eleven_turbo_v2_5")
 POLLY_ENGINES     = ("neural","generative","long-form")  # AWS_Polly/tools/PIPELINE-MEMORY.md D-2026-08-20
@@ -158,6 +163,7 @@ def blank_manifest():
       "storyID": "PENDING", "supersedes": None, "identityResolved": False,
       "identityNote": "",
       "workflowStatus": "draft", "accessDecision": "PENDING",
+      "channels": ["app", "youtube"],
       "episode": {"id": 0, "pillar": "", "tags": []},
       "card": {"title":"PENDING","subtitle":"PENDING","narrator":"PENDING",
                "genreIDs":[], "bedtimeNote":"PENDING","bestFor":"PENDING",
@@ -197,6 +203,13 @@ def blank_manifest():
 # Each gate returns (status, message). status: PASS | FAIL | NA
 # STAGE_GATES says which gates a story must pass to legitimately be at a stage.
 
+def channels_of(m):
+    c = m.get("channels")
+    return list(c) if isinstance(c, list) and c else ["app"]
+
+def app_bound(m):
+    return "app" in channels_of(m)
+
 def _get(m, path, default=None):
     cur = m
     for k in path.split("."):
@@ -234,6 +247,10 @@ def g03_enums(m, d):
         bad.append("accessDecision=%r" % m.get("accessDecision"))
     if _get(m,"rights.status") not in RIGHTS_STATUSES:
         bad.append("rights.status=%r" % _get(m,"rights.status"))
+    if "channels" in m:
+        c = m["channels"]
+        if not isinstance(c, list) or not c or any(x not in CHANNELS for x in c):
+            bad.append("channels must be a non-empty list drawn from %s" % (CHANNELS,))
     gids = _get(m,"card.genreIDs") or []
     if not isinstance(gids, list) or not (1 <= len(gids) <= 2):
         bad.append("card.genreIDs must be a list of 1-2 ids")
@@ -418,6 +435,11 @@ def g13_qa(m, d):
     if not _get(m,"qa.audioApproved"): bad.append("audio QA not approved")
     elif is_placeholder(_get(m,"qa.approvedBy")): bad.append("qa.approvedBy not recorded")
     elif parse_iso_utc(_get(m,"qa.approvedAt") or "") is None: bad.append("qa.approvedAt not ISO-8601 UTC")
+    if not app_bound(m):
+        # A YouTube upload can be pulled in a minute; an App Store catalogue entry
+        # cannot. Spot-listen (opening, one middle section, the ending) by a named
+        # person is the bar here — D29.
+        return ("FAIL","; ".join(bad)) if bad else ("PASS","spot-listen approved by %s (youtube-only)" % _get(m,"qa.approvedBy"))
     if not _get(m,"qa.deviceAccepted"): bad.append("not accepted on a physical device")
     return ("FAIL","; ".join(bad)) if bad else ("PASS","approved by %s; device accepted" % _get(m,"qa.approvedBy"))
 
@@ -438,6 +460,7 @@ def g14_staging(m, d):
     """Landed in staging. NA for the stories that predate the staging project —
     see Docs/06-decisions.md D28. That flag is deliberately visible in the
     manifest rather than backfilled with invented timestamps."""
+    if not app_bound(m): return "NA","youtube-only — nothing goes to Supabase"
     if _get(m,"publish.legacyDirectToProduction"):
         return "NA","predates the staging environment — went straight to production"
     bad = ["%s not minted" % f for f in _identity_missing(m)] + _env_missing(m,"staging")
@@ -445,6 +468,7 @@ def g14_staging(m, d):
 
 def g18_production(m, d):
     """Landed in production — and got there by promotion, not by a direct write."""
+    if not app_bound(m): return "NA","youtube-only — nothing goes to Supabase"
     bad = ["%s not minted" % f for f in _identity_missing(m)] + _env_missing(m,"production")
     if not _get(m,"publish.legacyDirectToProduction") and not (_get(m,"publish.staging.verifiedAt") or ""):
         bad.append("staging.verifiedAt not recorded — production must be a promote, never a direct write")
@@ -458,6 +482,7 @@ def g15_rights(m, d):
 
 def g16_access(m, d):
     dec = m.get("accessDecision")
+    if not app_bound(m): return "NA","youtube-only — every upload is free"
     if dec == "PENDING":
         return "FAIL","accessDecision still PENDING — free vs premium must be settled before staging"
     return "PASS","access will publish as %r" % dec
@@ -1315,6 +1340,7 @@ def cmd_new(a):
     m["identityResolved"] = not a.unresolved
     m["identityNote"] = a.identity_note or ""
     m["episode"] = {"id": a.id, "pillar": a.pillar, "tags": [t.strip() for t in a.tags.split(",") if t.strip()]}
+    m["channels"] = [c.strip() for c in a.channels.split(",") if c.strip()]
     m["card"]["title"] = a.title
     if a.genre: m["card"]["genreIDs"] = [a.genre]
     save_manifest(d, m)
@@ -1341,6 +1367,8 @@ def cmd_status(a):
         counts[stage] = counts.get(stage, 0) + 1
         ready = publish_ready(results)
         blocking = "READY TO PUBLISH" if ready else (", ".join(failed) if failed else "stage satisfied")
+        if not app_bound(m) and not failed and stage == "qa-approved":
+            blocking = "YOUTUBE READY — make_long.py in lullable-marketing"
         _p("%-34s %-12s %-10s %7s %7s  %s" % (
             m.get("storyID"), stage, m.get("accessDecision"),
             _get(m,"script.words") or "-", _get(m,"script.estimatedMinutesAt118wpm") or "-", blocking))
@@ -1472,6 +1500,9 @@ def cmd_publish(a):
     env, root = a.env, a.root
     d = os.path.join(root, "Stories", a.story)
     m = load_manifest(d); results = run_gates(m, d)
+    if not app_bound(m):
+        _p("refusing: %s is youtube-only (channels: %s) — nothing to push to Supabase" % (a.story, channels_of(m)))
+        sys.exit(1)
 
     failed = [g for g in PUBLISHABLE_GATES if results[g][1] not in ("PASS", "NA")]
     if failed:
@@ -1766,6 +1797,8 @@ def main():
     n.add_argument("--genre", default="", choices=("",)+GENRES)
     n.add_argument("--pillar", default=""); n.add_argument("--id", type=int, default=0)
     n.add_argument("--tags", default="sleep story")
+    n.add_argument("--channels", default="app,youtube",
+                   help="comma list from %s; 'youtube' alone skips the Supabase gates" % (CHANNELS,))
     n.add_argument("--unresolved", action="store_true", help="mark identity as unresolved")
     n.add_argument("--identity-note", default="")
     n.set_defaults(fn=cmd_new)

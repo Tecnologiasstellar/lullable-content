@@ -35,6 +35,7 @@ drift into being `premium` before anyone decided that.
 |---|---|
 | `workflowStatus` | `draft` → `rendered` → `qa-approved` → `staging` → `published` |
 | `accessDecision` | `PENDING` → `free` or `premium` |
+| `channels` | list from `app`, `youtube`. Absent means `[app]`. `[youtube]` alone: the Supabase gates report n/a, QA is a spot-listen, and the story stops at `qa-approved` — the YouTube side lives in `lullable-marketing`. D29. |
 
 The `access` value the app sees is **derived**, never stored: it stays `PENDING`
 until the story is at `staging` or `published` **and** a decision exists. Nothing

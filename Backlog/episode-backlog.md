@@ -97,6 +97,91 @@ rejects anything else. A fifth genre is a product decision, not a writing one.
 
 ---
 
+## Ideas — YouTube-first, keyed to a search phrase
+
+Seeded 2026-09-10 for the channel (D29). Same house voice, same 45–65 minute
+band, same gates minus Supabase. Each row targets one phrase the niche research
+(`lullable-marketing/PLAYBOOK.md` v2 §3–4) found is typed and thinly served:
+`black screen sleep story`, `sleep story no ads`, `no music sleep story`,
+`boring bedtime story`, `history for sleep`, `bedtime story for adults`, plus a
+topic noun. Never an age label, never "no AI". Scaffold with
+`--channels youtube` (or leave the default `app,youtube` if it belongs in the app too).
+
+### 1. Cosmology for Sleep
+
+| Topic | Search phrase | Angle | Notes |
+|---|---|---|---|
+| Dusk on Mars, from a rover's camera | space sleep story | Thin air, long shadows, a blue sunset | Rover as a patient observer, never "alone" |
+| The light from Andromeda | black screen sleep story space | 2.5 million years old when it reaches you | Time-scale calm; the galaxy is the whole plot |
+| A year on Neptune | boring bedtime story space | 165 Earth years, wind, a blue haze | Long numbers read slowly |
+| Pluto and the far edge | sleep story no ads space | New Horizons' slow approach, a heart-shaped plain | Keep the flyby unhurried |
+| Inside the Sun, slowly | space sleep story | A photon's 100,000-year walk to the surface | Heat without danger |
+| The asteroid belt, mostly empty | boring bedtime story space | Hundreds of thousands of kilometres between rocks | The emptiness is the comfort |
+| Listening with a radio telescope | no music sleep story | A dish tilting through the night, hydrogen's hum | No signal-from-aliens angle |
+| Waiting at a Lagrange point | space sleep story | Webb telescope parked in balance, unfolding | Engineering as patience |
+| Aurora seen from orbit | black screen sleep story | Charged wind, curtains of green, silence | Colour kept dim in the telling |
+| Starlight older than the trees | bedtime story for adults space | Which stars you see, how old each light is | Ties to the night-sky episodes without repeating them |
+| The dark between the stars | space sleep story | The interstellar medium, thin and cold and vast | Voyager already exists — stay in the medium, not the probe |
+| How an eclipse comes around | boring bedtime story | The 18-year saros cycle, shadow crossing a map | Mechanism, no crowds |
+| The Kuiper belt | sleep story no ads space | Ice worlds turning slowly past Neptune | Pluto row above overlaps — pick one first |
+
+### 2. Ancient History & Gentle Lore
+
+| Topic | Search phrase | Angle | Notes |
+|---|---|---|---|
+| An evening in a Bronze Age village | history for sleep | Roundhouse, hearth, bronze cooling in a mould | Zero conflict; domestic craft |
+| The scriptorium at Lindisfarne | history sleep story | Vellum, ink, a monk's cold fingers, one letter at a time | Skip the raids entirely |
+| A Roman aqueduct, stone by stone | boring bedtime story history | Gradient of a few centimetres per kilometre | The gradient is the fact that sounds wrong |
+| The stargazers of Babylon | history for sleep | Clay tablets, eclipse records, a night watch | Pairs with the eclipse row in pillar 1 |
+| A Tang-dynasty tea house | sleep story no ads history | Water, leaves, porcelain, evening trade | Sensory lane |
+| A Viking longhouse in winter | history sleep story | Turf roof, long fire, wool, stories | Keep it the farmstead, not the longship |
+| Raising Stonehenge | boring bedtime story history | Sledges, ropes, antler picks, a solstice line | Mechanism over mystery |
+| The gardens of Persia | history for sleep | Qanats bringing water underground, four-part gardens | Water engineering read slowly |
+| A medieval mill on a river | bedtime story for adults history | Wheel, millstones, flour dust, the miller's evening | Bakery already exists — stay at the mill |
+| The salt caravans of the Sahara | history sleep story | Slabs of salt, camels, night marching by stars | Silk Road idea overlaps — different desert, different trade |
+| The pyramid builders' village | history for sleep | Bread rations, ramps, a workers' town at Giza | Workers as craftsmen, not slaves — the evidence supports it |
+| Hadrian's Wall by lamplight | boring bedtime story history | A quiet night on the milecastle, letters home | Vindolanda tablets are the factual spine |
+| Laying a Roman mosaic | history sleep story | Tesserae, lime, a pattern growing across a floor | Craft mechanics |
+
+### 3. Earth Science & Nature
+
+| Topic | Search phrase | Angle | Notes |
+|---|---|---|---|
+| How a cave forms | nature sleep story | One drip, one grain of limestone, a hundred thousand years | Stalactites as clocks |
+| The slow drift of continents | boring bedtime story | Fingernail speed, oceans opening | Erosion-calm plot |
+| A peat bog remembering | no music sleep story nature | Layers, pollen, a landscape kept in order | Avoid the bog-body angle |
+| The life of a river delta | nature sleep story | Sediment settling, channels wandering | Glacial river exists — start where it ends |
+| How snow forms in a cloud | black screen sleep story | Supercooled droplets, six-fold growth, the fall | Physics read softly |
+| The Atacama at night | sleep story no ads nature | Driest place, clearest sky, salt flats | Overlaps the observatory episodes — stay on the ground |
+| Tide pools between tides | nature sleep story | Anemones, limpets, the sea drawing back and returning | Leave predation out |
+| A mangrove forest at dusk | bedtime story for adults nature | Roots in salt water, mud, the tide coming in | Warm and enclosed |
+| The bristlecone pines | boring bedtime story nature | Five thousand years on a dry ridge | Redwood exists — this is the opposite tree |
+| How a pearl forms | nature sleep story | Nacre, layer by layer, years in the dark | Small-scale calm |
+| A pond through four seasons | no music sleep story | Ice, thaw, dragonflies, leaf fall | Close-range, low-drama |
+| The making of chalk cliffs | history for sleep nature | Plankton shells, a shallow sea, ninety million years | Deep time |
+| A kelp forest swaying | ocean sleep story | Holdfasts, fronds, light through water | Deep trenches and glowing bay exist — this is the shallows |
+| A raindrop through an aquifer | nature sleep story | Soil, gravel, decades underground, a spring | Water's slow route |
+
+### 4. Immersive Journeys & Slow Fiction
+
+| Topic | Search phrase | Angle | Notes |
+|---|---|---|---|
+| A night ferry across a northern sea | sleep story no ads journey | Engine hum, a cabin bunk, the swell | Keep the weather kind |
+| A canal boat through the locks | boring bedtime story | Water rising a few feet at a time, towpath, evening | Slowness is the mechanism |
+| A candle maker's workshop | cozy sleep story | Wax, wicks, dipping, the smell of the room | Craft with a factual body |
+| The bookshop after closing | bedtime story for adults | Shelving, order, one lamp | Quiet fiction with real bookselling facts |
+| A night at a mountain hut | black screen sleep story | Wood stove, bunks, wind outside, dawn plans | No storm, no rescue |
+| The paper mill | no music sleep story | Rags to pulp to sheet, the drying loft | Pairs with bookbinding idea above |
+| A cheesemaker's cave | cozy sleep story | Wheels turning on shelves, humidity, months | Warm and tactile |
+| A violin maker's bench | boring bedtime story | Spruce, maple, varnish, the long wait for the wood | Craft mechanics are excellent |
+| A slow tram across an old city at night | sleep story no ads | Stops, bells, lit windows, last passengers | The long-way-home exists — different vehicle, different city |
+| A tea plantation at dawn | cozy sleep story | Mist, terraces, plucking, withering | Pairs with the Tang tea house |
+| The weaver's loom | no music sleep story | Warp, weft, shuttle, a pattern emerging | Wool mill idea overlaps — hand loom, not machines |
+| A boat builder's shed | bedtime story for adults | Steam-bent planks, copper rivets, tide tables | Slow craft |
+| The night watchman's round | boring bedtime story | Lanterns, keys, an old town asleep | Keep it uneventful on purpose |
+| The seed vault in the permafrost | black screen sleep story | Cold shelves, sealed boxes, patience as policy | Svalbard; no doomsday framing |
+| A hand printing press | cozy sleep story | Type set backwards, ink, the pull of the lever | Craft with a factual spine |
+
 ## Rejected, and why
 
 Kept so they do not get re-proposed.

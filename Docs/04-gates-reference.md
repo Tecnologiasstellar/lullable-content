@@ -24,6 +24,10 @@ measured audio. A wrong number cannot pass by being confidently entered.
 
 A fresh episode legitimately fails the audio gates. That is the system working.
 
+A **youtube-only** story (`channels: [youtube]`) reports n/a on G14, G16 and G18,
+and G13 accepts a named spot-listen without the device flag. Its terminal stage is
+`qa-approved`; `status` then says `YOUTUBE READY`. See D29.
+
 ---
 
 ## The gates
@@ -87,6 +91,8 @@ itself is wrong — v3 ignores break tags, so the pauses are gone. Re-render.
 ### G13 — QA and device sign-off
 `audioApproved` with a named approver and ISO timestamp, plus `deviceAccepted`.
 **Fix:** listen to the whole thing on a real phone, then run `approve --device`.
+For a youtube-only story the device flag is not required: spot-listen the opening,
+one middle section and the ending, then `approve --by "AV"`.
 
 ### G14 — staging landed
 `audioAssetID`, `bucketID` and `objectPath` minted, and
