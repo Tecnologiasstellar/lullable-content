@@ -149,11 +149,13 @@ a separate gate.
 
 ---
 
-## Sending it to ElevenLabs
+## Rendering with Amazon Polly
 
-1. **ElevenLabs Studio / Projects**, not the small text box.
-2. **A v2-family model.** Not v3 — v3 ignores the pauses, and G12 will reject it.
-3. Upload `upload-to-elevenlabs.txt`. Nothing else.
+ElevenLabs was retired on 2026-08-20; the narrator is now Amazon Polly, one fixed
+voice per category (`Stories/casting.yaml`). The break-tagged file keeps its legacy
+name, `upload-to-elevenlabs.txt`, and is the Polly source. The exact steps are in
+`AWS_Polly/tools/CLAUDE-INSTRUCTIONS.md`: convert (pause scale 1.25), render async
+to S3, master with the approved ffmpeg chain, then `closeout`.
 
 ---
 

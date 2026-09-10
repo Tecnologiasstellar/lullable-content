@@ -174,10 +174,10 @@ def blank_manifest():
                  "estimatedMinutesAt118wpm":0.0},
       "rights": {"status":"verified",
                  "evidence":("Script written in-house for Lullable; narration rendered with our own "
-                             "licensed ElevenLabs voice; no third-party text, music or sound used. "
+                             "Amazon Polly voice under our AWS account; no third-party text, music or sound used. "
                              "All rights owned by Lullable."),
                  "evidenceFiles": []},
-      "render": {"provider":"elevenlabs","voiceId":"PENDING","voiceName":"PENDING",
+      "render": {"provider":"amazon-polly","voiceId":"PENDING","voiceName":"PENDING",
                  "model":"PENDING",
                  "settings":{"stability":None,"similarityBoost":None,"style":None,"speakerBoost":None},
                  "historyItemId":"PENDING","projectId":"PENDING","renderedAt":"PENDING"},
