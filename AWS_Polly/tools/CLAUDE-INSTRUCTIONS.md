@@ -96,7 +96,8 @@ ffmpeg -y -i delivery.m4a -ar 44100 -ac 1 -c:a pcm_s16le master.wav
 - `ffprobe` delivery.m4a: duration should land 36–45 min; mono 44.1 kHz AAC ~96k.
 - Spot-listen: opening, one mid section, the `Sleep now… Goodnight.` ending.
 - The story folder must now contain exactly: `audio/polly-<Voice>-raw.mp3`,
-  `audio/delivery.m4a`, `audio/master.wav`, `_generated/polly.ssml`.
+  `audio/delivery.m4a`, `_generated/polly.ssml`; `audio/master.wav` is optional — it is
+  a decode of the delivery and may be deleted to save disk (Docs/06-decisions.md D30).
 - Update `story.yaml` through the existing pipeline (`Tools/lullable.py`, its docs in `Docs/`):
   render provider is now amazon-polly, voice/engine from casting.yaml, narrator = the
   category persona ("Read by … from …"), then `build` + `validate`. Publishing to

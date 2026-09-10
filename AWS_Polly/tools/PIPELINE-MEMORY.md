@@ -34,7 +34,7 @@
    `Stories/word-targets.csv` has per-story word counts needed at each voice's measured pace.
 5. **File naming per story** (`Stories/<storyID>/`):
    - `audio/polly-<Voice>-raw.mp3` — raw Polly output, 24 kHz mono (archival source)
-   - `audio/master.wav` — mastered, 44.1 kHz 16-bit mono PCM
+   - `audio/master.wav` — mastered, 44.1 kHz 16-bit mono PCM (optional, derivable from delivery — D30)
    - `audio/delivery.m4a` — mastered, AAC-LC 44.1 kHz mono 96 kbps (app upload format)
    - `_generated/polly.ssml` — the exact SSML sent to Polly
 6. **Story→category mapping** — approved list at the bottom of `casting.yaml`.

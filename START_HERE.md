@@ -42,7 +42,7 @@ lullable_audio/
 │       ├── narration.md              the story as written
 │       ├── upload-to-elevenlabs.txt  the story with pauses — upload this
 │       ├── script.md                 clean readable copy
-│       ├── audio/                    master.wav and delivery.m4a go here
+│       ├── audio/                    delivery.m4a (+ optional master.wav) goes here
 │       └── _generated/               never edit anything in here
 │           ├── story-card.yaml
 │           ├── tracker-row.tsv
@@ -109,7 +109,7 @@ Each stage requires a subset. `PUBLISH READY` means all eighteen pass or are n/a
 | G05 | artwork colours | six uppercase hex characters |
 | G06 | publish date | strict ISO-8601 UTC, not a bare date |
 | G07 | no placeholders | nothing still says PENDING or VOICE_ID |
-| G08 | files exist | master, delivery and any rights evidence are on disk |
+| G08 | files exist | delivery and any rights evidence are on disk; the WAV master is optional (D30) |
 | G09 | checksums | recorded sha256 matches the actual bytes |
 | G10 | delivery encoding | really AAC-LC, 44.1 kHz, mono, ~96 kbps |
 | G11 | duration matches | card duration equals measured audio, within 1s |
@@ -138,7 +138,7 @@ is the system working, not a problem.
 
 ## After the render
 
-Put `master.wav` and `delivery.m4a` into the story's `audio/` folder, then run
+Put `delivery.m4a` (and `master.wav` if you keep one) into the story's `audio/` folder, then run
 `closeout`. It reads the files themselves — computes both checksums, measures the
 real duration and encoding, and fills the manifest. Nothing is typed, so nothing
 can be mistyped.

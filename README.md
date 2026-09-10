@@ -41,7 +41,7 @@ lullable_audio/
     ├── narration.md                   the story as written
     ├── upload-to-elevenlabs.txt       the story with pauses — upload this
     ├── script.md                      clean readable copy
-    ├── audio/                         master.wav + delivery.m4a
+    ├── audio/                         delivery.m4a (+ optional master.wav)
     └── _generated/                    derived; never edit
 ```
 

@@ -138,7 +138,7 @@ is the system working, not a problem.
 model — never v3, which ignores break tags and fails G12. Upload
 `upload-to-elevenlabs.txt` and nothing else.
 
-**Bring the audio back.** Put `master.wav` and `delivery.m4a` in the story's
+**Bring the audio back.** Put `delivery.m4a` (and the WAV master, if you keep one — D30) in the story's
 `audio/` folder. Delivery must be AAC-LC, 44.1 kHz, mono, ~96 kbps.
 
 **Close out.** This reads the actual files — nothing is typed:

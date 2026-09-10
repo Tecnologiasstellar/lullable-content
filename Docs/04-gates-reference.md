@@ -63,12 +63,15 @@ Nothing anywhere still reads `PENDING`, `VOICE_ID`, `TODO`, `XXX`, `CHANGEME`.
 **Fix:** the message lists every path. Five are expected pre-render.
 
 ### G08 — files on disk
-`audio/<master>` and `audio/<delivery>` exist, plus any file listed in
-`rights.evidenceFiles`.
-**Fix:** put the files in the story's `audio/` folder and re-run `closeout`.
+`audio/<delivery>` exists, plus any file listed in `rights.evidenceFiles`. The
+WAV master is checked when present and reported as "not on disk (derivable from
+delivery)" when absent — it is a decode of the delivery file and is not required
+(D30).
+**Fix:** put the delivery file in the story's `audio/` folder and re-run `closeout`.
 
 ### G09 — audio checksums
-Recorded `sha256` matches the actual bytes, for both files.
+Recorded `sha256` matches the actual bytes for the delivery file, and for the
+master when it is on disk.
 **Fix:** if this fails after the files were replaced, re-run `closeout`. If it
 fails unexpectedly, the audio changed without anyone recording it — **mint a new
 `audioAssetID`**, since the old ID no longer describes these bytes.
@@ -159,6 +162,6 @@ deliberately:
 | device acceptance revoked | G13 |
 | catalog row not upserted in staging | G14 |
 | promoted to production with no staging verification | G18 |
-| `master.wav` deleted | G08 missing file |
+| `delivery.m4a` deleted | G08 missing file (a deleted master is reported, not failed — D30) |
 
 Re-run that test after any change to the gate logic.

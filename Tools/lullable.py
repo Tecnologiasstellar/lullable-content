@@ -345,12 +345,18 @@ def _audio_path(d, m, which):
     if is_placeholder(fn): return None
     return os.path.join(d, "audio", fn)
 
+# The WAV master is a decode of delivery.m4a (AWS_Polly/tools/CLAUDE-INSTRUCTIONS.md
+# step 4), ~210 MB per episode of bytes the delivery already carries. It is
+# archival, not required: G08/G09 verify it when it is on disk and say so when
+# it is not. The delivery file is the artifact every gate stands on. D30.
 def g08_files(m, d):
     msgs, bad = [], []
     for which in ("master","delivery"):
         p = _audio_path(d,m,which)
         if p is None: bad.append("%s filename unset" % which); continue
-        if not os.path.exists(p): bad.append("%s missing on disk: audio/%s" % (which, os.path.basename(p)))
+        if not os.path.exists(p):
+            if which == "master": msgs.append("master not on disk (derivable from delivery — D30)")
+            else: bad.append("%s missing on disk: audio/%s" % (which, os.path.basename(p)))
         else: msgs.append("%s present (%.1f MB)" % (which, os.path.getsize(p)/1e6))
     for ev in (_get(m,"rights.evidenceFiles") or []):
         if not os.path.exists(os.path.join(d,"rights",ev)):
@@ -362,7 +368,9 @@ def g09_hashes(m, d):
     for which in ("master","delivery"):
         p = _audio_path(d,m,which)
         rec = _get(m,"audio.%s.sha256" % which)
-        if p is None or not os.path.exists(p): bad.append("%s not on disk" % which); continue
+        if p is None or not os.path.exists(p):
+            if which == "master": ok.append("master not on disk, not hashed (D30)"); continue
+            bad.append("%s not on disk" % which); continue
         if is_placeholder(rec): bad.append("%s sha256 not recorded" % which); continue
         actual = sha256_of(p)
         if actual != rec: bad.append("%s CHECKSUM MISMATCH (file has %s…)" % (which, actual[:12]))
@@ -1386,10 +1394,11 @@ def cmd_closeout(a):
     master = a.master or "master.wav"
     delivery = a.delivery or "delivery.m4a"
     mp, dp = os.path.join(adir, master), os.path.join(adir, delivery)
-    for label, p in (("master", mp), ("delivery", dp)):
-        if not os.path.exists(p):
-            _p("cannot close out: %s not found at audio/%s" % (label, os.path.basename(p))); sys.exit(1)
-    mpr, dpr = ffprobe(mp), ffprobe(dp)
+    if not os.path.exists(dp):
+        _p("cannot close out: delivery not found at audio/%s" % os.path.basename(dp)); sys.exit(1)
+    has_master = os.path.exists(mp)
+    if not has_master: _p("  master not on disk — recording the delivery only (D30)")
+    mpr, dpr = (ffprobe(mp) if has_master else None), ffprobe(dp)
     if not dpr:
         _p("cannot close out: ffprobe could not read the delivery file"); sys.exit(1)
     old_delivery_sha = _get(m, "audio.delivery.sha256")
@@ -1399,7 +1408,7 @@ def cmd_closeout(a):
         m["qa"] = {"audioApproved": False, "approvedBy": "", "approvedAt": "",
                    "deviceAccepted": False, "deviceNotes": ""}
         _p("  !! delivery audio changed since the last approval — QA sign-off reset, re-listen required")
-    m["audio"]["master"] = {"filename": master, "sha256": sha256_of(mp), "bytes": (mpr or {}).get("bytes"),
+    m["audio"]["master"] = {"filename": master, "sha256": sha256_of(mp) if has_master else None, "bytes": (mpr or {}).get("bytes"),
         "durationSeconds": (mpr or {}).get("durationSeconds"), "codec": (mpr or {}).get("codec"),
         "sampleRate": (mpr or {}).get("sampleRate"), "channels": (mpr or {}).get("channels")}
     m["audio"]["delivery"] = {"filename": delivery, "sha256": new_delivery_sha, "bytes": dpr["bytes"],
@@ -1427,7 +1436,7 @@ def cmd_closeout(a):
     _p("  duration   %ss  (from the file, not an estimate)" % m["card"]["durationSeconds"])
     _p("  delivery   %s %s %d Hz %d ch %s kbps" % (dpr["codec"], dpr["profile"], dpr["sampleRate"],
                                                    dpr["channels"], dpr["bitRateKbps"]))
-    _p("  sha256     master %s…  delivery %s…" % (m["audio"]["master"]["sha256"][:12],
+    _p("  sha256     master %s…  delivery %s…" % ((m["audio"]["master"]["sha256"] or "not on disk")[:12],
                                                   m["audio"]["delivery"]["sha256"][:12]))
     _p("  status     %s" % m["workflowStatus"])
     build_story(d)

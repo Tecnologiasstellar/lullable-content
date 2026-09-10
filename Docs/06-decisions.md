@@ -611,3 +611,20 @@ The topic queue stays in `Backlog/episode-backlog.md`, now with a
 search-phrase column for YouTube-first ideas — a wider table, not a second
 database.
 
+## D30 — The WAV master is archival, not a gate  *(settled 2026-09-10)*
+
+Every one of the 27 stories was failing G08 and G09 because no `master.wav`
+was on disk. Under the Polly recipe the master is made *from* `delivery.m4a`
+(a PCM decode, step 4 of `AWS_Polly/tools/CLAUDE-INSTRUCTIONS.md`), so it
+carries nothing the delivery does not. Twenty-seven of them are ~6 GB on a
+machine with 15 GB free; the `.gitignore` already says masters belong in cloud
+storage, and they were deleted for exactly that reason.
+
+Regenerating 6 GB to satisfy a gate that then re-hashes it is the wrong shape.
+Instead: the delivery file is the artifact every audio gate stands on. G08 and
+G09 verify the master when it is present and say "not on disk" when it is not;
+`closeout` records the delivery alone if there is no master. The recorded
+master checksums on existing manifests are left as history. The archival
+source that matters is `audio/polly-<Voice>-raw.mp3` (24 kHz, ~13 MB), which
+every story still has.
+
