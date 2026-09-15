@@ -130,16 +130,10 @@ topic noun. Never an age label, never "no AI". Scaffold with
 | Topic | Search phrase | Angle | Notes |
 |---|---|---|---|
 | An evening in a Bronze Age village | history for sleep | Roundhouse, hearth, bronze cooling in a mould | Zero conflict; domestic craft |
-| The scriptorium at Lindisfarne | history sleep story | Vellum, ink, a monk's cold fingers, one letter at a time | Skip the raids entirely |
-| A Roman aqueduct, stone by stone | boring bedtime story history | Gradient of a few centimetres per kilometre | The gradient is the fact that sounds wrong |
 | The stargazers of Babylon | history for sleep | Clay tablets, eclipse records, a night watch | Pairs with the eclipse row in pillar 1 |
 | A Tang-dynasty tea house | sleep story no ads history | Water, leaves, porcelain, evening trade | Sensory lane |
 | A Viking longhouse in winter | history sleep story | Turf roof, long fire, wool, stories | Keep it the farmstead, not the longship |
-| Raising Stonehenge | boring bedtime story history | Sledges, ropes, antler picks, a solstice line | Mechanism over mystery |
-| The gardens of Persia | history for sleep | Qanats bringing water underground, four-part gardens | Water engineering read slowly |
 | A medieval mill on a river | bedtime story for adults history | Wheel, millstones, flour dust, the miller's evening | Bakery already exists — stay at the mill |
-| The salt caravans of the Sahara | history sleep story | Slabs of salt, camels, night marching by stars | Silk Road idea overlaps — different desert, different trade |
-| The pyramid builders' village | history for sleep | Bread rations, ramps, a workers' town at Giza | Workers as craftsmen, not slaves — the evidence supports it |
 | Hadrian's Wall by lamplight | boring bedtime story history | A quiet night on the milecastle, letters home | Vindolanda tablets are the factual spine |
 | Laying a Roman mosaic | history sleep story | Tesserae, lime, a pattern growing across a floor | Craft mechanics |
 

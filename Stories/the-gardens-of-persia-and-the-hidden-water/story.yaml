@@ -1,0 +1,105 @@
+# CANONICAL MANIFEST — edit this file and nothing else.
+# Everything in _generated/ is produced from here by: lullable.py build
+
+schemaVersion: 1
+storyID: the-gardens-of-persia-and-the-hidden-water
+supersedes: null
+identityResolved: true
+identityNote: ''
+workflowStatus: rendered
+accessDecision: PENDING
+channels:
+- app
+- youtube
+episode:
+  id: 39
+  pillar: 2. Ancient History & Gentle Lore
+  tags:
+  - sleep story
+  - history
+  - persian garden
+  - qanat
+  - iran
+card:
+  title: The Gardens of Persia and the Hidden Water
+  subtitle: Cool air, moving water, and a wall that keeps the desert out
+  narrator: Read by Arthur from Ludlow
+  genreIDs:
+  - ancient-worlds
+  bedtimeNote: An evening in a walled garden, and the patient tunnel that brings its water in from the mountains. Nothing here is urgent and nothing needs remembering.
+  bestFor: Letting the day end
+  sleepPace: Slow, unhurried
+  atmosphere: Cool, green, softly lit
+  description: You step through a gate in a warm mud wall, out of the dry plain and into cool air that smells of roses and wet stone. Water runs in stone channels between the cypresses, and you follow it back underground to where it begins. You learn how the tunnel diggers cut their way forward by lamplight, how a slope too gentle to feel carries water for kilometers, and how a floating bowl with a small hole in it shared that water fairly among a whole village.
+  colorHex: 1E3A2E
+  accentHex: 5EB8AE
+  sigil: null
+  sigilPaths: null
+  glowHex: null
+  baseHex: null
+  isFeatured: false
+  trialPreviewEligible: false
+  publishedAt: PENDING
+  durationSeconds: 2904
+script:
+  narrationFile: narration.md
+  ssmlFile: upload-to-elevenlabs.txt
+  words: 5552
+  breaks: 463
+  wordsPerBreak: 11.99
+  silenceSeconds: 764.7
+  estimatedMinutesAt118wpm: 59.8
+rights:
+  status: verified
+  evidence: Script written in-house for Lullable; narration rendered with our own Amazon Polly voice under our AWS account; no third-party text, music or sound used. All rights owned by Lullable.
+  evidenceFiles: []
+render:
+  provider: amazon-polly
+  voiceId: Arthur
+  voiceName: Arthur
+  model: neural
+  settings:
+    stability: null
+    similarityBoost: null
+    style: null
+    speakerBoost: false
+  historyItemId: polly-task=cc2f40ad-7dcd-4d1a-b4f3-aff79fc1aa48;raw=polly-Arthur-raw.mp3
+  projectId: PENDING
+  renderedAt: '2026-09-15T03:13:22Z'
+audio:
+  master:
+    filename: master.wav
+    sha256: null
+    bytes: null
+    durationSeconds: null
+    codec: null
+    sampleRate: null
+    channels: null
+  delivery:
+    filename: delivery.m4a
+    sha256: 6b43e0e2112950cccd087941828589c46d5fa07526a71f9974355461ddd9919f
+    bytes: 21678027
+    durationSeconds: 2904.2
+    codec: aac
+    profile: LC
+    sampleRate: 44100
+    channels: 1
+    bitRateKbps: 58
+qa:
+  audioApproved: false
+  approvedBy: ''
+  approvedAt: ''
+  deviceAccepted: false
+  deviceNotes: ''
+publish:
+  audioAssetID: audio-the-gardens-of-persia-and-the-hidden-water-en-v1-aac96
+  bucketID: PENDING
+  objectPath: PENDING
+  staging:
+    uploadedAt: ''
+    rowUpsertedAt: ''
+    verifiedAt: ''
+  production:
+    uploadedAt: ''
+    rowUpsertedAt: ''
+    verifiedAt: ''

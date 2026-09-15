@@ -1,0 +1,105 @@
+# CANONICAL MANIFEST — edit this file and nothing else.
+# Everything in _generated/ is produced from here by: lullable.py build
+
+schemaVersion: 1
+storyID: the-village-that-built-the-pyramids
+supersedes: null
+identityResolved: true
+identityNote: ''
+workflowStatus: rendered
+accessDecision: PENDING
+channels:
+- app
+- youtube
+episode:
+  id: 37
+  pillar: 2. Ancient History & Gentle Lore
+  tags:
+  - sleep story
+  - history
+  - giza
+  - pyramids
+  - ancient egypt
+card:
+  title: The Village That Built the Pyramids
+  subtitle: An evening in the workers' town below the pyramids of Giza
+  narrator: Read by Arthur from Ludlow
+  genreIDs:
+  - ancient-worlds
+  bedtimeNote: Bread ovens cooling, crews coming down from the plateau, boats tied up on the flood water. A working evening, four and a half thousand years ago.
+  bestFor: Letting the day end
+  sleepPace: Slow, like the river
+  atmosphere: Warm brick, ember, dusk
+  description: 'Come down to the mud-brick town below the Giza plateau, on an evening around 2550 BC. The bell-shaped bread pots are cooling in the ash, the crews are coming in from the stone, and Merer''s boat is tying up at the flooded harbor with white limestone from Tura. We follow the ordinary craft of it: wet sand under a sledge, copper chisels, gypsum spread thin as butter, a base leveled with water and squared to the stars. Then the last light leaves the polished casing, and the town goes quiet.'
+  colorHex: 3B2A1E
+  accentHex: E0A24A
+  sigil: null
+  sigilPaths: null
+  glowHex: null
+  baseHex: null
+  isFeatured: false
+  trialPreviewEligible: false
+  publishedAt: PENDING
+  durationSeconds: 2764
+script:
+  narrationFile: narration.md
+  ssmlFile: upload-to-elevenlabs.txt
+  words: 5479
+  breaks: 442
+  wordsPerBreak: 12.4
+  silenceSeconds: 714.5
+  estimatedMinutesAt118wpm: 58.3
+rights:
+  status: verified
+  evidence: Script written in-house for Lullable; narration rendered with our own Amazon Polly voice under our AWS account; no third-party text, music or sound used. All rights owned by Lullable.
+  evidenceFiles: []
+render:
+  provider: amazon-polly
+  voiceId: Arthur
+  voiceName: Arthur
+  model: neural
+  settings:
+    stability: null
+    similarityBoost: null
+    style: null
+    speakerBoost: false
+  historyItemId: polly-task=180aed0e-51e6-46cc-80cc-a292f8095a8f;raw=polly-Arthur-raw.mp3
+  projectId: PENDING
+  renderedAt: '2026-09-15T03:06:04Z'
+audio:
+  master:
+    filename: master.wav
+    sha256: null
+    bytes: null
+    durationSeconds: null
+    codec: null
+    sampleRate: null
+    channels: null
+  delivery:
+    filename: delivery.m4a
+    sha256: 63766d5009e25c1db65d20ff4de65fee0781be6d7213ce828a755fd18a54c24b
+    bytes: 21047684
+    durationSeconds: 2763.7
+    codec: aac
+    profile: LC
+    sampleRate: 44100
+    channels: 1
+    bitRateKbps: 60
+qa:
+  audioApproved: false
+  approvedBy: ''
+  approvedAt: ''
+  deviceAccepted: false
+  deviceNotes: ''
+publish:
+  audioAssetID: audio-the-village-that-built-the-pyramids-en-v1-aac96
+  bucketID: PENDING
+  objectPath: PENDING
+  staging:
+    uploadedAt: ''
+    rowUpsertedAt: ''
+    verifiedAt: ''
+  production:
+    uploadedAt: ''
+    rowUpsertedAt: ''
+    verifiedAt: ''

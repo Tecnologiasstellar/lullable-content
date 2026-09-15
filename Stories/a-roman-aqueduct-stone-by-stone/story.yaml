@@ -1,0 +1,105 @@
+# CANONICAL MANIFEST — edit this file and nothing else.
+# Everything in _generated/ is produced from here by: lullable.py build
+
+schemaVersion: 1
+storyID: a-roman-aqueduct-stone-by-stone
+supersedes: null
+identityResolved: true
+identityNote: ''
+workflowStatus: rendered
+accessDecision: PENDING
+channels:
+- app
+- youtube
+episode:
+  id: 38
+  pillar: 2. Ancient History & Gentle Lore
+  tags:
+  - sleep story
+  - history
+  - roman aqueduct
+  - engineering
+  - water
+card:
+  title: A Roman Aqueduct, Stone by Stone
+  subtitle: Following water downhill at dusk, one gentle centimeter at a time
+  narrator: Read by Arthur from Ludlow
+  genreIDs:
+  - ancient-worlds
+  bedtimeNote: A long, level walk beside moving water, from a cool spring in the hills to the fountains of a Roman town at nightfall.
+  bestFor: Letting the day end
+  sleepPace: Slow, level, unhurried
+  atmosphere: Cool, stony, quiet
+  description: Tonight we walk the length of a Roman aqueduct at dusk, from the spring at Uzès to the fountains of Nîmes. Fifty kilometers of channel, falling barely the width of a forearm in every kilometer, so gently that the slope cannot be seen or felt. We follow the water through buried channels lined in red waterproof mortar, through tunnels cut by lamplight, and across the three golden tiers of the Pont du Gard, where the fall is two and a half centimeters from one side to the other. Nothing hurries, and nothing in the whole long line has a single moving part.
+  colorHex: 4A443B
+  accentHex: B9C6CE
+  sigil: null
+  sigilPaths: null
+  glowHex: null
+  baseHex: null
+  isFeatured: false
+  trialPreviewEligible: false
+  publishedAt: PENDING
+  durationSeconds: 2905
+script:
+  narrationFile: narration.md
+  ssmlFile: upload-to-elevenlabs.txt
+  words: 5496
+  breaks: 456
+  wordsPerBreak: 12.05
+  silenceSeconds: 757.5
+  estimatedMinutesAt118wpm: 59.2
+rights:
+  status: verified
+  evidence: Script written in-house for Lullable; narration rendered with our own Amazon Polly voice under our AWS account; no third-party text, music or sound used. All rights owned by Lullable.
+  evidenceFiles: []
+render:
+  provider: amazon-polly
+  voiceId: Arthur
+  voiceName: Arthur
+  model: neural
+  settings:
+    stability: null
+    similarityBoost: null
+    style: null
+    speakerBoost: false
+  historyItemId: polly-task=8d7a52fd-a9f5-499e-a70b-54609243c1e3;raw=polly-Arthur-raw.mp3
+  projectId: PENDING
+  renderedAt: '2026-09-15T03:10:11Z'
+audio:
+  master:
+    filename: master.wav
+    sha256: null
+    bytes: null
+    durationSeconds: null
+    codec: null
+    sampleRate: null
+    channels: null
+  delivery:
+    filename: delivery.m4a
+    sha256: b6191639dde6d3f8afa3cec06fd5af5bc5ebf91e2382aaaa3d2cbb39cf78c2df
+    bytes: 21779790
+    durationSeconds: 2905.3
+    codec: aac
+    profile: LC
+    sampleRate: 44100
+    channels: 1
+    bitRateKbps: 59
+qa:
+  audioApproved: false
+  approvedBy: ''
+  approvedAt: ''
+  deviceAccepted: false
+  deviceNotes: ''
+publish:
+  audioAssetID: audio-a-roman-aqueduct-stone-by-stone-en-v1-aac96
+  bucketID: PENDING
+  objectPath: PENDING
+  staging:
+    uploadedAt: ''
+    rowUpsertedAt: ''
+    verifiedAt: ''
+  production:
+    uploadedAt: ''
+    rowUpsertedAt: ''
+    verifiedAt: ''

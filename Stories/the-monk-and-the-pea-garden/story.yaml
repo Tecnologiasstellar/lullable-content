@@ -1,0 +1,106 @@
+# CANONICAL MANIFEST — edit this file and nothing else.
+# Everything in _generated/ is produced from here by: lullable.py build
+
+schemaVersion: 1
+storyID: the-monk-and-the-pea-garden
+supersedes: null
+identityResolved: true
+identityNote: ''
+workflowStatus: rendered
+accessDecision: PENDING
+channels:
+- app
+- youtube
+episode:
+  id: 28
+  pillar: 2. Ancient History & Gentle Lore
+  tags:
+  - sleep story
+  - history
+  - gregor mendel
+  - garden
+  - monastery
+card:
+  title: The Monk and the Pea Garden
+  subtitle: A summer evening among the pea rows, where patient counting found the shape of inheritance
+  narrator: Read by Arthur from Ludlow
+  genreIDs:
+  - ancient-worlds
+  - cozy-tales
+  bedtimeNote: A garden that asks nothing of you. Follow one flower at a time, and let the counting go on without you.
+  bestFor: Slow, patient evenings
+  sleepPace: Row by row, unhurried
+  atmosphere: Green, warm, quiet, steady
+  description: Behind an old abbey in Moravia, a friar named Gregor Mendel spends his evenings among the pea rows. We watch him open a bud with tweezers, brush pollen by hand, and tie a small bag over the flower. In winter he pours the seeds into dishes by lamplight and counts them, and a quiet pattern of three to one rises out of the numbers. We visit the warm glasshouse and the fuchsias, the little weather hut, and the humming bee house, before rain begins on the glass and the garden settles for the night.
+  colorHex: 1E3A2B
+  accentHex: E9DFB0
+  sigil: null
+  sigilPaths: null
+  glowHex: null
+  baseHex: null
+  isFeatured: false
+  trialPreviewEligible: false
+  publishedAt: PENDING
+  durationSeconds: 2936
+script:
+  narrationFile: narration.md
+  ssmlFile: upload-to-elevenlabs.txt
+  words: 5531
+  breaks: 468
+  wordsPerBreak: 11.82
+  silenceSeconds: 773.9
+  estimatedMinutesAt118wpm: 59.8
+rights:
+  status: verified
+  evidence: Script written in-house for Lullable; narration rendered with our own Amazon Polly voice under our AWS account; no third-party text, music or sound used. All rights owned by Lullable.
+  evidenceFiles: []
+render:
+  provider: amazon-polly
+  voiceId: Arthur
+  voiceName: Arthur
+  model: neural
+  settings:
+    stability: null
+    similarityBoost: null
+    style: null
+    speakerBoost: false
+  historyItemId: polly-task=f93dbcc1-a74c-428e-a2f8-4205f19670e1;raw=polly-Arthur-raw.mp3
+  projectId: PENDING
+  renderedAt: '2026-09-15T02:28:33Z'
+audio:
+  master:
+    filename: master.wav
+    sha256: null
+    bytes: null
+    durationSeconds: null
+    codec: null
+    sampleRate: null
+    channels: null
+  delivery:
+    filename: delivery.m4a
+    sha256: 7e4e85a80a3b2088e9453abf72008e084a4a245ac5bca4b6ec316b7c50eca6b5
+    bytes: 21894784
+    durationSeconds: 2936.0
+    codec: aac
+    profile: LC
+    sampleRate: 44100
+    channels: 1
+    bitRateKbps: 58
+qa:
+  audioApproved: false
+  approvedBy: ''
+  approvedAt: ''
+  deviceAccepted: false
+  deviceNotes: ''
+publish:
+  audioAssetID: audio-the-monk-and-the-pea-garden-en-v1-aac96
+  bucketID: PENDING
+  objectPath: PENDING
+  staging:
+    uploadedAt: ''
+    rowUpsertedAt: ''
+    verifiedAt: ''
+  production:
+    uploadedAt: ''
+    rowUpsertedAt: ''
+    verifiedAt: ''

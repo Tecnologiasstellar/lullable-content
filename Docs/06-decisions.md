@@ -632,3 +632,56 @@ master checksums on existing manifests are left as history. The archival
 source that matters is `audio/polly-<Voice>-raw.mp3` (24 kHz, ~13 MB), which
 every story still has.
 
+
+## D31 — The Polly language tag must match the voice, and it is not optional  *(settled 2026-09-14)*
+
+The fifteen-episode history batch was rendered twice. The first pass was wrong,
+and the way it was wrong is worth keeping.
+
+`lullable_polly.py convert` defaults to `--lang en-US` and writes
+`<speak xml:lang="en-US">`. The 2026-08-20 catalogue run did not go through that
+default: `batch.py` emitted a bare `<speak>`, so every published episode carries
+the voice's own language. Following `CLAUDE-INSTRUCTIONS.md` literally, as written
+at the time, stamped a US language tag onto Arthur — an **en-GB** voice.
+
+It is not cosmetic. Measured on 271 words of identical prose, Arthur/neural, breaks
+stripped:
+
+| speak tag | duration | rate |
+|---|---|---|
+| `<speak>` | 83.28 s | 195.2 wpm |
+| `<speak xml:lang="en-GB">` | 83.28 s | 195.2 wpm |
+| `<speak xml:lang="en-US">` | 96.34 s | 168.8 wpm |
+
+Bare and `en-GB` are identical to the hundredth of a second. `en-US` is a different
+read: American pronunciation from a British narrator, and 15% slower. The defect is
+audible rather than visible, and no gate catches it — G10 through G12 all pass on a
+mispronounced file, because the bytes are a valid AAC-LC delivery of the right
+duration for what was asked.
+
+What surfaced it was a runtime calibration, not a listen. The four episodes closed out
+in the first pass measured 163–169 effective wpm against 187–195 for the four Arthur
+episodes already in the catalogue — same voice, same engine, same mastering chain.
+A 15% pace gap with no cause in the prose is a signal that the input differed.
+
+**Five of the six cast voices are not en-US** (Arthur, Amy, Brian, Emma are en-GB;
+Niamh is en-IE; only Patrick is en-US), so the converter's default is wrong for
+almost every episode this catalogue will ever render.
+
+So: `--lang` is now a required argument in `CLAUDE-INSTRUCTIONS.md`, taken from the
+category voice's `language_code` in `Stories/casting.yaml`. The 15 history episodes
+were re-converted with `--lang en-GB` and re-rendered from scratch (~$7 of Polly);
+the first-pass audio was discarded rather than shipped.
+
+**Not done, and deliberately left for AV.** The real fix is for the converter to
+default to the voice's language instead of `en-US`, or to refuse when `--lang` and
+the target voice disagree. That is a change to render software, and the standing
+instruction is to confirm before changing critical software — so it is recorded here
+as a proposal, not applied.
+
+**A second thing this run established:** runtime is predictable from the manifest.
+`delivery_minutes = (words / wpm + authored_silence_seconds * 1.25 / 60) / 0.93`,
+with wpm ≈ 195 for Arthur. Checked against the catalogue: Alexandria predicts
+35.7 min against 36.0 measured. `Stories/word-targets.csv` uses Arthur at 183 wpm
+and no 0.93 correction, which is why it under-predicted and why its "+880 words"
+style advice ran long.

@@ -62,11 +62,19 @@ When AV supplies a sample text (e.g. a YouTube transcript) plus the URL:
 cd ~/developer/lullable-content
 python3 AWS_Polly/tools/lullable_polly.py convert \
   "Stories/<storyID>/upload-to-elevenlabs.txt" \
-  --pause-scale 1.25 --out "Stories/<storyID>/_generated/polly.ssml"
+  --pause-scale 1.25 --lang <language_code> --out "Stories/<storyID>/_generated/polly.ssml"
 ```
 It XML-escapes the prose, wraps `<speak>`, scales every break 1.25x (cap 10s), refuses on
 exclamation marks / >15 words-per-break, and prints words, silence, runtime and cost
 estimates. Fix the prose if it refuses — never the converter.
+
+**`--lang` is not optional.** It must be the `language_code` of the category's voice in
+`Stories/casting.yaml` — `en-GB` for Arthur, Amy, Brian and Emma, `en-IE` for Niamh,
+`en-US` for Patrick. The converter defaults to `en-US`, and a US tag on a non-US voice
+makes Polly read with American pronunciation at a different pace: measured on Arthur,
+195 wpm with the correct tag against 169 wpm with `en-US`, from identical prose. Five of
+the six cast voices are not en-US, so the default is wrong for nearly every episode. See
+Docs/06-decisions.md D31.
 
 ## Step 3 — Render (async, the category's voice)
 

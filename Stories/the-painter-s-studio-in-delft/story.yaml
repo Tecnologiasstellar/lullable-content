@@ -1,0 +1,106 @@
+# CANONICAL MANIFEST — edit this file and nothing else.
+# Everything in _generated/ is produced from here by: lullable.py build
+
+schemaVersion: 1
+storyID: the-painter-s-studio-in-delft
+supersedes: null
+identityResolved: true
+identityNote: ''
+workflowStatus: rendered
+accessDecision: PENDING
+channels:
+- app
+- youtube
+episode:
+  id: 31
+  pillar: 2. Ancient History & Gentle Lore
+  tags:
+  - sleep story
+  - history
+  - vermeer
+  - delft
+  - painting
+card:
+  title: The Painter's Studio in Delft
+  subtitle: An unhurried afternoon of north light, ground blue, and slow work
+  narrator: Read by Arthur from Ludlow
+  genreIDs:
+  - ancient-worlds
+  - cozy-tales
+  bedtimeNote: A quiet room, a patient painter, and paint that takes days to dry. Nothing here moves faster than the light across the floor.
+  bestFor: Settling into stillness
+  sleepPace: Slow as drying oil
+  atmosphere: Cool light, warm stillness
+  description: We arrive in Delft by water at evening, pass the leaning tower and the market square, and climb the narrow stairs to an upstairs room where the light comes in from the left. There Johannes Vermeer works slowly on one canvas. We follow the blue from the mountains of Afghanistan to his palette, watch a picture built up in patient layers, and look closely at a milkmaid, a pearl, and the town seen from across the water at seven in the morning. Then the bells, the light going blue, and an empty studio.
+  colorHex: 2E3A48
+  accentHex: F3E9D2
+  sigil: null
+  sigilPaths: null
+  glowHex: null
+  baseHex: null
+  isFeatured: false
+  trialPreviewEligible: false
+  publishedAt: PENDING
+  durationSeconds: 2854
+script:
+  narrationFile: narration.md
+  ssmlFile: upload-to-elevenlabs.txt
+  words: 5490
+  breaks: 457
+  wordsPerBreak: 12.01
+  silenceSeconds: 751.3
+  estimatedMinutesAt118wpm: 59.0
+rights:
+  status: verified
+  evidence: Script written in-house for Lullable; narration rendered with our own Amazon Polly voice under our AWS account; no third-party text, music or sound used. All rights owned by Lullable.
+  evidenceFiles: []
+render:
+  provider: amazon-polly
+  voiceId: Arthur
+  voiceName: Arthur
+  model: neural
+  settings:
+    stability: null
+    similarityBoost: null
+    style: null
+    speakerBoost: false
+  historyItemId: polly-task=f2dc4f70-2b28-4861-b5a5-33de50c92ae9;raw=polly-Arthur-raw.mp3
+  projectId: PENDING
+  renderedAt: '2026-09-15T02:34:07Z'
+audio:
+  master:
+    filename: master.wav
+    sha256: null
+    bytes: null
+    durationSeconds: null
+    codec: null
+    sampleRate: null
+    channels: null
+  delivery:
+    filename: delivery.m4a
+    sha256: 5c7963d9a4da16b15ac3ac2e93d336668fc3ac890aa59c231aca5601089da656
+    bytes: 21247549
+    durationSeconds: 2853.5
+    codec: aac
+    profile: LC
+    sampleRate: 44100
+    channels: 1
+    bitRateKbps: 58
+qa:
+  audioApproved: false
+  approvedBy: ''
+  approvedAt: ''
+  deviceAccepted: false
+  deviceNotes: ''
+publish:
+  audioAssetID: audio-the-painter-s-studio-in-delft-en-v1-aac96
+  bucketID: PENDING
+  objectPath: PENDING
+  staging:
+    uploadedAt: ''
+    rowUpsertedAt: ''
+    verifiedAt: ''
+  production:
+    uploadedAt: ''
+    rowUpsertedAt: ''
+    verifiedAt: ''

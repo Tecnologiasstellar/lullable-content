@@ -1,0 +1,105 @@
+# CANONICAL MANIFEST — edit this file and nothing else.
+# Everything in _generated/ is produced from here by: lullable.py build
+
+schemaVersion: 1
+storyID: the-salt-caravans-of-the-sahara
+supersedes: null
+identityResolved: true
+identityNote: ''
+workflowStatus: rendered
+accessDecision: PENDING
+channels:
+- app
+- youtube
+episode:
+  id: 40
+  pillar: 2. Ancient History & Gentle Lore
+  tags:
+  - sleep story
+  - history
+  - sahara
+  - salt caravan
+  - timbuktu
+card:
+  title: The Salt Caravans of the Sahara
+  subtitle: A night march under the stars, from the salt pans to a city of books.
+  narrator: Read by Arthur from Ludlow
+  genreIDs:
+  - ancient-worlds
+  bedtimeNote: Forty camels walking slowly through the cool dark, on a road seven hundred years old. Nothing here is in a hurry, and nothing is asked of you.
+  bestFor: Letting the day end
+  sleepPace: Slow and walking
+  atmosphere: Starlit, cool, unhurried
+  description: You join a salt caravan in the fourteenth century, camped at dusk far north of Timbuktu, with tea on the fire and the camels folded down on the cooling sand. Through the night you walk south with them, past wells and low dunes, while the guide steers by the stars and reads the grain of the sand. Along the way, how rock salt is cut in slabs from the bed of a dried lake, why a camel drinks a hundred liters at once and then nothing for days, and what the salt paid for at the other end.
+  colorHex: 141A3C
+  accentHex: D89A4E
+  sigil: null
+  sigilPaths: null
+  glowHex: null
+  baseHex: null
+  isFeatured: false
+  trialPreviewEligible: false
+  publishedAt: PENDING
+  durationSeconds: 2817
+script:
+  narrationFile: narration.md
+  ssmlFile: upload-to-elevenlabs.txt
+  words: 5602
+  breaks: 436
+  wordsPerBreak: 12.85
+  silenceSeconds: 713.4
+  estimatedMinutesAt118wpm: 59.4
+rights:
+  status: verified
+  evidence: Script written in-house for Lullable; narration rendered with our own Amazon Polly voice under our AWS account; no third-party text, music or sound used. All rights owned by Lullable.
+  evidenceFiles: []
+render:
+  provider: amazon-polly
+  voiceId: Arthur
+  voiceName: Arthur
+  model: neural
+  settings:
+    stability: null
+    similarityBoost: null
+    style: null
+    speakerBoost: false
+  historyItemId: polly-task=2fe76916-03b3-4a82-a680-aec633274458;raw=polly-Arthur-raw.mp3
+  projectId: PENDING
+  renderedAt: '2026-09-15T03:17:00Z'
+audio:
+  master:
+    filename: master.wav
+    sha256: null
+    bytes: null
+    durationSeconds: null
+    codec: null
+    sampleRate: null
+    channels: null
+  delivery:
+    filename: delivery.m4a
+    sha256: 75a318ef56d37d17a81093eb46877c24d9670325f86715cfdefda54eaa728f77
+    bytes: 21587469
+    durationSeconds: 2816.7
+    codec: aac
+    profile: LC
+    sampleRate: 44100
+    channels: 1
+    bitRateKbps: 60
+qa:
+  audioApproved: false
+  approvedBy: ''
+  approvedAt: ''
+  deviceAccepted: false
+  deviceNotes: ''
+publish:
+  audioAssetID: audio-the-salt-caravans-of-the-sahara-en-v1-aac96
+  bucketID: PENDING
+  objectPath: PENDING
+  staging:
+    uploadedAt: ''
+    rowUpsertedAt: ''
+    verifiedAt: ''
+  production:
+    uploadedAt: ''
+    rowUpsertedAt: ''
+    verifiedAt: ''

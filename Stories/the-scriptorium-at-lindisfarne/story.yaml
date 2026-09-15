@@ -1,0 +1,106 @@
+# CANONICAL MANIFEST — edit this file and nothing else.
+# Everything in _generated/ is produced from here by: lullable.py build
+
+schemaVersion: 1
+storyID: the-scriptorium-at-lindisfarne
+supersedes: null
+identityResolved: true
+identityNote: ''
+workflowStatus: rendered
+accessDecision: PENDING
+channels:
+- app
+- youtube
+episode:
+  id: 41
+  pillar: 2. Ancient History & Gentle Lore
+  tags:
+  - sleep story
+  - history
+  - lindisfarne
+  - scriptorium
+  - northumbria
+card:
+  title: The Scriptorium at Lindisfarne
+  subtitle: A quill, a calfskin page, and a whole summer evening to fill one letter
+  narrator: Read by Arthur from Ludlow
+  genreIDs:
+  - ancient-worlds
+  - cozy-tales
+  bedtimeNote: The sea closes the causeway behind you, and nothing on the island is in any hurry. A book that takes years is being made one careful letter at a time.
+  bestFor: Letting the day end
+  sleepPace: Slow and unhurried
+  atmosphere: Warm, tidal, candlelit
+  description: Around the year 715, on a tidal island off the Northumberland coast, a monk sits at a sloped oak desk and works on a book of the Gospels. We follow the making of it. The calfskins soaked and stretched into vellum, the margins pricked, the lines ruled in lead point, the quill cut, the ink steeped from oak galls. Then the colors, one at a time, and the knotwork laid out with a compass and a grid, while the tide comes in over the causeway and the seals begin to sing out on the sandbanks.
+  colorHex: 2B3A4C
+  accentHex: E9D6AC
+  sigil: null
+  sigilPaths: null
+  glowHex: null
+  baseHex: null
+  isFeatured: false
+  trialPreviewEligible: false
+  publishedAt: PENDING
+  durationSeconds: 2884
+script:
+  narrationFile: narration.md
+  ssmlFile: upload-to-elevenlabs.txt
+  words: 5554
+  breaks: 443
+  wordsPerBreak: 12.54
+  silenceSeconds: 765.7
+  estimatedMinutesAt118wpm: 59.8
+rights:
+  status: verified
+  evidence: Script written in-house for Lullable; narration rendered with our own Amazon Polly voice under our AWS account; no third-party text, music or sound used. All rights owned by Lullable.
+  evidenceFiles: []
+render:
+  provider: amazon-polly
+  voiceId: Arthur
+  voiceName: Arthur
+  model: neural
+  settings:
+    stability: null
+    similarityBoost: null
+    style: null
+    speakerBoost: false
+  historyItemId: polly-task=34a7ab6f-7685-41b9-8744-0e4b6396afbb;raw=polly-Arthur-raw.mp3
+  projectId: PENDING
+  renderedAt: '2026-09-15T03:27:30Z'
+audio:
+  master:
+    filename: master.wav
+    sha256: null
+    bytes: null
+    durationSeconds: null
+    codec: null
+    sampleRate: null
+    channels: null
+  delivery:
+    filename: delivery.m4a
+    sha256: 660cfe05b2563afa14b00ecb018139bfa52b740a345f7a7c157307c23a5b86fc
+    bytes: 21431099
+    durationSeconds: 2883.7
+    codec: aac
+    profile: LC
+    sampleRate: 44100
+    channels: 1
+    bitRateKbps: 58
+qa:
+  audioApproved: false
+  approvedBy: ''
+  approvedAt: ''
+  deviceAccepted: false
+  deviceNotes: ''
+publish:
+  audioAssetID: audio-the-scriptorium-at-lindisfarne-en-v1-aac96
+  bucketID: PENDING
+  objectPath: PENDING
+  staging:
+    uploadedAt: ''
+    rowUpsertedAt: ''
+    verifiedAt: ''
+  production:
+    uploadedAt: ''
+    rowUpsertedAt: ''
+    verifiedAt: ''

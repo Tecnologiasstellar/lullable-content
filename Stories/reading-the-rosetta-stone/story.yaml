@@ -1,0 +1,105 @@
+# CANONICAL MANIFEST — edit this file and nothing else.
+# Everything in _generated/ is produced from here by: lullable.py build
+
+schemaVersion: 1
+storyID: reading-the-rosetta-stone
+supersedes: null
+identityResolved: true
+identityNote: ''
+workflowStatus: rendered
+accessDecision: PENDING
+channels:
+- app
+- youtube
+episode:
+  id: 34
+  pillar: 2. Ancient History & Gentle Lore
+  tags:
+  - sleep story
+  - history
+  - rosetta stone
+  - champollion
+  - egypt
+card:
+  title: Reading the Rosetta Stone
+  subtitle: A dark stone, three scripts, and a patient man in Paris sounding out the old signs
+  narrator: Read by Arthur from Ludlow
+  genreIDs:
+  - ancient-worlds
+  bedtimeNote: Nothing here is solved quickly. A museum gallery at closing time, and a lamplit study where one sign at a time is gently worked out.
+  bestFor: Winding down slowly
+  sleepPace: Patient and slow
+  atmosphere: Lamplit, cool, quiet
+  description: 'We begin in a long stone gallery in London at closing time, in front of a dark slab carved with three kinds of writing. Then we go back to 1822, to a study in Paris, where Jean-François Champollion lays two royal names side by side and slowly finds the sounds inside the signs. Along the way: the town of Rashid where the stone was found, the plaster casts that carried its words across Europe, an obelisk on a lawn in Dorset, and which way the birds face when you read.'
+  colorHex: 35383C
+  accentHex: C79A4A
+  sigil: null
+  sigilPaths: null
+  glowHex: null
+  baseHex: null
+  isFeatured: false
+  trialPreviewEligible: false
+  publishedAt: PENDING
+  durationSeconds: 3006
+script:
+  narrationFile: narration.md
+  ssmlFile: upload-to-elevenlabs.txt
+  words: 5633
+  breaks: 475
+  wordsPerBreak: 11.86
+  silenceSeconds: 774.8
+  estimatedMinutesAt118wpm: 60.7
+rights:
+  status: verified
+  evidence: Script written in-house for Lullable; narration rendered with our own Amazon Polly voice under our AWS account; no third-party text, music or sound used. All rights owned by Lullable.
+  evidenceFiles: []
+render:
+  provider: amazon-polly
+  voiceId: Arthur
+  voiceName: Arthur
+  model: neural
+  settings:
+    stability: null
+    similarityBoost: null
+    style: null
+    speakerBoost: false
+  historyItemId: polly-task=819d6d0a-63f8-4be7-a797-39f8a2543459;raw=polly-Arthur-raw.mp3
+  projectId: PENDING
+  renderedAt: '2026-09-15T02:43:36Z'
+audio:
+  master:
+    filename: master.wav
+    sha256: null
+    bytes: null
+    durationSeconds: null
+    codec: null
+    sampleRate: null
+    channels: null
+  delivery:
+    filename: delivery.m4a
+    sha256: ed6c16077bbbfa179057d2b34652f5d5d34ee24e4968258f40c42e9f53e22c77
+    bytes: 22665798
+    durationSeconds: 3005.5
+    codec: aac
+    profile: LC
+    sampleRate: 44100
+    channels: 1
+    bitRateKbps: 59
+qa:
+  audioApproved: false
+  approvedBy: ''
+  approvedAt: ''
+  deviceAccepted: false
+  deviceNotes: ''
+publish:
+  audioAssetID: audio-reading-the-rosetta-stone-en-v1-aac96
+  bucketID: PENDING
+  objectPath: PENDING
+  staging:
+    uploadedAt: ''
+    rowUpsertedAt: ''
+    verifiedAt: ''
+  production:
+    uploadedAt: ''
+    rowUpsertedAt: ''
+    verifiedAt: ''

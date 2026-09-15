@@ -1,0 +1,106 @@
+# CANONICAL MANIFEST — edit this file and nothing else.
+# Everything in _generated/ is produced from here by: lullable.py build
+
+schemaVersion: 1
+storyID: six-dots-the-quiet-work-of-louis-braille
+supersedes: null
+identityResolved: true
+identityNote: ''
+workflowStatus: rendered
+accessDecision: PENDING
+channels:
+- app
+- youtube
+episode:
+  id: 29
+  pillar: 2. Ancient History & Gentle Lore
+  tags:
+  - sleep story
+  - history
+  - louis braille
+  - paris
+  - reading
+card:
+  title: 'Six Dots: The Quiet Work of Louis Braille'
+  subtitle: A boy in Paris works out how to read with a fingertip, one small dot at a time
+  narrator: Read by Arthur from Ludlow
+  genreIDs:
+  - ancient-worlds
+  - cozy-tales
+  bedtimeNote: A harness maker's workshop, a rainy Paris courtyard, and six small dots under one fingertip. Nothing here happens quickly, and nothing needs to.
+  bestFor: Letting the day settle
+  sleepPace: Slow and unhurried
+  atmosphere: Warm, tactile, quiet
+  description: We begin in a village east of Paris, in a workshop that smells of leather and beeswax, where a small boy learns the world by touch. Then the road to the city, and a school where the books are heavy and slow to read. We follow Louis Braille as he trims a soldier's twelve-dot code down to six, chooses his letters, and writes music with the same cells. The night ends with rain on a courtyard and a slate resting on a boy's knees.
+  colorHex: 2A1A10
+  accentHex: CFA05C
+  sigil: null
+  sigilPaths: null
+  glowHex: null
+  baseHex: null
+  isFeatured: false
+  trialPreviewEligible: false
+  publishedAt: PENDING
+  durationSeconds: 2886
+script:
+  narrationFile: narration.md
+  ssmlFile: upload-to-elevenlabs.txt
+  words: 5563
+  breaks: 466
+  wordsPerBreak: 11.94
+  silenceSeconds: 761.7
+  estimatedMinutesAt118wpm: 59.8
+rights:
+  status: verified
+  evidence: Script written in-house for Lullable; narration rendered with our own Amazon Polly voice under our AWS account; no third-party text, music or sound used. All rights owned by Lullable.
+  evidenceFiles: []
+render:
+  provider: amazon-polly
+  voiceId: Arthur
+  voiceName: Arthur
+  model: neural
+  settings:
+    stability: null
+    similarityBoost: null
+    style: null
+    speakerBoost: false
+  historyItemId: polly-task=8e12f9ce-e112-42f9-9899-87266384e7bb;raw=polly-Arthur-raw.mp3
+  projectId: PENDING
+  renderedAt: '2026-09-15T02:40:31Z'
+audio:
+  master:
+    filename: master.wav
+    sha256: null
+    bytes: null
+    durationSeconds: null
+    codec: null
+    sampleRate: null
+    channels: null
+  delivery:
+    filename: delivery.m4a
+    sha256: 49fe781c94e969569099a76b05ce664a507afddd9cae999202ee495de8ba537b
+    bytes: 21393658
+    durationSeconds: 2886.5
+    codec: aac
+    profile: LC
+    sampleRate: 44100
+    channels: 1
+    bitRateKbps: 58
+qa:
+  audioApproved: false
+  approvedBy: ''
+  approvedAt: ''
+  deviceAccepted: false
+  deviceNotes: ''
+publish:
+  audioAssetID: audio-six-dots-the-quiet-work-of-louis-braille-en-v1-aac96
+  bucketID: PENDING
+  objectPath: PENDING
+  staging:
+    uploadedAt: ''
+    rowUpsertedAt: ''
+    verifiedAt: ''
+  production:
+    uploadedAt: ''
+    rowUpsertedAt: ''
+    verifiedAt: ''
