@@ -99,7 +99,7 @@ publish:
   staging:
     uploadedAt: '2026-09-15T03:44:20Z'
     rowUpsertedAt: '2026-09-15T03:45:09Z'
-    verifiedAt: ''
+    verifiedAt: '2026-09-15T23:32:08Z'
   production:
     uploadedAt: ''
     rowUpsertedAt: ''
