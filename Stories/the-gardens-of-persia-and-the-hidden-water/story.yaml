@@ -6,8 +6,8 @@ storyID: the-gardens-of-persia-and-the-hidden-water
 supersedes: null
 identityResolved: true
 identityNote: ''
-workflowStatus: rendered
-accessDecision: PENDING
+workflowStatus: staging
+accessDecision: premium
 channels:
 - app
 - youtube
@@ -39,7 +39,7 @@ card:
   baseHex: null
   isFeatured: false
   trialPreviewEligible: false
-  publishedAt: PENDING
+  publishedAt: '2026-09-15T03:40:07Z'
   durationSeconds: 2904
 script:
   narrationFile: narration.md
@@ -86,18 +86,18 @@ audio:
     channels: 1
     bitRateKbps: 58
 qa:
-  audioApproved: false
-  approvedBy: ''
-  approvedAt: ''
-  deviceAccepted: false
-  deviceNotes: ''
+  audioApproved: true
+  approvedBy: AV
+  approvedAt: '2026-09-15T03:40:44Z'
+  deviceAccepted: true
+  deviceNotes: QA waived by AV without a device listen, 2026-09-14 — approved on his explicit instruction, not an actual audio review.
 publish:
   audioAssetID: audio-the-gardens-of-persia-and-the-hidden-water-en-v1-aac96
-  bucketID: PENDING
-  objectPath: PENDING
+  bucketID: sleep-stories-premium
+  objectPath: the-gardens-of-persia-and-the-hidden-water/audio-the-gardens-of-persia-and-the-hidden-water-en-v1-aac96/story.m4a
   staging:
-    uploadedAt: ''
-    rowUpsertedAt: ''
+    uploadedAt: '2026-09-15T03:51:46Z'
+    rowUpsertedAt: '2026-09-15T03:52:23Z'
     verifiedAt: ''
   production:
     uploadedAt: ''
