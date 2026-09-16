@@ -752,3 +752,50 @@ stamped, so this is safe to re-run once the cause is fixed" — and it was.
 **Left undone:** the bakery and Saturn still carry a named sigil and a ground but
 no `sigilPaths` in the manifest. Their marks live only in the app. They are not
 broken, so they were not touched.
+
+## D33 — Production accepts Apple sandbox purchases, on purpose, for App Review  *(founder decision 2026-09-14, recorded here 2026-09-15)*
+
+Found while checking why the production catalogue looked healthy but its Apple
+environment did not. Recorded because it looks exactly like a defect and is not
+one.
+
+Production currently accepts Apple **sandbox** purchases. Both halves of the
+go-live switch described in the app repo's DECISIONS.md are deliberately open:
+
+| Switch | State | Changed |
+|---|---|---|
+| `public.database_environment` | row present, `apple_environment = 'sandbox'` | 2026-09-14 17:54:37Z |
+| `APPLE_ACCEPT_SANDBOX` edge secret | `true` | 2026-09-14 17:53:52Z |
+
+`sandbox_entitlements_accepted()` therefore returns true, and a sandbox
+entitlement unlocks premium audio: asked directly, production answers
+`allowed: true, reason: entitled` for the one active sandbox entitlement against
+a premium story. At go-live the same query answered `allowed: false, reason:
+environment-mismatch`.
+
+**Why.** AV decided it on 2026-09-14 and confirmed it on 2026-09-15: App Review
+testers buy through sandbox, so production must accept sandbox receipts for the
+submission to pass. Running review against staging instead would mean reviewing
+a build that does not point at the production catalogue. Simpler to keep one
+environment open for the duration.
+
+**The cost, stated plainly so the decision stays informed.** While this holds,
+any sandbox receipt grants premium access to real production content, including
+the fifteen history episodes. The exposure today is one account and twelve
+sandbox transactions, all predating launch.
+
+**This contradicts the app repo, which is the authoritative home.**
+`lullable-ios/DECISIONS.md` §26 says production never inserts a row and an absent
+row fails closed, and its go-live entry records both switches being closed and
+verified. Neither has been amended. Until they are, the two repos disagree and
+the app repo is the one a reader will trust.
+
+**The close-out, for whoever does it after approval:**
+
+```
+supabase db query --linked "delete from public.database_environment;"
+supabase secrets set APPLE_ACCEPT_SANDBOX=false --project-ref wamsqjzstezqfpemhucm
+```
+
+Then confirm `select public.sandbox_entitlements_accepted();` returns false and
+that the sandbox account's premium request goes back to `environment-mismatch`.
