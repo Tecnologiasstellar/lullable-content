@@ -781,8 +781,18 @@ environment open for the duration.
 
 **The cost, stated plainly so the decision stays informed.** While this holds,
 any sandbox receipt grants premium access to real production content, including
-the fifteen history episodes. The exposure today is one account and twelve
-sandbox transactions, all predating launch.
+the fifteen history episodes.
+
+I first reported that exposure as "one account and twelve sandbox transactions,
+all predating launch". The second half was wrong, and the app repo's own audit
+(`lullable-ios/audit/SUBMISSION_QA_EVIDENCE.md` §I) has the accurate account: the
+pre-existing August entitlement had expired on 2026-08-19 and granted nothing.
+The active entitlement I found is newer — the founder's own TestFlight annual
+purchase of 2026-09-14 17:48, made deliberately to prove the reviewer's path
+works. So the exposure is one account, the founder's, and it is evidence rather
+than a leak. Sandbox testers can only be created in App Store Connect by the
+founder, verification stays API-authoritative, and a forged transaction still
+fails against Apple.
 
 **This contradicts the app repo, which is the authoritative home.**
 `lullable-ios/DECISIONS.md` §26 says production never inserts a row and an absent
