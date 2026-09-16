@@ -6,7 +6,7 @@ storyID: the-great-survey-of-1086
 supersedes: null
 identityResolved: true
 identityNote: ''
-workflowStatus: staging
+workflowStatus: published
 accessDecision: premium
 channels:
 - app
@@ -99,6 +99,6 @@ publish:
     rowUpsertedAt: '2026-09-15T03:47:04Z'
     verifiedAt: '2026-09-15T23:32:37Z'
   production:
-    uploadedAt: ''
-    rowUpsertedAt: ''
-    verifiedAt: ''
+    uploadedAt: '2026-09-16T00:21:27Z'
+    rowUpsertedAt: '2026-09-16T00:22:04Z'
+    verifiedAt: '2026-09-16T00:29:24Z'

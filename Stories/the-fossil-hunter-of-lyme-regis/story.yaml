@@ -6,7 +6,7 @@ storyID: the-fossil-hunter-of-lyme-regis
 supersedes: null
 identityResolved: true
 identityNote: ''
-workflowStatus: staging
+workflowStatus: published
 accessDecision: premium
 channels:
 - app
@@ -101,6 +101,6 @@ publish:
     rowUpsertedAt: '2026-09-15T03:43:14Z'
     verifiedAt: '2026-09-15T23:31:48Z'
   production:
-    uploadedAt: ''
-    rowUpsertedAt: ''
-    verifiedAt: ''
+    uploadedAt: '2026-09-16T00:18:00Z'
+    rowUpsertedAt: '2026-09-16T00:18:28Z'
+    verifiedAt: '2026-09-16T00:28:27Z'

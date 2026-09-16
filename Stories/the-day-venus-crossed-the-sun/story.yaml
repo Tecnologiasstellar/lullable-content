@@ -6,7 +6,7 @@ storyID: the-day-venus-crossed-the-sun
 supersedes: null
 identityResolved: true
 identityNote: ''
-workflowStatus: staging
+workflowStatus: published
 accessDecision: premium
 channels:
 - app
@@ -101,6 +101,6 @@ publish:
     rowUpsertedAt: '2026-09-15T03:49:26Z'
     verifiedAt: '2026-09-15T23:33:09Z'
   production:
-    uploadedAt: ''
-    rowUpsertedAt: ''
-    verifiedAt: ''
+    uploadedAt: '2026-09-16T00:23:49Z'
+    rowUpsertedAt: '2026-09-16T00:24:31Z'
+    verifiedAt: '2026-09-16T00:30:17Z'

@@ -6,7 +6,7 @@ storyID: the-painter-s-studio-in-delft
 supersedes: null
 identityResolved: true
 identityNote: ''
-workflowStatus: staging
+workflowStatus: published
 accessDecision: premium
 channels:
 - app
@@ -101,6 +101,6 @@ publish:
     rowUpsertedAt: '2026-09-15T03:46:26Z'
     verifiedAt: '2026-09-15T23:32:27Z'
   production:
-    uploadedAt: ''
-    rowUpsertedAt: ''
-    verifiedAt: ''
+    uploadedAt: '2026-09-16T00:20:32Z'
+    rowUpsertedAt: '2026-09-16T00:21:10Z'
+    verifiedAt: '2026-09-16T00:29:13Z'

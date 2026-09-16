@@ -6,7 +6,7 @@ storyID: the-monk-and-the-pea-garden
 supersedes: null
 identityResolved: true
 identityNote: ''
-workflowStatus: staging
+workflowStatus: published
 accessDecision: premium
 channels:
 - app
@@ -101,6 +101,6 @@ publish:
     rowUpsertedAt: '2026-09-15T03:44:10Z'
     verifiedAt: '2026-09-15T23:31:59Z'
   production:
-    uploadedAt: ''
-    rowUpsertedAt: ''
-    verifiedAt: ''
+    uploadedAt: '2026-09-16T00:18:35Z'
+    rowUpsertedAt: '2026-09-16T00:19:02Z'
+    verifiedAt: '2026-09-16T00:28:39Z'

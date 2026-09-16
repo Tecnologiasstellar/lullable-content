@@ -6,7 +6,7 @@ storyID: the-glass-palace-in-hyde-park
 supersedes: null
 identityResolved: true
 identityNote: ''
-workflowStatus: staging
+workflowStatus: published
 accessDecision: premium
 channels:
 - app
@@ -100,6 +100,6 @@ publish:
     rowUpsertedAt: '2026-09-15T03:47:58Z'
     verifiedAt: '2026-09-15T23:32:46Z'
   production:
-    uploadedAt: ''
-    rowUpsertedAt: ''
-    verifiedAt: ''
+    uploadedAt: '2026-09-16T00:22:17Z'
+    rowUpsertedAt: '2026-09-16T00:22:58Z'
+    verifiedAt: '2026-09-16T00:29:39Z'

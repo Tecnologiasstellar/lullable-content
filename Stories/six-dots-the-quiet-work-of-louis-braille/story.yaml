@@ -6,7 +6,7 @@ storyID: six-dots-the-quiet-work-of-louis-braille
 supersedes: null
 identityResolved: true
 identityNote: ''
-workflowStatus: staging
+workflowStatus: published
 accessDecision: premium
 channels:
 - app
@@ -101,6 +101,6 @@ publish:
     rowUpsertedAt: '2026-09-15T03:45:09Z'
     verifiedAt: '2026-09-15T23:32:08Z'
   production:
-    uploadedAt: ''
-    rowUpsertedAt: ''
-    verifiedAt: ''
+    uploadedAt: '2026-09-16T00:19:11Z'
+    rowUpsertedAt: '2026-09-16T00:19:39Z'
+    verifiedAt: '2026-09-16T00:28:49Z'

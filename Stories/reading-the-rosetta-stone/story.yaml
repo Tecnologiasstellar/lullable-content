@@ -6,7 +6,7 @@ storyID: reading-the-rosetta-stone
 supersedes: null
 identityResolved: true
 identityNote: ''
-workflowStatus: staging
+workflowStatus: published
 accessDecision: premium
 channels:
 - app
@@ -100,6 +100,6 @@ publish:
     rowUpsertedAt: '2026-09-15T03:48:47Z'
     verifiedAt: '2026-09-15T23:32:59Z'
   production:
-    uploadedAt: ''
-    rowUpsertedAt: ''
-    verifiedAt: ''
+    uploadedAt: '2026-09-16T00:23:07Z'
+    rowUpsertedAt: '2026-09-16T00:23:36Z'
+    verifiedAt: '2026-09-16T00:29:48Z'
