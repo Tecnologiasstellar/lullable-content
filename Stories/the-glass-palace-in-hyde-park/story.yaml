@@ -95,7 +95,7 @@ qa:
   approvedBy: AV
   approvedAt: '2026-09-15T03:40:38Z'
   deviceAccepted: true
-  deviceNotes: QA waived by AV without a device listen, 2026-09-14 — approved on his explicit instruction, not an actual audio review.
+  deviceNotes: 'Verified on device by AV, 2026-09-15, iPhone 12, against production: the story appears in the catalogue, plays, and renders its mark. Not a full listen — the narration has not been heard end to end by anyone. Supersedes the 2026-09-14 waiver note, which said no device check had happened at all.'
 publish:
   audioAssetID: audio-the-glass-palace-in-hyde-park-en-v1-aac96
   bucketID: sleep-stories-premium
