@@ -32,12 +32,17 @@ card:
   sleepPace: Slow as drying oil
   atmosphere: Cool light, warm stillness
   description: We arrive in Delft by water at evening, pass the leaning tower and the market square, and climb the narrow stairs to an upstairs room where the light comes in from the left. There Johannes Vermeer works slowly on one canvas. We follow the blue from the mountains of Afghanistan to his palette, watch a picture built up in patient layers, and look closely at a milkmaid, a pearl, and the town seen from across the water at seven in the morning. Then the bells, the light going blue, and an empty studio.
-  colorHex: 2E3A48
+  colorHex: 2C3744
   accentHex: F3E9D2
   sigil: null
-  sigilPaths: null
-  glowHex: null
-  baseHex: null
+  sigilPaths:
+  - d: M34,28 L66,28 L66,66 L34,66 Z
+  - d: M50,28 L50,66 M34,47 L66,47
+    opacity: 0.5
+  - d: M30,74 L70,74
+    opacity: 0.35
+  glowHex: '617996'
+  baseHex: 2C3744
   isFeatured: false
   trialPreviewEligible: false
   publishedAt: '2026-09-15T03:40:07Z'
@@ -98,8 +103,8 @@ publish:
   objectPath: the-painter-s-studio-in-delft/audio-the-painter-s-studio-in-delft-en-v1-aac96/story.m4a
   staging:
     uploadedAt: '2026-09-15T03:45:55Z'
-    rowUpsertedAt: '2026-09-15T03:46:26Z'
-    verifiedAt: '2026-09-15T23:32:27Z'
+    rowUpsertedAt: '2026-09-16T02:52:52Z'
+    verifiedAt: '2026-09-16T02:55:43Z'
   production:
     uploadedAt: '2026-09-16T00:20:32Z'
     rowUpsertedAt: '2026-09-16T00:21:10Z'

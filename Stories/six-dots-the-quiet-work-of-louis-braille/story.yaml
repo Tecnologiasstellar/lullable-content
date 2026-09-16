@@ -35,9 +35,12 @@ card:
   colorHex: 2A1A10
   accentHex: CFA05C
   sigil: null
-  sigilPaths: null
-  glowHex: null
-  baseHex: null
+  sigilPaths:
+  - d: M36.4,34 A3.6,3.6 0 1 1 43.6,34 A3.6,3.6 0 1 1 36.4,34 M36.4,50 A3.6,3.6 0 1 1 43.6,50 A3.6,3.6 0 1 1 36.4,50 M36.4,66 A3.6,3.6 0 1 1 43.6,66 A3.6,3.6 0 1 1 36.4,66
+  - d: M56.4,34 A3.6,3.6 0 1 1 63.6,34 A3.6,3.6 0 1 1 56.4,34 M56.4,50 A3.6,3.6 0 1 1 63.6,50 A3.6,3.6 0 1 1 56.4,50 M56.4,66 A3.6,3.6 0 1 1 63.6,66 A3.6,3.6 0 1 1 56.4,66
+    opacity: 0.3
+  glowHex: 5C3923
+  baseHex: 2A1A10
   isFeatured: false
   trialPreviewEligible: false
   publishedAt: '2026-09-15T03:40:07Z'
@@ -98,8 +101,8 @@ publish:
   objectPath: six-dots-the-quiet-work-of-louis-braille/audio-six-dots-the-quiet-work-of-louis-braille-en-v1-aac96/story.m4a
   staging:
     uploadedAt: '2026-09-15T03:44:20Z'
-    rowUpsertedAt: '2026-09-15T03:45:09Z'
-    verifiedAt: '2026-09-15T23:32:08Z'
+    rowUpsertedAt: '2026-09-16T02:52:33Z'
+    verifiedAt: '2026-09-16T02:55:23Z'
   production:
     uploadedAt: '2026-09-16T00:19:11Z'
     rowUpsertedAt: '2026-09-16T00:19:39Z'

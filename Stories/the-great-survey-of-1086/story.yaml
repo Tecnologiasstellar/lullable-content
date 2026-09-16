@@ -33,9 +33,14 @@ card:
   colorHex: 3B2A1D
   accentHex: E8C88A
   sigil: null
-  sigilPaths: null
-  glowHex: null
-  baseHex: null
+  sigilPaths:
+  - d: M50,36 C44,30 34,30 28,33 L28,68 C34,65 44,65 50,70 C56,65 66,65 72,68 L72,33 C66,30 56,30 50,36
+  - d: M50,36 L50,70
+    opacity: 0.5
+  - d: M34,45 L44,45 M56,45 L66,45 M34,54 L44,54 M56,54 L66,54
+    opacity: 0.3
+  glowHex: 825C40
+  baseHex: 3B2A1D
   isFeatured: false
   trialPreviewEligible: false
   publishedAt: '2026-09-15T03:40:07Z'
@@ -96,8 +101,8 @@ publish:
   objectPath: the-great-survey-of-1086/audio-the-great-survey-of-1086-en-v1-aac96/story.m4a
   staging:
     uploadedAt: '2026-09-15T03:46:39Z'
-    rowUpsertedAt: '2026-09-15T03:47:04Z'
-    verifiedAt: '2026-09-15T23:32:37Z'
+    rowUpsertedAt: '2026-09-16T02:53:03Z'
+    verifiedAt: '2026-09-16T02:55:52Z'
   production:
     uploadedAt: '2026-09-16T00:21:27Z'
     rowUpsertedAt: '2026-09-16T00:22:04Z'

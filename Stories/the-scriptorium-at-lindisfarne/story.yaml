@@ -32,12 +32,16 @@ card:
   sleepPace: Slow and unhurried
   atmosphere: Warm, tidal, candlelit
   description: Around the year 715, on a tidal island off the Northumberland coast, a monk sits at a sloped oak desk and works on a book of the Gospels. We follow the making of it. The calfskins soaked and stretched into vellum, the margins pricked, the lines ruled in lead point, the quill cut, the ink steeped from oak galls. Then the colors, one at a time, and the knotwork laid out with a compass and a grid, while the tide comes in over the causeway and the seals begin to sing out on the sandbanks.
-  colorHex: 2B3A4C
+  colorHex: '293748'
   accentHex: E9D6AC
   sigil: null
-  sigilPaths: null
-  glowHex: null
-  baseHex: null
+  sigilPaths:
+  - d: M24,50 A16,16 0 1 1 56,50 A16,16 0 1 1 24,50
+  - d: M44,50 A16,16 0 1 1 76,50 A16,16 0 1 1 44,50
+  - d: M34,50 A16,16 0 1 1 66,50 A16,16 0 1 1 34,50
+    opacity: 0.4
+  glowHex: 5A799E
+  baseHex: '293748'
   isFeatured: false
   trialPreviewEligible: false
   publishedAt: '2026-09-15T03:40:07Z'
@@ -98,8 +102,8 @@ publish:
   objectPath: the-scriptorium-at-lindisfarne/audio-the-scriptorium-at-lindisfarne-en-v1-aac96/story.m4a
   staging:
     uploadedAt: '2026-09-15T03:41:27Z'
-    rowUpsertedAt: '2026-09-15T03:42:04Z'
-    verifiedAt: '2026-09-15T03:42:19Z'
+    rowUpsertedAt: '2026-09-16T02:54:38Z'
+    verifiedAt: '2026-09-16T02:57:23Z'
   production:
     uploadedAt: '2026-09-16T00:17:25Z'
     rowUpsertedAt: '2026-09-16T00:28:13Z'

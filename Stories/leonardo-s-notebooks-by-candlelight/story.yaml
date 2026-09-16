@@ -35,9 +35,14 @@ card:
   colorHex: 3B2616
   accentHex: C89A5A
   sigil: null
-  sigilPaths: null
-  glowHex: null
-  baseHex: null
+  sigilPaths:
+  - d: M24,50 A26,26 0 1 1 76,50 A26,26 0 1 1 24,50
+  - d: M31.6,31.6 L68.4,31.6 L68.4,68.4 L31.6,68.4 Z
+    opacity: 0.5
+  - d: M47.8,50 A2.2,2.2 0 1 1 52.2,50 A2.2,2.2 0 1 1 47.8,50
+    opacity: 0.9
+  glowHex: '825430'
+  baseHex: 3B2616
   isFeatured: false
   trialPreviewEligible: false
   publishedAt: '2026-09-15T03:40:07Z'
@@ -98,8 +103,8 @@ publish:
   objectPath: leonardo-s-notebooks-by-candlelight/audio-leonardo-s-notebooks-by-candlelight-en-v1-aac96/story.m4a
   staging:
     uploadedAt: '2026-09-15T03:45:20Z'
-    rowUpsertedAt: '2026-09-15T03:45:45Z'
-    verifiedAt: '2026-09-15T23:32:17Z'
+    rowUpsertedAt: '2026-09-16T02:52:43Z'
+    verifiedAt: '2026-09-16T02:55:33Z'
   production:
     uploadedAt: '2026-09-16T00:19:50Z'
     rowUpsertedAt: '2026-09-16T00:20:22Z'

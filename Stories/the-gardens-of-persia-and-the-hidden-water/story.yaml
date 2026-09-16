@@ -34,9 +34,13 @@ card:
   colorHex: 1E3A2E
   accentHex: 5EB8AE
   sigil: null
-  sigilPaths: null
-  glowHex: null
-  baseHex: null
+  sigilPaths:
+  - d: M30,30 L70,30 L70,70 L30,70 Z
+  - d: M50,30 L50,70 M30,50 L70,50
+    opacity: 0.55
+  - d: M46,50 A4,4 0 1 1 54,50 A4,4 0 1 1 46,50
+  glowHex: '428065'
+  baseHex: 1E3A2E
   isFeatured: false
   trialPreviewEligible: false
   publishedAt: '2026-09-15T03:40:07Z'
@@ -97,8 +101,8 @@ publish:
   objectPath: the-gardens-of-persia-and-the-hidden-water/audio-the-gardens-of-persia-and-the-hidden-water-en-v1-aac96/story.m4a
   staging:
     uploadedAt: '2026-09-15T03:51:46Z'
-    rowUpsertedAt: '2026-09-15T03:52:23Z'
-    verifiedAt: '2026-09-15T23:33:49Z'
+    rowUpsertedAt: '2026-09-16T02:54:17Z'
+    verifiedAt: '2026-09-16T02:57:02Z'
   production:
     uploadedAt: '2026-09-16T00:26:53Z'
     rowUpsertedAt: '2026-09-16T00:27:20Z'

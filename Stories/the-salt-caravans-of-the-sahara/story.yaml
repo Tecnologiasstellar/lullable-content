@@ -34,9 +34,16 @@ card:
   colorHex: 141A3C
   accentHex: D89A4E
   sigil: null
-  sigilPaths: null
-  glowHex: null
-  baseHex: null
+  sigilPaths:
+  - d: M24,64 C34,54 44,66 54,60 C62,55 70,62 76,58
+  - d: M26,72 C36,64 46,74 58,68 C66,64 70,70 74,68
+    opacity: 0.45
+  - d: M55.8,34 A2.2,2.2 0 1 1 60.2,34 A2.2,2.2 0 1 1 55.8,34
+    opacity: 0.9
+  - d: M33,30 A1.2,1.2 0 1 1 35.4,30 A1.2,1.2 0 1 1 33,30 M67,44 A1.2,1.2 0 1 1 69.4,44 A1.2,1.2 0 1 1 67,44
+    opacity: 0.35
+  glowHex: 2C3984
+  baseHex: 141A3C
   isFeatured: false
   trialPreviewEligible: false
   publishedAt: '2026-09-15T03:40:07Z'
@@ -97,8 +104,8 @@ publish:
   objectPath: the-salt-caravans-of-the-sahara/audio-the-salt-caravans-of-the-sahara-en-v1-aac96/story.m4a
   staging:
     uploadedAt: '2026-09-15T03:52:37Z'
-    rowUpsertedAt: '2026-09-15T03:53:19Z'
-    verifiedAt: '2026-09-15T23:33:58Z'
+    rowUpsertedAt: '2026-09-16T02:54:27Z'
+    verifiedAt: '2026-09-16T02:57:12Z'
   production:
     uploadedAt: '2026-09-16T00:27:28Z'
     rowUpsertedAt: '2026-09-16T00:28:00Z'

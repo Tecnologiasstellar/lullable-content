@@ -35,9 +35,12 @@ card:
   colorHex: 26333D
   accentHex: E3CD8C
   sigil: null
-  sigilPaths: null
-  glowHex: null
-  baseHex: null
+  sigilPaths:
+  - d: M76,50 A26,26 0 0 1 24,50 A18.7,18.7 0 0 1 61.4,50 A13.5,13.5 0 0 1 34.4,50 A9.7,9.7 0 0 1 53.8,50
+  - d: M28,72 L72,72
+    opacity: 0.35
+  glowHex: '547086'
+  baseHex: 26333D
   isFeatured: false
   trialPreviewEligible: false
   publishedAt: '2026-09-15T03:40:07Z'
@@ -98,8 +101,8 @@ publish:
   objectPath: the-fossil-hunter-of-lyme-regis/audio-the-fossil-hunter-of-lyme-regis-en-v1-aac96/story.m4a
   staging:
     uploadedAt: '2026-09-15T03:42:33Z'
-    rowUpsertedAt: '2026-09-15T03:43:14Z'
-    verifiedAt: '2026-09-15T23:31:48Z'
+    rowUpsertedAt: '2026-09-16T02:52:11Z'
+    verifiedAt: '2026-09-16T02:55:03Z'
   production:
     uploadedAt: '2026-09-16T00:18:00Z'
     rowUpsertedAt: '2026-09-16T00:18:28Z'

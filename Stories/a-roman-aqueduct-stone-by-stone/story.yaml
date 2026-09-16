@@ -31,12 +31,17 @@ card:
   sleepPace: Slow, level, unhurried
   atmosphere: Cool, stony, quiet
   description: Tonight we walk the length of a Roman aqueduct at dusk, from the spring at Uzès to the fountains of Nîmes. Fifty kilometers of channel, falling barely the width of a forearm in every kilometer, so gently that the slope cannot be seen or felt. We follow the water through buried channels lined in red waterproof mortar, through tunnels cut by lamplight, and across the three golden tiers of the Pont du Gard, where the fall is two and a half centimeters from one side to the other. Nothing hurries, and nothing in the whole long line has a single moving part.
-  colorHex: 4A443B
+  colorHex: 3A352E
   accentHex: B9C6CE
   sigil: null
-  sigilPaths: null
-  glowHex: null
-  baseHex: null
+  sigilPaths:
+  - d: M26,70 L26,54 A8,8 0 0 1 42,54 L42,70 M42,70 L42,54 A8,8 0 0 1 58,54 L58,70 M58,70 L58,54 A8,8 0 0 1 74,54 L74,70
+  - d: M24,46 L76,46
+    opacity: 0.55
+  - d: M28,41 L72,41
+    opacity: 0.3
+  glowHex: '807565'
+  baseHex: 3A352E
   isFeatured: false
   trialPreviewEligible: false
   publishedAt: '2026-09-15T03:40:07Z'
@@ -97,8 +102,8 @@ publish:
   objectPath: a-roman-aqueduct-stone-by-stone/audio-a-roman-aqueduct-stone-by-stone-en-v1-aac96/story.m4a
   staging:
     uploadedAt: '2026-09-15T03:51:03Z'
-    rowUpsertedAt: '2026-09-15T03:51:28Z'
-    verifiedAt: '2026-09-15T23:33:39Z'
+    rowUpsertedAt: '2026-09-16T02:54:07Z'
+    verifiedAt: '2026-09-16T02:56:52Z'
   production:
     uploadedAt: '2026-09-16T00:26:03Z'
     rowUpsertedAt: '2026-09-16T00:26:45Z'

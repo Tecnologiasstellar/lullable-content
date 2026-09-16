@@ -825,9 +825,12 @@ def asset_version(aid):
     mt = re.search(r"-v(\d+)-", aid or "")
     return int(mt.group(1)) if mt else 1
 
-# The story columns this pipeline owns. sigil / glow_hex / base_hex are owned by
-# the app's design layer, are nullable, and appear in no manifest — writing them
-# from here would null out design work on every republish.
+# The story columns this pipeline owns. sigil / sigil_paths / glow_hex / base_hex
+# were once the app design layer's alone; they now travel in the manifest and are
+# written from here (D28 said otherwise and was reversed — see the art note in
+# Docs/06-decisions.md). They stay nullable, and the art block below is appended
+# only when the manifest actually carries it, so publishing a story that has no
+# mark never blanks the mark of one that does.
 def _story_columns(m):
     base = [
       ("id",                       m.get("storyID")),

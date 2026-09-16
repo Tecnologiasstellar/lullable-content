@@ -35,9 +35,14 @@ card:
   colorHex: 1D2145
   accentHex: E2B064
   sigil: null
-  sigilPaths: null
-  glowHex: null
-  baseHex: null
+  sigilPaths:
+  - d: M22,50 A28,28 0 1 1 78,50 A28,28 0 1 1 22,50
+    opacity: 0.55
+  - d: M26,40 L74,40
+    opacity: 0.3
+  - d: M58.8,40 A3.2,3.2 0 1 1 65.2,40 A3.2,3.2 0 1 1 58.8,40
+  glowHex: '404998'
+  baseHex: 1D2145
   isFeatured: false
   trialPreviewEligible: false
   publishedAt: '2026-09-15T03:40:07Z'
@@ -98,8 +103,8 @@ publish:
   objectPath: the-day-venus-crossed-the-sun/audio-the-day-venus-crossed-the-sun-en-v1-aac96/story.m4a
   staging:
     uploadedAt: '2026-09-15T03:48:58Z'
-    rowUpsertedAt: '2026-09-15T03:49:26Z'
-    verifiedAt: '2026-09-15T23:33:09Z'
+    rowUpsertedAt: '2026-09-16T02:53:38Z'
+    verifiedAt: '2026-09-16T02:56:22Z'
   production:
     uploadedAt: '2026-09-16T00:23:49Z'
     rowUpsertedAt: '2026-09-16T00:24:31Z'

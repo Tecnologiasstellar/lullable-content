@@ -35,9 +35,12 @@ card:
   colorHex: 1E3A2B
   accentHex: E9DFB0
   sigil: null
-  sigilPaths: null
-  glowHex: null
-  baseHex: null
+  sigilPaths:
+  - d: M30,60 C38,40 62,32 70,40 C62,60 38,68 30,60
+  - d: M39.6,52 A2.4,2.4 0 1 1 44.4,52 A2.4,2.4 0 1 1 39.6,52 M47.6,49 A2.4,2.4 0 1 1 52.4,49 A2.4,2.4 0 1 1 47.6,49 M55.6,46 A2.4,2.4 0 1 1 60.4,46 A2.4,2.4 0 1 1 55.6,46
+    opacity: 0.85
+  glowHex: 42805F
+  baseHex: 1E3A2B
   isFeatured: false
   trialPreviewEligible: false
   publishedAt: '2026-09-15T03:40:07Z'
@@ -98,8 +101,8 @@ publish:
   objectPath: the-monk-and-the-pea-garden/audio-the-monk-and-the-pea-garden-en-v1-aac96/story.m4a
   staging:
     uploadedAt: '2026-09-15T03:43:26Z'
-    rowUpsertedAt: '2026-09-15T03:44:10Z'
-    verifiedAt: '2026-09-15T23:31:59Z'
+    rowUpsertedAt: '2026-09-16T02:52:22Z'
+    verifiedAt: '2026-09-16T02:55:13Z'
   production:
     uploadedAt: '2026-09-16T00:18:35Z'
     rowUpsertedAt: '2026-09-16T00:19:02Z'

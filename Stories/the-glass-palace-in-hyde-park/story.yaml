@@ -31,12 +31,17 @@ card:
   sleepPace: Slow, unhurried
   atmosphere: Pale, glassy, hushed
   description: You arrive in Hyde Park before sunrise, in the spring of 1851, and walk toward a building made almost entirely of glass. Inside, full-grown elm trees stand under a great arched roof, a fountain of cut glass falls softly at the crossing, and sparrows sing in the iron. You learn how a gardener drew the whole thing on blotting paper, how nearly three hundred thousand panes were set from little trolleys that ran along the gutters, and who will come through the doors when they open. Then rain begins on the roof.
-  colorHex: 3B4A42
+  colorHex: 2D3832
   accentHex: F1E8D2
   sigil: null
-  sigilPaths: null
-  glowHex: null
-  baseHex: null
+  sigilPaths:
+  - d: M26,68 L26,48 A24,24 0 0 1 74,48 L74,68
+  - d: M38,68 L38,42 M50,68 L50,34 M62,68 L62,42
+    opacity: 0.45
+  - d: M26,70 L74,70
+    opacity: 0.35
+  glowHex: 637B6E
+  baseHex: 2D3832
   isFeatured: false
   trialPreviewEligible: false
   publishedAt: '2026-09-15T03:40:07Z'
@@ -97,8 +102,8 @@ publish:
   objectPath: the-glass-palace-in-hyde-park/audio-the-glass-palace-in-hyde-park-en-v1-aac96/story.m4a
   staging:
     uploadedAt: '2026-09-15T03:47:14Z'
-    rowUpsertedAt: '2026-09-15T03:47:58Z'
-    verifiedAt: '2026-09-15T23:32:46Z'
+    rowUpsertedAt: '2026-09-16T02:53:14Z'
+    verifiedAt: '2026-09-16T02:56:02Z'
   production:
     uploadedAt: '2026-09-16T00:22:17Z'
     rowUpsertedAt: '2026-09-16T00:22:58Z'

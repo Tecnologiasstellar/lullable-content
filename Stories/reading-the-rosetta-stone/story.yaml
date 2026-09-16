@@ -31,12 +31,15 @@ card:
   sleepPace: Patient and slow
   atmosphere: Lamplit, cool, quiet
   description: 'We begin in a long stone gallery in London at closing time, in front of a dark slab carved with three kinds of writing. Then we go back to 1822, to a study in Paris, where Jean-François Champollion lays two royal names side by side and slowly finds the sounds inside the signs. Along the way: the town of Rashid where the stone was found, the plaster casts that carried its words across Europe, an obelisk on a lawn in Dorset, and which way the birds face when you read.'
-  colorHex: 35383C
+  colorHex: 33363A
   accentHex: C79A4A
   sigil: null
-  sigilPaths: null
-  glowHex: null
-  baseHex: null
+  sigilPaths:
+  - d: M34,74 L34,34 L60,34 L66,40 L66,74 Z
+  - d: M40,46 L60,46 M40,54 L60,54 M40,62 L60,62
+    opacity: 0.45
+  glowHex: '707780'
+  baseHex: 33363A
   isFeatured: false
   trialPreviewEligible: false
   publishedAt: '2026-09-15T03:40:07Z'
@@ -97,8 +100,8 @@ publish:
   objectPath: reading-the-rosetta-stone/audio-reading-the-rosetta-stone-en-v1-aac96/story.m4a
   staging:
     uploadedAt: '2026-09-15T03:48:11Z'
-    rowUpsertedAt: '2026-09-15T03:48:47Z'
-    verifiedAt: '2026-09-15T23:32:59Z'
+    rowUpsertedAt: '2026-09-16T02:53:24Z'
+    verifiedAt: '2026-09-16T02:56:12Z'
   production:
     uploadedAt: '2026-09-16T00:23:07Z'
     rowUpsertedAt: '2026-09-16T00:23:36Z'

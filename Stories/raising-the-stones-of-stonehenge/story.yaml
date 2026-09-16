@@ -31,12 +31,16 @@ card:
   sleepPace: Slow and unhurried
   atmosphere: Frost, woodsmoke, stillness
   description: Four and a half thousand years ago, on a frozen evening on Salisbury Plain, the great stones are going up. We walk in from the woodsmoke of the village at Durrington, where whole pigs turn slowly over the fires, out across the frost to the ring itself. There is antler and chalk, hammerstones and rope twisted from plant fiber, and joints cut in stone the way a carpenter would cut them in oak. Along the axis of the circle, the low winter sun goes down between the tallest stones.
-  colorHex: 2F3A34
+  colorHex: 2E3832
   accentHex: D4B678
   sigil: null
-  sigilPaths: null
-  glowHex: null
-  baseHex: null
+  sigilPaths:
+  - d: M30,34 L70,34 L70,42 L30,42 Z
+  - d: M34,42 L34,72 L44,72 L44,42 M56,42 L56,72 L66,72 L66,42
+  - d: M28,74 L72,74
+    opacity: 0.35
+  glowHex: 657B6E
+  baseHex: 2E3832
   isFeatured: false
   trialPreviewEligible: false
   publishedAt: '2026-09-15T03:40:07Z'
@@ -97,8 +101,8 @@ publish:
   objectPath: raising-the-stones-of-stonehenge/audio-raising-the-stones-of-stonehenge-en-v1-aac96/story.m4a
   staging:
     uploadedAt: '2026-09-15T03:49:37Z'
-    rowUpsertedAt: '2026-09-15T03:50:16Z'
-    verifiedAt: '2026-09-15T23:33:20Z'
+    rowUpsertedAt: '2026-09-16T02:53:47Z'
+    verifiedAt: '2026-09-16T02:56:33Z'
   production:
     uploadedAt: '2026-09-16T00:24:40Z'
     rowUpsertedAt: '2026-09-16T00:25:16Z'

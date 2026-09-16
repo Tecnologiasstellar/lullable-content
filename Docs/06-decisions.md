@@ -541,7 +541,14 @@ running it against a row that already exists.
 
 Three things it deliberately does not touch: `sigil`, `glow_hex` and `base_hex`
 are owned by the app's design layer, appear in no manifest, and would be nulled
-on every republish if this wrote them. `publication_status` is left out of the
+on every republish if this wrote them.
+
+> **Superseded, 2026-09-15.** That last sentence stopped being true when story
+> art moved into the manifest (`card.sigil`, `card.sigilPaths`, `card.glowHex`,
+> `card.baseHex`, validated by G05 and `validate_sigil_paths`). `publish` does
+> write those four columns now — but only when the manifest carries them, which
+> preserves the property this paragraph was protecting: a story with no mark can
+> never blank the mark of a story that has one. See D32. `publication_status` is left out of the
 story upsert's `DO UPDATE` so a live row is never momentarily demoted to draft.
 Genre rows are `ON CONFLICT DO NOTHING` so publishing a story can never rewrite
 the presentation of a genre that is already live.
@@ -685,3 +692,63 @@ with wpm ≈ 195 for Arthur. Checked against the catalogue: Alexandria predicts
 35.7 min against 36.0 measured. `Stories/word-targets.csv` uses Arthur at 183 wpm
 and no 0.93 correction, which is why it under-predicted and why its "+880 words"
 style advice ran long.
+
+## D32 — Every story gets its own mark, and the ground is derived from its colour  *(settled 2026-09-15)*
+
+The fifteen history episodes shipped to production with their copy and genre
+intact and no artwork: `sigil`, `sigil_paths`, `glow_hex` and `base_hex` were all
+null. Nothing caught it. G05 only requires `colorHex` and `accentHex` to be valid
+hex, and the art fields are optional by design, so fifteen stories went live
+rendering the shared echo fallback while twenty-five of their neighbours had a
+drawn mark. The brief given to the writers covered card copy and the two gradient
+colours and never mentioned the mark, which is the actual cause.
+
+Two rules were recovered from the catalogue rather than invented, by checking
+every existing story:
+
+- **`baseHex` is the story's own `colorHex`.** True for 25 of 27; the bakery and
+  Saturn differ by a shade and predate the convention.
+- **`glowHex` is that colour multiplied by 2.2**, clamped. Exact on 17 of 27; the
+  misses are the earliest few, picked by hand before the rule existed.
+
+So the ground is derived, not chosen. Only the mark is authored.
+
+**A brightness ceiling, which the derivation needed.** Six of the fifteen came
+out with a glow brighter than anything in the catalogue, because their writers
+picked lighter `colorHex` values than the house norm. The brightest existing glow
+is `547BA3`, relative luminance 118. Six new ones ran to 155. Nothing in a
+Lullable card should be bright enough to wake someone, so those six grounds were
+scaled down, hue intact, until their derived glow sat at or under 118. The other
+nine were already inside the range and were left alone.
+
+**What a mark is.** One to five path elements on a 100-unit grid, everything
+inside a 34-unit safe circle, at most 64 commands each, standard SVG path
+commands only. The idiom is a solid primary stroke, one or two quieter strokes
+behind it at 0.3–0.6 opacity, and sometimes a single near-solid dot. The
+validator checks the geometry, sampling arcs and including Bezier control hulls,
+so a mark that would spill outside the circle is refused rather than published.
+
+**The stale note this exposed.** The comment above `_story_columns()` and the
+matching paragraph in D28 both still claimed these columns were the app's alone
+and appeared in no manifest, while the code directly beneath the comment wrote
+them from the manifest. D28 was true when written and was reversed by the story
+art change; neither was updated. Both now say so.
+
+**`sigil` is a closed list; the drawing is not.** The first republish was
+rejected by the database: `stories_sigil_check` allows only `bakery`,
+`saturn-rings`, `saturn-edge`, `bookshop`, `alexandria`, `ocean-current` and
+`echo` — the marks the app has code to draw. Fifteen invented slugs could never
+have been stored. That is also why the catalogue has 21 stories with
+`sigil_paths` and only 5 with a `sigil`: a named sigil asks the app to draw
+something it already knows, while `sigil_paths` carries the drawing itself and
+needs no app change. So the fifteen carry paths and a null `sigil`, which is the
+normal case, not a workaround.
+
+The failure was clean, which is worth recording: the upsert is one transaction,
+so the row was never half-written, and `publish` does not stamp the manifest
+until the query succeeds. The tool said so itself — "the manifest was NOT
+stamped, so this is safe to re-run once the cause is fixed" — and it was.
+
+**Left undone:** the bakery and Saturn still carry a named sigil and a ground but
+no `sigilPaths` in the manifest. Their marks live only in the app. They are not
+broken, so they were not touched.
