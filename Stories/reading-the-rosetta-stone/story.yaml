@@ -104,5 +104,5 @@ publish:
     verifiedAt: '2026-09-16T02:56:12Z'
   production:
     uploadedAt: '2026-09-16T00:23:07Z'
-    rowUpsertedAt: '2026-09-16T00:23:36Z'
-    verifiedAt: '2026-09-16T00:29:48Z'
+    rowUpsertedAt: '2026-09-16T03:02:48Z'
+    verifiedAt: '2026-09-16T03:05:45Z'
